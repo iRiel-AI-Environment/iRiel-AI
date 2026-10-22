@@ -1,0 +1,1744 @@
+PRSL-AI ECOSYSTEM
+CANONICAL OBSERVABILITY MODEL
+
+Organization: Robert Software Labs
+Status: Canonical
+Version: 1.0
+Classification: Core Architecture
+Document Type: Architectural Observability Standard
+
+==================================================
+1. PURPOSE
+==================================================
+
+This document defines the canonical Observability Model of the
+PRSL-AI Ecosystem.
+
+It establishes:
+
+- How PRSL-AI knows what is happening internally.
+- What the ecosystem records.
+- What must not be recorded.
+- How failures are investigated.
+- How diagnostics coexist with Privacy & Security.
+- How observability interacts with Events, Identity, Context,
+  Memory, Governance and Verification.
+- How the ecosystem avoids turning diagnostics into surveillance.
+
+The primary objective is:
+
+SYSTEM VISIBILITY
+
+without:
+
+USER SURVEILLANCE.
+
+==================================================
+2. CORE PRINCIPLE
+==================================================
+
+Canonical principle:
+
+OBSERVE THE SYSTEM,
+NOT THE PERSON.
+
+Observability exists to answer:
+
+"What happened to the system?"
+
+It must not unnecessarily answer:
+
+"What was the user doing?"
+
+unless that information is strictly required to diagnose,
+secure, verify or audit a specific operation.
+
+==================================================
+3. OBSERVABILITY DEFINITION
+==================================================
+
+Observability is the ability to understand the internal state
+and behavior of PRSL-AI through externally observable signals.
+
+The canonical observability signals are:
+
+1. Logs
+2. Metrics
+3. Traces
+4. Events
+5. Health Signals
+6. Audit Records
+7. Diagnostics
+8. Verification Results
+
+These signals have different purposes.
+
+==================================================
+4. OBSERVABILITY ≠ SURVEILLANCE
+==================================================
+
+Observability:
+
+System-focused.
+
+Surveillance:
+
+Person-focused.
+
+Good:
+
+ROUTER_LATENCY = 420ms
+
+Bad:
+
+USER_WAS_LOOKING_FOR_A_HOTEL_AT_14:32
+
+Good:
+
+EXECUTION_FAILED
+ERROR_CODE = PROVIDER_TIMEOUT
+
+Bad:
+
+FULL_USER_CONVERSATION = "..."
+
+The system should collect operational facts rather than
+unnecessary behavioral histories.
+
+==================================================
+5. OBSERVABILITY LAYERS
+==================================================
+
+PRSL-AI observability operates across:
+
+SYSTEM
+↓
+SERVICE
+↓
+CAPABILITY
+↓
+REQUEST
+↓
+EXECUTION
+↓
+VERIFICATION
+
+Each layer exposes only the telemetry required to understand
+its behavior.
+
+==================================================
+6. SYSTEM OBSERVABILITY
+==================================================
+
+System-level signals include:
+
+- CPU utilization.
+- Memory utilization.
+- Storage health.
+- Network state.
+- Service availability.
+- System health.
+- Error rates.
+- Resource pressure.
+
+Where possible, these are aggregated.
+
+Example:
+
+CPU:
+
+67%
+
+rather than:
+
+"User was performing X while CPU reached 67%."
+
+==================================================
+7. SERVICE OBSERVABILITY
+==================================================
+
+Services may expose:
+
+SERVICE_STARTED
+SERVICE_STOPPED
+SERVICE_DEGRADED
+SERVICE_UNAVAILABLE
+SERVICE_RECOVERED
+
+Metrics may include:
+
+- Request count.
+- Error count.
+- Latency.
+- Throughput.
+- Queue depth.
+- Retry count.
+
+==================================================
+8. CAPABILITY OBSERVABILITY
+==================================================
+
+Capabilities may expose:
+
+CAPABILITY_AVAILABLE
+CAPABILITY_UNAVAILABLE
+CAPABILITY_EXECUTION_STARTED
+CAPABILITY_EXECUTION_COMPLETED
+CAPABILITY_EXECUTION_FAILED
+
+Example:
+
+Vision:
+
+Success rate:
+99.2%
+
+Average latency:
+1.8s
+
+This is useful.
+
+Recording every image processed:
+
+Not automatically necessary.
+
+==================================================
+9. REQUEST OBSERVABILITY
+==================================================
+
+Requests should be traceable without necessarily storing their
+full content.
+
+Example:
+
+REQUEST_ID:
+req_123
+
+TRACE_ID:
+trace_456
+
+INTENT_CLASS:
+DOCUMENT_ANALYSIS
+
+LATENCY:
+840ms
+
+RESULT:
+SUCCESS
+
+The complete user request does not need to be stored merely
+because the operation occurred.
+
+==================================================
+10. EXECUTION OBSERVABILITY
+==================================================
+
+Execution telemetry should record:
+
+- Execution ID.
+- Capability.
+- Start time.
+- End time.
+- Duration.
+- Result state.
+- Error code.
+- Retry count.
+- Resource status.
+
+Example:
+
+EXECUTION_ID:
+exec_123
+
+CAPABILITY:
+CALENDAR_WRITE
+
+STATUS:
+FAILED
+
+ERROR:
+PROVIDER_TIMEOUT
+
+This allows debugging without requiring the entire conversation.
+
+==================================================
+11. VERIFICATION OBSERVABILITY
+==================================================
+
+Verification is observable.
+
+Examples:
+
+VERIFICATION_STARTED
+VERIFICATION_CONFIRMED
+VERIFICATION_FAILED
+VERIFICATION_UNKNOWN
+
+Metrics:
+
+Verification success rate.
+
+Verification failure rate.
+
+Unknown-result rate.
+
+These signals are critical for trustworthy execution.
+
+==================================================
+12. ROUTER OBSERVABILITY
+==================================================
+
+The Intelligence Router should expose operational telemetry.
+
+Examples:
+
+ROUTE_SELECTED
+ROUTE_REJECTED
+ROUTE_FALLBACK
+ROUTE_FAILED
+
+Metrics:
+
+- Routing latency.
+- Fallback rate.
+- Provider failure rate.
+- Capability availability.
+- Routing decision distribution.
+
+The Router should not need to log the user's complete prompt
+to demonstrate that routing worked.
+
+==================================================
+13. EVENT OBSERVABILITY
+==================================================
+
+The Event Model provides a fundamental observability layer.
+
+Events include:
+
+EVENT_ID
+EVENT_TYPE
+PRODUCER
+TIMESTAMP
+TRACE_ID
+CORRELATION_ID
+CAUSATION_ID
+
+These allow reconstruction of system behavior.
+
+Example:
+
+TASK_CREATED
+↓
+ROUTE_SELECTED
+↓
+EXECUTION_STARTED
+↓
+EXECUTION_FAILED
+↓
+ROUTE_FALLBACK_STARTED
+↓
+EXECUTION_COMPLETED
+↓
+VERIFICATION_CONFIRMED
+
+The sequence tells us what happened without requiring complete
+user content.
+
+==================================================
+14. LOGS
+==================================================
+
+Logs are intended for diagnostic information.
+
+Good log:
+
+"Execution failed: provider timeout."
+
+Better:
+
+"Execution failed: provider=provider_a,
+capability=vision,
+error=timeout,
+execution_id=exec_123."
+
+Bad:
+
+"User Robert uploaded a private image showing..."
+
+The latter exposes unnecessary personal information.
+
+==================================================
+15. LOG LEVELS
+==================================================
+
+Canonical levels:
+
+DEBUG
+INFO
+NOTICE
+WARNING
+ERROR
+CRITICAL
+
+Production systems should avoid DEBUG-level collection of
+sensitive information unless explicitly enabled under a
+controlled diagnostic mode.
+
+==================================================
+16. METRICS
+==================================================
+
+Metrics should be the preferred observability mechanism for
+aggregate behavior.
+
+Examples:
+
+REQUEST_COUNT
+ERROR_RATE
+LATENCY_P95
+LATENCY_P99
+CPU_USAGE
+MEMORY_USAGE
+QUEUE_DEPTH
+FALLBACK_RATE
+VERIFICATION_FAILURE_RATE
+
+Metrics generally provide high diagnostic value with lower
+privacy exposure.
+
+==================================================
+17. DISTRIBUTED TRACING
+==================================================
+
+Distributed tracing allows one operation to be followed across
+services.
+
+Example:
+
+TRACE_ID
+
+Core AI
+↓
+Router
+↓
+Capability
+↓
+iRiel System
+↓
+Verification
+
+Each component contributes timing and state information.
+
+==================================================
+18. TRACE DATA MINIMIZATION
+==================================================
+
+Traces should contain:
+
+- IDs.
+- Timing.
+- Service names.
+- Operation names.
+- Status.
+- Error codes.
+- Performance information.
+
+They should not automatically contain:
+
+- Full prompts.
+- Full conversations.
+- Photos.
+- Audio.
+- Private documents.
+- Complete Memory.
+
+==================================================
+19. AUDIT VS OBSERVABILITY
+==================================================
+
+Observability answers:
+
+"How did the system behave?"
+
+Audit answers:
+
+"Which important security, authorization or governance event
+occurred?"
+
+Example:
+
+Observability:
+
+EXECUTION_FAILED
+
+Audit:
+
+ACTION_AUTHORIZED
+
+These systems may overlap but have different purposes.
+
+==================================================
+20. SECURITY OBSERVABILITY
+==================================================
+
+Security telemetry may include:
+
+- Authentication failures.
+- Authorization failures.
+- Permission changes.
+- Device enrollment.
+- Device revocation.
+- Suspicious access.
+- Security policy violations.
+
+Sensitive security telemetry must itself be protected.
+
+==================================================
+21. PRIVACY OBSERVABILITY
+==================================================
+
+Privacy telemetry may include:
+
+- External processing requests.
+- Data classification decisions.
+- Privacy policy decisions.
+- Data movement.
+- Consent state changes.
+
+Example:
+
+EXTERNAL_PROCESSING_DENIED
+
+Reason:
+
+SENSITIVE_DATA_POLICY
+
+This is useful.
+
+Recording the entire sensitive payload:
+
+Not required.
+
+==================================================
+22. WHAT SHOULD BE RECORDED
+==================================================
+
+PRSL-AI should generally record:
+
+- Event IDs.
+- Trace IDs.
+- Correlation IDs.
+- Component names.
+- Operation names.
+- Status.
+- Error codes.
+- Timing.
+- Resource usage.
+- Retry information.
+- Routing decisions.
+- Verification results.
+- Permission decisions.
+- Security events.
+- Governance decisions.
+- System health.
+
+==================================================
+23. WHAT SHOULD NOT BE RECORDED BY DEFAULT
+==================================================
+
+The following should not be logged merely for observability:
+
+- Full conversations.
+- Complete user prompts.
+- Private photos.
+- Audio recordings.
+- Full Memory.
+- Health information.
+- Financial information.
+- Authentication secrets.
+- Passwords.
+- API keys.
+- Session tokens.
+- Private documents.
+- Precise behavioral histories.
+
+==================================================
+24. SENSITIVE CONTENT
+==================================================
+
+If sensitive content is required for a specific diagnostic
+operation, it must not automatically enter ordinary logs.
+
+Possible mechanisms:
+
+- Redaction.
+- Hashing.
+- Pseudonymization.
+- Secure diagnostic storage.
+- Explicit user-authorized diagnostics.
+- Short retention.
+- Restricted access.
+
+==================================================
+25. REDACTION
+==================================================
+
+Example:
+
+Original:
+
+"user@example.com"
+
+Log:
+
+"[REDACTED_EMAIL]"
+
+Original:
+
+API key:
+
+sk-xxxxxxxx
+
+Log:
+
+"[REDACTED_SECRET]"
+
+The system should preferably prevent secrets from reaching the
+logging layer at all.
+
+==================================================
+26. PSEUDONYMIZATION
+==================================================
+
+Where identity correlation is required for diagnostics, use a
+pseudonymous identifier.
+
+Example:
+
+USER_001
+
+instead of:
+
+Full name
+Email
+Phone number
+
+The diagnostic system can correlate events without unnecessarily
+exposing the user's identity.
+
+==================================================
+27. HASHING
+==================================================
+
+Hashing may be used when correlation is required without
+retaining the original value.
+
+Example:
+
+Document fingerprint:
+
+HASH_ABC123
+
+Instead of:
+
+Entire document contents.
+
+Hashing is not a substitute for encryption when the original
+data must later be recovered.
+
+==================================================
+28. DATA CLASSIFICATION
+==================================================
+
+Observability data must inherit an appropriate classification.
+
+Example:
+
+SYSTEM_METRIC:
+
+Operational
+
+Permission event:
+
+Security-sensitive
+
+Sensitive data processing event:
+
+Privacy-sensitive
+
+Authentication failure:
+
+Security-sensitive
+
+The classification determines:
+
+- Storage.
+- Access.
+- Retention.
+- Encryption.
+- Visibility.
+
+==================================================
+29. OBSERVABILITY DATA OWNERSHIP
+==================================================
+
+The subsystem generating telemetry remains responsible for its
+meaning.
+
+Example:
+
+Router owns routing telemetry.
+
+Memory owns memory telemetry.
+
+Security owns security telemetry.
+
+System owns system health telemetry.
+
+Observability infrastructure aggregates telemetry but should not
+become the owner of every underlying domain state.
+
+==================================================
+30. OBSERVABILITY DATA FLOW
+==================================================
+
+Component
+↓
+Telemetry
+↓
+Classification
+↓
+Redaction / Minimization
+↓
+Observability Pipeline
+↓
+Secure Storage / Aggregation
+↓
+Monitoring / Diagnostics
+
+Privacy controls occur before unnecessary information enters
+the observability system.
+
+==================================================
+31. OBSERVABILITY PIPELINE
+==================================================
+
+Canonical pipeline:
+
+PRODUCE
+↓
+CLASSIFY
+↓
+MINIMIZE
+↓
+REDACT
+↓
+VALIDATE
+↓
+TRANSMIT
+↓
+STORE
+↓
+AGGREGATE
+↓
+ANALYZE
+
+Sensitive information should be eliminated as early as
+possible.
+
+==================================================
+32. LOCAL OBSERVABILITY
+==================================================
+
+PRSL-AI should support local observability.
+
+Examples:
+
+- Device health.
+- Local execution errors.
+- Local traces.
+- Local performance metrics.
+- Local diagnostics.
+
+This supports:
+
+Privacy-first operation.
+
+Local-first architecture.
+
+Offline diagnostics.
+
+==================================================
+33. REMOTE OBSERVABILITY
+==================================================
+
+Remote observability may exist when necessary.
+
+Examples:
+
+- Distributed service monitoring.
+- Infrastructure health.
+- Provider availability.
+- Ecosystem-wide reliability.
+- Security monitoring.
+
+Remote telemetry must follow:
+
+Privacy
++
+Security
++
+Data Minimization
++
+Retention Policy.
+
+==================================================
+34. CLOUD TELEMETRY
+==================================================
+
+Cloud observability must not become an automatic copy of local
+user activity.
+
+Example:
+
+Allowed:
+
+SERVICE_ERROR_RATE = 2.1%
+
+Not automatically allowed:
+
+FULL_USER_CONVERSATION_HISTORY
+
+Canonical principle:
+
+REMOTE OBSERVABILITY ≠ REMOTE USER SURVEILLANCE.
+
+==================================================
+35. OFFLINE OPERATION
+==================================================
+
+If the device is offline:
+
+Local telemetry may continue.
+
+It may be buffered according to retention policy.
+
+When connectivity returns:
+
+Only authorized telemetry is synchronized.
+
+Sensitive diagnostic data should not be silently uploaded merely
+because connectivity became available.
+
+==================================================
+36. OBSERVABILITY CONSENT
+==================================================
+
+Normal system telemetry necessary for security and operation may
+be collected as part of the system's functioning.
+
+Additional diagnostic collection involving user content should
+require stronger controls.
+
+Examples:
+
+Normal:
+
+ERROR_CODE
+LATENCY
+TRACE_ID
+
+Elevated diagnostic:
+
+USER_PROVIDED_ARTIFACT_FOR_DEBUGGING
+
+The latter requires explicit handling.
+
+==================================================
+37. USER-INITIATED DIAGNOSTICS
+==================================================
+
+A user may intentionally provide diagnostic information.
+
+Example:
+
+"iRiel, send diagnostics because this action keeps failing."
+
+The system may create a diagnostic package.
+
+But even then:
+
+- Minimize.
+- Redact.
+- Explain scope.
+- Define retention.
+- Protect the package.
+
+==================================================
+38. DIAGNOSTIC MODE
+==================================================
+
+PRSL-AI may support a controlled Diagnostic Mode.
+
+Diagnostic Mode should have:
+
+- Explicit activation.
+- Defined duration.
+- Defined scope.
+- Increased telemetry.
+- Automatic expiration.
+- Clear user visibility.
+- Privacy controls.
+
+It should never silently become permanent surveillance.
+
+==================================================
+39. INCIDENT INVESTIGATION
+==================================================
+
+Canonical investigation flow:
+
+FAILURE DETECTED
+↓
+TRACE IDENTIFIED
+↓
+CORRELATION IDENTIFIED
+↓
+EVENT HISTORY RECONSTRUCTED
+↓
+ERROR ANALYZED
+↓
+SYSTEM STATE ANALYZED
+↓
+ROOT CAUSE IDENTIFIED
+↓
+REMEDIATION
+↓
+VERIFICATION
+
+The investigator should start with metadata and system signals,
+not user content.
+
+==================================================
+40. INVESTIGATION WITHOUT USER CONTENT
+==================================================
+
+Example failure:
+
+User asks @iriel to perform an action.
+
+Operation fails.
+
+Available telemetry:
+
+TRACE_ID
+TASK_ID
+ROUTE
+CAPABILITY
+EXECUTION_STATUS
+ERROR_CODE
+LATENCY
+VERIFICATION_STATUS
+
+This may already identify:
+
+Provider timeout.
+
+No conversation content is required.
+
+==================================================
+41. ESCALATION TO CONTENT
+==================================================
+
+User content should only become part of investigation when
+metadata cannot reasonably establish the cause.
+
+Then:
+
+SYSTEM TELEMETRY
+↓
+MINIMAL CONTEXT
+↓
+AUTHORIZED CONTENT
+↓
+DEEP DIAGNOSTICS
+
+Never:
+
+FULL CONTENT BY DEFAULT.
+
+==================================================
+42. PRIVACY-PRESERVING ROOT CAUSE ANALYSIS
+==================================================
+
+Root cause analysis should prioritize:
+
+1. Metrics.
+2. Traces.
+3. Event chains.
+4. Error codes.
+5. System state.
+6. Capability state.
+7. Provider status.
+8. Minimal contextual metadata.
+9. User content only if necessary.
+
+==================================================
+43. FAILURE EXAMPLE
+==================================================
+
+User:
+
+"Envie uma mensagem."
+
+System:
+
+EXECUTION_FAILED
+
+Telemetry:
+
+TASK_ID = task_123
+TRACE_ID = trace_456
+CAPABILITY = messaging
+PROVIDER = provider_a
+ERROR = TIMEOUT
+RETRY_COUNT = 2
+
+Investigation:
+
+Provider timeout.
+
+No need to store:
+
+The complete message text.
+
+==================================================
+44. FAILURE EXAMPLE — UNKNOWN
+==================================================
+
+Execution:
+
+COMPLETED
+
+Verification:
+
+UNKNOWN
+
+Telemetry:
+
+EXECUTION_ID
+TRACE_ID
+VERIFICATION_STATUS = UNKNOWN
+
+Possible cause:
+
+External provider did not return confirmation.
+
+The system can investigate the verification path without storing
+the user's complete request.
+
+==================================================
+45. FAILURE EXAMPLE — ROUTER
+==================================================
+
+Router repeatedly selects an unavailable capability.
+
+Metrics:
+
+ROUTE_FAILURE_RATE = 27%
+
+Events:
+
+ROUTE_SELECTED
+ROUTE_FAILED
+ROUTE_FALLBACK_STARTED
+
+Investigation can identify:
+
+Routing policy problem.
+
+No user conversation archive is required.
+
+==================================================
+46. FAILURE EXAMPLE — MEMORY
+==================================================
+
+Memory update fails.
+
+Telemetry:
+
+MEMORY_UPDATE_FAILED
+MEMORY_ID
+VERSION
+ERROR_CODE
+TRACE_ID
+
+The Memory content itself does not need to be written to logs.
+
+==================================================
+47. OBSERVABILITY AND MEMORY
+==================================================
+
+Observability must not silently become another Memory system.
+
+Canonical distinction:
+
+MEMORY:
+
+Preserves authorized user continuity.
+
+OBSERVABILITY:
+
+Explains system behavior.
+
+A telemetry record must not become Memory merely because it
+contains information about a user operation.
+
+==================================================
+48. OBSERVABILITY AND CONTEXT
+==================================================
+
+Context may be used during an active diagnostic operation.
+
+However:
+
+Context
+≠
+Telemetry Archive.
+
+Only the minimum Context required for diagnosis should be
+exposed.
+
+==================================================
+49. OBSERVABILITY AND EVENT MODEL
+==================================================
+
+The Event Model is one of the primary sources of system
+observability.
+
+Events provide:
+
+- Causality.
+- Ordering.
+- State transitions.
+- Correlation.
+- Traceability.
+
+Observability systems consume events.
+
+They do not need to own the business meaning of those events.
+
+==================================================
+50. OBSERVABILITY AND PERMISSIONS
+==================================================
+
+Observability itself requires authorization.
+
+Not every operator, subsystem or agent may inspect all telemetry.
+
+Example:
+
+System operator:
+
+May view infrastructure metrics.
+
+Security operator:
+
+May view security events.
+
+Memory subsystem:
+
+May view its own diagnostics.
+
+No component automatically receives:
+
+ALL USER DATA.
+
+==================================================
+51. OBSERVABILITY AND GOVERNANCE
+==================================================
+
+Governance defines:
+
+- What telemetry may be collected.
+- Who may access it.
+- How long it may exist.
+- Which classifications require additional protection.
+- Which diagnostic actions require authorization.
+
+Observability therefore operates under governance.
+
+==================================================
+52. OBSERVABILITY AND PRIVACY & SECURITY
+==================================================
+
+Privacy & Security defines:
+
+- Data classification.
+- Redaction.
+- Encryption.
+- Access control.
+- Retention requirements.
+- Sensitive-data handling.
+
+Observability must respect these controls.
+
+==================================================
+53. OBSERVABILITY AND IDENTITY
+==================================================
+
+Identity may be represented through pseudonymous references.
+
+Example:
+
+USER_REF = usr_hash_123
+
+rather than:
+
+Full user profile.
+
+Identity information should be exposed only when necessary for
+the investigation.
+
+==================================================
+54. OBSERVABILITY AND DEVICE
+==================================================
+
+Device telemetry may include:
+
+DEVICE_ID
+DEVICE_CLASS
+OS_VERSION
+CAPABILITY_STATE
+SECURITY_POSTURE
+
+It should not automatically include:
+
+User activity history.
+
+==================================================
+55. OBSERVABILITY AND EXTERNAL AI
+==================================================
+
+Provider telemetry may include:
+
+PROVIDER
+MODEL
+LATENCY
+STATUS
+TOKEN_USAGE
+ERROR_CODE
+
+Where available and appropriate.
+
+The provider's telemetry should not automatically become a
+complete record of the user's private interaction.
+
+==================================================
+56. OBSERVABILITY AND AI-AGNOSTIC ARCHITECTURE
+==================================================
+
+The same observability contract should work regardless of the
+AI provider.
+
+Example:
+
+Provider A:
+
+LATENCY
+ERROR
+MODEL
+
+Provider B:
+
+LATENCY
+ERROR
+MODEL
+
+PRSL-AI observes the capability execution rather than coupling
+its observability model to one provider.
+
+==================================================
+57. TELEMETRY RETENTION
+==================================================
+
+Retention should follow purpose.
+
+Example:
+
+Performance metric:
+
+May be aggregated for longer periods.
+
+Debug trace:
+
+May have shorter retention.
+
+Sensitive diagnostic artifact:
+
+Should have strictly limited retention.
+
+Security audit:
+
+May require longer retention.
+
+There must be no universal:
+
+"Keep everything forever."
+
+==================================================
+58. TELEMETRY DELETION
+==================================================
+
+When telemetry reaches its retention limit:
+
+DELETE
+or
+AGGREGATE
+or
+ANONYMIZE
+
+according to policy.
+
+Deletion must not break required security or audit guarantees.
+
+==================================================
+59. AGGREGATION
+==================================================
+
+Aggregation is preferred where individual-level information is
+not required.
+
+Instead of:
+
+10,000 individual execution records
+
+store:
+
+EXECUTION_SUCCESS_RATE = 98.4%
+
+when individual traces are no longer needed.
+
+==================================================
+60. ANOMALY DETECTION
+==================================================
+
+PRSL-AI may use observability to detect:
+
+- Sudden latency increases.
+- Error spikes.
+- Provider outages.
+- Resource exhaustion.
+- Security anomalies.
+- Repeated verification failures.
+- Routing anomalies.
+
+Anomaly detection should operate primarily on system signals,
+not behavioral profiling of users.
+
+==================================================
+61. USER BEHAVIOR ANALYTICS
+==================================================
+
+Behavioral analytics must not be treated as a default
+observability requirement.
+
+If product analytics are required, they should be a separate
+domain with:
+
+- Explicit purpose.
+- Separate governance.
+- Data minimization.
+- Privacy controls.
+- Appropriate consent where required.
+
+Observability should not become product surveillance by accident.
+
+==================================================
+62. OBSERVABILITY BOUNDARY
+==================================================
+
+Canonical boundary:
+
+USER DATA
+↓
+Privacy / Security
+↓
+Authorized Processing
+↓
+MINIMAL TELEMETRY
+↓
+Observability
+
+Not:
+
+USER DATA
+↓
+EVERYTHING
+↓
+OBSERVABILITY
+
+==================================================
+63. ZERO-TRUST TELEMETRY
+==================================================
+
+Telemetry should be treated as sensitive infrastructure data.
+
+Every access should be:
+
+- Authenticated.
+- Authorized.
+- Logged where appropriate.
+- Scoped.
+- Protected.
+
+Observability operators should not automatically have access to
+user content.
+
+==================================================
+64. OBSERVABILITY FAILURE
+==================================================
+
+If observability itself fails:
+
+The primary system should continue operating where safe.
+
+Telemetry failure must not automatically become:
+
+SYSTEM FAILURE
+
+unless observability is required for a safety or security
+guarantee.
+
+Critical security events may require fail-closed behavior.
+
+==================================================
+65. OBSERVABILITY HEALTH
+==================================================
+
+The observability infrastructure should monitor itself.
+
+Examples:
+
+TELEMETRY_PIPELINE_HEALTHY
+TELEMETRY_QUEUE_DEPTH
+TELEMETRY_DROPPED_EVENTS
+TELEMETRY_STORAGE_HEALTH
+TRACE_COLLECTION_FAILURE
+
+This prevents blind spots.
+
+==================================================
+66. BLIND SPOTS
+==================================================
+
+The ecosystem should explicitly identify what cannot be observed.
+
+Example:
+
+External provider does not expose detailed execution state.
+
+PRSL-AI records:
+
+PROVIDER_RESPONSE_UNKNOWN
+
+It must not invent internal provider state.
+
+==================================================
+67. UNKNOWN STATE
+==================================================
+
+UNKNOWN is a valid observability state.
+
+Example:
+
+Provider:
+
+UNKNOWN
+
+Verification:
+
+UNKNOWN
+
+Network:
+
+UNKNOWN
+
+The system must not transform:
+
+UNKNOWN
+
+into:
+
+SUCCESS
+
+for convenience.
+
+==================================================
+68. INCIDENT TIMELINE
+==================================================
+
+A major incident should be reconstructable as a timeline.
+
+Example:
+
+14:02:01
+TASK_CREATED
+
+14:02:02
+ROUTE_SELECTED
+
+14:02:03
+EXECUTION_STARTED
+
+14:02:08
+EXECUTION_FAILED
+
+14:02:08
+FALLBACK_STARTED
+
+14:02:09
+EXECUTION_STARTED
+
+14:02:12
+VERIFICATION_CONFIRMED
+
+This provides a system-level explanation.
+
+==================================================
+69. ROOT CAUSE
+==================================================
+
+Observability should help distinguish:
+
+SYMPTOM
+
+from:
+
+CAUSE
+
+Example:
+
+Symptom:
+
+REQUEST_FAILED
+
+Cause:
+
+PROVIDER_TIMEOUT
+
+Root cause:
+
+Provider outage.
+
+This distinction prevents superficial diagnostics.
+
+==================================================
+70. OBSERVABILITY AND TRUST
+==================================================
+
+A system that cannot explain its failures cannot reliably
+establish trust.
+
+PRSL-AI therefore requires enough observability to answer:
+
+"What happened?"
+
+"Where did it fail?"
+
+"Why did it fail?"
+
+"What was attempted?"
+
+"Was fallback used?"
+
+"Was the result verified?"
+
+At the same time:
+
+It must not require:
+
+"What was the user privately discussing?"
+
+==================================================
+71. CANONICAL OBSERVABILITY DATA MODEL
+==================================================
+
+A telemetry record may contain:
+
+TELEMETRY_ID
+TELEMETRY_TYPE
+TIMESTAMP
+SOURCE_COMPONENT
+TRACE_ID
+CORRELATION_ID
+OPERATION_ID
+STATUS
+ERROR_CODE
+LATENCY
+DATA_CLASSIFICATION
+REDACTION_STATUS
+PAYLOAD_REFERENCE
+
+Optional:
+
+DEVICE_REF
+USER_REF
+TASK_REF
+EXECUTION_REF
+PROVIDER_REF
+
+==================================================
+72. OBSERVABILITY EVENTS
+==================================================
+
+Canonical events include:
+
+TELEMETRY_RECORDED
+TRACE_STARTED
+TRACE_COMPLETED
+TRACE_FAILED
+DIAGNOSTIC_MODE_ENABLED
+DIAGNOSTIC_MODE_EXPIRED
+INCIDENT_DETECTED
+INCIDENT_RESOLVED
+OBSERVABILITY_DEGRADED
+OBSERVABILITY_RECOVERED
+
+==================================================
+73. OBSERVABILITY INVARIANTS
+==================================================
+
+The following are canonical:
+
+1. Observe the system, not the person.
+
+2. Observability is not Memory.
+
+3. Observability is not Context.
+
+4. Observability is not surveillance.
+
+5. Logs must be data-minimized.
+
+6. Metrics should be preferred for aggregate behavior.
+
+7. Traces must avoid unnecessary user content.
+
+8. Secrets must never be logged.
+
+9. Sensitive data must be redacted or excluded.
+
+10. Telemetry must have a classification.
+
+11. Telemetry access requires authorization.
+
+12. Retention must have a defined purpose.
+
+13. User content should be accessed only when necessary.
+
+14. Diagnostic mode must be controlled.
+
+15. Remote telemetry must not become automatic user-data
+    replication.
+
+16. UNKNOWN must remain UNKNOWN.
+
+17. Events, traces and metrics must support failure
+    reconstruction.
+
+18. Observability must remain compatible with Privacy & Security.
+
+19. Observability must remain subordinate to Governance.
+
+20. The system must remain diagnosable without requiring
+    permanent surveillance of the user.
+
+==================================================
+74. FINAL OBSERVABILITY MODEL
+==================================================
+
+The canonical flow is:
+
+SYSTEM
+↓
+EVENTS
+↓
+LOGS
+↓
+METRICS
+↓
+TRACES
+↓
+VERIFICATION
+↓
+DIAGNOSTICS
+↓
+INCIDENT ANALYSIS
+
+Across every stage:
+
+CLASSIFY
+↓
+MINIMIZE
+↓
+PROTECT
+↓
+AUTHORIZE
+↓
+RETAIN ONLY AS NECESSARY
+
+==================================================
+75. FINAL CANONICAL PRINCIPLE
+==================================================
+
+"PRSL-AI must be observable enough to explain and correct its
+behavior, but must never require surveillance of the user's
+private life to remain operationally trustworthy."
+
+==================================================
+76. FINAL STATEMENT
+==================================================
+
+Observability is what allows PRSL-AI to know what is happening
+inside itself.
+
+Events tell the ecosystem what occurred.
+
+Metrics reveal patterns.
+
+Logs explain operational conditions.
+
+Traces reconstruct distributed execution.
+
+Verification establishes whether results were actually achieved.
+
+Audit preserves critical accountability.
+
+Diagnostics investigate failures.
+
+Privacy & Security determines what may be exposed.
+
+Governance determines what may be collected and who may access
+it.
+
+Together, these mechanisms create a system that can explain
+itself without continuously recording the person using it.
+
+The canonical philosophy is therefore:
+
+SEE THE SYSTEM.
+
+UNDERSTAND THE FAILURE.
+
+PROTECT THE USER.
+
+DO NOT TURN DIAGNOSTICS INTO SURVEILLANCE.
+
+==================================================
+
+© Robert Software Labs
+PRSL-AI Ecosystem
+Canonical Observability Model
+Version 1.0

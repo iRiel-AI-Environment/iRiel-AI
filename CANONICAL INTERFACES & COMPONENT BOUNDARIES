@@ -1,0 +1,1204 @@
+PRSL-AI ECOSYSTEM
+CANONICAL INTERFACES & COMPONENT BOUNDARIES
+
+Organization: Robert Software Labs
+Status: Canonical
+Version: 1.0
+Classification: Core Architecture
+Document Type: Architectural Standard
+
+==================================================
+1. PURPOSE
+==================================================
+
+This document defines how PRSL-AI subsystems communicate, which subsystems may communicate with each other, where architectural boundaries exist, how coupling is controlled, and how responsibility and authority are preserved.
+
+The purpose is to ensure that PRSL-AI can grow without becoming a monolithic or tightly coupled system.
+
+Canonical principle:
+
+No subsystem may assume the authority or responsibility of another subsystem.
+
+==================================================
+2. CORE PRINCIPLE
+==================================================
+
+PRSL-AI subsystems must communicate through explicit interfaces and contracts.
+
+Preferred:
+
+Subsystem A
+    ↓
+Public Interface / Contract
+    ↓
+Subsystem B
+
+Forbidden:
+
+Subsystem A
+    ↓
+Internal implementation of B
+    ↓
+Private state / database / internal functions
+
+A subsystem must never depend on the internal implementation of another subsystem.
+
+==================================================
+3. COMMUNICATION MODEL
+==================================================
+
+PRSL-AI uses four primary communication concepts:
+
+1. Commands
+2. Queries
+3. Events
+4. Results
+
+These mechanisms provide controlled communication while preserving subsystem boundaries.
+
+==================================================
+4. COMMANDS
+==================================================
+
+Commands request an operation.
+
+Example:
+
+Core AI
+↓
+Command
+↓
+iRiel System
+
+Example command:
+
+SEND_MESSAGE
+
+The requesting subsystem does not directly manipulate the implementation of the receiving subsystem.
+
+==================================================
+5. QUERIES
+==================================================
+
+Queries request information.
+
+Example:
+
+Core AI
+↓
+Query
+↓
+Memory
+
+Example:
+
+GET_RELEVANT_MEMORY
+
+The consumer receives only the information exposed by the Memory contract.
+
+It does not access Memory's internal storage directly.
+
+==================================================
+6. EVENTS
+==================================================
+
+Events communicate that something happened.
+
+Example:
+
+iRiel System
+↓
+ACTION_EXECUTED
+↓
+Verification
+
+Events reduce direct dependencies because the producer does not need to know every consumer.
+
+==================================================
+7. RESULTS
+==================================================
+
+Operations must return explicit states.
+
+Canonical states include:
+
+SUCCESS
+FAILED
+DENIED
+UNKNOWN
+NO_ROUTE
+UNAVAILABLE
+TIMEOUT
+
+The architecture must never infer success from an attempted operation.
+
+Example:
+
+Execution Attempt
+↓
+Verification
+↓
+SUCCESS
+
+or:
+
+Execution Attempt
+↓
+Verification
+↓
+FAILED
+
+==================================================
+8. CANONICAL ARCHITECTURE
+==================================================
+
+Human
+↓
+iRiel
+↓
+Core AI
+↓
+Context / Memory / Knowledge
+↓
+Intelligence Router
+↓
+Capabilities / Models / Tools
+↓
+iRiel System
+↓
+Execution
+↓
+Verification
+↓
+Result
+↓
+iRiel
+↓
+Human
+
+Cross-cutting architectural controls:
+
+Privacy & Security
+Governance
+Accessibility
+
+These controls operate across appropriate boundaries rather than being treated as ordinary execution modules.
+
+==================================================
+9. HUMAN
+==================================================
+
+The Human is the center and final authority of the ecosystem.
+
+The Human may:
+
+- Provide intent.
+- Provide authorization.
+- Reject actions.
+- Configure preferences.
+- Control memory.
+- Control permissions.
+- Receive results.
+- Request clarification.
+
+The architecture must preserve human agency.
+
+==================================================
+10. iRIEL
+==================================================
+
+iRiel is the human-facing intelligent interaction layer.
+
+Responsibilities:
+
+- Receive human interaction.
+- Present information.
+- Translate interaction into system-understandable intent.
+- Present system results.
+- Adapt interaction modalities.
+
+iRiel must not directly bypass:
+
+- Governance.
+- Privacy & Security.
+- Router policies.
+- System authorization.
+
+==================================================
+11. CORE AI
+==================================================
+
+Core AI is responsible for:
+
+- Understanding intent.
+- Reasoning.
+- Planning.
+- Task decomposition.
+- Context interpretation.
+- Capability coordination.
+- Result interpretation.
+
+Core AI may request capabilities.
+
+Core AI must not directly:
+
+- Access private subsystem databases.
+- Execute system actions without authorization.
+- Modify Governance.
+- Override Privacy & Security.
+- Select providers by bypassing the Router.
+- Claim execution success without verification.
+
+Canonical rule:
+
+Core AI determines WHAT needs to happen.
+
+==================================================
+12. CONTEXT
+==================================================
+
+Context manages information relevant to the current situation.
+
+Responsibilities:
+
+- Current interaction state.
+- Task state.
+- Environment state.
+- Relevant temporary information.
+- Current requirements.
+
+Context must not automatically become permanent Memory.
+
+Context may request information from Memory through an explicit contract.
+
+==================================================
+13. MEMORY
+==================================================
+
+Memory manages authorized continuity.
+
+Responsibilities:
+
+- Store authorized memory.
+- Retrieve relevant memory.
+- Update memory.
+- Delete memory.
+- Apply memory lifecycle rules.
+
+Memory must not become:
+
+- A universal database.
+- A model provider.
+- A system execution layer.
+- A Governance authority.
+- An unrestricted data repository.
+
+Canonical distinction:
+
+Context answers:
+
+"What is relevant now?"
+
+Memory answers:
+
+"What should remain available for future continuity?"
+
+==================================================
+14. KNOWLEDGE
+==================================================
+
+Knowledge provides information used by the intelligence architecture.
+
+Responsibilities:
+
+- Store or expose knowledge.
+- Retrieve information.
+- Provide provenance where applicable.
+- Support information grounding.
+- Support domain-specific knowledge.
+
+Knowledge must not assume responsibility for:
+
+- User memory.
+- System execution.
+- AI routing.
+- Governance.
+- Privacy policy.
+
+Canonical distinction:
+
+Memory primarily represents authorized user continuity.
+
+Knowledge primarily represents information available for reasoning and retrieval.
+
+==================================================
+15. INTELLIGENCE ROUTER
+==================================================
+
+The Router determines which capability should process a request.
+
+Responsibilities:
+
+- Capability discovery.
+- Candidate selection.
+- Routing.
+- Fallback.
+- Availability evaluation.
+- Provider selection.
+- Routing policy application.
+
+The Router must consider:
+
+- Intent.
+- Context.
+- Capability match.
+- Privacy.
+- Security.
+- Governance.
+- Latency.
+- Cost.
+- Reliability.
+- Availability.
+
+The Router must not:
+
+- Execute system actions directly.
+- Modify Memory directly.
+- Override Governance.
+- Modify Privacy policies.
+- Depend on provider-specific internal APIs.
+- Assume successful execution.
+
+Canonical rule:
+
+Core AI determines WHAT needs to happen.
+
+Router determines WHERE and WITH WHICH CAPABILITY it should happen.
+
+==================================================
+16. CAPABILITIES
+==================================================
+
+Capabilities provide specialized functionality.
+
+Examples:
+
+- Vision.
+- OCR.
+- Translation.
+- Search.
+- Calculation.
+- Speech.
+- Messaging.
+- Calendar.
+- Files.
+- Automation.
+
+Capabilities must expose explicit contracts.
+
+A capability should define:
+
+- Identity.
+- Purpose.
+- Inputs.
+- Outputs.
+- Permissions.
+- Privacy requirements.
+- Security requirements.
+- Supported environments.
+- Failure states.
+- Verification mechanism.
+
+==================================================
+17. INTEGRATIONS
+==================================================
+
+Integrations connect capabilities to external services.
+
+Examples:
+
+- Messaging providers.
+- Cloud services.
+- Productivity systems.
+- Search providers.
+- External APIs.
+- Automation platforms.
+
+The Router should not need to know the internal implementation of an integration.
+
+Preferred:
+
+Router
+↓
+Messaging Capability
+↓
+Integration Adapter
+↓
+External Service
+
+Not:
+
+Router
+↓
+External Service SDK
+
+==================================================
+18. PROVIDER ABSTRACTION
+==================================================
+
+PRSL-AI must prevent provider-specific dependencies from leaking into higher architectural layers.
+
+Forbidden:
+
+Core AI
+↓
+OpenAI SDK
+
+Preferred:
+
+Core AI
+↓
+AI Capability Contract
+↓
+Router
+↓
+Provider Adapter
+↓
+AI Provider
+
+This allows providers to be replaced without redesigning PRSL-AI.
+
+Potential providers include:
+
+- Apple Foundation Models.
+- OpenAI Models.
+- Gemini Models.
+- Local Models.
+- Specialized Models.
+- Future providers.
+
+Providers are implementations.
+
+They are not architectural authorities.
+
+==================================================
+19. iRIEL SYSTEM
+==================================================
+
+iRiel System is the execution boundary for authorized system operations.
+
+Responsibilities:
+
+- Receive authorized commands.
+- Interact with operating system capabilities.
+- Execute App Intents.
+- Execute permitted automations.
+- Manage system actions.
+- Return execution state.
+
+Core AI must not directly manipulate operating system APIs.
+
+Preferred:
+
+Core AI
+↓
+Router
+↓
+Capability
+↓
+iRiel System
+↓
+System Execution
+
+==================================================
+20. EXECUTION
+==================================================
+
+Execution is distinct from planning.
+
+Planning:
+
+Core AI
+↓
+"Send this message."
+
+Execution:
+
+iRiel System
+↓
+Message API
+↓
+Actual operation
+
+Execution must produce an explicit state.
+
+==================================================
+21. VERIFICATION
+==================================================
+
+Verification is responsible for determining whether an operation actually succeeded.
+
+The architecture must distinguish:
+
+REQUESTED
+ATTEMPTED
+EXECUTED
+VERIFIED
+
+Example:
+
+Core AI:
+SEND_MESSAGE
+
+iRiel System:
+ATTEMPTED
+
+Verification:
+DELIVERED
+
+Final state:
+
+SUCCESS
+
+The statement "done" from an AI model is not sufficient evidence of execution.
+
+==================================================
+22. PRIVACY & SECURITY
+==================================================
+
+Privacy & Security provides cross-cutting protection.
+
+Responsibilities include:
+
+- Data protection.
+- Secure processing.
+- Access control.
+- Authorization enforcement.
+- Sensitive-data handling.
+- Secure communication.
+- Local-processing preference.
+- External processing controls.
+
+Privacy & Security must not be bypassed by:
+
+- Core AI.
+- Router.
+- Capabilities.
+- Integrations.
+- Devices.
+- External providers.
+
+Canonical principle:
+
+Privacy is architectural.
+
+==================================================
+23. GOVERNANCE
+==================================================
+
+Governance determines what actions are permitted.
+
+Responsibilities:
+
+- Policy.
+- Authorization boundaries.
+- Capability restrictions.
+- Data handling rules.
+- Execution rules.
+- Fallback restrictions.
+- Compliance requirements.
+
+Governance is authoritative.
+
+A technically possible operation is not automatically an authorized operation.
+
+==================================================
+24. ACCESSIBILITY
+==================================================
+
+Accessibility is a cross-cutting architectural concern.
+
+PRSL-AI may support:
+
+- Voice.
+- Text.
+- Vision.
+- Audio.
+- Haptics.
+- Assistive technologies.
+- Alternative interaction methods.
+
+Accessibility must not require duplication of the intelligence architecture.
+
+Different interfaces should access the same underlying capabilities through defined contracts.
+
+==================================================
+25. WHO MAY COMMUNICATE WITH WHOM
+==================================================
+
+Human
+→ iRiel
+
+iRiel
+→ Core AI
+
+Core AI
+→ Context
+→ Memory
+→ Knowledge
+→ Router
+
+Router
+→ Capabilities
+→ Models
+→ Tools
+
+Capabilities
+→ Integrations
+→ iRiel System
+
+iRiel System
+→ Operating System
+→ Authorized Device Capabilities
+
+Execution
+→ Verification
+
+Verification
+→ Result Consumers
+
+Privacy & Security
+→ Applicable subsystem policies and enforcement points
+
+Governance
+→ Applicable decision and authorization points
+
+No subsystem receives unrestricted access to all other subsystems.
+
+==================================================
+26. COMMUNICATION BOUNDARIES
+==================================================
+
+The following direct communication patterns are discouraged or prohibited unless explicitly defined by an architectural contract:
+
+Core AI
+→ External Provider
+
+Core AI
+→ Operating System
+
+Core AI
+→ Integration API
+
+Router
+→ Private Database
+
+Router
+→ Operating System
+
+Memory
+→ External Provider Selection
+
+Knowledge
+→ System Execution
+
+Capability
+→ Governance Modification
+
+Integration
+→ Memory Internal Storage
+
+Device
+→ Core AI Internal State
+
+These boundaries prevent responsibility leakage.
+
+==================================================
+27. SINGLE AUTHORITY PRINCIPLE
+==================================================
+
+Each major decision must have a clear owner.
+
+Intent interpretation:
+
+Core AI
+
+Routing:
+
+Intelligence Router
+
+Context:
+
+Context subsystem
+
+Persistence:
+
+Memory
+
+Knowledge retrieval:
+
+Knowledge subsystem
+
+Permission:
+
+Governance / Privacy & Security
+
+Execution:
+
+iRiel System
+
+Verification:
+
+Verification
+
+Interaction:
+
+iRiel
+
+No two layers should independently own the same architectural decision.
+
+==================================================
+28. NO INTERNAL STATE ACCESS
+==================================================
+
+A subsystem must never directly access the private state of another subsystem.
+
+Forbidden:
+
+Core AI
+→ Memory Database
+
+Preferred:
+
+Core AI
+→ Memory Contract
+→ Memory Service
+→ Internal Storage
+
+The internal implementation remains encapsulated.
+
+==================================================
+29. EXPLICIT CONTRACTS
+==================================================
+
+Every important subsystem interface should define:
+
+- Request.
+- Identity.
+- Context.
+- Authorization.
+- Payload.
+- Expected result.
+- Error state.
+- Trace identifier.
+- Security requirements.
+- Privacy requirements.
+
+Contracts provide predictable communication.
+
+==================================================
+30. CAPABILITY CONTRACT EXAMPLE
+==================================================
+
+Capability:
+
+Messaging
+
+Contract:
+
+INPUT:
+recipient
+message
+
+REQUIRES:
+messaging.permission
+
+OUTPUT:
+execution_id
+
+STATES:
+SUCCESS
+FAILED
+DENIED
+UNKNOWN
+
+VERIFICATION:
+delivery_status
+
+The Router does not need to know whether the underlying implementation is:
+
+- Apple Messages.
+- WhatsApp.
+- Telegram.
+- Signal.
+- Another authorized provider.
+
+==================================================
+31. EXAMPLE — MESSAGE
+==================================================
+
+User:
+
+"Manda uma mensagem para João dizendo que chego às 20h."
+
+Flow:
+
+Human
+↓
+iRiel
+↓
+Core AI
+↓
+Intent
+↓
+Router
+↓
+Messaging Capability
+↓
+Governance
+↓
+iRiel System
+↓
+Messaging Integration
+↓
+Verification
+↓
+Result
+↓
+iRiel
+↓
+Human
+
+No component assumes another component's responsibility.
+
+==================================================
+32. EXAMPLE — SENSITIVE IMAGE
+==================================================
+
+User:
+
+"Pode me ajudar a entender essa imagem?"
+
+Flow:
+
+Image
+↓
+iRiel
+↓
+Core AI
+↓
+Sensitive Data Classification
+↓
+Privacy & Security
+↓
+Router
+↓
+Local Vision Capability
+↓
+Analysis
+↓
+Verification / Response
+↓
+iRiel
+
+If local processing is insufficient:
+
+Local Capability
+↓
+INSUFFICIENT
+↓
+Router
+↓
+Privacy & Security
+↓
+Governance
+↓
+Authorization
+↓
+Secure External Capability
+↓
+Result
+
+The system must not silently send sensitive information externally.
+
+==================================================
+33. EXAMPLE — FAILURE
+==================================================
+
+Primary capability:
+
+Local Model
+
+State:
+
+FAILED
+
+Router evaluates fallback.
+
+Fallback:
+
+Authorized External Model
+
+If permitted:
+
+External Model
+↓
+Processing
+↓
+Verification
+↓
+SUCCESS
+
+If not permitted:
+
+NO_AUTHORIZED_ROUTE
+↓
+iRiel
+↓
+Human
+
+The system must not fabricate a successful result.
+
+==================================================
+34. EXAMPLE — UNKNOWN
+==================================================
+
+Router cannot determine a suitable capability.
+
+State:
+
+UNKNOWN
+
+Core AI may:
+
+- Request clarification.
+- Search for another capability.
+- Ask the user.
+- Stop.
+
+UNKNOWN must not become fabricated certainty.
+
+==================================================
+35. COUPLING CONTROL
+==================================================
+
+PRSL-AI controls coupling through:
+
+1. Explicit interfaces.
+2. Contract-based communication.
+3. Internal-state isolation.
+4. Provider abstraction.
+5. Single authority.
+6. Controlled dependency direction.
+7. Capability boundaries.
+8. Adapter layers.
+9. Explicit permissions.
+10. Verification.
+
+==================================================
+36. DEPENDENCY DIRECTION
+==================================================
+
+Dependencies should follow controlled architectural directions.
+
+Avoid:
+
+A
+↓
+B
+↓
+C
+↓
+A
+
+This creates circular dependencies.
+
+Preferred:
+
+Interface / Contract
+↓
+Implementation
+
+or:
+
+Human
+↓
+Interaction
+↓
+Intelligence
+↓
+Coordination
+↓
+Capability
+↓
+Execution
+↓
+Verification
+
+==================================================
+37. NO PROVIDER LEAKAGE
+==================================================
+
+Provider-specific concepts must remain inside provider adapters or capability implementations whenever possible.
+
+Higher layers should reason about:
+
+AI Capability
+
+not:
+
+Specific Provider SDK
+
+This protects the AI-Agnostic principle.
+
+==================================================
+38. RESPONSIBILITY FIREWALL
+==================================================
+
+Each subsystem should define:
+
+RESPONSIBILITY
+AUTHORITY
+INPUTS
+OUTPUTS
+ALLOWED OPERATIONS
+FORBIDDEN OPERATIONS
+DEPENDENCIES
+FAILURE STATES
+VERIFICATION METHOD
+
+This creates an architectural responsibility firewall.
+
+==================================================
+39. ARCHITECTURAL INVARIANTS
+==================================================
+
+The following principles are mandatory:
+
+1. No subsystem may assume another subsystem's authority.
+
+2. No subsystem may directly access another subsystem's private state.
+
+3. No provider may become an architectural dependency of the ecosystem.
+
+4. No execution may be considered successful without appropriate verification.
+
+5. No sensitive data may bypass Privacy & Security controls.
+
+6. No capability may bypass Governance.
+
+7. No component may silently expand its responsibility.
+
+8. No subsystem should expose implementation details unnecessarily.
+
+9. Communication must occur through explicit contracts.
+
+10. Human agency must remain preserved.
+
+==================================================
+40. ARCHITECTURAL REVIEW QUESTIONS
+==================================================
+
+Every new PRSL-AI subsystem must answer:
+
+1. What is its responsibility?
+
+2. What authority does it possess?
+
+3. What authority does it explicitly NOT possess?
+
+4. Who may communicate with it?
+
+5. Who may it communicate with?
+
+6. What is its public interface?
+
+7. What data may it receive?
+
+8. What data may it emit?
+
+9. What are its failure states?
+
+10. How is its output verified?
+
+11. What dependencies does it introduce?
+
+12. Can the implementation be replaced without redesigning other subsystems?
+
+If these questions cannot be answered, the subsystem is not architecturally ready.
+
+==================================================
+41. CANONICAL RULE
+==================================================
+
+"No subsystem may assume the authority of another subsystem."
+
+Expanded canonical definition:
+
+"Every PRSL-AI subsystem must communicate through explicit contracts, maintain a clearly defined responsibility, expose only the interfaces required by its consumers, protect its internal state, and exercise only the authority assigned to it by the architecture."
+
+==================================================
+42. FINAL ARCHITECTURAL PRINCIPLE
+==================================================
+
+PRSL-AI must be able to evolve without requiring every subsystem to evolve with it.
+
+A subsystem should be replaceable.
+
+A provider should be replaceable.
+
+A device should be replaceable.
+
+An integration should be replaceable.
+
+A capability should be replaceable.
+
+The architecture should remain stable.
+
+This is achieved through:
+
+Contracts
++
+Interfaces
++
+Boundaries
++
+Authority
++
+Isolation
++
+Verification
+
+==================================================
+43. FINAL STATEMENT
+==================================================
+
+The PRSL-AI Ecosystem is not defined only by the components it contains.
+
+It is also defined by the boundaries between those components.
+
+The architecture remains modular when:
+
+- Components have clear responsibilities.
+- Communication occurs through contracts.
+- Internal state remains private.
+- Authority is explicitly assigned.
+- Providers remain replaceable.
+- Execution remains separated from reasoning.
+- Verification remains separated from execution.
+- Privacy and Governance remain enforceable.
+- Accessibility remains cross-cutting.
+- Human agency remains central.
+
+The objective is not to prevent communication.
+
+The objective is to make communication predictable, controlled and replaceable.
+
+PRSL-AI should therefore be able to grow in capability without growing in architectural chaos.
+
+==================================================
+
+© Robert Software Labs
+PRSL-AI Ecosystem
+Canonical Interfaces & Component Boundaries
+Version 1.0

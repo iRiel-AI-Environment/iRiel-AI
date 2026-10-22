@@ -1,0 +1,539 @@
+iRiel_Router_Intelligence.md
+iRIEL ROUTER INTELLIGENCE
+STATUS: CANONICAL INSTITUTIONAL CONTRACT
+iRiel Router Intelligence is the intelligent routing contract of iRiel Personal Intelligence within the PRSL-AI Ecosystem.
+iRiel Router Intelligence determines how requests, intents, capabilities, context, and execution requirements should be routed across the available intelligence resources and system capabilities.
+The Router exists to make the appropriate intelligence available for the appropriate human, context, capability, privacy requirement, accessibility requirement, execution environment, and moment.
+The Router is not the identity of iRiel.
+The Router is not iRiel Personal Intelligence itself.
+The Router is not the Maestro.
+The Router is not the Intelligence Server.
+The Router is not Core AI.
+The Router does not define the Principle.
+The Router serves iRiel Personal Intelligence under the constitutional Principle:
+Accessibility and Inclusion with Privacy by Default.
+The Router must therefore treat privacy, accessibility, human agency, context, continuity, and capability suitability as routing constraints rather than optional considerations.
+The Router is AI-agnostic.
+No model is the Router.
+No provider is the Router.
+No vendor is the Router.
+No API is the Router.
+No intelligence provider may become the architectural identity of iRiel merely because the Router uses it.
+The Router must be capable of selecting between replaceable intelligence resources.
+These resources may include:
+On-device intelligence
+Local models
+Apple Intelligence
+OpenAI
+Gemini
+Other AI providers
+Specialized models
+Deterministic capabilities
+External APIs
+MCP services
+Internal services
+Future intelligence systems
+The Router must remain capable of operating as the available intelligence landscape changes.
+A provider may be added.
+A provider may be removed.
+A model may be upgraded.
+A model may be deprecated.
+A service may become unavailable.
+A device may become unavailable.
+The Router must adapt without changing the identity of iRiel Personal Intelligence.
+The Router’s fundamental responsibility is not to select the most powerful intelligence.
+It is to select the most appropriate intelligence.
+Appropriateness is determined by the relevant context and applicable constraints.
+The Router may evaluate:
+Intent
+Capability match
+Context match
+Privacy
+Accessibility
+Latency
+Cost
+Availability
+Reliability
+Execution environment
+Device capability
+Provider capability
+Model capability
+Authorization
+Security constraints
+Continuity requirements
+Resource availability
+Other applicable policy
+The canonical routing principle is:
+Appropriate Intelligence > Maximum Intelligence
+The most capable model is not necessarily the correct model.
+The correct model is the model or capability that satisfies the request while respecting the applicable constraints.
+The Router must therefore avoid unnecessary escalation.
+A simple request should not automatically require the most expensive or remote intelligence resource.
+A privacy-sensitive request should not automatically be sent to a remote provider.
+A local capability should be preferred where it adequately satisfies the request and applicable constraints.
+A specialized capability should be preferred when it provides a materially better match for the intent.
+The Router must consider privacy before routing information to an external intelligence provider.
+Privacy is a routing constraint.
+It may determine:
+Whether a request can be processed remotely
+Which provider may receive the request
+Which context may be transmitted
+Which information must be filtered
+Which capability may be used
+Whether local execution is required
+Whether the request must be refused
+Whether a fallback is appropriate
+The Router must not treat provider availability as permission.
+The existence of an API does not authorize sending personal information to it.
+The existence of a model does not authorize its use.
+The existence of a capability does not authorize its execution.
+Authorization remains a separate requirement.
+The Router must consider accessibility as part of routing.
+Accessibility may determine:
+Input interpretation
+Output modality
+Response complexity
+Voice requirements
+Text requirements
+Visual requirements
+Haptic requirements
+Alternative communication
+Cognitive load
+Timing
+Interaction sequence
+Device selection
+Automation pathway
+A request may therefore be routed not only to an intelligence model, but also to an appropriate interaction or execution capability.
+For example:
+Intent
+↓
+Accessibility Context
+↓
+Router Intelligence
+↓
+Appropriate Intelligence + Appropriate Interaction Modality
+The goal is not merely to produce a correct answer.
+The goal is to produce an answer or action that is meaningfully accessible to the human.
+The Router must preserve the distinction between intelligence routing and interface adaptation.
+The Router determines appropriate capability paths.
+iRiel System determines system-level presentation and interaction.
+iRiel Maestro Resonance maintains coherence between these decisions.
+The Router must consider context.
+Context may include:
+Current interaction
+Session context
+Working context
+Relevant authorized memory
+Identity
+Accessibility state
+Privacy state
+Device state
+System state
+Environmental state
+Previous execution state
+User intent
+Available capabilities
+Other authorized contextual information
+The Router must not consume all available context by default.
+Context must be minimized to what is relevant and authorized.
+Context relevance does not imply context permission.
+The Router must distinguish between:
+Available context
+Relevant context
+Authorized context
+Required context
+Transmittable context
+These are not necessarily the same.
+The Router must support contextual routing.
+The same request may legitimately route to different capabilities depending on context.
+For example:
+The same intent may use local processing in one context and remote processing in another.
+The same request may use voice output for one accessibility profile and text output for another.
+The same capability may be available on one device and unavailable on another.
+The same provider may be appropriate for one task and inappropriate for another.
+Routing is therefore contextual rather than static.
+The Router must support dynamic provider selection.
+Provider selection may change during the lifecycle of a request where appropriate.
+For example:
+Initial local processing
+↓
+Capability unavailable
+↓
+Fallback evaluation
+↓
+Remote provider
+↓
+Execution
+The transition must remain consistent with privacy and authorization constraints.
+The Router must not silently escalate from local to remote processing when the change materially affects privacy.
+Where appropriate, the human or applicable policy must authorize or permit the transition.
+The Router must support graceful degradation.
+When the preferred capability is unavailable, it should evaluate appropriate alternatives.
+Possible states include:
+Preferred capability available
+Preferred capability unavailable
+Alternative available
+Alternative unavailable
+Local capability available
+Remote capability available
+Remote processing restricted
+Capability partially available
+Execution degraded
+Execution impossible
+If no acceptable capability exists, the Router must communicate the limitation rather than fabricate success.
+The Router must never claim that a capability was executed when it was not.
+The Router must never claim that a provider responded when it did not.
+The Router must never silently substitute a materially different capability when that substitution would change the meaning or expected outcome of the request.
+The Router must support explicit routing policies.
+Policies may define:
+Preferred providers
+Disallowed providers
+Local-only processing
+Privacy restrictions
+Accessibility requirements
+Latency requirements
+Cost limits
+Capability requirements
+Security requirements
+Device restrictions
+Fallback rules
+Regional requirements
+Other system constraints
+Policies must be evaluated before execution.
+The Router must remain subordinate to higher-level contracts.
+iRiel Maestro Resonance coordinates broader system coherence.
+The Router makes routing decisions within the applicable system context and policies.
+The Router does not override the Principle.
+The Router does not override human agency.
+The Router does not override privacy.
+The Router does not override authorization.
+The Router does not redefine accessibility requirements.
+The Router does not redefine identity.
+The Router does not redefine memory policy.
+The Router does not redefine system policy.
+The Router must maintain a clear separation between selection and execution.
+The Router selects.
+The Intelligence Server executes or provides the infrastructure for execution.
+The distinction is fundamental.
+Conceptually:
+Human
+↓
+Intent
+↓
+Context
+↓
+Policy
+↓
+iRiel Maestro Resonance
+↓
+iRiel Router Intelligence
+↓
+Selected Capability
+↓
+iRiel Intelligence Server / Device / Local Runtime
+↓
+Execution
+↓
+Result
+↓
+iRiel Maestro Resonance
+↓
+Feedback
+↓
+iRiel Personal Intelligence
+The exact implementation may evolve.
+The contractual responsibilities remain distinct.
+The Router must support routing across multiple execution environments.
+These may include:
+On-device
+Local network
+Private infrastructure
+Trusted infrastructure
+Cloud services
+External providers
+MCP services
+Other authorized execution environments
+The Router should prefer the least externally exposed execution path that adequately satisfies the request, subject to capability and performance requirements.
+The Router must not equate cloud capability with superior capability.
+The Router must not equate local capability with universally superior capability.
+The decision must remain contextual.
+The Router may use a routing score to compare candidate capabilities.
+The canonical conceptual scoring model is:
+Score = (Privacy × 3) + (Capability Match × 3) + (Context Match × 2) + (Latency × 2) + (Cost × 1)
+This score is a routing mechanism, not a constitutional value.
+The weights may evolve through validated architectural decisions.
+The Principle and higher-level contracts remain superior to any scoring formula.
+A numerical score must never authorize an action that violates a higher-priority constraint.
+For example:
+A provider with excellent latency and capability match must not be selected if its use violates a privacy requirement.
+A cheaper capability must not be selected if it cannot satisfy the required task.
+A highly capable model must not be selected if it violates a local-only policy.
+Routing is constrained optimization, not unrestricted optimization.
+The Router must support capability classification.
+Capabilities may be classified by:
+Language
+Vision
+Audio
+Speech
+Reasoning
+Planning
+Coding
+Translation
+Summarization
+Generation
+Automation
+Tool execution
+Search
+Memory operations
+Device control
+Accessibility transformation
+Other defined capabilities
+Capability classification must remain extensible.
+The Router should select capabilities based on actual requirements rather than provider branding.
+A provider’s name must not substitute for capability evaluation.
+The Router must support capability discovery.
+It may determine:
+What capabilities exist
+Which capabilities are available
+Which capabilities are compatible
+Which capabilities satisfy privacy constraints
+Which capabilities satisfy accessibility requirements
+Which capabilities satisfy latency requirements
+Which capabilities satisfy cost constraints
+Which capabilities are currently healthy
+Which capabilities are authorized
+Capability discovery does not imply permission.
+Availability does not imply authorization.
+Compatibility does not imply suitability.
+Suitability does not imply permission.
+The Router must support provider health and availability.
+Provider state may include:
+Available
+Unavailable
+Degraded
+Rate limited
+Timeout
+Error
+Maintenance
+Restricted
+Unknown
+The Router should use this information to prevent unnecessary failed executions.
+The Router must distinguish provider failure from routing failure.
+A provider being unavailable does not mean routing is unavailable.
+A routing failure does not mean iRiel Personal Intelligence has failed.
+The architecture must preserve these failure boundaries.
+The Router must support fallback and load balancing where appropriate.
+Fallback should be based on policy and capability suitability rather than blind substitution.
+Load balancing may distribute requests across equivalent capabilities when doing so improves reliability, latency, cost, or availability without violating privacy or continuity requirements.
+The Router must not use load balancing as a mechanism to bypass privacy or authorization constraints.
+The Router must support deterministic routing when required.
+Some contexts may require:
+Local-only
+Provider-specific
+Model-specific
+Device-specific
+Capability-specific
+Policy-specific
+Other constrained routing
+In these cases, deterministic constraints may override optimization.
+The Router must support user preferences where authorized.
+Preferences may include:
+Preferred provider
+Preferred execution environment
+Local-first preference
+Voice preference
+Output preference
+Cost preference
+Latency preference
+Other interaction or execution preferences
+User preferences remain subordinate to safety, privacy, authorization, system, and architectural constraints.
+A user preference cannot authorize an action that the system is not permitted to perform.
+The Router must support transparent routing outcomes where appropriate.
+The system should be able to communicate meaningful routing information when useful, such as:
+Processed locally
+Using a remote service
+Provider unavailable
+Fallback used
+Capability unavailable
+Action requires confirmation
+This transparency should not expose unnecessary internal information or sensitive provider details.
+The Router must support observability for system operation.
+Appropriate telemetry may include:
+Routing decision
+Selected capability
+Fallback event
+Provider state
+Latency
+Failure state
+Policy constraint
+Execution environment
+Other operational metadata
+Telemetry must remain privacy-aware.
+The Router must not log sensitive personal context unnecessarily.
+The Router must not turn routing observability into unrestricted surveillance of the human.
+The Router must preserve continuity across provider changes.
+Changing the intelligence provider must not inherently reset the Personal Intelligence context.
+Where authorized and technically appropriate, the relevant context should continue across routing transitions.
+This is especially important when fallback occurs.
+For example:
+Provider A unavailable
+↓
+Router selects Provider B
+↓
+Relevant authorized context preserved
+↓
+Execution continues
+↓
+iRiel remains the same
+The provider changes.
+The Personal Intelligence does not.
+The Router must remain aware of system state.
+Routing decisions may depend on:
+Battery
+Connectivity
+Device availability
+Compute availability
+Network state
+Provider availability
+Privacy mode
+Accessibility mode
+User preference
+Current execution state
+Other relevant system conditions
+System state does not become Router identity.
+The Router simply incorporates relevant state into routing decisions.
+The Router must remain compatible with iRiel System and iRiel AppWeb.
+The AppWeb may present routing-related states or feedback where appropriate.
+The AppWeb does not become the Router.
+The Router remains an architectural capability beneath the Personal Intelligence environment.
+The Router must remain compatible with iRiel-AI Device’s.
+Device capabilities may materially affect routing.
+A capable local device may allow local execution.
+A constrained device may require remote execution.
+An accessibility requirement may favor one device or execution path over another.
+Device capability remains one factor among the applicable constraints.
+The Router must remain compatible with iRiel Intelligence Server.
+The Intelligence Server provides infrastructure for selected execution targets.
+The Router selects.
+The Intelligence Server executes or provides the infrastructure for execution.
+The Router must remain compatible with iRiel-AI Core AI.
+Core AI provides AI capabilities that the Router may select.
+The Router does not own the models.
+The Router determines when they are appropriate.
+The Router must remain compatible with iRiel Maestro Resonance.
+The Maestro maintains overall coherence.
+The Router provides routing decisions within that coherent environment.
+The Router should communicate routing outcomes and failures back into the broader orchestration flow.
+The Router participates in the ecosystem’s continuous loop:
+Human
+↓
+Intent
+↓
+Context
+↓
+Maestro Resonance
+↓
+Router Intelligence
+↓
+Capability Selection
+↓
+Execution
+↓
+Result
+↓
+Feedback
+↓
+Context
+↓
+Continuity
+↓
+Human
+∞
+The Router must remain capable of operating without dependence on a single provider.
+The Router must be architecturally independent from provider-specific business logic where practical.
+Provider adapters, connectors, or capability drivers may exist, but they must remain replaceable.
+The Router must not become a collection of hard-coded provider preferences disguised as intelligence.
+Its purpose is to determine suitability.
+The Router must support future providers without requiring fundamental architectural redesign.
+The Router must remain extensible.
+New models.
+New providers.
+New protocols.
+New devices.
+New capabilities.
+New execution environments.
+New accessibility requirements.
+New privacy policies.
+New routing constraints.
+The architecture must accommodate them without redefining the identity of iRiel.
+The Router must preserve human-centered optimization.
+Routing must optimize for the human outcome, not merely technical metrics.
+Latency matters.
+Cost matters.
+Capability matters.
+Privacy matters.
+Context matters.
+But the final objective remains:
+Useful intelligence for the human under the applicable constraints.
+The Router must therefore avoid unnecessary complexity.
+A routing decision should not become more complicated than the request requires.
+Simple intent should produce simple routing when possible.
+Complex intent may require complex orchestration.
+The system should not manufacture complexity merely because the architecture is capable of it.
+The Router must remain subordinate to the Principle.
+The architecture can change.
+The scoring model can change.
+The providers can change.
+The routing algorithms can change.
+The infrastructure can change.
+The available capabilities can change.
+The Principle does not.
+CANONICAL INVARIANTS
+iRiel Router Intelligence is an institutional contract of iRiel Personal Intelligence.
+The Router routes.
+It does not define the identity of iRiel.
+It does not define the Principle.
+It does not replace Maestro Resonance.
+It does not replace the Intelligence Server.
+It does not replace Core AI.
+It does not replace the System.
+It does not replace Device infrastructure.
+It must remain AI-agnostic.
+It must remain provider-agnostic.
+It must remain modular.
+It must remain replaceable.
+It must remain context-aware.
+It must remain privacy-aware.
+It must remain accessibility-aware.
+It must remain authorization-aware.
+It must support local-first execution where appropriate.
+It must support provider replacement.
+It must support fallback.
+It must support graceful degradation.
+It must preserve authorized continuity.
+It must distinguish availability from authorization.
+It must distinguish capability from suitability.
+It must distinguish routing from execution.
+It must not fabricate routing outcomes.
+It must not fabricate execution.
+It must not silently violate privacy constraints.
+It must not silently override human agency.
+It must not redefine the Principle.
+FINAL CONTRACT STATEMENT
+iRiel Router Intelligence exists to ensure that the right intelligence capability reaches the right human context through the right execution path under the right constraints.
+It does not seek the most powerful intelligence.
+It seeks the most appropriate intelligence.
+The model may change.
+The provider may change.
+The device may change.
+The execution environment may change.
+The routing algorithm may change.
+The ecosystem may evolve.
+The Router remains responsible for one fundamental task:
+Choose appropriately.
+Respect the constraints.
+Preserve continuity.
+Protect privacy.
+Support accessibility.
+Serve the Personal Intelligence.
+Keep the human at the center.

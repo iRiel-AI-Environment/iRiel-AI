@@ -1,0 +1,445 @@
+# PRSL-AI — Vital Access Key
+
+Canonical Version: 1.0
+Status: Foundational / Canonical
+Primary Domain: Governance
+Supporting Domains: Privacy & Security, Accessibility, iRiel
+
+---
+
+## 1. Purpose
+
+Vital Access Key is a dedicated emergency-access layer designed to provide emergency responders with a minimal set of user-defined vital information when the user is unable to communicate or interact with their device.
+
+The purpose is simple:
+
+How can emergency responders obtain the information necessary to help a person without obtaining access to that person's private digital life?
+
+Vital Access Key is therefore not a device-unlocking mechanism.
+
+It is an isolated emergency information interface.
+
+---
+
+## 2. Core Principle
+
+Emergency access must never equal device access.
+
+Activating Vital Access Key does not unlock the device.
+
+It does not provide access to:
+
+- Personal files
+- Messages
+- Photos
+- Applications
+- Financial information
+- Passwords
+- Authentication credentials
+- Browsing history
+- Private conversations
+- Personal AI memory
+- Personal context outside the emergency profile
+
+The activation mechanism opens only one dedicated interface containing information previously designated by the user.
+
+Core rule:
+
+"The device remains locked. The vital information becomes accessible."
+
+---
+
+## 3. User Ownership
+
+The user defines, before an emergency, which information may be exposed through Vital Access Key.
+
+Potential information includes:
+
+- Full name
+- Date of birth
+- Critical allergies
+- Relevant medical information
+- Immediate care requirements
+- Emergency contacts
+- Family or relationship information
+- Other explicitly supported emergency information
+
+The system does not independently decide what constitutes the user's emergency profile.
+
+The user decides what the emergency world is allowed to know.
+
+However, the system must not place the entire responsibility on the user to understand the technical implications. Configuration must clearly communicate what information will become available during emergency access.
+
+---
+
+## 4. Dedicated Security Layer
+
+Vital Access Key operates as an independent security and interaction layer.
+
+It must remain logically and technically separate from normal device authentication.
+
+Emergency authorization is therefore different from device authorization.
+
+Emergency Authorization ≠ Device Authorization
+
+A successful Vital Access Key activation grants access only to the emergency profile.
+
+Normal device authentication grants access to the user's private digital environment.
+
+One must never automatically imply the other.
+
+---
+
+## 5. Activation
+
+Vital Access Key must not depend exclusively on a touchscreen or fingerprint.
+
+Emergency situations are unpredictable, and users have different physical and sensory abilities.
+
+Supported activation modalities may include:
+
+- Dedicated physical button
+- Accessible gesture
+- Voice command
+- Assistive technologies
+- Contextual interaction through iRiel
+
+The system must prioritize speed, simplicity and accessibility.
+
+The objective is not to create a complicated authentication ceremony.
+
+The objective is to make necessary information available to people trying to save the user as quickly as possible.
+
+---
+
+## 6. Emergency Visibility
+
+The device should provide a minimal indication on the locked screen that emergency information is available.
+
+The indication must be:
+
+- Clearly understandable
+- Visually minimal
+- Accessible
+- Non-intrusive
+- Visible without unlocking the device
+
+Example:
+
+"Emergency information available"
+
+The exact visual language may evolve as the PRSL-AI Design Language matures.
+
+The fundamental requirement remains unchanged:
+
+A responder should not need prior knowledge of the user's device to understand that an emergency-information interface exists.
+
+---
+
+## 7. Emergency Responder Interaction
+
+Vital Access Key must account for situations in which the user is:
+
+- Unconscious
+- Unable to speak
+- Unable to use their hands
+- Visually impaired
+- Physically injured
+- Disoriented
+- Otherwise unable to operate the device
+
+The emergency interface should therefore be accessible without requiring the user to actively operate the device.
+
+Voice interaction may recognize emergency-related language or contextual signals from a responder.
+
+However, voice recognition or contextual intelligence must not automatically grant unrestricted trust.
+
+Context may help initiate the emergency interface.
+
+Context must not expand the authorization boundary.
+
+---
+
+## 8. Example — Medical Emergency
+
+Consider a person who suffers a medical emergency inside a subway station.
+
+The person becomes unconscious and cannot unlock their phone.
+
+A responder arrives.
+
+The device remains locked.
+
+The responder sees the emergency-access indication and activates the emergency interface using an available supported mechanism.
+
+The device displays:
+
+--------------------------------
+
+VITAL ACCESS
+
+Name
+[User-defined name]
+
+Date of Birth
+[User-defined information]
+
+Critical Allergies
+[User-defined information]
+
+Medical Information
+[User-defined information]
+
+Emergency Contact
+[Name]
+
+Phone
+[Phone number]
+
+Relationship
+[Relationship]
+
+--------------------------------
+
+Device remains locked.
+
+--------------------------------
+
+The responder obtains information necessary to assist the person.
+
+The responder does not obtain access to:
+
+- Photos
+- Messages
+- Banking
+- Email
+- Passwords
+- Applications
+- Personal files
+- Personal AI context
+- Private memory
+
+---
+
+## 9. Accessibility
+
+Accessibility is a core architectural requirement of Vital Access Key.
+
+A system that depends exclusively on fingerprint, touchscreen or conventional visual interaction may exclude users with disabilities.
+
+Vital Access Key must therefore support multiple interaction modalities.
+
+Potential mechanisms include:
+
+- Physical button
+- Accessible gestures
+- Voice
+- Assistive technologies
+- Contextual interaction through iRiel
+
+The system must consider users with:
+
+- Visual impairments
+- Limited or absent use of their hands or arms
+- Hearing impairments
+- Speech limitations
+- Cognitive or neurological accessibility requirements
+- Other physical or sensory limitations
+
+The emergency interface must remain usable under stressful and time-critical conditions.
+
+---
+
+## 10. Minimalism as a Safety Principle
+
+Minimalism is not merely a visual preference.
+
+It is a safety requirement.
+
+Emergency responders may have only seconds to interpret the information.
+
+Every displayed element must therefore justify its presence.
+
+Priority should be given to:
+
+1. Identity
+2. Critical medical information
+3. Allergies
+4. Immediate care requirements
+5. Emergency contact
+
+The interface should prioritize information that can be understood immediately.
+
+It should use:
+
+- Clear hierarchy
+- High legibility
+- Appropriate typography
+- Strong contrast
+- Simple labels
+- Minimal navigation
+- No unnecessary animation
+- No decorative elements that interfere with interpretation
+
+The emergency interface should be designed to be read, not explored.
+
+---
+
+## 11. iRiel Integration
+
+iRiel may provide the contextual intelligence surrounding Vital Access Key.
+
+Potential responsibilities include:
+
+- Contextual awareness
+- Accessibility
+- Voice interaction
+- Environmental signals
+- Interface adaptation
+- Emergency-state interpretation
+- Multimodal interaction
+
+However, iRiel must not become the authorization boundary itself.
+
+The emergency-access policy remains governed by the Vital Access Key security and governance layer.
+
+Intelligence may assist interaction.
+
+Intelligence must never silently expand emergency permissions.
+
+Core principle:
+
+"Context can influence interaction. Context cannot override authorization."
+
+---
+
+## 12. Privacy Boundary
+
+Vital Access Key establishes a strict privacy boundary between emergency information and the user's Personal Intelligence Environment.
+
+The emergency layer intentionally exposes only a small subset of the information available to the user's private environment.
+
+Emergency Information ≠ Personal Intelligence
+
+The emergency layer must never become a shortcut into:
+
+- Personal Context
+- Long-Term Memory
+- Working Memory
+- Private Knowledge
+- Files
+- Applications
+- Accounts
+- Personal communications
+- Private AI interactions
+
+The limitation is intentional.
+
+The limitation is a security feature.
+
+---
+
+## 13. Governance
+
+Vital Access Key belongs primarily to the Governance domain because it defines the rules governing emergency access.
+
+Governance establishes:
+
+- Emergency-access policies
+- Authorization boundaries
+- Permitted information
+- Activation conditions
+- User consent
+- Responder interaction
+- Data-exposure limits
+- Accessibility requirements
+- Auditability
+- Configuration policies
+- Revocation and lifecycle policies
+
+Privacy & Security remain foundational dependencies.
+
+Accessibility is a mandatory supporting domain.
+
+Governance defines how these principles operate together.
+
+---
+
+## 14. Emergency Access Philosophy
+
+Emergency circumstances may justify rapid access to necessary information.
+
+They do not justify unrestricted access to the user's digital identity.
+
+Vital Access Key therefore follows:
+
+Minimum necessary information.
+Minimum necessary access.
+Minimum necessary interaction.
+Maximum necessary speed.
+
+The system should remove unnecessary bureaucracy without removing the privacy boundary.
+
+---
+
+## 15. Architectural Principle
+
+Emergency access must provide enough information to help the person without providing enough access to compromise the person.
+
+This principle defines the fundamental security boundary of Vital Access Key.
+
+---
+
+## 16. Core Definition
+
+Vital Access Key is a dedicated emergency-access layer that provides emergency responders with a minimal, user-defined set of vital information without unlocking or exposing the user's private device environment.
+
+It is not:
+
+- A device-unlocking mechanism
+- A general authentication mechanism
+- A medical-record system
+- An unrestricted data-sharing mechanism
+- A replacement for professional emergency services
+
+It is:
+
+A controlled, isolated, user-configured emergency information interface.
+
+---
+
+## 17. Canonical Status
+
+Vital Access Key is established as a foundational PRSL-AI architectural concept in Canonical Version 1.0.
+
+This version establishes the core principles, boundaries and intended behavior.
+
+Implementation details may evolve as the PRSL-AI Ecosystem matures.
+
+Future revisions may refine:
+
+- Activation mechanisms
+- Hardware integration
+- iRiel integration
+- Accessibility
+- Emergency interaction
+- Governance policies
+- Security mechanisms
+- Data models
+- Interface design
+
+Future implementation changes must preserve the foundational principle:
+
+"The device remains locked. The vital information becomes accessible."
+
+---
+
+## 18. Canonical Statement
+
+Vital Access Key exists to protect two things at the same time:
+
+The user's right to privacy.
+
+And the user's right to receive immediate help when they cannot speak for themselves.
+
+PRSL-AI does not require a person to surrender their digital privacy in order to remain accessible during an emergency.

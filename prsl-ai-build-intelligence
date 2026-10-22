@@ -1,0 +1,61 @@
+# PRSL-AI Build Intelligence
+
+**AI software engineering & product development specialist by Robert Software Labs.**
+
+![Version](https://img.shields.io/badge/version-2.0.3-blue) ![Status](https://img.shields.io/badge/status-plugin%20distribution-informational)
+
+> Human First. Privacy Second. Technology Last.
+
+PRSL-AI Build Intelligence is a packaged engineering skill and plugin configuration for AI-assisted software development. It provides instructions for architecture, implementation, validation, security, accessibility and transparent execution reporting.
+
+## What's included
+
+- `plugin.json` — root plugin manifest
+- `.codex-plugin/plugin.json` — plugin metadata and interface settings
+- `assets/icon.png` — supplied project icon
+- `skills/build-intelligence/SKILL.md` — skill entrypoint
+- `skills/build-intelligence/references/master-instructions.md` — engineering and operational policy
+- `skills/build-intelligence/references/execution-integrations.md` — execution workflow and integration boundaries
+
+## Capabilities and scope
+
+The instructions guide AI-assisted development of websites, applications, APIs, SaaS products and AI agents. They emphasize modular architecture, testing, security, privacy, WCAG accessibility and evidence-based reporting.
+
+**Important:** This repository distributes configuration and instructional assets, not a standalone runtime, deployed AI agent, hosted service or verified integration. Actual tool execution depends on the host environment, permissions and connected services.
+
+## Getting started
+
+1. Clone or download this repository.
+2. Review `skills/build-intelligence/SKILL.md` and its references.
+3. Configure or import the plugin only in a host that supports this plugin format, following that host's official installation procedure.
+4. Verify available tools, permissions and integrations before performing operations.
+5. Use the skill for software implementation tasks and require direct verification of test/deployment claims.
+
+No universal installer is provided, because host compatibility has not been independently validated.
+
+## Principles
+
+- Human-first product development and privacy by design
+- KISS, DRY, SOLID and clean architecture when appropriate
+- Strong typing and TypeScript-first implementation preferences
+- Explicit permissions, secure defaults and validated integrations
+- Automated testing and transparent evidence for outcomes
+- Accessibility and responsive design
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Capabilities and limitations](docs/CAPABILITIES.md)
+- [Security policy](SECURITY.md)
+- [Contributing](CONTRIBUTING.md)
+- [Roadmap](docs/ROADMAP.md)
+
+## iRiel AI
+
+Future integration with the iRiel AI ecosystem is a **design objective**, not an implemented connection. See the roadmap for planned integration boundaries.
+
+## License
+
+**All rights reserved** until the copyright holder selects and adds a license. Public GitHub visibility does not grant permission to reuse, modify or redistribute this project.
+
+© Robert Software Labs.

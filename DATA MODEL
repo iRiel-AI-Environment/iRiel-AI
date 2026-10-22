@@ -1,0 +1,1934 @@
+PRSL-AI ECOSYSTEM
+CANONICAL DATA MODEL
+
+Organization: Robert Software Labs
+Status: Canonical
+Version: 1.0
+Classification: Core Architecture
+Document Type: Architectural Data Standard
+
+==================================================
+1. PURPOSE
+==================================================
+
+This document defines the canonical data model of the PRSL-AI Ecosystem.
+
+It establishes:
+
+- The fundamental entities.
+- Their relationships.
+- What is temporary.
+- What is persistent.
+- Who owns each class of data.
+- How data moves through the ecosystem.
+- How consistency is maintained.
+- How privacy, security and governance affect data.
+
+The objective is to ensure that PRSL-AI does not become a collection of disconnected data stores.
+
+The Data Model must reflect the architecture.
+
+==================================================
+2. CORE PRINCIPLE
+==================================================
+
+Data must have:
+
+- A defined meaning.
+- A defined owner.
+- A defined lifecycle.
+- A defined authority.
+- A defined access boundary.
+- A defined consistency model.
+
+Canonical principle:
+
+NO DATA SHOULD EXIST WITHOUT A CLEAR OWNER AND LIFECYCLE.
+
+==================================================
+3. FUNDAMENTAL DATA ENTITIES
+==================================================
+
+The canonical PRSL-AI data model is organized around the following fundamental entities:
+
+1. Human
+2. Identity
+3. Intent
+4. Session
+5. Context
+6. Memory
+7. Knowledge
+8. Capability
+9. Task
+10. Command
+11. Execution
+12. Result
+13. Authorization
+14. Policy
+15. Device
+16. Integration
+17. Provider
+18. Artifact
+19. Event
+20. Audit Record
+
+These entities do not all have the same lifecycle.
+
+Some are persistent.
+
+Some are temporary.
+
+Some are immutable records.
+
+Some are derived.
+
+Some are stateful.
+
+==================================================
+4. HUMAN
+==================================================
+
+The Human is the central entity.
+
+The Human represents the person around whom the ecosystem operates.
+
+Conceptually:
+
+Human
+↓
+Identity
+↓
+Preferences
+↓
+Memory
+↓
+Context
+↓
+Interactions
+↓
+Tasks
+
+The Human is the ultimate beneficiary and authority of the ecosystem.
+
+The Human should remain the primary owner of personal data.
+
+==================================================
+5. IDENTITY
+==================================================
+
+Identity represents how the ecosystem recognizes and authenticates a human or authorized system actor.
+
+Identity may include:
+
+- Account identity.
+- Device identity.
+- Session identity.
+- Authentication state.
+- Authorization references.
+
+Identity data is security-sensitive.
+
+It must not be confused with personality, memory or context.
+
+Owner:
+
+Identity / Security subsystem.
+
+Human authority:
+
+The Human controls their identity and authorization where applicable.
+
+==================================================
+6. INTENT
+==================================================
+
+Intent represents what the Human is trying to accomplish.
+
+Example:
+
+"Envie uma mensagem para João."
+
+Intent:
+
+SEND_MESSAGE
+
+Intent is primarily contextual and temporary.
+
+It may become part of an audit or decision history when required, but the active intent itself should not automatically become long-term memory.
+
+Owner:
+
+Core AI / Interaction layer.
+
+==================================================
+7. SESSION
+==================================================
+
+A Session represents a bounded interaction period.
+
+A session may contain:
+
+- Requests.
+- Responses.
+- Context.
+- Temporary state.
+- Active tasks.
+- Execution references.
+
+Example:
+
+User opens iRiel.
+
+↓
+
+Session begins.
+
+↓
+
+Multiple interactions occur.
+
+↓
+
+Session ends.
+
+Session data may be partially retained according to policy.
+
+Owner:
+
+Session / Context subsystem.
+
+==================================================
+8. CONTEXT
+==================================================
+
+Context represents information relevant to the current situation.
+
+Examples:
+
+- Current task.
+- Current location.
+- Current device.
+- Current conversation.
+- Current application.
+- Current user intent.
+- Temporary environmental information.
+
+Context is generally temporary.
+
+Canonical principle:
+
+CONTEXT IS NOT AUTOMATICALLY MEMORY.
+
+Context may be promoted into Memory only through an explicit persistence decision.
+
+==================================================
+9. MEMORY
+==================================================
+
+Memory represents authorized information retained for future continuity.
+
+Examples:
+
+- User preferences.
+- Explicitly saved information.
+- Long-term task continuity.
+- Relevant personal preferences.
+- Authorized historical context.
+
+Memory is persistent unless:
+
+- It expires.
+- The user deletes it.
+- Governance requires deletion.
+- Lifecycle policy removes it.
+- The system determines it is no longer valid.
+
+Owner:
+
+iRiel Memory.
+
+The Human remains the ultimate authority over personal memory.
+
+==================================================
+10. KNOWLEDGE
+==================================================
+
+Knowledge represents information available for reasoning and retrieval.
+
+Examples:
+
+- Documents.
+- Structured information.
+- Trusted references.
+- Domain information.
+- User-authorized knowledge sources.
+- System knowledge.
+
+Knowledge may be:
+
+- Persistent.
+- Temporary.
+- External.
+- Local.
+- Derived.
+
+Knowledge is not automatically personal memory.
+
+Owner:
+
+Knowledge subsystem or the source authority from which the knowledge originates.
+
+==================================================
+11. TASK
+==================================================
+
+A Task represents work the ecosystem is attempting to perform.
+
+Example:
+
+"Organize minha viagem."
+
+Task:
+
+TRAVEL_PLANNING
+
+A task may contain:
+
+- Intent.
+- Requirements.
+- Context.
+- Subtasks.
+- Selected capabilities.
+- Execution states.
+- Results.
+
+Tasks may be temporary or persist for continuity.
+
+Owner:
+
+Core AI / Task Orchestration.
+
+==================================================
+12. COMMAND
+==================================================
+
+A Command represents an explicit request for an operation.
+
+Example:
+
+SEND_MESSAGE
+
+A Command should contain enough information for the receiving subsystem to understand:
+
+- What operation is requested.
+- Who requested it.
+- Context.
+- Authorization.
+- Required parameters.
+- Expected result.
+
+Commands are normally temporary.
+
+==================================================
+13. CAPABILITY
+==================================================
+
+A Capability represents an available operation.
+
+Examples:
+
+- Vision.
+- OCR.
+- Translation.
+- Search.
+- Messaging.
+- Calendar.
+- Calculation.
+- Speech.
+- Automation.
+
+Capabilities are architectural entities rather than user memory.
+
+They may be registered persistently as system configuration.
+
+Owner:
+
+Capability Registry / Ecosystem Architecture.
+
+==================================================
+14. EXECUTION
+==================================================
+
+Execution represents an attempt to perform a command.
+
+Example:
+
+Command:
+
+SEND_MESSAGE
+
+Execution:
+
+EXEC-12345
+
+Execution should contain:
+
+- Command reference.
+- Capability reference.
+- Execution state.
+- Timestamp.
+- Environment.
+- Authorization reference.
+- Provider reference where applicable.
+- Verification reference.
+
+Execution is normally persistent for the required operational and audit lifecycle.
+
+==================================================
+15. RESULT
+==================================================
+
+Result represents the outcome of an execution.
+
+Canonical states include:
+
+SUCCESS
+FAILED
+DENIED
+UNKNOWN
+NO_ROUTE
+UNAVAILABLE
+TIMEOUT
+
+A result should reference the execution that produced it.
+
+Example:
+
+Execution
+↓
+Verification
+↓
+Result
+
+The result should not exist without a traceable execution where applicable.
+
+==================================================
+16. AUTHORIZATION
+==================================================
+
+Authorization represents permission to perform an operation.
+
+Examples:
+
+- Camera permission.
+- Messaging permission.
+- Location permission.
+- Memory persistence permission.
+- External processing authorization.
+
+Authorization is security-sensitive and may be persistent configuration or temporary approval.
+
+Owner:
+
+Privacy & Security / Governance.
+
+==================================================
+17. POLICY
+==================================================
+
+Policy defines rules that govern data and system behavior.
+
+Examples:
+
+- Privacy policies.
+- Data retention.
+- External processing restrictions.
+- Capability restrictions.
+- Memory rules.
+- Security requirements.
+
+Policies are persistent system-level data.
+
+Owner:
+
+Governance.
+
+Policies have higher authority than ordinary task logic.
+
+==================================================
+18. DEVICE
+==================================================
+
+Device represents a computing environment participating in PRSL-AI.
+
+Examples:
+
+- iPhone.
+- iRiel Smartphone.
+- iRiel Tablet.
+- iRiel Laptop.
+- iRiel Desktop.
+- iRiel Server.
+
+Device data may include:
+
+- Device identity.
+- Capabilities.
+- State.
+- Storage.
+- Available compute.
+- Security status.
+
+Owner:
+
+Device / System subsystem.
+
+==================================================
+19. INTEGRATION
+==================================================
+
+Integration represents a connection to an external system.
+
+Examples:
+
+- Messaging.
+- Calendar.
+- Cloud storage.
+- Productivity systems.
+- External APIs.
+
+An Integration contains configuration and capability metadata.
+
+It should not own the user's data merely because it processes it.
+
+Data ownership remains governed by the originating authority and applicable contracts.
+
+==================================================
+20. PROVIDER
+==================================================
+
+Provider represents an external or internal service capable of providing intelligence or functionality.
+
+Examples:
+
+- OpenAI.
+- Google Gemini Models.
+- Apple Foundation Models.
+- Local AI models.
+- Specialized services.
+
+Provider identity is architectural metadata.
+
+Provider must not become the owner of PRSL-AI's internal canonical state.
+
+==================================================
+21. ARTIFACT
+==================================================
+
+Artifact represents a concrete piece of user or system data.
+
+Examples:
+
+- Image.
+- Video.
+- Audio.
+- Document.
+- File.
+- Generated output.
+- Structured dataset.
+
+Artifacts may be:
+
+TEMPORARY
+PERSISTENT
+ARCHIVED
+DELETED
+
+An artifact must have a lifecycle.
+
+==================================================
+22. EVENT
+==================================================
+
+Event represents something that happened.
+
+Examples:
+
+SESSION_STARTED
+COMMAND_CREATED
+EXECUTION_STARTED
+EXECUTION_COMPLETED
+MEMORY_CREATED
+MEMORY_UPDATED
+MEMORY_DELETED
+DEVICE_CONNECTED
+
+Events are useful for:
+
+- Observability.
+- Synchronization.
+- Auditing.
+- State reconstruction.
+- Automation.
+
+Events should generally be immutable.
+
+==================================================
+23. AUDIT RECORD
+==================================================
+
+Audit Records provide traceability for significant system actions.
+
+Examples:
+
+- Permission changes.
+- Sensitive-data processing.
+- External transmission.
+- System execution.
+- Memory deletion.
+- Policy decisions.
+
+Audit records should be append-oriented and tamper-resistant.
+
+They are not ordinary Memory.
+
+==================================================
+24. FUNDAMENTAL RELATIONSHIP MODEL
+==================================================
+
+The canonical relationship is:
+
+Human
+↓
+Identity
+↓
+Session
+↓
+Intent
+↓
+Task
+↓
+Command
+↓
+Execution
+↓
+Result
+
+Context surrounds the active interaction:
+
+Session
+↓
+Context
+↓
+Intent / Task / Command
+
+Memory provides authorized continuity:
+
+Human
+↓
+Memory
+↓
+Context
+
+Knowledge provides information:
+
+Knowledge
+↓
+Core AI
+↓
+Reasoning
+
+Capabilities provide operations:
+
+Task
+↓
+Router
+↓
+Capability
+↓
+Execution
+
+==================================================
+25. COMPLETE DATA FLOW
+==================================================
+
+Human
+↓
+Interaction
+↓
+Intent
+↓
+Session
+↓
+Context
+↓
+Core AI
+↓
+Task
+↓
+Router
+↓
+Capability
+↓
+Command
+↓
+Authorization
+↓
+Execution
+↓
+Verification
+↓
+Result
+↓
+Event / Audit
+↓
+iRiel
+↓
+Human
+
+Memory and Knowledge participate where required.
+
+==================================================
+26. TEMPORARY DATA
+==================================================
+
+The following are generally temporary:
+
+- Active intent.
+- Session context.
+- Working context.
+- Intermediate reasoning state.
+- Temporary tool outputs.
+- Temporary files.
+- Pending commands.
+- Intermediate execution state.
+- Ephemeral routing decisions.
+
+Temporary does not mean:
+
+"unprotected."
+
+Temporary data can still be highly sensitive.
+
+It must remain protected throughout its lifecycle.
+
+==================================================
+27. PERSISTENT DATA
+==================================================
+
+The following may be persistent:
+
+- Identity.
+- Preferences.
+- Authorized Memory.
+- Knowledge repositories.
+- Device configuration.
+- Capability registry.
+- Integration configuration.
+- Policies.
+- Authorization configuration.
+- Required audit records.
+- Required execution history.
+- User-owned artifacts.
+
+Persistence must have a purpose.
+
+Canonical principle:
+
+PERSISTENCE IS A DECISION, NOT A DEFAULT.
+
+==================================================
+28. DATA PROMOTION
+==================================================
+
+Data should not automatically move from temporary to persistent storage.
+
+Canonical lifecycle:
+
+Temporary Data
+↓
+Evaluation
+↓
+Persistence Decision
+↓
+Persistent Data
+
+Example:
+
+Conversation:
+
+"I am staying in Manchester tonight."
+
+This is Context.
+
+It does not automatically become Memory.
+
+If the user explicitly establishes:
+
+"I live in Manchester."
+
+that may become authorized persistent Memory depending on the system's memory policy.
+
+==================================================
+29. DATA DEMOTION
+==================================================
+
+Persistent data may become obsolete.
+
+Lifecycle:
+
+Persistent
+↓
+Review
+↓
+Expired / Obsolete
+↓
+Archive or Delete
+
+Memory should not grow indefinitely without lifecycle management.
+
+==================================================
+30. DATA OWNERSHIP
+==================================================
+
+Ownership must be distinguished from storage location.
+
+A provider storing data does not automatically become its owner.
+
+Canonical ownership categories:
+
+HUMAN-OWNED
+SYSTEM-OWNED
+PROVIDER-OWNED
+EXTERNALLY-SOURCED
+DERIVED
+AUDIT-OWNED
+
+==================================================
+31. HUMAN-OWNED DATA
+==================================================
+
+Examples:
+
+- Personal Memory.
+- Personal files.
+- Personal photographs.
+- Preferences.
+- User-created content.
+- Personal context.
+- Personal configurations.
+
+The Human is the primary authority.
+
+PRSL-AI manages this data according to authorization and policy.
+
+==================================================
+32. SYSTEM-OWNED DATA
+==================================================
+
+Examples:
+
+- Capability definitions.
+- Routing configuration.
+- Internal system state.
+- System policies.
+- Component metadata.
+
+This data belongs to the operation of the ecosystem.
+
+It must not be confused with user data.
+
+==================================================
+33. PROVIDER-OWNED DATA
+==================================================
+
+A provider may own its own:
+
+- Service metadata.
+- Infrastructure records.
+- Operational identifiers.
+- Provider-generated telemetry according to its contractual and policy boundaries.
+
+Provider ownership must not silently extend to user-owned PRSL-AI data.
+
+==================================================
+34. EXTERNALLY-SOURCED DATA
+==================================================
+
+Information retrieved from an external source retains provenance.
+
+Example:
+
+Web information.
+
+The ecosystem should preserve:
+
+- Source.
+- Retrieval time.
+- Relevant identifier.
+- Provenance metadata where required.
+
+The ecosystem must not represent external information as native personal memory without an explicit reason.
+
+==================================================
+35. DERIVED DATA
+==================================================
+
+Derived data is produced from other data.
+
+Examples:
+
+- Embeddings.
+- Summaries.
+- Classifications.
+- Routing scores.
+- OCR results.
+- Transcriptions.
+- AI-generated interpretations.
+
+Derived data must have a defined relationship to its source.
+
+If the source is deleted, the system must determine whether dependent derived data must also be deleted.
+
+==================================================
+36. DATA LINEAGE
+==================================================
+
+Important data should be traceable.
+
+Example:
+
+Artifact
+↓
+OCR
+↓
+Translation
+↓
+Summary
+↓
+Response
+
+The system should know the relationship between the output and its source when required.
+
+This is especially important for:
+
+- Sensitive data.
+- Knowledge.
+- AI-generated results.
+- Auditability.
+- Verification.
+
+==================================================
+37. CONSISTENCY MODEL
+==================================================
+
+PRSL-AI should not attempt to enforce identical consistency rules for every entity.
+
+Different data requires different consistency guarantees.
+
+Examples:
+
+Identity:
+
+Strong consistency.
+
+Authorization:
+
+Strong consistency.
+
+Policy:
+
+Strong consistency.
+
+Memory:
+
+Controlled consistency.
+
+Context:
+
+Session consistency.
+
+Events:
+
+Append-oriented consistency.
+
+Search indexes:
+
+Eventual consistency may be acceptable.
+
+Derived embeddings:
+
+Eventual consistency may be acceptable.
+
+==================================================
+38. STRONG CONSISTENCY
+==================================================
+
+Strong consistency should be used when stale information could cause an unsafe or unauthorized operation.
+
+Examples:
+
+- Permissions.
+- Authorization.
+- Security state.
+- Governance policy.
+- Identity.
+
+Example:
+
+If the user revokes camera permission, the system must not continue using an old authorization state.
+
+==================================================
+39. EVENTUAL CONSISTENCY
+==================================================
+
+Eventual consistency may be appropriate for derived or searchable data.
+
+Example:
+
+User updates a Memory.
+
+Primary Memory:
+
+Updated immediately.
+
+Search index:
+
+May update shortly afterward.
+
+The system must not treat an outdated search index as authoritative.
+
+Canonical rule:
+
+PRIMARY STATE IS AUTHORITATIVE.
+
+DERIVED STATE IS REBUILDABLE.
+
+==================================================
+40. SOURCE OF TRUTH
+==================================================
+
+Every important entity must have a canonical source of truth.
+
+Examples:
+
+Memory:
+
+Memory Store.
+
+Authorization:
+
+Security / Authorization Store.
+
+Policy:
+
+Governance Store.
+
+Device state:
+
+Device/System State.
+
+Execution:
+
+Execution Record.
+
+Knowledge:
+
+Knowledge Source / Knowledge Store.
+
+Derived indexes are not authoritative.
+
+==================================================
+41. CONFLICT RESOLUTION
+==================================================
+
+When two sources disagree, PRSL-AI must not arbitrarily merge them.
+
+Canonical process:
+
+Conflict
+↓
+Identify Sources
+↓
+Determine Authority
+↓
+Evaluate Timestamp / Version
+↓
+Apply Policy
+↓
+Resolve
+↓
+Record Decision
+
+The source of truth determines the final state.
+
+==================================================
+42. VERSIONING
+==================================================
+
+Persistent mutable entities should support versioning where required.
+
+Examples:
+
+Memory:
+
+Memory v1
+↓
+Memory v2
+↓
+Memory v3
+
+Policy:
+
+Policy v1
+↓
+Policy v2
+
+Knowledge:
+
+Document v1
+↓
+Document v2
+
+Versioning enables:
+
+- Recovery.
+- Conflict resolution.
+- Auditability.
+- Historical understanding.
+
+==================================================
+43. IMMUTABLE RECORDS
+==================================================
+
+Some records should not be modified after creation.
+
+Examples:
+
+- Audit Events.
+- Security Events.
+- Execution Events.
+- Certain governance decisions.
+
+Instead of modifying:
+
+Event v1
+
+append:
+
+Event v2
+
+This preserves history.
+
+==================================================
+44. DATA INTEGRITY
+==================================================
+
+Integrity should be maintained through:
+
+- Schema validation.
+- Type validation.
+- Ownership validation.
+- Authorization validation.
+- Version checks.
+- Transaction boundaries.
+- Event ordering where required.
+- Idempotency.
+- Checksums or hashes where appropriate.
+- Audit records.
+
+==================================================
+45. IDEMPOTENCY
+==================================================
+
+Operations that can be retried should use idempotency where appropriate.
+
+Example:
+
+SEND_MESSAGE
+
+If the network fails after the request is submitted, retrying must not unintentionally send two messages.
+
+Canonical model:
+
+Command ID
+↓
+Execution ID
+↓
+Idempotency Key
+↓
+Execution
+↓
+Verification
+
+==================================================
+46. DELETION CONSISTENCY
+==================================================
+
+Deletion must propagate according to ownership and dependency relationships.
+
+Example:
+
+User deletes a Memory.
+
+System evaluates:
+
+Memory
+↓
+Derived Embedding
+↓
+Search Index
+↓
+Cache
+↓
+Backup / Archive Policy
+
+The system determines what must also be removed.
+
+Deleting the primary record while leaving indefinitely recoverable derivatives would violate the intended lifecycle.
+
+==================================================
+47. PRIVACY AND DATA MODEL
+==================================================
+
+Privacy is part of the data model.
+
+Each data entity should be classifiable by:
+
+- Sensitivity.
+- Ownership.
+- Purpose.
+- Retention.
+- Processing location.
+- Access level.
+- External-processing eligibility.
+
+Example:
+
+Health-related image:
+
+Sensitivity:
+HIGH
+
+Owner:
+Human
+
+Processing:
+Prefer local
+
+External processing:
+Restricted / authorization-dependent
+
+Retention:
+Temporary unless explicitly retained
+
+==================================================
+48. DATA CLASSIFICATION
+==================================================
+
+A canonical classification model should distinguish at minimum:
+
+PUBLIC
+INTERNAL
+PERSONAL
+SENSITIVE
+HIGHLY SENSITIVE
+SYSTEM-CRITICAL
+
+The exact classification may be extended by Governance.
+
+Classification affects:
+
+- Storage.
+- Processing.
+- Routing.
+- Sharing.
+- Retention.
+- Logging.
+
+==================================================
+49. DATA MINIMIZATION
+==================================================
+
+PRSL-AI should process the minimum information required for the task.
+
+Example:
+
+If OCR only requires an image:
+
+Do not send:
+
+- Entire Memory.
+- Entire Session.
+- Unrelated personal data.
+
+Canonical principle:
+
+NEED-TO-KNOW DATA FLOW.
+
+==================================================
+50. DATA LOCALITY
+==================================================
+
+Data should preferably remain as close as practical to its source and owner.
+
+Preferred:
+
+Device
+↓
+Local Processing
+
+When external processing is necessary:
+
+Device
+↓
+Privacy / Security
+↓
+Governance
+↓
+Secure Transmission
+↓
+External Processing
+
+The cloud is a capability.
+
+It is not the default owner of user data.
+
+==================================================
+51. DATA MODEL AND MEMORY
+==================================================
+
+Memory should be treated as a controlled persistent data domain.
+
+It must have:
+
+- Ownership.
+- Lifecycle.
+- Version.
+- Source.
+- Confidence where applicable.
+- Creation timestamp.
+- Update timestamp.
+- Retention policy.
+- Deletion mechanism.
+
+Memory must not be treated as an unrestricted conversation archive.
+
+==================================================
+52. DATA MODEL AND CONTEXT
+==================================================
+
+Context should have:
+
+- Session ID.
+- Task ID.
+- Current intent.
+- Relevant state.
+- Expiration.
+- Source.
+- Sensitivity.
+
+Context may disappear when:
+
+- Session ends.
+- Task completes.
+- Context expires.
+- User requests deletion.
+
+==================================================
+53. DATA MODEL AND KNOWLEDGE
+==================================================
+
+Knowledge should maintain provenance.
+
+Minimum useful metadata may include:
+
+- Source.
+- Version.
+- Retrieval time.
+- Authority.
+- Content identifier.
+- Freshness.
+- Confidence where applicable.
+
+This prevents external information from becoming indistinguishable from authoritative system data.
+
+==================================================
+54. DATA MODEL AND EXECUTION
+==================================================
+
+Execution records should allow the ecosystem to answer:
+
+What was requested?
+
+Who requested it?
+
+Which capability was selected?
+
+Which provider was used?
+
+Which authorization allowed it?
+
+What happened?
+
+Did it succeed?
+
+How was success verified?
+
+This provides operational traceability.
+
+==================================================
+55. DATA MODEL AND AUDIT
+==================================================
+
+Audit should not become a copy of all user activity.
+
+Audit should record events that matter for:
+
+- Security.
+- Governance.
+- Authorization.
+- Compliance.
+- Execution traceability.
+- System integrity.
+
+Sensitive payloads should not be unnecessarily copied into logs.
+
+==================================================
+56. CANONICAL DATA OWNERSHIP MAP
+==================================================
+
+Human
+→ Personal Data
+→ Personal Memory
+→ Personal Files
+→ Personal Preferences
+
+Identity / Security
+→ Identity
+→ Authentication
+→ Authorization
+
+Context
+→ Active Context
+
+Memory
+→ Persistent Authorized Memory
+
+Knowledge
+→ Knowledge Objects
+
+Core AI
+→ Intent Interpretation
+→ Task Planning
+
+Router
+→ Routing Decisions
+
+Capability Registry
+→ Capability Definitions
+
+iRiel System
+→ Execution State
+
+Verification
+→ Verification State
+
+Governance
+→ Policies
+
+Privacy & Security
+→ Security Policies / Controls
+
+Device
+→ Device State
+
+Integration
+→ Integration Configuration
+
+Provider
+→ Provider Metadata
+
+Audit
+→ Immutable Audit Records
+
+==================================================
+57. CANONICAL LIFECYCLE
+==================================================
+
+Data may follow:
+
+CREATED
+↓
+CLASSIFIED
+↓
+PROCESSED
+↓
+USED
+↓
+PERSISTED OR DISCARDED
+↓
+UPDATED
+↓
+ARCHIVED OR DELETED
+
+Not every entity passes through every stage.
+
+==================================================
+58. DATA MODEL EXAMPLE
+==================================================
+
+User says:
+
+"Estou procurando um hotel em Manchester."
+
+Entities:
+
+Human
+→ User
+
+Session
+→ Current interaction
+
+Intent
+→ FIND_ACCOMMODATION
+
+Context
+→ Manchester
+→ Current date
+→ Party size
+→ Budget
+
+Task
+→ HOTEL_SEARCH
+
+Capability
+→ Accommodation Search
+
+Command
+→ SEARCH_HOTELS
+
+Execution
+→ Search execution
+
+Result
+→ Available hotels
+
+Temporary data:
+Current search context.
+
+Potential persistent data:
+Only explicitly authorized preferences.
+
+The search itself does not automatically become Memory.
+
+==================================================
+59. DATA MODEL EXAMPLE — PERSONAL PREFERENCE
+==================================================
+
+User says:
+
+"Prefiro hotéis próximos ao centro."
+
+Intent:
+
+Express Preference
+
+Context:
+
+Current conversation.
+
+Memory decision:
+
+Potentially persistent.
+
+If authorized:
+
+Memory
+→ Preference
+→ Hotel location preference
+
+Future task:
+
+Context retrieves the Memory.
+
+This demonstrates:
+
+Context
++
+Memory
+=
+Continuity
+
+==================================================
+60. DATA MODEL EXAMPLE — IMAGE
+==================================================
+
+User provides a private image.
+
+Artifact:
+
+Image
+
+Classification:
+
+Sensitive
+
+Context:
+
+Current task
+
+Processing:
+
+Vision Capability
+
+Result:
+
+Analysis
+
+After task:
+
+Image may be deleted according to lifecycle policy.
+
+It does not automatically become:
+
+Memory.
+
+Knowledge.
+
+Permanent Storage.
+
+==================================================
+61. DATA MODEL EXAMPLE — KNOWLEDGE
+==================================================
+
+User uploads a document.
+
+Artifact
+↓
+Knowledge Ingestion
+↓
+Knowledge Object
+↓
+Index
+↓
+Retrieval
+↓
+Core AI
+
+The document remains traceable to its source.
+
+If deleted:
+
+Source
+↓
+Knowledge Object
+↓
+Index
+↓
+Derived Data
+
+Lifecycle policies determine propagation.
+
+==================================================
+62. DATA MODEL EXAMPLE — FAILED EXECUTION
+==================================================
+
+Command:
+
+SEND_MESSAGE
+
+Execution:
+
+EXEC-001
+
+State:
+
+FAILED
+
+Verification:
+
+Delivery not confirmed.
+
+Result:
+
+FAILED
+
+The failed result remains distinguishable from:
+
+SUCCESS.
+
+This prevents false state transitions.
+
+==================================================
+63. DATA MODEL EXAMPLE — EXTERNAL AI
+==================================================
+
+User submits sensitive information.
+
+Artifact:
+
+Sensitive Data
+
+Core AI:
+
+Requires reasoning.
+
+Router:
+
+External Model candidate.
+
+Privacy:
+
+Evaluates data exposure.
+
+Governance:
+
+Evaluates authorization.
+
+If allowed:
+
+Secure Transmission
+↓
+External Provider
+↓
+Result
+↓
+Verification
+
+Provider receives only the data required by the operation.
+
+==================================================
+64. CONSISTENCY PRINCIPLE
+==================================================
+
+PRSL-AI should use:
+
+ONE AUTHORITATIVE SOURCE
+
+and:
+
+MANY DERIVED REPRESENTATIONS.
+
+Example:
+
+Canonical Memory
+↓
+Search Index
+↓
+Embedding
+↓
+Cache
+↓
+Context Projection
+
+The derived representations may become stale.
+
+The canonical Memory remains authoritative.
+
+==================================================
+65. DATA CONTRACT
+==================================================
+
+Every canonical entity should define:
+
+ENTITY ID
+OWNER
+TYPE
+SCHEMA
+SOURCE
+SENSITIVITY
+LIFECYCLE
+RETENTION
+VERSION
+CREATED AT
+UPDATED AT
+AUTHORIZATION
+DEPENDENCIES
+PROVENANCE
+CONSISTENCY MODEL
+
+Not every field is mandatory for every entity, but the architecture must define which metadata applies.
+
+==================================================
+66. ARCHITECTURAL INVARIANTS
+==================================================
+
+The following rules are canonical:
+
+1. Every important entity has an owner.
+
+2. Every persistent entity has a lifecycle.
+
+3. Temporary data is not automatically persistent.
+
+4. Processing does not imply retention.
+
+5. Storage location does not define ownership.
+
+6. Derived data must remain traceable to its source where required.
+
+7. Primary state is authoritative.
+
+8. Derived state must be rebuildable whenever practical.
+
+9. Security-critical data requires strong consistency.
+
+10. Sensitive data must follow explicit privacy rules.
+
+11. Deletion must account for dependent derived data.
+
+12. Provider storage does not automatically transfer ownership.
+
+13. Audit records must not become an unrestricted copy of user activity.
+
+14. No subsystem may treat another subsystem's internal data as its own.
+
+15. Human authority remains central to personal data.
+
+==================================================
+67. FINAL DATA MODEL
+==================================================
+
+The canonical PRSL-AI data architecture can be summarized as:
+
+HUMAN
+│
+├── IDENTITY
+│
+├── PREFERENCES
+│
+├── MEMORY
+│
+├── ARTIFACTS
+│
+└── AUTHORIZATIONS
+│
+▼
+SESSION
+│
+├── CONTEXT
+├── INTENT
+└── TASK
+        │
+        ▼
+     COMMAND
+        │
+        ▼
+      ROUTER
+        │
+        ▼
+    CAPABILITY
+        │
+        ▼
+     EXECUTION
+        │
+        ▼
+   VERIFICATION
+        │
+        ▼
+      RESULT
+        │
+        ├── EVENT
+        └── AUDIT
+       
+KNOWLEDGE
+│
+└── INFORMATION / SOURCES / PROVENANCE
+
+GOVERNANCE
+│
+└── POLICIES
+
+PRIVACY & SECURITY
+│
+└── PROTECTION / AUTHORIZATION / DATA CONTROLS
+
+DEVICE
+│
+└── COMPUTE / STORAGE / SYSTEM STATE
+
+INTEGRATION
+│
+└── EXTERNAL SYSTEM CONNECTIONS
+
+PROVIDER
+│
+└── EXTERNAL / LOCAL INTELLIGENCE CAPABILITY
+
+==================================================
+68. FINAL CANONICAL PRINCIPLE
+==================================================
+
+PRSL-AI does not treat all data equally.
+
+Data has:
+
+Meaning.
+
+Ownership.
+
+Authority.
+
+Sensitivity.
+
+Lifecycle.
+
+Persistence.
+
+Provenance.
+
+Consistency.
+
+The architecture must know the difference between:
+
+"What is happening now."
+
+"What should be remembered."
+
+"What is known."
+
+"What was executed."
+
+"What was verified."
+
+"What is authorized."
+
+"What belongs to the user."
+
+"What belongs to the system."
+
+"What came from an external source."
+
+This separation is fundamental to maintaining privacy, reliability, modularity and architectural integrity.
+
+==================================================
+69. FINAL STATEMENT
+==================================================
+
+The PRSL-AI Data Model exists to ensure that intelligence does not become synonymous with uncontrolled data accumulation.
+
+PRSL-AI should remember intentionally.
+
+Process minimally.
+
+Persist purposefully.
+
+Share selectively.
+
+Verify consistently.
+
+Delete appropriately.
+
+And always preserve the distinction between temporary context, persistent memory, knowledge, execution state and authoritative system data.
+
+The objective is not to store everything.
+
+The objective is to maintain exactly the information required to provide useful, continuous, secure and human-centered intelligence.
+
+==================================================
+
+© Robert Software Labs
+PRSL-AI Ecosystem
+Canonical Data Model
+Version 1.0

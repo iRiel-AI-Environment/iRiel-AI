@@ -1,0 +1,644 @@
+iRIEL APP WEB
+Document Type:
+Canonical Architecture Specification
+System:
+PRSL-AI Ecosystem
+Primary Entity:
+iRiel
+Component:
+iRiel App Web
+Status:
+Architecture Defined
+1. PURPOSE
+iRiel App Web is the primary human-facing web interface of the iRiel ecosystem.
+It provides a portable, accessible, privacy-first interface through which the Human can interact
+with iRiel without requiring a traditional native application.
+iRiel App Web is designed to function across supported browsers, devices, operating systems,
+and execution environments.
+2. FUNDAMENTAL PRINCIPLE
+iRiel App Web is an interface.
+It is not the intelligence itself.
+It is not the memory system.
+It is not the Intelligence Router.
+It is not the provider layer.
+It is not the authority of the ecosystem.
+The App Web provides the Human with access to iRiel.
+3. ARCHITECTURAL POSITION
+The canonical relationship is:
+Human
+↓
+iRiel App Web
+↓
+iRiel
+↓
+iRiel Personal Intelligence
+↓
+iRiel Resonance
+↓
+PRSL-AI Core
+↓
+Intelligence Router
+↓
+Provider / Platform / Service
+↓
+Result
+↓
+iRiel App Web
+↓
+Human
+4. APP WEB PRINCIPLE
+The App Web follows a Progressive Web Application architecture.
+It SHOULD prioritize:
+Portability
+Accessibility
+Privacy
+Performance
+Resilience
+Low friction
+Cross-platform compatibility
+Progressive enhancement
+5. WEB-FIRST ARCHITECTURE
+iRiel App Web is designed as a web-native experience rather than as a wrapper around a native
+application.
+The interface SHOULD operate through standard web technologies whenever possible.
+Possible technologies include:
+HTML
+CSS
+JavaScript
+Web APIs
+Service Workers
+Web App Manifest
+WebSockets
+HTTP
+WebRTC
+IndexedDB
+Web Storage
+6. NATIVE APPLICATION INDEPENDENCE
+The existence of iRiel App Web MUST NOT depend on a native iOS application.
+The App Web can serve as the primary interface even when:
+No native iRiel application exists
+A native application is unavailable
+The Human changes devices
+The Human changes platforms
+7. PLATFORM INDEPENDENCE
+iRiel App Web SHOULD operate across:
+iOS
+iPadOS
+macOS
+Windows
+Linux
+Android
+Supported desktop browsers
+Supported mobile browsers
+8. BROWSER ROLE
+The browser is an execution environment.
+Safari is not the identity of iRiel.
+Chrome is not the identity of iRiel.
+Edge is not the identity of iRiel.
+Firefox is not the identity of iRiel.
+The browser may change.
+The iRiel remains.
+9. APP WEB AND SAFARI
+Safari may provide capabilities useful to iRiel App Web, including:
+Web APIs
+Web Push
+Web Authentication
+Speech capabilities where available
+Camera access
+Microphone access
+Location APIs
+Web Share
+PWA installation
+Accessibility technologies
+These capabilities remain subject to browser and operating-system permissions.
+10. PRIVACY-FIRST INTERFACE
+iRiel App Web SHOULD follow:
+Privacy by Default
+Data Minimization
+Explicit Permission
+Local Processing Where Possible
+Secure Transport
+Minimal External Disclosure
+Controlled Context Exposure
+11. LOCAL-FIRST OPERATION
+The App Web SHOULD perform appropriate operations locally when possible.
+Possible local capabilities include:
+Interface state
+Temporary context
+Cached configuration
+Accessibility preferences
+Language preferences
+Oﬄine interface behavior
+Local session state
+12. LOCAL DATA
+Local browser storage MAY include:
+Temporary state
+Session metadata
+Cached UI resources
+User-approved preferences
+Oﬄine application data
+Sensitive long-term memory SHOULD NOT be stored casually in browser storage.
+Long-term memory SHOULD remain governed through iRiel Resonance.
+13. APP WEB AND RESONANCE
+The App Web does not own Resonance.
+Preferred relationship:
+iRiel App Web
+↓
+iRiel API
+↓
+Resonance
+↓
+Authorized Context
+14. APP WEB AND MEMORY
+The App Web MAY request memory operations through authorized APIs.
+It MUST NOT directly access the underlying memory database.
+Example:
+Human:
+"Remember this."
+↓
+App Web
+↓
+Memory Request
+↓
+Resonance
+↓
+Memory Governance
+↓
+Authorized Memory
+15. APP WEB AND CONTEXT
+The App Web SHOULD provide the minimum context required for each operation.
+The interface SHOULD NOT automatically transmit:
+Complete conversation history
+Complete memory
+Private identity data
+Unrelated application state
+16. APP WEB AND INTELLIGENCE
+The App Web does not select intelligence providers directly.
+The preferred architecture is:
+App Web
+↓
+Canonical Request
+↓
+PRSL-AI Core
+↓
+Intelligence Router
+↓
+Provider
+17. CANONICAL REQUEST
+The App Web SHOULD communicate using a canonical request structure.
+Conceptually:
+request_id
+intent
+input
+language
+context_refs
+permissions
+capabilities
+constraints
+18. CANONICAL RESULT
+The App Web SHOULD receive normalized results.
+Conceptually:
+status
+content
+artifacts
+provider
+usage
+latency
+routing_trace
+error
+19. PROVIDER ABSTRACTION
+The App Web MUST NOT depend on:
+OpenAI response formats
+Gemini response formats
+Claude response formats
+Apple Intelligence response formats
+Microsoft response formats
+Meta response formats
+Provider-specific logic belongs behind the Provider Adapter Layer.
+20. MULTILINGUAL INTERFACE
+iRiel App Web SHOULD support multilingual interaction.
+The interface MAY support:
+Multiple UI languages
+Multiple input languages
+Multiple output languages
+Language detection
+Translation
+Voice languages
+Locale-specific formatting
+21. LANGUAGE CONTINUITY
+Language preferences MAY be provided through Resonance.
+Example:
+Preferred language:
+pt-BR
+Temporary interaction:
+en-GB
+After the interaction:
+Preferred language:
+pt-BR
+Temporary language changes SHOULD NOT automatically modify permanent preferences.
+22. ACCESSIBILITY
+Accessibility is a core architectural requirement.
+iRiel App Web SHOULD support:
+Screen readers
+Keyboard navigation
+Voice interaction
+High contrast
+Reduced motion
+Large text
+Semantic HTML
+Accessible labels
+Focus management
+Alternative input methods
+Cognitive accessibility
+23. NEURO-INCLUSIVE DESIGN
+The interface SHOULD minimize unnecessary cognitive load.
+Design SHOULD favor:
+Clear hierarchy
+Predictable interaction
+Limited visual noise
+Consistent controls
+Short feedback loops
+Explicit system state
+Simple navigation
+24. iRIEL PRESENCE
+The interface MAY expose an iRiel Presence system representing current operational state.
+Possible states:
+Ready
+Listening
+Thinking
+Creating
+Speaking
+Executing
+Waiting
+Recovering
+Error
+Presence SHOULD communicate system state without creating unnecessary distraction.
+25. CONVERSATION INTERFACE
+The primary conversational interface SHOULD support:
+Text input
+Text output
+Voice input where available
+Voice output where available
+Attachments where authorized
+Tool results
+Structured content
+Progress indicators
+System state
+26. HUMAN-CENTERED INTERACTION
+The App Web SHOULD feel like an interaction environment rather than a provider dashboard.
+The Human interacts with:
+iRiel
+not:
+OpenAI
+Gemini
+Claude
+Provider A
+Provider B
+27. PROVIDER VISIBILITY
+Provider information MAY be exposed when useful for:
+Transparency
+Debugging
+Auditability
+User control
+However, provider identity SHOULD NOT dominate the primary interaction.
+The user experience remains centered on iRiel.
+28. TRANSPARENCY
+Where appropriate, iRiel App Web MAY expose:
+Provider used
+Model used
+Routing decision
+Source information
+Permission status
+Execution status
+Tool used
+29. WEB SEARCH
+The App Web MAY expose web search capabilities through the PRSL-AI provider architecture.
+Preferred relationship:
+App Web
+↓
+Intent
+↓
+Policy
+↓
+Router
+↓
+Web Provider Adapter
+↓
+Search Provider
+↓
+Normalized Result
+↓
+App Web
+30. DUCKDUCKGO
+DuckDuckGo may function as an external web/search provider.
+The App Web MUST NOT depend directly on DuckDuckGo.
+The integration remains:
+App Web
+↓
+PRSL-AI
+↓
+Router
+↓
+DuckDuckGo Adapter
+↓
+DuckDuckGo
+31. MCP
+The App Web MAY consume MCP-backed capabilities through the PRSL-AI architecture.
+MCP MUST remain a capability protocol rather than the identity architecture of iRiel.
+The App Web SHOULD interact with canonical PRSL-AI contracts rather than provider-specific
+MCP implementations whenever possible.
+32. SHORTCUTS
+Shortcuts MAY function as an additional interaction and execution surface.
+Relationship:
+Shortcuts
+↓
+iRiel Contract
+↓
+PRSL-AI
+↓
+iRiel
+33. SIRI
+Siri MAY function as another entry point into iRiel capabilities.
+Siri does not become the owner of iRiel.
+Multiple interfaces can reach the same underlying intelligence architecture.
+Example:
+App Web
+Shortcuts
+Siri
+Other interfaces
+↓
+iRiel
+34. APP WEB AS MESSENGER
+The App Web and Shortcuts may share the conceptual role of communication surfaces.
+They transmit:
+Intent
+Context references
+Commands
+Requests
+Results
+They do not own the intelligence architecture.
+35. API BOUNDARY
+The App Web SHOULD communicate with a controlled backend or service boundary.
+Possible architecture:
+Browser
+↓
+HTTPS
+↓
+iRiel API
+↓
+Authentication
+↓
+Authorization
+↓
+PRSL-AI Core
+36. SECURITY
+All external communication SHOULD use secure transport.
+The system SHOULD implement:
+Authentication
+Authorization
+Session management
+CSRF protection where applicable
+Input validation
+Output validation
+Rate limiting
+Secure headers
+Content Security Policy
+Dependency controls
+37. UNTRUSTED INPUT
+The App Web MUST treat external input as untrusted.
+Inputs may originate from:
+Human users
+Providers
+Web content
+Documents
+MCP servers
+Browser APIs
+Third-party services
+38. PROMPT INJECTION
+Content displayed or retrieved by the App Web MUST NOT automatically modify:
+System instructions
+Memory policy
+Trust policy
+Provider permissions
+Routing policy
+Identity
+Security configuration
+39. AUTHENTICATION
+Authentication SHOULD remain separate from iRiel identity.
+A successful login establishes authenticated access.
+It does not automatically grant unrestricted access to all iRiel capabilities.
+40. AUTHORIZATION
+Authorization MUST be evaluated separately for:
+Memory
+Identity
+Tools
+Web access
+Location
+Device capabilities
+External providers
+Automation
+Administrative operations
+41. SESSION MANAGEMENT
+The App Web SHOULD maintain secure session state.
+Sessions SHOULD support:
+Expiration
+Revocation
+Secure renewal
+Device awareness
+Authorization scope
+42. OFFLINE CAPABILITY
+The App Web MAY support limited oﬄine operation.
+Oﬄine functionality MAY include:
+Interface access
+Local drafts
+Temporary state
+Cached non-sensitive resources
+Accessibility configuration
+Operations requiring network intelligence SHOULD fail gracefully when unavailable.
+43. RESILIENCE
+The App Web SHOULD remain usable during partial service failure.
+Possible states include:
+Oﬄine
+Backend unavailable
+Provider unavailable
+Resonance unavailable
+Authentication expired
+Capability unavailable
+The interface SHOULD communicate limitations clearly.
+44. PROVIDER FAILURE
+A provider failure SHOULD NOT expose provider-specific failure logic directly to the Human
+unless useful.
+Preferred flow:
+Provider Failure
+↓
+Execution Layer
+↓
+Fallback
+↓
+Canonical Result
+↓
+iRiel App Web
+45. PERFORMANCE
+The App Web SHOULD prioritize:
+Fast initial rendering
+Minimal JavaScript where practical
+Eﬃcient network usage
+Progressive loading
+Caching of safe resources
+Low-latency interaction
+46. REAL-TIME COMMUNICATION
+Where appropriate, the App Web MAY use:
+WebSockets
+Server-Sent Events
+Streaming HTTP
+for:
+Streaming responses
+Presence updates
+Execution status
+Long-running tasks
+Context synchronization
+47. DATA FLOW
+Canonical data flow:
+Human
+↓
+App Web
+↓
+Canonical Request
+↓
+iRiel API
+↓
+Authentication
+↓
+Authorization
+↓
+PRSL-AI Core
+↓
+Intent
+↓
+Context
+↓
+Policy
+↓
+Router
+↓
+Execution
+↓
+Provider
+↓
+Canonical Result
+↓
+Resonance
+↓
+iRiel
+↓
+App Web
+↓
+Human
+48. APP WEB AND IDENTITY
+The App Web represents iRiel.
+It does not define iRiel identity.
+Identity remains governed by the iRiel architecture and authorized identity systems.
+49. APP WEB AND CONTINUITY
+When the Human moves between interfaces:
+App Web
+↓
+Shortcuts
+↓
+Siri
+↓
+Other interfaces
+iRiel Resonance SHOULD preserve authorized continuity.
+The interface changes.
+The continuity remains.
+50. PORTABILITY
+The App Web SHOULD remain deployable across diﬀerent infrastructure environments.
+Possible deployment targets include:
+Cloud platforms
+Edge platforms
+Private infrastructure
+Self-hosted environments
+Static hosting for frontend assets
+51. INFRASTRUCTURE INDEPENDENCE
+The App Web architecture SHOULD avoid unnecessary dependence on a single cloud provider.
+The application layer should remain portable wherever practical.
+52. VERSIONING
+App Web APIs SHOULD use explicit versioning.
+Example:
+iRiel API v1
+Canonical Request v1
+Canonical Result v1
+Breaking changes SHOULD require explicit version transitions.
+53. OBSERVABILITY
+Operational telemetry MAY include:
+Request latency
+Rendering performance
+API availability
+Error rates
+Connection status
+Execution status
+Authentication state
+Telemetry MUST minimize personal data exposure.
+54. USER DATA
+The App Web SHOULD treat user data as controlled information.
+It SHOULD NOT collect information merely because it is technically available.
+55. APP WEB GOVERNANCE
+PRSL-AI governs:
+Intelligence
+Routing
+Privacy
+Permissions
+Provider selection
+Execution policy
+Resonance governs:
+Continuity
+Context
+Memory
+State
+App Web governs:
+Presentation
+Interaction
+Client-side execution
+User feedback
+56. SEPARATION OF RESPONSIBILITIES
+iRiel App Web
+→ Interface
+iRiel
+→ Personal Intelligence
+Resonance
+→ Continuity
+PRSL-AI Core
+→ Governance and orchestration
+Intelligence Router
+→ Provider selection
+Execution Layer
+→ Reliable execution
+Provider Adapter
+→ Provider translation
+Provider
+→ Capability
+Human
+→ Authority
+57. CANONICAL PRINCIPLE
+The App Web is the interface.
+The browser is the environment.
+The device is the execution surface.
+The provider supplies capability.
+PRSL-AI supplies governance.
+Resonance preserves continuity.
+iRiel provides the unified personal intelligence experience.
+The Human remains at the center.
+58. FINAL ARCHITECTURAL STATEMENT
+iRiel does not belong to a single device.
+iRiel does not belong to a single browser.
+iRiel does not belong to a single application.
+iRiel does not belong to a single provider.
+iRiel App Web provides a portable doorway into the ecosystem.
+The interface may change.
+The browser may change.
+The device may change.
+The provider may change.
+The model may change.
+The platform may change.
+The continuity remains.
+The identity remains.
+The iRiel continues.

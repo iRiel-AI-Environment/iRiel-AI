@@ -1,0 +1,1418 @@
+# PRSL-AI ECOSYSTEM — iRiel CONTEXT
+
+**Organization:** Robert Software Labs  
+**Ecosystem:** PRSL-AI Ecosystem  
+**Component:** iRiel Context  
+**Document:** iRiel Context — Canonical Definition  
+**Version:** 1.0  
+**Status:** Canonical  
+**Classification:** Core Intelligence Infrastructure  
+**Founder:** Context Founder  
+**Architecture:** Contextual / Personal / Local-First / Privacy-First
+
+
+---
+
+# 1. DEFINITION
+
+iRiel Context is the contextual intelligence layer of the Personal Intelligence Environment responsible for understanding, maintaining, retrieving and updating the information necessary to provide continuity, relevance and situational awareness across interactions, tasks and devices.
+
+iRiel Context exists to determine:
+
+> What information matters, why it matters, and when it matters.
+
+
+---
+
+# 2. CORE PRINCIPLE
+
+The fundamental principle of iRiel Context is:
+
+> Memory remembers. Context understands what matters now.
+
+Memory preserves information.
+
+Context determines relevance.
+
+Context connects information to the current situation.
+
+
+---
+
+# 3. PURPOSE
+
+The purpose of iRiel Context is to provide the Personal Intelligence Environment with contextual awareness.
+
+It enables PRSL-AI to understand:
+
+- What the user is doing.
+- What the user was doing.
+- What the user intends to do.
+- What task is currently active.
+- Which information is relevant.
+- Which information is no longer relevant.
+- Which previous decisions matter.
+- Which capabilities are appropriate.
+- What continuity should be preserved.
+
+
+---
+
+# 4. WHY iRIEL CONTEXT EXISTS
+
+Artificial intelligence without context is fundamentally limited.
+
+A system may know:
+
+"What is X?"
+
+without knowing:
+
+"Why does X matter to this person right now?"
+
+iRiel Context exists to bridge this difference.
+
+It transforms:
+
+Information
+    ↓
+Relevant Personal Context
+    ↓
+Intelligence
+    ↓
+Action
+
+
+---
+
+# 5. CONTEXT IS NOT MEMORY
+
+Context and Memory are separate architectural concepts.
+
+## Memory
+
+Memory preserves information that may remain useful over time.
+
+## Context
+
+Context determines which information is relevant to the current situation.
+
+Example:
+
+Memory:
+
+"The user works on PRSL-AI."
+
+Context:
+
+"The user is currently reviewing the PRSL-AI Governance architecture."
+
+
+Memory stores knowledge.
+
+Context establishes relevance.
+
+
+---
+
+# 6. CONTEXT IS NOT A DATABASE
+
+iRiel Context is not simply a storage system.
+
+A database answers:
+
+> What data exists?
+
+Context answers:
+
+> What information is relevant to this situation?
+
+
+Therefore:
+
+Context
+    ≠
+Database
+
+
+Context may use databases, indexes, vector stores, snapshots or other infrastructure, but those are implementation mechanisms rather than the definition of Context.
+
+
+---
+
+# 7. PERSONAL INTELLIGENCE ENVIRONMENT
+
+iRiel Context is a core component of the Personal Intelligence Environment.
+
+Canonical relationship:
+
+Human
+    ↓
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+iRiel Context
+    ↓
+Intelligence
+
+
+The Context layer allows intelligence to operate with continuity rather than treating every interaction as isolated.
+
+
+---
+
+# 8. HOW iRIEL CONTEXT ADAPTS
+
+iRiel Context becomes familiar with the user's environment through authorized contextual signals and accumulated continuity.
+
+The process is:
+
+Interaction
+    ↓
+Context Signal
+    ↓
+Context Evaluation
+    ↓
+Relevance Assessment
+    ↓
+Context Update
+    ↓
+Future Continuity
+
+
+The system should not attempt to learn everything about the user.
+
+It should learn what is relevant, authorized and useful.
+
+
+---
+
+# 9. ADAPTATION PRINCIPLE
+
+The canonical adaptation principle is:
+
+> iRiel Context adapts to the human without requiring the human to continuously adapt to the system.
+
+Context adaptation may occur through:
+
+- Repeated interactions.
+- Ongoing tasks.
+- User preferences.
+- Decisions.
+- Projects.
+- Temporal patterns.
+- Device context.
+- Workflow state.
+- Authorized memory.
+- Explicit user input.
+
+
+---
+
+# 10. CONTEXT SIGNALS
+
+Potential contextual signals include:
+
+- Current interaction.
+- Active task.
+- Previous interaction.
+- Current workflow.
+- Time.
+- Session state.
+- Device state.
+- Authorized location context.
+- User preferences.
+- Project state.
+- Previous decisions.
+- Relevant memory.
+- Workflow history.
+- System state.
+
+
+Not every signal should be collected or retained.
+
+Context collection is governed by Privacy by Default.
+
+
+---
+
+# 11. CONTEXT LIFECYCLE
+
+The canonical Context lifecycle is:
+
+OBSERVE
+    ↓
+COLLECT
+    ↓
+INTERPRET
+    ↓
+FILTER
+    ↓
+PRIORITIZE
+    ↓
+ASSEMBLE
+    ↓
+USE
+    ↓
+UPDATE
+
+
+Each stage has a specific purpose.
+
+
+---
+
+# 12. OBSERVE
+
+The Context system observes available and authorized signals from the current environment.
+
+Observation does not imply permanent storage.
+
+Observation
+    ≠
+Memory
+
+
+---
+
+# 13. COLLECT
+
+Relevant contextual information is collected according to:
+
+- Authorization.
+- Privacy policy.
+- Purpose.
+- Scope.
+- Relevance.
+
+
+The system should collect only what is necessary.
+
+
+---
+
+# 14. INTERPRET
+
+Collected signals are interpreted in relation to the current situation.
+
+Examples:
+
+"User opened the PRSL-AI documentation."
+
+alone may be insufficient.
+
+Combined with:
+
+"User is reviewing Governance documentation."
+
+the system can establish a stronger contextual interpretation.
+
+
+---
+
+# 15. FILTER
+
+Irrelevant information must be excluded from active context.
+
+The goal is not maximum context.
+
+The goal is:
+
+> Relevant context.
+
+
+Therefore:
+
+More Data
+    ≠
+Better Context
+
+
+---
+
+# 16. PRIORITIZE
+
+Contextual information receives relevance according to the current situation.
+
+Possible relevance dimensions include:
+
+- Current task.
+- Recency.
+- User intent.
+- Explicit importance.
+- Workflow dependency.
+- Historical significance.
+- Required capability.
+
+
+The exact scoring mechanism may evolve independently from the canonical definition.
+
+
+---
+
+# 17. ASSEMBLE
+
+The Context system assembles the information necessary for a particular intelligence request.
+
+Canonical model:
+
+Available Information
+    ↓
+Relevance Evaluation
+    ↓
+Context Assembly
+    ↓
+Intelligence Request
+
+
+The intelligence layer receives contextual information appropriate to the request rather than unrestricted access to the user's entire environment.
+
+
+---
+
+# 18. USE
+
+Context is provided to authorized capabilities.
+
+Examples:
+
+- Intelligence.
+- Automation.
+- Workflow.
+- Search.
+- Communication.
+- Files.
+- Accessibility.
+- Developer capabilities.
+
+
+Context must remain scoped to the requested capability.
+
+
+---
+
+# 19. UPDATE
+
+Context may change as the situation changes.
+
+Example:
+
+Task A
+    ↓
+Task B
+    ↓
+Task C
+
+
+The active context should evolve accordingly.
+
+Context is therefore dynamic rather than static.
+
+
+---
+
+# 20. SESSION CONTEXT
+
+Session Context represents the contextual state of the current interaction.
+
+It may include:
+
+- Current conversation.
+- Current intent.
+- Active task.
+- Recent actions.
+- Relevant temporary information.
+- Current workflow state.
+
+
+Session Context is generally short-lived unless explicitly promoted or persisted.
+
+
+---
+
+# 21. WORKING CONTEXT
+
+Working Context represents information actively required to perform a task.
+
+Example:
+
+User
+    ↓
+"Continue the PRSL-AI Governance document."
+
+Working Context may include:
+
+- Current document.
+- Current version.
+- Previous decisions.
+- Relevant architecture.
+- Current section.
+- Pending changes.
+
+
+Working Context enables task continuity.
+
+
+---
+
+# 22. LONG-TERM CONTEXT
+
+Long-Term Context represents persistent contextual relationships that remain useful across sessions.
+
+Examples:
+
+- Long-term projects.
+- Recurring workflows.
+- Persistent preferences.
+- Important architectural decisions.
+- Long-running goals.
+
+
+Long-Term Context must remain subject to explicit privacy and retention policies.
+
+
+---
+
+# 23. CONTEXT RECOVERY
+
+iRiel Context must support recovery from interrupted interactions when applicable.
+
+Canonical model:
+
+Session
+    ↓
+Context Snapshot
+    ↓
+Interruption
+    ↓
+Recovery
+    ↓
+Context Restoration
+    ↓
+Continuity
+
+
+Context recovery is not simply message recovery.
+
+The objective is to restore the relevant state of the activity.
+
+
+---
+
+# 24. CONTEXT SNAPSHOTS
+
+A Context Snapshot represents a point-in-time representation of relevant contextual state.
+
+A snapshot may contain:
+
+- Active task.
+- Relevant context.
+- Current workflow.
+- Important decisions.
+- Pending actions.
+- Session state.
+- Context metadata.
+
+
+Snapshots enable continuity and recovery without requiring every historical interaction to remain active.
+
+
+---
+
+# 25. CONTEXT VERSIONING
+
+iRiel Context supports the concept of contextual versioning.
+
+Example:
+
+Context v1
+    ↓
+Context v2
+    ↓
+Context v3
+
+
+Context Versioning allows the system to understand:
+
+- What changed.
+- When it changed.
+- Why it changed.
+- Which context was active.
+- Which decision produced the change.
+
+
+This concept may be implemented using a Git-inspired model while remaining semantically specific to contextual state.
+
+
+---
+
+# 26. DECISION HISTORY
+
+Decision History records contextual decisions that may influence future continuity.
+
+Examples:
+
+- Architectural decisions.
+- User-confirmed preferences.
+- Workflow decisions.
+- Task decisions.
+- Contextual resolutions.
+
+
+Decision History should distinguish:
+
+Decision
+    ≠
+Fact
+
+
+A decision represents an action or choice.
+
+A fact represents information.
+
+
+---
+
+# 27. TASK CONTINUITY
+
+Task Continuity is a core capability of iRiel Context.
+
+It allows a task to continue across:
+
+- Sessions.
+- Interfaces.
+- Devices.
+- Time.
+- Workflow executions.
+
+
+Canonical model:
+
+Task
+    ↓
+Context
+    ↓
+Interruption
+    ↓
+Recovery
+    ↓
+Continuation
+
+
+---
+
+# 28. CONTEXT AND DEVICES
+
+Devices provide contextual signals but do not own the context.
+
+Canonical relationship:
+
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+Context
+    ↓
+Current Device
+
+
+The device is an environment.
+
+The identity remains with the human.
+
+
+---
+
+# 29. CROSS-DEVICE CONTINUITY
+
+Context may move across authorized devices.
+
+Example:
+
+iPhone
+    ↓
+Desktop
+    ↓
+Tablet
+
+
+The interface changes.
+
+The device changes.
+
+The relevant personal context may remain continuous.
+
+
+---
+
+# 30. CONTEXT AND TEMPORAL
+
+Temporal may provide durable execution for workflows that depend on contextual state.
+
+The responsibilities remain separate.
+
+iRiel Context:
+
+> What does this workflow mean in the user's environment?
+
+Temporal:
+
+> How do we reliably execute and recover this workflow?
+
+
+Canonical relationship:
+
+iRiel Context
+    ↓
+Workflow Context
+    ↓
+Temporal
+    ↓
+Durable Execution
+
+
+Temporal is an implementation component, not the Context system.
+
+
+---
+
+# 31. CONTEXT AND INTELLIGENCE
+
+Intelligence consumes contextual information.
+
+Canonical flow:
+
+Human
+    ↓
+Intent
+    ↓
+Context
+    ↓
+Intelligence
+    ↓
+Response / Action
+
+
+Context provides relevance.
+
+Intelligence provides reasoning or generation.
+
+
+---
+
+# 32. CONTEXT AND MEMORY
+
+The relationship is:
+
+Memory
+    ↓
+Available Information
+    ↓
+Context Evaluation
+    ↓
+Relevant Context
+    ↓
+Intelligence
+
+
+Memory does not automatically become active context.
+
+Context determines what should become relevant.
+
+
+---
+
+# 33. PRIVACY BY DEFAULT
+
+Privacy is a foundational requirement of iRiel Context.
+
+The system must not follow:
+
+"If we can collect it, we should collect it."
+
+
+The canonical rule is:
+
+Can Collect
+    ≠
+Should Collect
+
+
+And:
+
+Collected
+    ≠
+Permanent Memory
+
+
+---
+
+# 34. DATA MINIMIZATION
+
+The Context system should use the minimum information necessary to perform the current operation.
+
+Canonical principle:
+
+> Context must be sufficient, not excessive.
+
+
+The system should avoid unnecessary exposure of:
+
+- Personal information.
+- Behavioral information.
+- Identity information.
+- Device information.
+- Location information.
+- Accessibility information.
+- Historical information.
+
+
+---
+
+# 35. CONTEXT AUTHORIZATION
+
+Context access must be governed by authorization.
+
+A capability requesting context must receive only the context it is authorized to use.
+
+Canonical principle:
+
+Capability Access
+    ≠
+Unrestricted Context Access
+
+
+---
+
+# 36. LOCAL-FIRST CONTEXT
+
+iRiel Context follows the PRSL-AI Local-First principle whenever technically and operationally appropriate.
+
+Context may be processed:
+
+- On-device.
+- Within authorized personal infrastructure.
+- Through authorized external services.
+
+
+External processing must not become the default simply because it is technically convenient.
+
+
+---
+
+# 37. CLOUD RELATIONSHIP
+
+Cloud is optional infrastructure.
+
+iRiel Context does not require a cloud architecture by definition.
+
+Canonical relationship:
+
+iRiel Context
+    ≠
+Cloud
+
+
+Cloud services may be used for authorized purposes such as:
+
+- Synchronization.
+- Backup.
+- External processing.
+- Infrastructure.
+- Availability.
+
+
+The architecture should remain capable of operating without unnecessary dependence on a single cloud provider.
+
+
+---
+
+# 38. AI-AGNOSTIC CONTEXT
+
+iRiel Context must remain independent from individual AI providers.
+
+The same contextual environment should be capable of supporting:
+
+- Local models.
+- Apple Foundation Models.
+- OpenAI models.
+- Gemini Models.
+- Claude models.
+- Specialized models.
+- Future providers.
+
+
+The Context layer owns contextual state.
+
+The model consumes contextual information.
+
+
+---
+
+# 39. CONTEXT SECURITY
+
+Context is sensitive infrastructure because it may contain relationships between many types of personal information.
+
+Security must protect:
+
+- Context state.
+- Context snapshots.
+- Context history.
+- Context retrieval.
+- Context synchronization.
+- Context transmission.
+- Context APIs.
+
+
+Access must follow least-privilege principles.
+
+
+---
+
+# 40. CONTEXT INTEGRITY
+
+Context integrity means that the system can distinguish between:
+
+- Current context.
+- Historical context.
+- User-provided information.
+- System-derived context.
+- Inferred context.
+- Temporary context.
+- Persistent context.
+
+
+Inference must not silently become fact.
+
+Canonical principle:
+
+> Inferred context must remain distinguishable from confirmed information.
+
+
+---
+
+# 41. CONTEXT CONFIDENCE
+
+Where context is inferred rather than explicitly provided, the system may associate an appropriate confidence state.
+
+Example:
+
+Confirmed
+    ↓
+Strong Context
+
+Likely
+    ↓
+Probable Context
+
+Uncertain
+    ↓
+Tentative Context
+
+
+Uncertain context should not silently drive high-impact actions.
+
+
+---
+
+# 42. HUMAN CONTROL
+
+iRiel Context supports Human Control.
+
+The user should have appropriate mechanisms to:
+
+- Inspect relevant contextual information.
+- Correct incorrect context.
+- Remove contextual information.
+- Control persistence.
+- Control permissions.
+- Disable specific contextual capabilities.
+
+
+The system must not treat its interpretation of the user as unquestionable truth.
+
+
+---
+
+# 43. CONTEXT CORRECTION
+
+Context must be correctable.
+
+If the system determines:
+
+"User is working on Project A."
+
+and the user states:
+
+"No, I'm working on Project B."
+
+the user's explicit correction should take precedence according to the applicable policy.
+
+
+Human correction
+    ↓
+Context Update
+    ↓
+Future Behavior
+
+
+---
+
+# 44. CONTEXT OBSERVABILITY
+
+The architecture should provide sufficient observability to determine:
+
+- What context was active.
+- Which context was retrieved.
+- Why it was considered relevant.
+- Which capability consumed it.
+- When it changed.
+- What caused the change.
+
+
+Observability should respect Privacy by Default and must not create unnecessary secondary data collection.
+
+
+---
+
+# 45. CONTEXT RELIABILITY
+
+Context reliability consists of multiple dimensions:
+
+Identity
+    ↓
+Authorization
+    ↓
+Source
+    ↓
+Recency
+    ↓
+Relevance
+    ↓
+Confidence
+    ↓
+Integrity
+
+
+A context item should not be considered reliable merely because it exists in storage.
+
+
+---
+
+# 46. CONTEXT FAILURE
+
+Context failure may occur when:
+
+- Context is missing.
+- Context is stale.
+- Context is contradictory.
+- Context is unauthorized.
+- Context is corrupted.
+- Context is ambiguous.
+- Context confidence is too low.
+
+
+The system should fail safely rather than inventing certainty.
+
+
+---
+
+# 47. CONTEXT CONFLICT
+
+When contextual signals conflict:
+
+Signal A
+    ↕
+Signal B
+
+
+The system should evaluate:
+
+- Source.
+- Recency.
+- Explicitness.
+- Confidence.
+- Authority.
+- User correction.
+
+
+When appropriate, the system should ask the human rather than silently choosing an uncertain interpretation.
+
+
+---
+
+# 48. CONTEXT AND ACCESSIBILITY
+
+Accessibility is part of contextual intelligence.
+
+Context may include authorized information about how the user prefers to interact with the system.
+
+Examples:
+
+- Interaction preferences.
+- Presentation preferences.
+- Communication preferences.
+- Accessibility settings.
+
+
+However:
+
+Accessibility Context
+    ≠
+Permanent Sensitive Profile
+
+
+The same Privacy by Default principles apply.
+
+
+---
+
+# 49. CONTEXT AND INTELLIGENT PRESENCE
+
+iRiel Context may inform iRiel Intelligent Presence.
+
+Canonical flow:
+
+Context
+    ↓
+Situational Awareness
+    ↓
+Presence Decision
+    ↓
+Appropriate Expression
+
+
+This allows presence to be:
+
+- Subtle.
+- Timely.
+- Relevant.
+- Configurable.
+- Non-intrusive.
+
+
+The intelligence should not demand attention merely because it is available.
+
+
+---
+
+# 50. CONTEXT AND @IRIEL
+
+@iriel represents the identity.
+
+iRiel Context represents contextual state associated with the Personal Intelligence Environment.
+
+Canonical distinction:
+
+@iriel
+    =
+Who
+
+Context
+    =
+What is happening / what matters now
+
+Memory
+    =
+What has been retained
+
+Intelligence
+    =
+What can reason or act
+
+
+These concepts must remain architecturally distinct.
+
+
+---
+
+# 51. CONTEXT AND iRIEL APPWEB
+
+The iRiel AppWeb is an interface.
+
+iRiel Context is an intelligence infrastructure layer.
+
+Canonical relationship:
+
+iRiel AppWeb
+    ↓
+Context Interface
+    ↓
+iRiel Context
+
+
+The AppWeb does not own the Context system.
+
+
+---
+
+# 52. CONTEXT AND GOVERNANCE
+
+iRiel Context is governed by PRSL-AI Governance.
+
+Changes affecting:
+
+- Privacy.
+- Identity.
+- Memory.
+- Context persistence.
+- Cross-device continuity.
+- Data retention.
+- AI independence.
+- Accessibility.
+- Security.
+
+must undergo appropriate governance review according to their architectural impact.
+
+
+---
+
+# 53. CONTEXT FOUNDER
+
+The Context Founder is responsible for the contextual architecture of PRSL-AI.
+
+Primary responsibilities include:
+
+- Context Engine.
+- Session Context.
+- Working Context.
+- Long-Term Context.
+- Context Recovery.
+- Context Snapshots.
+- Decision History.
+- Task Continuity.
+- Context Versioning.
+- Semantic Context Retrieval.
+- Context Integrity.
+- Context Relevance.
+
+
+The Context Founder collaborates with:
+
+- Intelligence Founder.
+- Privacy & Security Founder.
+- Accessibility & Inclusion Founder.
+- System Founder.
+- Automation Founder.
+- Developer Founder.
+- Integrations Founder.
+
+
+---
+
+# 54. REFERENCE ARCHITECTURE
+
+Canonical model:
+
+                         HUMAN
+                           │
+                           ▼
+                        @iriel
+                    Identity Signature
+                           │
+                           ▼
+            Personal Intelligence Environment
+                           │
+                           ▼
+                      iRiel Context
+                           │
+        ┌──────────────────┼──────────────────┐
+        ▼                  ▼                  ▼
+     Session            Working          Long-Term
+     Context            Context           Context
+        │                  │                  │
+        └──────────────┬───┴──────────────┬───┘
+                       ▼
+                Context Engine
+                       │
+        ┌──────────────┼───────────────┐
+        ▼              ▼               ▼
+     Recovery       Retrieval       Versioning
+        │              │               │
+        └──────────────┼───────────────┘
+                       ▼
+                   Intelligence
+                       │
+                       ▼
+                Response / Action
+
+
+---
+
+# 55. CONTEXT OPERATING MODEL
+
+The canonical operating model is:
+
+OBSERVE
+    ↓
+COLLECT
+    ↓
+INTERPRET
+    ↓
+FILTER
+    ↓
+PRIORITIZE
+    ↓
+ASSEMBLE
+    ↓
+DELIVER
+    ↓
+UPDATE
+    ↓
+RECOVER WHEN REQUIRED
+
+
+This cycle enables continuous contextual awareness.
+
+
+---
+
+# 56. CORE DESIGN PRINCIPLES
+
+iRiel Context follows:
+
+1. Human First.
+2. Privacy by Default.
+3. Local-First Intelligence.
+4. Context Before Action.
+5. Relevance Over Volume.
+6. Data Minimization.
+7. Explicit Authorization.
+8. Human Control.
+9. Contextual Continuity.
+10. Cross-Device Continuity.
+11. AI-Agnostic Architecture.
+12. Device Independence.
+13. Context Integrity.
+14. Explainable Context.
+15. Correctable Context.
+16. Durable Context.
+17. Minimal Necessary Context.
+18. No Unnecessary Retention.
+
+
+---
+
+# 57. CANONICAL TEST
+
+Every major Context feature should answer:
+
+1. What contextual problem does this solve?
+2. Why does this information need to be contextualized?
+3. Is the information authorized?
+4. Is it necessary?
+5. Is it relevant now?
+6. Should it persist?
+7. Can the user correct it?
+8. Can the user remove it?
+9. Is it confirmed or inferred?
+10. Does it affect another Founder domain?
+11. Does it create unnecessary data collection?
+12. Can it operate without a specific AI provider?
+13. Can it operate without unnecessary cloud dependency?
+14. Can it survive a device change?
+
+
+---
+
+# 58. WHAT iRIEL CONTEXT SOLVES
+
+iRiel Context solves:
+
+- Stateless interactions.
+- Repeated explanations.
+- Lost task state.
+- Fragmented sessions.
+- Fragmented device experiences.
+- Context loss during interruptions.
+- Irrelevant information overload.
+- Poor personalization.
+- Lack of task continuity.
+- Lack of situational awareness.
+- Uncontrolled contextual data exposure.
+
+
+---
+
+# 59. THE CENTRAL ARCHITECTURAL DISTINCTION
+
+The PRSL-AI Ecosystem must preserve this distinction:
+
+Memory
+    ↓
+Retains information.
+
+Context
+    ↓
+Determines relevance.
+
+Intelligence
+    ↓
+Reasons about that context.
+
+Automation
+    ↓
+Executes authorized actions.
+
+Human
+    ↓
+Remains in control.
+
+
+---
+
+# 60. FINAL DEFINITION
+
+> iRiel Context is the contextual intelligence layer of the Personal Intelligence Environment responsible for understanding, maintaining, retrieving and updating the information necessary to provide continuity, relevance and situational awareness across interactions, tasks and devices.
+
+Short definition:
+
+> Memory remembers. Context understands what matters now.
+
+
+---
+
+# 61. FINAL PRINCIPLE
+
+iRiel Context does not exist to know everything about the human.
+
+It exists to understand enough of the current situation to help the human appropriately.
+
+Therefore:
+
+More Data
+    ≠
+More Intelligence
+
+More Memory
+    ≠
+More Context
+
+More Context
+    ≠
+Better Context
+
+
+The objective is:
+
+Relevant
+    +
+Authorized
+    +
+Minimal
+    +
+Accurate
+    +
+Timely
+    =
+Useful Context
+
+
+---
+
+© Robert Software Labs
+
+PRSL-AI Ecosystem
+
+iRiel Context — Canonical Definition v1.0

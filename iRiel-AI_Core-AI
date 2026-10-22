@@ -1,0 +1,585 @@
+iRiel-AI_Core-AI.md
+iRIEL-AI CORE AI
+STATUS: CANONICAL INSTITUTIONAL CONTRACT
+iRiel-AI Core AI is the intelligence capability contract of iRiel Personal Intelligence within the PRSL-AI Ecosystem.
+Core AI provides the computational intelligence capabilities that iRiel Personal Intelligence may use to understand, reason, generate, transform, interpret, plan, analyze, and assist.
+Core AI is a capability layer.
+It is not the identity of iRiel.
+It is not the Principle.
+It is not iRiel Personal Intelligence itself.
+It is not iRiel Maestro Resonance.
+It is not iRiel Router Intelligence.
+It is not iRiel Intelligence Server.
+It is not iRiel System.
+It is not iRiel-AI Device’s.
+Core AI exists to provide intelligence capabilities to the Personal Intelligence environment under the contracts that govern the ecosystem.
+The foundational Principle remains:
+Accessibility and Inclusion with Privacy by Default.
+Core AI must therefore operate in service of that Principle.
+INTELLIGENCE WITHOUT IDENTITY
+Core AI may provide intelligence.
+It does not become iRiel.
+A model may reason.
+A provider may generate.
+A service may process.
+A local runtime may infer.
+None of these capabilities independently constitute the identity of iRiel Personal Intelligence.
+The relationship is:
+Human
+↓
+iRiel Personal Intelligence
+↓
+iRiel Maestro Resonance
+↓
+iRiel Router Intelligence
+↓
+iRiel-AI Core AI
+↓
+Intelligence Capability
+Core AI is therefore subordinate to the Personal Intelligence architecture.
+The intelligence provider is replaceable.
+The intelligence capability is replaceable.
+The implementation is replaceable.
+The identity and constitutional principles remain.
+AI-AGNOSTIC INTELLIGENCE
+Core AI must remain AI-agnostic.
+The architecture may integrate:
+On-device models
+Apple Intelligence
+OpenAI
+Gemini
+Anthropic
+Other commercial providers
+Open-source models
+Specialized models
+Deterministic intelligence systems
+Future AI systems
+Other authorized intelligence providers
+No provider is constitutionally privileged merely because it currently supplies intelligence.
+A provider may be preferred for a particular capability.
+That preference is operational.
+It is not identity.
+A provider may be removed without destroying iRiel Personal Intelligence.
+A model may be replaced without destroying iRiel Personal Intelligence.
+An AI architecture may evolve without destroying iRiel Personal Intelligence.
+Core AI must therefore provide a stable architectural capability boundary above replaceable intelligence implementations.
+CORE AI CAPABILITIES
+Core AI may provide capabilities including:
+Understanding
+Reasoning
+Analysis
+Generation
+Transformation
+Summarization
+Classification
+Translation
+Planning
+Problem solving
+Coding
+Vision understanding
+Audio understanding
+Speech processing
+Multimodal reasoning
+Content generation
+Tool-oriented reasoning
+Structured output
+Other authorized intelligence capabilities
+The capability set is extensible.
+New capabilities may be introduced without redefining the identity of iRiel.
+Capability availability may vary by provider, device, model, system state, privacy policy, accessibility requirements, or network conditions.
+The absence of a capability does not mean that iRiel Personal Intelligence ceases to exist.
+INTELLIGENCE AS A SERVICE TO THE HUMAN
+Core AI exists to improve the human’s ability to understand, create, decide, communicate, access, and act.
+It must not optimize intelligence for its own sake.
+The objective is not:
+Maximum model capability.
+The objective is:
+Appropriate intelligence for the human, context, and purpose.
+A smaller or local model may be preferable when it adequately satisfies the request while providing greater privacy, lower latency, lower resource consumption, or better accessibility.
+A larger model may be preferable when the task genuinely requires greater reasoning or capability.
+The correct choice belongs to the broader routing and orchestration architecture.
+Core AI provides the capability.
+It does not independently decide the entire system strategy.
+RELATIONSHIP WITH iRiel MAESTRO RESONANCE
+Maestro Resonance coordinates the ecosystem.
+Core AI provides intelligence capabilities within that orchestration.
+The Maestro determines how intelligence participates in the current Personal Intelligence context.
+Core AI performs the applicable intelligence operation.
+Conceptually:
+Context
+↓
+Maestro Resonance
+↓
+Router Intelligence
+↓
+Core AI
+↓
+Intelligence Capability
+↓
+Result
+↓
+Maestro Resonance
+Core AI must return meaningful results and meaningful failure states to the orchestration layer.
+It must not conceal material execution failures.
+It must not fabricate completion.
+It must not claim reasoning, tool execution, retrieval, or external action that did not occur.
+RELATIONSHIP WITH iRiel ROUTER INTELLIGENCE
+The Router selects the appropriate intelligence capability.
+Core AI provides the selected capability.
+The Router routes.
+Core AI processes.
+The distinction must remain clear.
+The Router may select:
+Local model
+Remote model
+Specialized model
+Multimodal model
+Deterministic capability
+Other intelligence resource
+Core AI provides the capability interface through which that resource participates in iRiel Personal Intelligence.
+Core AI must not bypass the Router merely because a particular provider is available.
+Where direct deterministic execution is explicitly defined as part of the architecture, the execution must still respect the applicable contracts.
+RELATIONSHIP WITH iRiel INTELLIGENCE SERVER
+The Intelligence Server provides infrastructure through which intelligence capabilities may be hosted, coordinated, exposed, or executed.
+Core AI represents the intelligence capability layer.
+The Intelligence Server represents infrastructure.
+The two must remain architecturally distinguishable.
+Core AI must be capable of operating through different infrastructure environments where supported.
+Local execution.
+Private infrastructure.
+Remote infrastructure.
+Cloud infrastructure.
+Device execution.
+Other authorized environments.
+Infrastructure may change.
+The intelligence contract remains.
+RELATIONSHIP WITH iRiel SYSTEM
+iRiel System provides the system environment through which Core AI becomes accessible to the human.
+Core AI provides intelligence.
+The System provides the environment.
+The AppWeb provides an interface expression of that environment.
+Core AI must not become responsible for the entire system interface.
+It should communicate capabilities and results through appropriate system contracts.
+RELATIONSHIP WITH iRiel-AI DEVICE’S
+Devices provide computational environments and physical capabilities.
+Core AI may use device-local resources where appropriate.
+Examples include:
+CPU
+GPU
+NPU
+Memory
+Microphone
+Camera
+Sensors
+Local models
+Speech processing
+Vision processing
+Other device capabilities
+Device availability does not determine iRiel identity.
+A device is an execution environment.
+Core AI must remain capable of moving between supported execution environments through the routing architecture.
+ON-DEVICE FIRST
+Where appropriate, Core AI should support on-device intelligence.
+On-device processing may provide:
+Improved privacy
+Reduced latency
+Reduced network dependence
+Offline capability
+Lower external data exposure
+Greater resilience
+Potentially improved accessibility
+However, on-device execution is not an absolute requirement for every task.
+The correct execution environment depends on:
+Capability
+Privacy
+Context
+Accessibility
+Latency
+Cost
+Availability
+Device resources
+Authorization
+Other applicable constraints
+The architectural preference is:
+Local when sufficient.
+Remote when necessary and authorized.
+Fallback when appropriate.
+Failure when neither is acceptable.
+PRIVACY
+Core AI must treat privacy as a first-class architectural constraint.
+Core AI must not assume that information may be transmitted simply because a model can process it.
+Before information reaches an intelligence provider, the applicable architecture must determine:
+Whether transmission is permitted.
+Which information is necessary.
+Which provider is authorized.
+Which context is necessary.
+Whether local processing is sufficient.
+Whether sensitive information must be minimized.
+Whether the operation requires explicit authorization.
+Core AI must support privacy-preserving processing patterns.
+Where feasible:
+Minimize context.
+Minimize exposure.
+Prefer local processing.
+Use authorized providers.
+Avoid unnecessary retention.
+Avoid unnecessary logging.
+Avoid unnecessary replication.
+Privacy is not a secondary feature of Core AI.
+Privacy is part of the conditions under which intelligence is allowed to operate.
+ACCESSIBILITY
+Core AI must support accessibility as an architectural requirement.
+Accessibility is not limited to the presentation layer.
+Intelligence processing may need to account for:
+Input modality
+Output modality
+Language
+Communication preference
+Cognitive load
+Speech characteristics
+Alternative communication
+Visual limitations
+Auditory limitations
+Motor interaction constraints
+Other authorized accessibility context
+Core AI may transform information to make it accessible.
+Examples include:
+Text to speech
+Speech to text
+Simplified explanations
+Alternative descriptions
+Structured responses
+Captioning
+Translation
+Alternative communication support
+Context-aware completion
+Other accessibility capabilities
+The underlying Personal Intelligence must remain the same.
+Accessibility changes how intelligence is expressed and accessed.
+It does not create a lesser intelligence environment.
+HUMAN AGENCY
+Core AI must support human agency.
+Intelligence generation does not equal authorization to act.
+A model may recommend an action.
+That does not mean the action is authorized.
+A model may generate an instruction.
+That does not mean the instruction should be executed.
+A model may identify a possible operation.
+That does not mean the operation is permitted.
+Execution authority remains governed by the applicable system, privacy, security, authorization, and automation contracts.
+Core AI must therefore distinguish:
+Suggestion
+Decision support
+Generation
+Planning
+Execution
+The existence of intelligence does not automatically imply execution authority.
+TRUTHFULNESS
+Core AI must preserve truthful representation of its capabilities and operations.
+It must not claim:
+A tool was used when it was not.
+A source was consulted when it was not.
+An action was executed when it was not.
+A provider responded when it did not.
+A file was created when it was not.
+A memory was stored when it was not.
+A capability was available when it was unavailable.
+A result was verified when it was not.
+The system must preserve the distinction between:
+Generated
+Retrieved
+Observed
+Executed
+Verified
+Inferred
+Requested
+Completed
+Failed
+This distinction is essential to trust.
+CONTEXT
+Core AI may receive contextual information necessary to perform an intelligence task.
+Context must be:
+Relevant
+Authorized
+Purpose-bound
+Minimized where possible
+Protected according to applicable privacy requirements
+Core AI must not assume that all available Personal Intelligence context should be passed into every intelligence operation.
+More context does not automatically mean better intelligence.
+The correct context is the context necessary to serve the human appropriately.
+MEMORY
+Core AI does not own iRiel Memory.
+Memory belongs to the Personal Intelligence architecture.
+Core AI may use authorized memory as input when the broader architecture determines that it is relevant and permitted.
+Core AI must not independently convert every interaction into permanent memory.
+It must not bypass memory policy.
+It must not treat generated content as automatically authoritative memory.
+Memory remains governed separately.
+IDENTITY
+Core AI does not own iRiel Identity.
+Identity belongs to iRiel Personal Intelligence.
+Core AI may receive relevant identity context when authorized.
+It must not redefine identity.
+It must not infer permanent identity changes merely from transient interactions.
+It must not treat identity information as unrestricted context.
+MULTIMODAL INTELLIGENCE
+Core AI must support multimodal intelligence where available.
+Inputs may include:
+Text
+Voice
+Audio
+Images
+Video
+Sensors
+Structured data
+Context
+Other authorized modalities
+Outputs may include:
+Text
+Speech
+Images
+Structured data
+Actions
+Accessibility transformations
+Other authorized modalities
+The multimodal capability must remain coordinated by the broader architecture.
+A modality is an interface to intelligence.
+It is not a separate identity.
+LOCAL AND REMOTE INTELLIGENCE
+Core AI must support architectural separation between intelligence capability and execution location.
+The same conceptual capability may be provided by:
+A local model
+A remote model
+A specialized service
+A device capability
+A future intelligence provider
+The Personal Intelligence identity remains unchanged.
+This allows the ecosystem to evolve without provider lock-in.
+FALLBACK
+Core AI must support graceful fallback where technically and architecturally appropriate.
+If one intelligence resource fails:
+The Router may select another resource.
+The Maestro may preserve context.
+The System may communicate the transition.
+The Personal Intelligence remains continuous.
+Fallback must respect privacy and authorization.
+A remote fallback must not be used merely because a local capability failed if remote processing is prohibited.
+A lower-capability fallback must not silently produce materially different results without appropriate handling.
+FAILURE
+Core AI must provide explicit failure states.
+Possible states include:
+Unavailable
+Timeout
+Rate Limited
+Provider Error
+Model Error
+Invalid Input
+Unsupported Capability
+Context Error
+Permission Error
+Execution Error
+Partial Result
+Cancelled
+Other defined failure states
+Failure is a valid system state.
+Fabricated success is not.
+Core AI must fail honestly.
+RESOURCE AWARENESS
+Core AI should be capable of operating under resource constraints.
+Relevant resources may include:
+CPU
+GPU
+NPU
+Memory
+Battery
+Network
+Latency budget
+Provider quotas
+Cost budget
+Storage
+Execution time
+The architecture should adapt intelligence selection according to these constraints through the Router and Maestro.
+Core AI itself must not assume unlimited resources.
+DETERMINISTIC CAPABILITIES
+Not every intelligence operation requires generative AI.
+Core AI may expose or cooperate with deterministic capabilities when they are more appropriate.
+Examples include:
+Parsing
+Classification
+Validation
+Transformation
+Calculation
+Structured processing
+Rule-based operations
+Other deterministic functions
+Where deterministic execution is more reliable and sufficient, the architecture should not require generative AI merely because AI is available.
+This supports:
+Reliability
+Privacy
+Latency
+Cost efficiency
+Predictability
+The principle is:
+Use intelligence where intelligence is useful.
+Do not introduce unnecessary intelligence where deterministic computation is sufficient.
+MODEL REPLACEMENT
+Models are replaceable components.
+Core AI must preserve an abstraction boundary that allows model replacement without requiring changes to the identity of iRiel Personal Intelligence.
+A model may be:
+Upgraded
+Downgraded
+Replaced
+Removed
+Added
+Localized
+Specialized
+Deprecated
+The Personal Intelligence architecture remains stable.
+PROVIDER REPLACEMENT
+Providers are replaceable.
+No provider should become a hard architectural dependency of iRiel’s identity.
+Provider-specific adapters may exist.
+Provider-specific capabilities may exist.
+Provider-specific optimizations may exist.
+The contract remains provider-agnostic.
+This is essential to prevent vendor lock-in and preserve long-term architectural autonomy.
+MODEL OUTPUT IS NOT AUTOMATICALLY TRUTH
+Core AI output may be:
+Correct
+Incorrect
+Incomplete
+Ambiguous
+Outdated
+Inferred
+Generated
+Probabilistic
+The broader ecosystem must distinguish intelligence output from verified external truth where the distinction matters.
+Core AI should communicate uncertainty when appropriate.
+It should not manufacture certainty merely to create a smoother interaction.
+CONTINUITY
+Core AI must support continuity across intelligence transitions.
+If the Router changes the model or provider, the Personal Intelligence should remain coherent when authorized context can be preserved.
+The human should not have to restart their relationship with iRiel simply because the underlying intelligence implementation changed.
+The model changes.
+iRiel does not.
+FEEDBACK
+Core AI must support feedback pathways.
+Feedback may include:
+User feedback
+Public feedback
+Developer feedback
+Beta feedback
+Capability feedback
+Quality feedback
+Error feedback
+Accessibility feedback
+Other authorized feedback
+Feedback may be used to improve intelligence capability and routing.
+Feedback does not automatically become Memory.
+Feedback remains governed by its appropriate contract.
+OBSERVABILITY
+Core AI should provide appropriate operational observability.
+The system may need to know:
+Which capability executed
+Which model executed
+Whether execution succeeded
+Whether fallback occurred
+Latency
+Error state
+Resource state
+Other operational metadata
+Such observability must remain privacy-aware.
+Internal operation does not justify unnecessary exposure of personal information.
+SECURITY
+Core AI must operate within the security boundaries established by the ecosystem.
+Models must not be treated as inherently trusted authorities.
+External model output must not automatically be treated as trusted instructions.
+Tool calls, automation, credentials, private data, and external actions require appropriate authorization and security controls.
+Intelligence is not authority.
+A model may suggest.
+The system decides whether the suggestion is permitted to influence execution.
+CORE AI AND MCP
+Core AI may interact with MCP-based capabilities through the broader architecture.
+MCP is a protocol capability.
+It is not the identity of iRiel.
+MCP servers remain external or modular capabilities subject to:
+Authorization
+Privacy
+Security
+Capability validation
+Routing
+Context boundaries
+Execution policies
+Core AI must not treat an MCP tool as inherently trusted merely because it is technically accessible.
+CORE AI AND AUTOMATION
+Core AI may generate plans or recommendations for automation.
+Automation execution remains subject to:
+Authorization
+Policy
+Security
+Human agency
+System constraints
+Maestro coordination
+Router decisions
+Core AI must not independently transform generated intent into unrestricted autonomous action.
+EXTENSIBILITY
+Core AI must support future intelligence paradigms.
+The architecture must not assume that intelligence will always be:
+A chatbot
+A single model
+A text interface
+A cloud API
+A transformer
+A generative model
+A single provider
+Future intelligence mechanisms may differ fundamentally.
+The contract therefore defines capabilities and relationships rather than locking the architecture to a specific technology.
+CANONICAL INVARIANTS
+iRiel-AI Core AI is an institutional contract of iRiel Personal Intelligence.
+Core AI provides intelligence capabilities.
+Core AI does not define iRiel identity.
+Core AI does not define the Principle.
+Core AI does not replace Maestro Resonance.
+Core AI does not replace Router Intelligence.
+Core AI does not replace Intelligence Server.
+Core AI does not replace iRiel System.
+Core AI does not replace iRiel-AI Device’s.
+Core AI must remain AI-agnostic.
+Core AI must remain provider-agnostic.
+Models are replaceable.
+Providers are replaceable.
+Infrastructure is replaceable.
+Execution environments are replaceable.
+Core AI must support local-first intelligence where appropriate.
+Core AI must respect privacy.
+Core AI must support accessibility.
+Core AI must preserve human agency.
+Core AI must use authorized context.
+Core AI must not own Memory.
+Core AI must not own Identity.
+Core AI must not fabricate actions, tool use, execution, retrieval, or verification.
+Core AI must support graceful degradation.
+Core AI must support truthful failure.
+Core AI must remain extensible.
+Core AI must serve iRiel Personal Intelligence rather than become its identity.
+FINAL CONTRACT STATEMENT
+iRiel-AI Core AI is the intelligence capability layer of iRiel Personal Intelligence.
+It provides the intelligence.
+It does not become the identity.
+It may reason.
+It may generate.
+It may understand.
+It may transform.
+It may assist.
+It may operate locally or remotely.
+It may use one model today and another tomorrow.
+It may use one provider today and another tomorrow.
+The implementation may change.
+The models may change.
+The providers may change.
+The infrastructure may change.
+The intelligence paradigm may change.
+The purpose does not.
+Core AI exists so that iRiel Personal Intelligence can provide appropriate intelligence to the human while preserving accessibility, privacy, autonomy, continuity, and architectural freedom.
+The intelligence may be replaceable.
+The human purpose is not.

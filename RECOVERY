@@ -1,0 +1,1931 @@
+PRSL-AI ECOSYSTEM
+CANONICAL RECOVERY MODEL
+
+Organization: Robert Software Labs
+Status: Canonical
+Version: 1.0
+Classification: Core Architecture
+Document Type: Architectural Recovery & Resilience Standard
+
+==================================================
+1. PURPOSE
+==================================================
+
+This document defines the canonical Recovery Model of the
+PRSL-AI Ecosystem.
+
+It establishes:
+
+- How PRSL-AI detects failures.
+- How the ecosystem reacts to unavailable subsystems.
+- How fallback operates.
+- How degraded operation works.
+- How Context is preserved.
+- How Memory is preserved.
+- How interrupted tasks are recovered.
+- How state consistency is protected.
+- How recovery interacts with Router, Events, Observability,
+  Governance, Privacy & Security and Verification.
+
+The primary objective is:
+
+RESILIENCE WITHOUT LOSS OF CONTINUITY.
+
+==================================================
+2. CORE PRINCIPLE
+==================================================
+
+Canonical principle:
+
+A FAILURE OF A COMPONENT
+MUST NOT AUTOMATICALLY BECOME
+A FAILURE OF THE USER'S CONTINUITY.
+
+PRSL-AI should distinguish:
+
+COMPONENT FAILURE
+
+from:
+
+ECOSYSTEM FAILURE
+
+and:
+
+ECOSYSTEM FAILURE
+
+from:
+
+USER DATA LOSS.
+
+==================================================
+3. RECOVERY DEFINITION
+==================================================
+
+Recovery is the controlled process through which PRSL-AI:
+
+1. Detects a failure.
+2. Classifies the failure.
+3. Contains the failure.
+4. Preserves valid state.
+5. Selects a recovery strategy.
+6. Executes fallback where possible.
+7. Verifies the recovered operation.
+8. Restores normal operation.
+9. Records the recovery outcome.
+
+==================================================
+4. RECOVERY STATES
+==================================================
+
+A subsystem may have:
+
+HEALTHY
+DEGRADED
+UNAVAILABLE
+FAILED
+RECOVERING
+RECOVERED
+UNKNOWN
+
+These states must be distinguishable.
+
+==================================================
+5. HEALTHY
+==================================================
+
+The subsystem is operating normally.
+
+Example:
+
+iRiel Context:
+
+HEALTHY
+
+Requests may proceed normally.
+
+==================================================
+6. DEGRADED
+==================================================
+
+The subsystem is operational but with reduced capability.
+
+Example:
+
+External AI unavailable.
+
+Local model still available.
+
+Result:
+
+PRSL-AI remains operational with reduced intelligence
+capability.
+
+==================================================
+7. UNAVAILABLE
+==================================================
+
+The subsystem cannot currently accept or complete requests.
+
+Example:
+
+Cloud synchronization unavailable.
+
+Local Context remains available.
+
+The ecosystem should continue where possible.
+
+==================================================
+8. FAILED
+==================================================
+
+The subsystem encountered a failure that prevented the requested
+operation.
+
+Example:
+
+Memory write failed.
+
+The system must prevent the failure from being interpreted as
+a successful write.
+
+==================================================
+9. RECOVERING
+==================================================
+
+The subsystem is actively attempting to restore normal operation.
+
+Example:
+
+Memory service reconnecting.
+
+==================================================
+10. RECOVERED
+==================================================
+
+The subsystem has returned to an operational state.
+
+Recovery should be verified before the subsystem is considered
+fully healthy.
+
+==================================================
+11. UNKNOWN
+==================================================
+
+The system cannot reliably determine the current state.
+
+UNKNOWN must remain UNKNOWN.
+
+It must not be silently converted into:
+
+SUCCESS
+
+or:
+
+HEALTHY.
+
+==================================================
+12. FAILURE CLASSIFICATION
+==================================================
+
+Failures may be classified as:
+
+TRANSIENT
+PERSISTENT
+DEPENDENCY
+NETWORK
+RESOURCE
+STATE
+DATA
+SECURITY
+AUTHORIZATION
+PRIVACY
+PROVIDER
+DEVICE
+STORAGE
+CONFIGURATION
+UNKNOWN
+
+Classification determines the recovery strategy.
+
+==================================================
+13. TRANSIENT FAILURE
+==================================================
+
+A transient failure may resolve automatically.
+
+Examples:
+
+- Network timeout.
+- Temporary provider outage.
+- Temporary resource exhaustion.
+
+Possible strategy:
+
+RETRY
+
+with controlled limits.
+
+==================================================
+14. PERSISTENT FAILURE
+==================================================
+
+A persistent failure does not resolve after defined recovery
+attempts.
+
+Example:
+
+A service remains unavailable after multiple retries.
+
+The system should stop blindly retrying and transition to:
+
+FALLBACK
+
+DEGRADED MODE
+
+or:
+
+FAILURE
+
+==================================================
+15. RETRY POLICY
+==================================================
+
+Retries must be controlled.
+
+Canonical retry mechanisms may include:
+
+- Retry limit.
+- Exponential backoff.
+- Jitter.
+- Timeout.
+- Circuit breaking.
+
+Example:
+
+Attempt 1
+↓
+Attempt 2
+↓
+Attempt 3
+↓
+Circuit Open
+↓
+Fallback
+
+Infinite retries are prohibited.
+
+==================================================
+16. CIRCUIT BREAKER
+==================================================
+
+Repeated failure of a dependency should temporarily prevent
+additional unnecessary requests.
+
+Example:
+
+Provider A:
+
+FAILED
+FAILED
+FAILED
+FAILED
+
+Circuit:
+
+OPEN
+
+Router should stop sending traffic to Provider A until recovery
+conditions are satisfied.
+
+==================================================
+17. FALLBACK
+==================================================
+
+Fallback is the controlled selection of an alternative execution
+path when the preferred path cannot safely execute the operation.
+
+Canonical flow:
+
+PRIMARY
+↓
+FAILURE
+↓
+POLICY CHECK
+↓
+ALTERNATIVE
+↓
+EXECUTION
+↓
+VERIFICATION
+
+Fallback is not simply:
+
+"Try something else."
+
+It is:
+
+"Try another authorized and compatible path."
+
+==================================================
+18. FALLBACK AUTHORIZATION
+==================================================
+
+A fallback must respect:
+
+- Permission.
+- Privacy.
+- Security.
+- Governance.
+- Capability compatibility.
+- Data classification.
+
+A component must not fallback to a more invasive provider merely
+because it is available.
+
+==================================================
+19. EXAMPLE — AI PROVIDER FALLBACK
+==================================================
+
+Preferred:
+
+Local Model
+
+Failure:
+
+LOCAL_MODEL_UNAVAILABLE
+
+Alternative:
+
+Authorized External Model
+
+But only if:
+
+EXTERNAL_PROCESSING = AUTHORIZED
+
+If not:
+
+Fallback must not occur.
+
+Result:
+
+DEGRADED MODE
+
+or:
+
+REQUIRE_USER_ACTION.
+
+==================================================
+20. EXAMPLE — ROUTER FALLBACK
+==================================================
+
+Router selects:
+
+VISION_PROVIDER_A
+
+Provider fails.
+
+Router evaluates:
+
+VISION_PROVIDER_B
+
+If:
+
+Capability compatible
++
+Privacy compatible
++
+Permission compatible
++
+Security compatible
+
+Then:
+
+SELECT PROVIDER_B
+
+Otherwise:
+
+FAIL.
+
+==================================================
+21. FALLBACK PRIORITY
+==================================================
+
+Fallback should generally prioritize:
+
+1. Local capability.
+2. Same-domain capability.
+3. Trusted alternative.
+4. External provider explicitly authorized.
+5. User interaction.
+
+The exact order depends on the operation.
+
+==================================================
+22. NO SILENT PRIVACY ESCALATION
+==================================================
+
+Fallback must never silently expand data exposure.
+
+Example:
+
+Primary:
+
+On-device image analysis.
+
+Fallback:
+
+Cloud image analysis.
+
+If cloud processing is not authorized:
+
+DO NOT UPLOAD IMAGE.
+
+The system must fail safely.
+
+==================================================
+23. NO SILENT PERMISSION ESCALATION
+==================================================
+
+A failed capability must not cause PRSL-AI to request or use
+broader permissions without an explicit authorization path.
+
+Example:
+
+Camera capability fails.
+
+The system must not automatically access:
+
+Photos
+
+instead.
+
+==================================================
+24. COMPONENT ISOLATION
+==================================================
+
+Subsystem failures should be contained.
+
+Example:
+
+Knowledge unavailable.
+
+The following should remain operational where possible:
+
+Context
+Memory
+System
+Identity
+Permissions
+
+This is:
+
+FAULT CONTAINMENT.
+
+==================================================
+25. FAULT CONTAINMENT
+==================================================
+
+A failure should propagate only as far as necessary.
+
+Example:
+
+External Integration failure
+
+must not automatically become:
+
+Core AI failure.
+
+==================================================
+26. DEPENDENCY GRAPH
+==================================================
+
+PRSL-AI should explicitly define subsystem dependencies.
+
+Example:
+
+iRiel App
+↓
+iRiel Core
+↓
+Router
+↓
+Capability
+↓
+Integration
+
+If Integration fails:
+
+Integration:
+FAILED
+
+Capability:
+DEGRADED
+
+Core:
+HEALTHY
+
+App:
+
+OPERATIONAL WITH REDUCED CAPABILITY
+
+==================================================
+27. CORE CONTINUITY
+==================================================
+
+The Core should preserve essential functionality when optional
+components are unavailable.
+
+Examples:
+
+Identity
+
+Permissions
+
+Privacy
+
+Context
+
+Memory
+
+should not depend unnecessarily on a single external provider.
+
+==================================================
+28. GRACEFUL DEGRADATION
+==================================================
+
+When full functionality is unavailable, PRSL-AI should provide
+the highest safe level of functionality that remains available.
+
+Example:
+
+External AI unavailable.
+
+Available:
+
+Local AI
+
+Result:
+
+Reduced capability.
+
+Not:
+
+Complete ecosystem shutdown.
+
+==================================================
+29. DEGRADATION STATES
+==================================================
+
+A subsystem may expose:
+
+FULL
+REDUCED
+READ_ONLY
+LOCAL_ONLY
+OFFLINE
+QUEUE_ONLY
+UNAVAILABLE
+
+These states should be explicit.
+
+==================================================
+30. READ-ONLY RECOVERY
+==================================================
+
+When writes are unsafe but reads remain valid:
+
+READ_ONLY
+
+may be used.
+
+Example:
+
+Memory storage becomes unreliable.
+
+PRSL-AI may still read the last known consistent Memory state.
+
+New writes are temporarily blocked.
+
+==================================================
+31. LOCAL-ONLY RECOVERY
+==================================================
+
+When external connectivity is unavailable:
+
+LOCAL_ONLY
+
+may allow:
+
+- Local Intelligence.
+- Local Context.
+- Local Memory.
+- Local System operations.
+
+Cloud synchronization waits until connectivity returns.
+
+==================================================
+32. OFFLINE RECOVERY
+==================================================
+
+PRSL-AI should support controlled offline operation.
+
+Offline operation must define:
+
+- What remains available.
+- What becomes unavailable.
+- What may be queued.
+- What requires online verification.
+- What must fail immediately.
+
+==================================================
+33. QUEUED OPERATIONS
+==================================================
+
+Some operations may be safely queued.
+
+Example:
+
+Non-critical synchronization.
+
+Flow:
+
+REQUEST
+↓
+QUEUE
+↓
+OFFLINE
+↓
+CONNECTIVITY RESTORED
+↓
+EXECUTE
+↓
+VERIFY
+
+However, sensitive or time-critical actions should not
+automatically queue.
+
+==================================================
+34. IDEMPOTENCY
+==================================================
+
+Recovery must avoid duplicate execution.
+
+Example:
+
+Send message.
+
+Network timeout occurs.
+
+The system does not know whether the message was sent.
+
+Blind retry could send it twice.
+
+Therefore:
+
+IDEMPOTENCY_KEY
+
+must be used where applicable.
+
+==================================================
+35. IDEMPOTENCY KEY
+==================================================
+
+An operation may contain:
+
+OPERATION_ID
+IDEMPOTENCY_KEY
+
+Example:
+
+send_message_123
+
+If the system retries the operation, the receiving component can
+recognize that it is the same logical operation.
+
+==================================================
+36. EXACTLY-ONCE SEMANTICS
+==================================================
+
+PRSL-AI should not assume that every distributed operation can
+guarantee exactly-once execution.
+
+Instead, operations should define:
+
+- At-most-once.
+- At-least-once.
+- Effectively-once through idempotency.
+
+The semantic contract must be explicit.
+
+==================================================
+37. STATE PRESERVATION
+==================================================
+
+Recovery must preserve valid state.
+
+Critical state includes:
+
+- Identity.
+- Permissions.
+- Context.
+- Memory.
+- Task state.
+- Event state.
+- Configuration.
+- Security state.
+
+==================================================
+38. CONTEXT PRESERVATION
+==================================================
+
+Context must survive component interruption whenever possible.
+
+Example:
+
+User:
+
+"Continue what we were doing."
+
+Context contains:
+
+TASK_ID
+CURRENT_STATE
+LAST_ACTION
+PENDING_ACTION
+DECISION_HISTORY
+RELEVANT_CONTEXT
+
+If the Router restarts:
+
+Context remains available.
+
+The task does not need to restart from zero.
+
+==================================================
+39. CONTEXT SNAPSHOTS
+==================================================
+
+Context should support snapshots.
+
+Example:
+
+CONTEXT_SNAPSHOT
+
+contains:
+
+- Current task state.
+- Relevant session state.
+- Pending operation.
+- Important decisions.
+- Dependencies.
+- Recovery point.
+
+Snapshots provide recovery checkpoints.
+
+==================================================
+40. CONTEXT VERSIONING
+==================================================
+
+Context changes should be versioned.
+
+Example:
+
+Context v41
+
+→
+
+Context v42
+
+If an invalid update occurs:
+
+Recovery may return to:
+
+Context v41
+
+subject to consistency rules.
+
+==================================================
+41. MEMORY PRESERVATION
+==================================================
+
+Memory must be protected from partial or corrupted writes.
+
+A failed Memory operation must not produce:
+
+FALSE SUCCESS.
+
+Example:
+
+MEMORY_WRITE_STARTED
+
+then:
+
+STORAGE_FAILURE
+
+Final state:
+
+MEMORY_WRITE_FAILED
+
+not:
+
+MEMORY_UPDATED.
+
+==================================================
+42. ATOMIC MEMORY UPDATES
+==================================================
+
+Where appropriate, Memory updates should be atomic.
+
+Either:
+
+COMMITTED
+
+or:
+
+NOT COMMITTED.
+
+Partial state must not become authoritative Memory.
+
+==================================================
+43. MEMORY CHECKPOINTS
+==================================================
+
+Memory may use:
+
+- Versioning.
+- Journaling.
+- Snapshots.
+- Transactional writes.
+- Integrity verification.
+
+This allows recovery from storage or process failures.
+
+==================================================
+44. EVENT-BASED RECOVERY
+==================================================
+
+The Event Model provides a recovery mechanism.
+
+Example:
+
+TASK_CREATED
+↓
+CONTEXT_UPDATED
+↓
+ROUTE_SELECTED
+↓
+EXECUTION_STARTED
+↓
+EXECUTION_FAILED
+
+The system can determine the last known valid state.
+
+==================================================
+45. EVENT REPLAY
+==================================================
+
+Where supported, events may be replayed to reconstruct state.
+
+Example:
+
+EVENT_100
+EVENT_101
+EVENT_102
+EVENT_103
+
+Replaying valid events may reconstruct:
+
+Context
+Memory projections
+Task state
+
+Replay must be idempotent.
+
+==================================================
+46. EVENT DEDUPLICATION
+==================================================
+
+Recovery may cause events to be emitted again.
+
+Therefore events should support:
+
+EVENT_ID
+
+and where appropriate:
+
+CAUSATION_ID
+
+CORRELATION_ID
+
+Consumers should detect duplicates.
+
+==================================================
+47. RECOVERY POINT
+==================================================
+
+A Recovery Point represents the latest known consistent state
+from which the system may safely continue.
+
+Example:
+
+LAST_VALID_CONTEXT:
+v42
+
+LAST_COMMITTED_MEMORY:
+v108
+
+LAST_CONFIRMED_TASK:
+step_7
+
+==================================================
+48. RECOVERY STRATEGIES
+==================================================
+
+Canonical recovery strategies include:
+
+RETRY
+FALLBACK
+RESTART
+RECONNECT
+REPLAY
+RESTORE
+ROLLBACK
+QUEUE
+DEGRADE
+FAIL_SAFE
+
+The correct strategy depends on the failure class.
+
+==================================================
+49. RESTART
+==================================================
+
+A failed stateless component may simply restart.
+
+Example:
+
+Router process crashes.
+
+Restart:
+
+Router
+↓
+Load configuration
+↓
+Restore required state
+↓
+Health check
+↓
+READY
+
+==================================================
+50. RECONNECT
+==================================================
+
+For dependency failures:
+
+Reconnect may be attempted.
+
+Example:
+
+Memory storage connection lost.
+
+Flow:
+
+DISCONNECTED
+↓
+RECONNECT
+↓
+HEALTH CHECK
+↓
+RESUME
+
+==================================================
+51. ROLLBACK
+==================================================
+
+If a state transition produces an invalid state:
+
+ROLLBACK
+
+may restore the previous valid version.
+
+Example:
+
+Context v43 invalid.
+
+Restore:
+
+Context v42
+
+==================================================
+52. RESTORE
+==================================================
+
+If current state is lost or corrupted:
+
+RESTORE
+
+may use:
+
+- Snapshot.
+- Journal.
+- Replica.
+- Persistent storage.
+- Event replay.
+
+==================================================
+53. RECOVERY CHECKPOINTS
+==================================================
+
+Long-running tasks should create recovery checkpoints where
+appropriate.
+
+Example:
+
+Task:
+
+Analyze 100 documents.
+
+Checkpoint:
+
+Documents 1–25 completed.
+
+Failure occurs.
+
+Recovery resumes from:
+
+26
+
+rather than:
+
+1.
+
+==================================================
+54. TASK RECOVERY
+==================================================
+
+Tasks should have explicit states.
+
+Example:
+
+CREATED
+QUEUED
+RUNNING
+PAUSED
+FAILED
+RECOVERING
+COMPLETED
+CANCELLED
+UNKNOWN
+
+This allows recovery to determine what should happen next.
+
+==================================================
+55. INTERRUPTED TASK
+==================================================
+
+Example:
+
+User asks:
+
+"Continue organizing my files."
+
+System begins.
+
+Device loses connectivity.
+
+Task:
+
+RUNNING
+↓
+INTERRUPTED
+↓
+PAUSED
+
+After recovery:
+
+RESUME
+
+if state remains valid.
+
+==================================================
+56. UNKNOWN EXECUTION
+==================================================
+
+A particularly dangerous state occurs when execution status is
+unknown.
+
+Example:
+
+Operation sent.
+
+Connection lost.
+
+No confirmation received.
+
+Status:
+
+UNKNOWN
+
+The system must not automatically assume:
+
+FAILED
+
+or:
+
+SUCCESS.
+
+Verification determines the next action.
+
+==================================================
+57. RECOVERY + VERIFICATION
+==================================================
+
+Recovery must end with verification where applicable.
+
+Canonical:
+
+RECOVER
+↓
+EXECUTE
+↓
+VERIFY
+↓
+CONFIRMED
+
+or:
+
+RECOVER
+↓
+EXECUTE
+↓
+VERIFY
+↓
+UNKNOWN
+
+UNKNOWN must remain visible.
+
+==================================================
+58. RECOVERY + OBSERVABILITY
+==================================================
+
+Every significant recovery operation should be observable.
+
+Examples:
+
+RECOVERY_STARTED
+RECOVERY_STRATEGY_SELECTED
+RETRY_STARTED
+FALLBACK_STARTED
+STATE_RESTORED
+RECOVERY_FAILED
+RECOVERY_COMPLETED
+
+Telemetry should remain privacy-preserving.
+
+==================================================
+59. RECOVERY + GOVERNANCE
+==================================================
+
+Governance defines:
+
+- Which failures may trigger automatic recovery.
+- Which fallbacks are permitted.
+- Which operations require user confirmation.
+- Which data may be restored.
+- Which actions must fail closed.
+
+==================================================
+60. RECOVERY + PRIVACY
+==================================================
+
+Recovery must not weaken privacy.
+
+Example:
+
+External processing was previously denied.
+
+A provider failure occurs.
+
+Recovery must not automatically send the user's data to an
+external provider.
+
+Privacy restrictions survive recovery.
+
+==================================================
+61. RECOVERY + SECURITY
+==================================================
+
+Security state survives recovery.
+
+Example:
+
+Device:
+
+SECURITY_COMPROMISED
+
+Restarting the device must not automatically transform:
+
+COMPROMISED
+
+into:
+
+TRUSTED.
+
+Security posture must be re-evaluated.
+
+==================================================
+62. RECOVERY + PERMISSIONS
+==================================================
+
+Permissions survive recovery according to their authoritative
+state.
+
+Example:
+
+Camera:
+
+GRANTED
+
+Router restarts.
+
+Camera permission:
+
+Still GRANTED
+
+unless revoked or invalidated by policy.
+
+Temporary permissions:
+
+Remain subject to expiration.
+
+==================================================
+63. RECOVERY + IDENTITY
+==================================================
+
+A subsystem restart must not create a new user identity.
+
+Identity remains independent from component lifecycle.
+
+Example:
+
+Router restarts.
+
+User identity:
+
+UNCHANGED
+
+Context:
+
+PRESERVED
+
+Memory:
+
+PRESERVED
+
+==================================================
+64. RECOVERY + ROUTER
+==================================================
+
+The Router is a major recovery coordinator.
+
+It evaluates:
+
+- Capability health.
+- Provider availability.
+- Permission.
+- Privacy.
+- Security.
+- Cost.
+- Latency.
+- Fallback policy.
+
+The Router must not select a fallback that violates higher-level
+constraints.
+
+==================================================
+65. RECOVERY + INTELLIGENCE SERVER
+==================================================
+
+The iRiel Intelligence Server may coordinate recovery for
+distributed intelligence operations.
+
+It may:
+
+- Detect capability failures.
+- Request fallback.
+- Resume tasks.
+- Coordinate retries.
+- Verify results.
+- Report degraded state.
+
+It does not override:
+
+Privacy
+Security
+Governance
+Permissions.
+
+==================================================
+66. AUTOMATIC RECOVERY
+==================================================
+
+Automatic recovery is appropriate when:
+
+- Risk is low.
+- Operation is idempotent.
+- Policy allows it.
+- No additional authorization is required.
+- Recovery is predictable.
+
+Example:
+
+Retrying a failed read request.
+
+==================================================
+67. USER-CONFIRMED RECOVERY
+==================================================
+
+User confirmation may be required when recovery changes:
+
+- Data destination.
+- Privacy boundary.
+- Financial effect.
+- External communication.
+- Security posture.
+- Permission requirements.
+
+Example:
+
+Primary local AI fails.
+
+Fallback requires sending private data externally.
+
+Result:
+
+ASK USER.
+
+==================================================
+68. AUTOMATIC FALLBACK EXAMPLE
+==================================================
+
+Task:
+
+Summarize public document.
+
+Primary:
+
+Local model.
+
+Failure:
+
+Local model unavailable.
+
+Alternative:
+
+Authorized external model.
+
+Privacy:
+
+Public data.
+
+Policy:
+
+Allowed.
+
+Result:
+
+Automatic fallback.
+
+==================================================
+69. USER-CONFIRMED FALLBACK EXAMPLE
+==================================================
+
+Task:
+
+Analyze private medical image.
+
+Primary:
+
+On-device Vision.
+
+Failure:
+
+On-device Vision unavailable.
+
+Fallback:
+
+External Vision provider.
+
+External processing:
+
+Not previously authorized.
+
+Result:
+
+DO NOT AUTOMATICALLY UPLOAD.
+
+Ask user.
+
+==================================================
+70. FAIL-SAFE
+==================================================
+
+When recovery cannot safely determine what should happen:
+
+FAIL_SAFE
+
+Examples:
+
+- Do not send duplicate payment.
+- Do not expose private data.
+- Do not overwrite Memory.
+- Do not execute unknown commands.
+- Do not bypass permissions.
+
+==================================================
+71. RECOVERY FAILURE
+==================================================
+
+If recovery itself fails:
+
+RECOVERY_FAILED
+
+The system should:
+
+1. Preserve last valid state.
+2. Stop unsafe operations.
+3. Report the limitation.
+4. Remain available in degraded mode where possible.
+5. Await a valid recovery path.
+
+==================================================
+72. DATA INTEGRITY
+==================================================
+
+Recovery must prioritize:
+
+DATA INTEGRITY
+
+over:
+
+AUTOMATIC CONTINUATION.
+
+If the system cannot determine whether a state is valid, it
+must not overwrite known-good state with uncertain state.
+
+==================================================
+73. LAST KNOWN GOOD STATE
+==================================================
+
+The ecosystem should preserve a:
+
+LAST_KNOWN_GOOD_STATE
+
+for critical subsystems.
+
+Example:
+
+Memory:
+
+v108 = valid
+
+v109 = corrupted
+
+Recovery:
+
+Restore v108.
+
+==================================================
+74. RECOVERY AND DISTRIBUTED STATE
+==================================================
+
+Distributed state may become temporarily inconsistent.
+
+The system should distinguish:
+
+TEMPORARY INCONSISTENCY
+
+from:
+
+PERMANENT CORRUPTION.
+
+Recovery mechanisms may use:
+
+- Event replay.
+- Version comparison.
+- Conflict resolution.
+- Authoritative source.
+- Idempotent updates.
+
+==================================================
+75. CONFLICT RESOLUTION
+==================================================
+
+When two recovered states conflict:
+
+The system must identify the authoritative source.
+
+Example:
+
+Context Device A:
+
+v42
+
+Context Device B:
+
+v43
+
+The system must not simply choose the newest timestamp without
+considering:
+
+- Version.
+- Causality.
+- Authority.
+- Conflict state.
+
+==================================================
+76. MULTI-DEVICE RECOVERY
+==================================================
+
+Because @iriel may operate across multiple devices:
+
+Device A failure
+
+must not imply:
+
+Identity failure.
+
+Example:
+
+iRiel Smartphone:
+
+OFFLINE
+
+iRiel Tablet:
+
+ONLINE
+
+The user's authorized Context and Memory may remain available
+according to synchronization policy.
+
+==================================================
+77. DEVICE FAILURE
+==================================================
+
+If a device becomes unavailable:
+
+- Identity remains.
+- Cloud state may remain.
+- Other authorized devices may continue.
+- Device-bound state remains subject to recovery policy.
+
+Private local-only data may remain unavailable if the device
+cannot be accessed.
+
+The system must not falsely claim that such data was recovered.
+
+==================================================
+78. MEMORY LOSS SCENARIO
+==================================================
+
+If local Memory becomes unavailable:
+
+PRSL-AI should determine whether an authorized replica,
+snapshot or synchronized state exists.
+
+Possible result:
+
+RESTORE
+
+If no valid copy exists:
+
+MEMORY_UNAVAILABLE
+
+The system must not invent missing Memory.
+
+==================================================
+79. CONTEXT LOSS SCENARIO
+==================================================
+
+If active Context is lost:
+
+PRSL-AI may use:
+
+- Last Context snapshot.
+- Session state.
+- Event history.
+- Authorized Memory.
+- User clarification.
+
+The system should explicitly indicate when continuity cannot be
+reliably reconstructed.
+
+==================================================
+80. NO FALSE CONTINUITY
+==================================================
+
+A critical rule:
+
+PRSL-AI MUST NOT PRETEND TO REMEMBER SOMETHING IT CANNOT
+RELIABLY RECOVER.
+
+If Context is uncertain:
+
+UNKNOWN
+
+or:
+
+RECOVERY_REQUIRED
+
+is preferable to fabricated continuity.
+
+==================================================
+81. RECOVERY TRANSPARENCY
+==================================================
+
+When recovery materially affects the user experience, @iriel
+should communicate appropriately.
+
+Example:
+
+"Minha conexão com o serviço externo caiu. Continuei localmente,
+mas algumas funções estão temporariamente limitadas."
+
+The system should not expose unnecessary internal complexity.
+
+==================================================
+82. RECOVERY WITHOUT USER INTERRUPTION
+==================================================
+
+Where safe, recovery should be invisible to the user.
+
+Example:
+
+Provider timeout.
+
+Router retries.
+
+Fallback succeeds.
+
+User receives:
+
+Successful result.
+
+No unnecessary technical interruption.
+
+==================================================
+83. RECOVERY WITH USER INTERRUPTION
+==================================================
+
+The user should be involved when recovery changes the nature or
+risk of the operation.
+
+Example:
+
+"Posso continuar essa análise usando um serviço externo? Isso
+enviará a imagem para fora do dispositivo."
+
+This preserves user control.
+
+==================================================
+84. RECOVERY AUDIT
+==================================================
+
+Important recovery decisions should be auditable.
+
+Examples:
+
+FALLBACK_USED
+RECOVERY_POLICY_APPLIED
+STATE_RESTORED
+PERMISSION_BLOCKED_FALLBACK
+PRIVACY_BLOCKED_FALLBACK
+SECURITY_BLOCKED_RECOVERY
+
+==================================================
+85. RECOVERY METRICS
+==================================================
+
+Canonical metrics include:
+
+RECOVERY_SUCCESS_RATE
+RECOVERY_FAILURE_RATE
+FALLBACK_RATE
+RETRY_RATE
+RECOVERY_LATENCY
+TIME_TO_RECOVERY
+DATA_RESTORE_FAILURE_RATE
+CONTEXT_RECOVERY_RATE
+MEMORY_RECOVERY_RATE
+UNKNOWN_EXECUTION_RATE
+
+==================================================
+86. RECOVERY TESTING
+==================================================
+
+Recovery must be tested deliberately.
+
+Examples:
+
+- Kill service.
+- Disconnect network.
+- Corrupt temporary state.
+- Simulate provider outage.
+- Revoke permission during execution.
+- Restart Router.
+- Restart Intelligence Server.
+- Interrupt Memory write.
+- Interrupt Context update.
+
+==================================================
+87. CHAOS / FAILURE TESTING
+==================================================
+
+The architecture should periodically test controlled failures.
+
+Examples:
+
+NETWORK_FAILURE
+
+PROVIDER_FAILURE
+
+STORAGE_FAILURE
+
+SERVICE_CRASH
+
+MESSAGE_DUPLICATION
+
+EVENT_DUPLICATION
+
+PARTIAL_EXECUTION
+
+VERIFICATION_TIMEOUT
+
+The objective is:
+
+VERIFY RECOVERY BEFORE REAL FAILURE.
+
+==================================================
+88. RECOVERY INVARIANTS
+==================================================
+
+The following are canonical:
+
+1. Component failure must not automatically become ecosystem
+   failure.
+
+2. Failure must not automatically imply data loss.
+
+3. Recovery must preserve the last valid state.
+
+4. Fallback must respect Privacy.
+
+5. Fallback must respect Security.
+
+6. Fallback must respect Permissions.
+
+7. Fallback must respect Governance.
+
+8. Recovery must not silently expand authority.
+
+9. Recovery must not silently expand data exposure.
+
+10. UNKNOWN must remain UNKNOWN.
+
+11. Retried operations must be idempotent where necessary.
+
+12. Memory writes must not report success unless committed.
+
+13. Context must support recovery checkpoints.
+
+14. Critical state must have a recoverable source of truth.
+
+15. Recovery must be observable.
+
+16. Recovery must be verifiable.
+
+17. The system must never invent lost Context or Memory.
+
+18. Automatic recovery is preferred only when safe.
+
+19. User confirmation is required when recovery changes material
+    privacy, authorization or external-processing conditions.
+
+20. Recovery must prioritize integrity over blind continuity.
+
+==================================================
+89. FINAL RECOVERY MODEL
+==================================================
+
+The canonical recovery flow is:
+
+FAILURE
+   │
+   ▼
+DETECT
+   │
+   ▼
+CLASSIFY
+   │
+   ▼
+CONTAIN
+   │
+   ▼
+PRESERVE LAST VALID STATE
+   │
+   ▼
+SELECT RECOVERY STRATEGY
+   │
+   ├── RETRY
+   │
+   ├── RESTART
+   │
+   ├── RECONNECT
+   │
+   ├── FALLBACK
+   │
+   ├── RESTORE
+   │
+   ├── REPLAY
+   │
+   ├── QUEUE
+   │
+   └── DEGRADE
+   │
+   ▼
+EXECUTE
+   │
+   ▼
+VERIFY
+   │
+   ├── CONFIRMED
+   │
+   ├── FAILED
+   │
+   └── UNKNOWN
+   │
+   ▼
+RECOVERED / DEGRADED / FAILED
+
+==================================================
+90. FINAL CANONICAL PRINCIPLE
+==================================================
+
+"PRSL-AI must recover from component and infrastructure failures
+without compromising data integrity, privacy, authorization or
+user continuity."
+
+==================================================
+91. FINAL STATEMENT
+==================================================
+
+Recovery is not merely restarting a service.
+
+Recovery is the mechanism that allows PRSL-AI to remain
+trustworthy when something goes wrong.
+
+A failed Router should not erase Context.
+
+A failed provider should not erase Memory.
+
+A disconnected device should not erase Identity.
+
+A failed synchronization operation should not overwrite valid
+state.
+
+A failed local model should not automatically expose private
+data to the cloud.
+
+A lost confirmation should not become a fabricated SUCCESS.
+
+The ecosystem therefore follows:
+
+DETECT
+↓
+CONTAIN
+↓
+PRESERVE
+↓
+RECOVER
+↓
+VERIFY
+↓
+CONTINUE SAFELY
+
+The ultimate objective is not:
+
+"Never fail."
+
+It is:
+
+"Fail safely, preserve what matters, recover what can be
+recovered, and never pretend that an uncertain state is certain."
+
+==================================================
+
+© Robert Software Labs
+PRSL-AI Ecosystem
+Canonical Recovery Model
+Version 1.0

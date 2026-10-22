@@ -1,0 +1,649 @@
+PRSL-AI — MOBILE ARCHITECTURE VISUALIZATION
+
+Design Objective:
+Create a mobile-first visualization of the PRSL-AI Ecosystem that represents the architecture as an expanding interconnected universe rather than a conventional hierarchical tree.
+
+The visualization must be optimized for smartphone screens, vertical scrolling, touch interaction, readability, and progressive exploration.
+
+==================================================
+01. MOBILE UNIVERSE
+==================================================
+
+PRSL-AI
+    ↓
+Human
+    ↓
+iRiel
+    ↓
+Personal Intelligence Environment
+    ↓
+Resonance ♾️
+    ↓
+PRSL-AI Core
+    ↓
+Domains
+    ↓
+Capabilities
+    ↓
+Technology
+    ↓
+iRiel
+    ↓
+Human
+
+The visualization should communicate that the ecosystem exists around the human rather than the technology.
+
+==================================================
+02. PRIMARY FLOW
+==================================================
+
+┌──────────────────────────┐
+│        PRSL-AI           │
+│     ARCHITECTURE         │
+│                          │
+│           ♾️             │
+│   Human Intelligence     │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│          HUMAN           │
+│                          │
+│ Person · Intent · Life   │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│          iRiel           │
+│                          │
+│ Personal Intelligence    │
+│ Environment              │
+└────────────┬─────────────┘
+             │
+             ▼
+╔══════════════════════════╗
+║       RESONANCE ♾️       ║
+║                          ║
+║ Continuity               ║
+║ Relationship             ║
+║ Coherence                ║
+║ Experience               ║
+╚════════════╤═════════════╝
+             │
+             ▼
+┌──────────────────────────┐
+│      PRSL-AI CORE        │
+│                          │
+│ Orchestration            │
+│ Routing                  │
+│ Policy                   │
+│ Governance               │
+└────────────┬─────────────┘
+             │
+             ▼
+==================================================
+03. CORE DOMAINS
+==================================================
+
+┌──────────────────────────┐
+│        DOMAINS           │
+│                          │
+│ Architecture             │
+│ Resonance                │
+│ Intelligence             │
+│ Context                  │
+│ Memory                   │
+│ Identity                 │
+│ Privacy                  │
+│ Security                 │
+│ Accessibility            │
+│ Automation               │
+│ Communication            │
+│ Files                    │
+│ Integration              │
+│ Developer                │
+│ Devices                  │
+│ Interfaces               │
+│ Deployment               │
+│ Governance               │
+└────────────┬─────────────┘
+             │
+             ▼
+
+Each domain is represented as an independent interactive node/card.
+
+Tapping a domain expands its internal architecture.
+
+==================================================
+04. INTELLIGENCE
+==================================================
+
+Intelligence
+     │
+     ▼
+Intelligence Core
+     │
+     ▼
+Intelligence Router
+     │
+     ▼
+Capabilities
+     │
+     ▼
+Provider Interface
+     │
+     ├── OpenAI
+     ├── Gemini
+     ├── Claude
+     ├── Meta AI
+     ├── Duck
+     └── Other Providers
+
+Providers are replaceable capabilities.
+
+No provider owns PRSL-AI.
+
+==================================================
+05. CONTEXT
+==================================================
+
+Context
+    │
+    ├── Context Engine
+    ├── Session Context
+    ├── Working Context
+    ├── Context Recovery
+    ├── Snapshots
+    ├── Decision History
+    ├── Semantic Search
+    └── Context Versioning
+
+Context allows iRiel to understand the current situation.
+
+==================================================
+06. MEMORY
+==================================================
+
+Memory
+    │
+    ├── Working Memory
+    ├── Session Memory
+    ├── Long-Term Memory
+    ├── Knowledge
+    ├── Memory Storage
+    ├── Memory Recovery
+    └── Memory Lifecycle
+
+Memory allows iRiel to retain meaningful information across time.
+
+==================================================
+07. IDENTITY
+==================================================
+
+Identity
+    │
+    ├── Identity Core
+    ├── Authentication
+    ├── Authorization
+    ├── Device Identity
+    ├── Trust
+    └── Recovery
+
+Identity establishes ownership of the personal intelligence environment.
+
+==================================================
+08. PRIVACY
+==================================================
+
+Privacy
+    │
+    ├── Privacy Core
+    ├── Data Minimization
+    ├── Data Control
+    ├── Data Lifecycle
+    ├── Local-First
+    └── Provider Privacy
+
+Privacy determines what information may leave the personal environment.
+
+==================================================
+09. SECURITY
+==================================================
+
+Security
+    │
+    ├── Security Core
+    ├── Device Security
+    ├── Access Control
+    ├── Secrets
+    ├── Encryption
+    ├── Threat Model
+    ├── Revocation
+    └── Recovery
+
+Security protects the environment and its boundaries.
+
+==================================================
+10. ACCESSIBILITY
+==================================================
+
+Accessibility
+    │
+    ├── Accessibility Core
+    ├── Vision
+    ├── Hearing
+    ├── Neurodiversity
+    ├── Communication
+    └── Adaptive Interfaces
+
+Accessibility is a system-level architectural capability.
+
+==================================================
+11. AUTOMATION
+==================================================
+
+Automation
+    │
+    ├── Automation Core
+    ├── Tasks
+    ├── Workflows
+    ├── Agents
+    ├── Triggers
+    └── Actions
+
+Automation allows iRiel to execute tasks on behalf of the user.
+
+==================================================
+12. COMMUNICATION
+==================================================
+
+Communication
+    │
+    ├── Voice
+    ├── Text
+    ├── Transcription
+    ├── Notifications
+    └── Multimodal Communication
+
+Communication represents how the human and iRiel interact.
+
+==================================================
+13. FILES
+==================================================
+
+Files
+    │
+    ├── Files Core
+    ├── Storage
+    ├── Documents
+    ├── Search
+    ├── Indexing
+    └── File Intelligence
+
+Files become part of the intelligence environment rather than isolated storage.
+
+==================================================
+14. INTEGRATION
+==================================================
+
+Integration
+    │
+    ├── Apple
+    │   ├── Siri
+    │   ├── App Intents
+    │   ├── Foundation Models
+    │   ├── Shortcuts
+    │   ├── Vision
+    │   └── Private Cloud Compute
+    │
+    ├── Microsoft
+    ├── Google
+    ├── GitHub
+    ├── Cloudflare
+    └── External Services
+
+Integrations connect PRSL-AI to external ecosystems.
+
+External platforms do not become PRSL-AI itself.
+
+==================================================
+15. DEVELOPER
+==================================================
+
+Developer
+    │
+    ├── Developer Core
+    ├── SDK
+    ├── APIs
+    ├── MCP
+    ├── App Development
+    ├── Testing
+    └── Tooling
+
+Developer infrastructure enables the ecosystem to grow.
+
+==================================================
+16. DEVICES
+==================================================
+
+Devices
+    │
+    ├── iRiel Smartphone
+    ├── iRiel Tablet
+    ├── iRiel Laptop
+    ├── iRiel Desktop
+    ├── iRiel Workstation
+    └── iRiel Personal Server
+
+Devices are execution environments.
+
+Devices do not own the intelligence.
+
+==================================================
+17. INTERFACES
+==================================================
+
+Interfaces
+    │
+    ├── iRiel App
+    ├── iRiel AppWeb
+    ├── Siri
+    ├── Shortcuts
+    ├── Voice
+    └── Web
+
+Interfaces are interaction layers.
+
+Changing the interface does not change the intelligence environment.
+
+==================================================
+18. DEPLOYMENT
+==================================================
+
+Deployment
+    │
+    ├── Local
+    ├── Personal Infrastructure
+    ├── Cloud
+    └── Platforms
+        ├── Replit
+        └── Other Platforms
+
+Deployment technology is replaceable.
+
+Replit is an execution/development platform, not the architecture.
+
+==================================================
+19. GOVERNANCE
+==================================================
+
+Governance
+    │
+    ├── Governance Core
+    ├── Architecture Governance
+    ├── Policy
+    ├── Compliance
+    ├── Contracts
+    └── Decision Records
+
+Governance ensures that implementation does not silently redefine architecture.
+
+==================================================
+20. RESONANCE
+==================================================
+
+Resonance is represented visually as a cross-domain layer.
+
+It must not be treated as merely another isolated feature.
+
+Conceptually:
+
+                    RESONANCE ♾️
+                         │
+        ┌────────────────┼────────────────┐
+        │                │                │
+        ▼                ▼                ▼
+     Identity          Context          Memory
+        │                │                │
+        ▼                ▼                ▼
+   Intelligence      Continuity      Experience
+        │                │                │
+        └────────────────┼────────────────┘
+                         │
+                         ▼
+                        iRiel
+                         │
+                         ▼
+                       Human
+
+Resonance represents relationships, continuity, coherence, and meaningful interaction across the ecosystem.
+
+The Resonance domain remains independent because of its potentially broad architectural scope.
+
+==================================================
+21. MOBILE NAVIGATION MODEL
+==================================================
+
+The mobile visualization must use progressive disclosure.
+
+Level 1:
+
+PRSL-AI Universe
+
+Level 2:
+
+Core Domains
+
+Level 3:
+
+Domain Architecture
+
+Level 4:
+
+Components
+
+Level 5:
+
+Implementation
+
+The user should never be required to see the entire architecture simultaneously.
+
+==================================================
+22. MOBILE INTERACTION
+==================================================
+
+Primary interactions:
+
+Tap
+    =
+Open domain
+
+Tap again
+    =
+Expand subsystem
+
+Swipe
+    =
+Navigate between architectural layers
+
+Pinch
+    =
+Zoom architecture
+
+Long Press
+    =
+Show domain description
+
+Back
+    =
+Return to previous architectural level
+
+Search
+    =
+Locate domain, component, provider or relationship
+
+==================================================
+23. VISUAL LANGUAGE
+==================================================
+
+The visual identity should follow the PRSL-AI aesthetic:
+
+Black
+Dark Metallic Green
+Neon Emerald
+Silver
+Glass / translucent surfaces
+Subtle depth
+Minimal visual noise
+High contrast
+Readable typography
+
+The interface should feel:
+
+Technical
+Human
+Quiet
+Deep
+Futuristic
+Architectural
+Organic
+
+It should not resemble a conventional enterprise architecture diagram.
+
+==================================================
+24. RESPONSIVE PRINCIPLE
+==================================================
+
+Desktop:
+
+The architecture may expand horizontally and radially.
+
+Tablet:
+
+The architecture may combine radial and vertical exploration.
+
+Mobile:
+
+The architecture becomes primarily vertical and interactive.
+
+The underlying architecture does not change.
+
+Only the visualization changes.
+
+==================================================
+25. MOBILE CANONICAL FLOW
+==================================================
+
+HUMAN
+  ↓
+iRiel
+  ↓
+Personal Intelligence Environment
+  ↓
+Resonance ♾️
+  ↓
+PRSL-AI Core
+  ↓
+Domains
+  ↓
+Capabilities
+  ↓
+Providers / Services / Platforms
+  ↓
+Devices / Interfaces
+  ↓
+iRiel
+  ↓
+HUMAN
+
+This creates a continuous loop rather than a terminal flow.
+
+==================================================
+26. THE LOOP
+==================================================
+
+The architecture should visually communicate:
+
+Human
+    ↓
+Intent
+    ↓
+iRiel
+    ↓
+Context
+    ↓
+Intelligence
+    ↓
+Action
+    ↓
+Experience
+    ↓
+Memory
+    ↓
+Continuity
+    ↓
+Resonance
+    ↓
+iRiel
+    ↓
+Human
+
+The system learns from interaction without making the human subordinate to the technology.
+
+==================================================
+27. FINAL MOBILE CONCEPT
+==================================================
+
+PRSL-AI should be visualized as an expanding universe.
+
+Architecture defines the structure.
+
+Domains define areas of capability.
+
+Intelligence provides reasoning.
+
+Context provides understanding.
+
+Memory provides history.
+
+Identity provides belonging.
+
+Privacy provides boundaries.
+
+Security provides protection.
+
+Accessibility provides inclusion.
+
+Automation provides action.
+
+Communication provides interaction.
+
+Integration provides interoperability.
+
+Devices provide execution.
+
+Interfaces provide access.
+
+Deployment provides infrastructure.
+
+Governance provides control.
+
+Resonance connects the whole system through continuity, coherence, relationship and experience.
+
+iRiel is the personal intelligence environment through which the architecture becomes real.
+
+The Human remains the center.
+
+Technology remains replaceable.
+
+The architecture remains expandable.
+
+The ecosystem remains continuous.
+
+Human First.
+Privacy Second.
+Technology Last.
+
+The machine adapts to the human.
+
+♾️💚

@@ -1,0 +1,1243 @@
+# PRSL-AI ECOSYSTEM — INTELLIGENT STORAGE LIFECYCLE
+
+Organization: Robert Software Labs
+Ecosystem: PRSL-AI Ecosystem
+Component: Intelligent Storage Lifecycle
+Document: Canonical Definition
+Version: 1.0
+Status: Canonical
+Classification: Core iRiel Device Architecture
+Architecture: AI-Agnostic / Privacy by Default / Local-First / Human-Centered
+
+---
+
+## 1. DEFINITION
+
+PRSL-AI Intelligent Storage Lifecycle is the infrastructure intelligence layer responsible for managing the physical lifecycle, placement, prioritization, retention, optimization, migration, expiration and removal of data across iRiel Devices and authorized storage resources.
+
+It exists to ensure that storage is not treated as passive capacity, but as an intelligent and governed resource within the Personal Intelligence Environment.
+
+---
+
+## 2. CORE PRINCIPLE
+
+The canonical principle is:
+
+> Intelligent Storage Lifecycle manages how information occupies physical storage without independently determining the semantic value of that information.
+
+Storage must adapt to the needs of the Personal Intelligence Environment.
+
+The user should not be required to manually manage every aspect of storage created by continuous intelligence, context, memory and local computation.
+
+---
+
+## 3. PRIMARY PURPOSE
+
+The Intelligent Storage Lifecycle exists to:
+
+- Optimize storage utilization.
+- Preserve required local data.
+- Reduce unnecessary retention.
+- Manage temporary data.
+- Manage caches.
+- Support local intelligence.
+- Support offline operation.
+- Enable intelligent data placement.
+- Support cross-device continuity.
+- Reduce unnecessary duplication.
+- Protect available storage capacity.
+- Support privacy through controlled retention.
+- Maintain predictable device performance.
+
+---
+
+## 4. WHAT IT IS NOT
+
+Intelligent Storage Lifecycle is not:
+
+- A file manager.
+- A personal memory system.
+- A privacy policy engine.
+- A security system.
+- A replacement for iRiel Memory.
+- A replacement for iRiel Context.
+- A replacement for Governance.
+- An automatic deletion engine.
+- A cloud-storage requirement.
+- A mechanism for deciding the semantic value of personal information.
+
+---
+
+## 5. ARCHITECTURAL POSITION
+
+The canonical position is:
+
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+iRiel Context
+    ↓
+iRiel Memory
+    ↓
+Memory Manager
+    ↓
+Memory Placement
+    ↓
+Intelligent Storage Lifecycle
+    ↓
+iRiel Storage Infrastructure
+    ↓
+iRiel Devices / Authorized Personal Storage
+
+---
+
+## 6. RESPONSIBILITY SEPARATION
+
+The architecture maintains a strict separation of responsibilities.
+
+iRiel Context
+→ Determines what is relevant now.
+
+iRiel Memory
+→ Determines what should remain available for continuity.
+
+Memory Manager
+→ Manages the lifecycle of logical memory.
+
+Memory Placement
+→ Determines appropriate storage location.
+
+Governance
+→ Determines what policies and permissions apply.
+
+Intelligent Storage Lifecycle
+→ Manages the physical lifecycle of stored data.
+
+iRiel Devices
+→ Provide computation and physical storage resources.
+
+---
+
+## 7. MEMORY VS STORAGE
+
+This distinction is canonical:
+
+iRiel Memory
+=
+What should remain relevant.
+
+Intelligent Storage Lifecycle
+=
+How that information is physically managed.
+
+Storage is an implementation resource.
+
+Memory is a semantic resource.
+
+The Intelligent Storage Lifecycle must never independently determine that a meaningful personal memory has no value.
+
+---
+
+## 8. CORE ARCHITECTURAL RULE
+
+The following rule is mandatory:
+
+> Storage optimization must never be allowed to silently override personal memory semantics or user-authorized retention requirements.
+
+Therefore:
+
+Storage Optimization
+≠
+Memory Deletion
+
+And:
+
+Storage Pressure
+≠
+Permission to Forget
+
+---
+
+## 9. DATA LIFECYCLE
+
+Canonical lifecycle:
+
+DATA
+    ↓
+CLASSIFY
+    ↓
+UNDERSTAND
+    ↓
+PRIORITIZE
+    ↓
+PLACE
+    ↓
+MONITOR
+    ↓
+OPTIMIZE
+    ↓
+MIGRATE / COMPRESS / CACHE
+    ↓
+EXPIRE
+    ↓
+ARCHIVE / DELETE
+    ↓
+RE-EVALUATE
+
+The lifecycle is continuous.
+
+Storage state may change as usage, relevance, device conditions and policies change.
+
+---
+
+## 10. STORAGE STATES
+
+The canonical storage states are:
+
+HOT
+    ↓
+Frequently accessed
+High operational relevance
+Immediately available locally when appropriate
+
+WARM
+    ↓
+Relevant
+Moderately accessed
+May remain local or in authorized personal storage
+
+COLD
+    ↓
+Rarely accessed
+Not required for immediate operation
+May be removed from active local storage when authorized
+
+EXPIRED
+    ↓
+No longer relevant
+Eligible for lifecycle removal according to policy
+
+FORGOTTEN
+    ↓
+Explicitly invalidated
+Must no longer remain active memory
+
+---
+
+## 11. HOT DATA
+
+Hot data represents information that provides immediate operational value.
+
+Examples:
+
+- Active context.
+- Frequently accessed files.
+- Active application data.
+- Current workflows.
+- Frequently used local models.
+- Frequently accessed memory.
+- Required offline resources.
+
+Hot data should prioritize low latency and local availability when appropriate.
+
+---
+
+## 12. WARM DATA
+
+Warm data remains relevant but does not require the same immediate availability as hot data.
+
+The system may:
+
+- Keep it locally.
+- Compress it.
+- Move it within authorized personal storage.
+- Reduce active caching.
+- Maintain an efficient retrieval path.
+
+---
+
+## 13. COLD DATA
+
+Cold data remains potentially useful but is rarely accessed.
+
+Depending on policy, privacy requirements and user configuration, cold data may be removed from active local storage while remaining recoverable through an authorized storage resource.
+
+Cold does not mean deleted.
+
+---
+
+## 14. EXPIRED DATA
+
+Expired data has reached the end of its useful lifecycle.
+
+Examples:
+
+- Temporary caches.
+- Short-lived artifacts.
+- Temporary processing files.
+- Obsolete intermediate data.
+
+Expired data becomes eligible for removal according to applicable policy.
+
+---
+
+## 15. FORGOTTEN DATA
+
+Forgotten data represents information explicitly invalidated by the user or by an applicable policy.
+
+For personal memory, forgetting must be coordinated with iRiel Memory and Governance.
+
+The Storage Lifecycle must not interpret ordinary storage pressure as a request to forget.
+
+---
+
+## 16. MEMORY INTEGRATION
+
+The relationship between iRiel Memory and Intelligent Storage Lifecycle is:
+
+iRiel Memory
+    ↓
+Memory Classification
+    ↓
+Memory Placement
+    ↓
+Intelligent Storage Lifecycle
+    ↓
+Physical Storage
+
+iRiel Memory determines continuity value.
+
+Intelligent Storage Lifecycle determines physical treatment.
+
+---
+
+## 17. MEMORY PLACEMENT
+
+Memory Placement acts as the bridge between semantic memory and physical storage.
+
+It may evaluate:
+
+- Relevance.
+- Frequency of access.
+- Privacy.
+- Sensitivity.
+- Device capacity.
+- Connectivity.
+- Offline requirements.
+- Storage cost.
+- User preferences.
+- Governance policies.
+
+The result determines where the information should reside.
+
+---
+
+## 18. STORAGE PLACEMENT
+
+Possible storage locations include:
+
+- iRiel Device local storage.
+- Local personal storage.
+- Authorized personal infrastructure.
+- Authorized distributed storage.
+- Durable workflow infrastructure.
+- External infrastructure when explicitly permitted.
+
+The architecture must remain independent of any mandatory cloud provider.
+
+---
+
+## 19. LOCAL-FIRST
+
+The default architectural preference is:
+
+Local
+    ↓
+Authorized Personal Infrastructure
+    ↓
+External Infrastructure
+
+Local storage should be preferred whenever local processing and retention provide the required capability.
+
+This supports:
+
+- Privacy.
+- Offline operation.
+- Reduced latency.
+- Reduced external dependency.
+- Greater user control.
+- Greater resilience.
+
+---
+
+## 20. DEVICE AWARENESS
+
+The Intelligent Storage Lifecycle may respond to device conditions such as:
+
+- Available storage.
+- Storage pressure.
+- Battery state.
+- Thermal state.
+- Performance.
+- Connectivity.
+- Offline status.
+- Current workload.
+- Local model requirements.
+
+Storage management must adapt to device conditions without violating higher-level policies.
+
+---
+
+## 21. STORAGE PRESSURE
+
+When storage pressure increases, the system should prioritize non-critical data first.
+
+Conceptual order:
+
+Temporary Data
+    ↓
+Disposable Cache
+    ↓
+Redundant Data
+    ↓
+Reconstructable Data
+    ↓
+Cold Data
+    ↓
+Warm Data
+    ↓
+Protected / Critical Data
+
+The exact order must remain subject to Governance, data type and user policy.
+
+---
+
+## 22. INTELLIGENT STORAGE OPTIMIZATION
+
+Optimization may include:
+
+- Deduplication.
+- Compression.
+- Cache eviction.
+- Data migration.
+- Tiering.
+- Re-indexing.
+- Artifact cleanup.
+- Temporary-data removal.
+- Storage reclamation.
+- Local availability optimization.
+
+Optimization should preserve functional continuity.
+
+---
+
+## 23. DEDUPLICATION
+
+The lifecycle should identify unnecessary physical duplication where technically possible.
+
+Example:
+
+Multiple copies of identical derived data may be consolidated when doing so does not violate:
+
+- User expectations.
+- Security requirements.
+- Application requirements.
+- Data integrity.
+- Governance policies.
+
+---
+
+## 24. CACHING
+
+Caches are temporary storage resources.
+
+Caches may be removed when:
+
+- They are no longer useful.
+- Storage pressure increases.
+- They can be safely reconstructed.
+- The user or policy permits removal.
+
+Cache deletion must not be interpreted as deletion of the underlying source information.
+
+---
+
+## 25. COMPRESSION
+
+Data may be compressed when:
+
+- It remains relevant.
+- Compression provides meaningful storage savings.
+- Performance requirements permit it.
+- Data integrity is maintained.
+
+Compression is a storage optimization operation, not a semantic change.
+
+---
+
+## 26. MIGRATION
+
+Data may move between storage tiers according to:
+
+- Usage.
+- Relevance.
+- Privacy.
+- Capacity.
+- Connectivity.
+- Performance.
+- Device state.
+- User policy.
+
+Migration must maintain integrity and authorization.
+
+---
+
+## 27. CROSS-DEVICE STORAGE
+
+The Personal Intelligence Environment may operate across multiple authorized devices.
+
+Example:
+
+iPhone
+    ↓
+@iriel
+    ↓
+Memory + Context
+    ↓
+Memory Placement
+    ↓
+Desktop
+    ↓
+Relevant Local Storage
+
+The architecture must not require the entire memory store to be duplicated across every device.
+
+---
+
+## 28. DEVICE REPLACEMENT
+
+Replacing a device must not imply loss of personal continuity.
+
+Example:
+
+Old iRiel Device
+    ↓
+@iriel
+    ↓
+Authorized Memory
+    ↓
+Context Reconstruction
+    ↓
+New iRiel Device
+
+The new device receives what it needs according to authorization, placement and storage policies.
+
+---
+
+## 29. OFFLINE OPERATION
+
+The Intelligent Storage Lifecycle must support offline-first behavior when applicable.
+
+Offline operation may require preserving:
+
+- Active context.
+- Working Memory.
+- Critical workflows.
+- Frequently used files.
+- Local models.
+- Required indexes.
+- User-selected offline resources.
+
+Storage placement should therefore consider connectivity as an architectural input.
+
+---
+
+## 30. PRIVACY
+
+Intelligent Storage Lifecycle contributes to Privacy by Design through controlled retention.
+
+The principle is:
+
+Less unnecessary data
+    ↓
+Less unnecessary retention
+    ↓
+Smaller exposure surface
+    ↓
+Greater privacy
+
+However, privacy governance remains the responsibility of the PRSL-AI Privacy and Governance architecture.
+
+---
+
+## 31. SECURITY
+
+The Intelligent Storage Lifecycle must cooperate with security systems.
+
+Security responsibilities include:
+
+- Access control.
+- Encryption.
+- Integrity.
+- Authentication.
+- Authorization.
+- Secure deletion where required.
+
+The Lifecycle manages storage state but does not replace the security architecture.
+
+---
+
+## 32. GOVERNANCE
+
+Governance determines applicable policy.
+
+Examples:
+
+- Retention policy.
+- User authorization.
+- Data sensitivity.
+- External-transfer policy.
+- Deletion requirements.
+- Storage location restrictions.
+
+The Lifecycle executes storage behavior within those boundaries.
+
+---
+
+## 33. USER CONTROL
+
+The user remains the authority over personal data.
+
+The architecture should support user controls such as:
+
+- Keep locally.
+- Make available offline.
+- Remove local copy.
+- Forget.
+- Archive.
+- Do not synchronize.
+- Do not transmit externally.
+- Preserve across devices.
+
+The system must clearly distinguish:
+
+Remove from device
+
+from:
+
+Forget permanently.
+
+---
+
+## 34. EXTERNAL PROCESSING
+
+When data must leave the local environment, the Lifecycle must cooperate with Governance and Privacy.
+
+Canonical flow:
+
+Data
+    ↓
+Need for External Processing
+    ↓
+Governance
+    ↓
+Authorization
+    ↓
+Data Minimization
+    ↓
+Secure Transfer
+    ↓
+External Processing
+    ↓
+Controlled Retention
+
+The entire local storage environment must never be exposed merely because an external service is being used.
+
+---
+
+## 35. ENCRYPTION
+
+Data crossing an external boundary must use appropriate secure transport.
+
+Stored data should use appropriate encryption based on:
+
+- Sensitivity.
+- Storage type.
+- Device capabilities.
+- Security policy.
+- Applicable requirements.
+
+Encryption is part of the security architecture and works alongside the Lifecycle.
+
+---
+
+## 36. INTELLIGENT STORAGE AND LOCAL AI
+
+Local AI may require substantial storage for:
+
+- Models.
+- Model assets.
+- Embeddings.
+- Indexes.
+- Caches.
+- Context.
+- Memory.
+- Temporary inference artifacts.
+
+The Lifecycle ensures that these resources coexist efficiently with ordinary user data.
+
+---
+
+## 37. STORAGE AND LOCAL INTELLIGENCE
+
+The relationship is:
+
+Local Intelligence
+    ↓
+More Local Data
+    ↓
+Greater Storage Demand
+    ↓
+Intelligent Storage Lifecycle
+    ↓
+Managed Storage
+    ↓
+Sustainable Local Intelligence
+
+Without intelligent storage management, increased local intelligence can create uncontrolled storage pressure.
+
+---
+
+## 38. STORAGE AND PERFORMANCE
+
+Storage management influences:
+
+- Application responsiveness.
+- Model loading.
+- Cache availability.
+- Indexing.
+- Search.
+- Local inference.
+- Workflow execution.
+- Offline operation.
+
+The Lifecycle should therefore consider performance, not only capacity.
+
+---
+
+## 39. STORAGE AND BATTERY
+
+Storage operations can affect power consumption.
+
+The Lifecycle may optimize expensive operations based on:
+
+- Battery level.
+- Charging state.
+- Thermal state.
+- Device activity.
+- User preferences.
+
+Heavy optimization operations should not unnecessarily interfere with active user tasks.
+
+---
+
+## 40. STORAGE AND THERMAL STATE
+
+When a device is under thermal pressure, non-essential storage operations may be deferred.
+
+The system should prioritize:
+
+User interaction
+    ↓
+Active computation
+    ↓
+Critical workflows
+    ↓
+Background storage optimization
+
+---
+
+## 41. STORAGE AND INTELLIGENT DEVICE DESIGN
+
+iRiel Devices are not designed around storage capacity alone.
+
+The architecture considers:
+
+Storage Capacity
++
+Local Intelligence
++
+Memory
++
+Context
++
+Lifecycle Management
++
+Privacy
++
+Performance
+
+Therefore:
+
+More Storage
+does not automatically mean
+More Intelligence.
+
+More Storage
++
+Better Management
+=
+More Useful Local Intelligence.
+
+---
+
+## 42. STORAGE CAPACITY PHILOSOPHY
+
+The iRiel storage roadmap may include high-capacity devices.
+
+However, capacity is treated as infrastructure for:
+
+- Knowledge.
+- Context.
+- Memory.
+- Intelligence.
+- User data.
+- Local models.
+- Personal computing.
+
+Capacity must be actively managed.
+
+---
+
+## 43. STORAGE LIFECYCLE AS INFRASTRUCTURE INTELLIGENCE
+
+The Intelligent Storage Lifecycle is not merely a utility.
+
+It represents a form of infrastructure intelligence.
+
+It enables the system to understand:
+
+- What storage is available.
+- What storage is being consumed.
+- What data is active.
+- What data is dormant.
+- What data is temporary.
+- What data can be reconstructed.
+- What data must be preserved.
+- What data may be removed.
+
+---
+
+## 44. RELATIONSHIP WITH iRiel INTELLIGENCE SERVER
+
+The iRiel Intelligence Server may coordinate storage-related operations but does not need to physically own all storage.
+
+Canonical relationship:
+
+iRiel Intelligence Server
+    ↓
+Storage Intelligence Request
+    ↓
+Intelligent Storage Lifecycle
+    ↓
+Storage Policy / Placement
+    ↓
+iRiel Storage Infrastructure
+
+The Intelligence Server provides orchestration and intelligence.
+
+The Lifecycle executes storage management.
+
+---
+
+## 45. RELATIONSHIP WITH iRiel APPWEB
+
+iRiel AppWeb may expose storage information and user controls.
+
+Example:
+
+Storage
+    ↓
+Usage
+    ↓
+Lifecycle State
+    ↓
+Recommendations
+    ↓
+User Control
+
+The AppWeb is an interface.
+
+It does not define the storage architecture.
+
+---
+
+## 46. RELATIONSHIP WITH iRiel MEMORY
+
+Canonical relationship:
+
+iRiel Memory
+→ Semantic continuity.
+
+Intelligent Storage Lifecycle
+→ Physical storage lifecycle.
+
+Neither replaces the other.
+
+Together they provide:
+
+Semantic Continuity
++
+Physical Resource Management
+
+---
+
+## 47. RELATIONSHIP WITH TEMPORAL
+
+Temporal may manage durable workflow execution and state.
+
+The Intelligent Storage Lifecycle may manage artifacts generated by those workflows.
+
+Example:
+
+Temporal
+→ Workflow state.
+
+Storage Lifecycle
+→ Workflow artifacts.
+
+iRiel Memory
+→ Personal continuity associated with the work.
+
+These are separate responsibilities.
+
+---
+
+## 48. STORAGE INTEGRITY
+
+Lifecycle operations must preserve:
+
+- Data integrity.
+- Metadata integrity.
+- Memory integrity.
+- Provenance where required.
+- Application consistency.
+- Workflow consistency.
+
+Storage optimization must not corrupt semantic state.
+
+---
+
+## 49. STORAGE OBSERVABILITY
+
+The architecture should provide observability into:
+
+- Storage utilization.
+- Storage pressure.
+- Data categories.
+- Lifecycle states.
+- Cache utilization.
+- Local model usage.
+- Memory usage.
+- Migration operations.
+- Cleanup operations.
+
+Observability should be privacy-preserving.
+
+---
+
+## 50. STORAGE RECOMMENDATIONS
+
+The system may recommend actions such as:
+
+- Remove unnecessary cache.
+- Move cold data.
+- Preserve required offline content.
+- Optimize local storage.
+- Remove temporary artifacts.
+- Reclaim space.
+
+Recommendations should be explainable.
+
+The system should not silently perform destructive operations when user authorization is required.
+
+---
+
+## 51. HUMAN-CENTERED STORAGE
+
+The architecture follows the broader PRSL-AI principle:
+
+> Technology adapts to the human.
+
+Therefore storage management should minimize unnecessary cognitive burden.
+
+The user should not need to understand:
+
+- Cache architecture.
+- Storage tiers.
+- Index structures.
+- Model artifacts.
+- Memory placement.
+
+unless they choose to inspect them.
+
+---
+
+## 52. ACCESSIBILITY
+
+Storage management must remain accessible.
+
+Information about storage should be available through:
+
+- Visual interfaces.
+- Voice interaction.
+- Assistive technologies.
+- Clear language.
+- Adjustable detail.
+- User-configurable notifications.
+
+Storage intelligence should reduce cognitive and operational burden rather than increase it.
+
+---
+
+## 53. HUMAN INTELLIGENCE PRINCIPLE
+
+The Intelligent Storage Lifecycle follows the PRSL-AI Human Intelligence principle:
+
+> **The system adapts storage management to the human instead of forcing the human to manually adapt to storage complexity.**
+
+The machine handles complexity.
+
+The human retains authority.
+
+---
+
+## 54. FAILURE HANDLING
+
+If an optimization operation fails:
+
+- Original data must remain protected.
+- The operation should be retryable.
+- Partial migration must be detected.
+- Integrity must be verified.
+- The system must avoid silent data loss.
+- User-visible impact should be minimized.
+
+Storage optimization must fail safely.
+
+---
+
+## 55. DATA LOSS PREVENTION
+
+No storage optimization operation should be treated as harmless by default.
+
+Operations involving potentially irreversible deletion require:
+
+- Appropriate policy.
+- Data classification.
+- Authorization.
+- Integrity checks.
+- Recovery strategy when applicable.
+
+---
+
+## 56. CANONICAL ARCHITECTURE
+
+                         HUMAN
+                           ↓
+                        @iriel
+                           ↓
+              PERSONAL INTELLIGENCE
+                   ENVIRONMENT
+                           ↓
+        ┌──────────────────┼──────────────────┐
+        ↓                  ↓                  ↓
+      Context           Memory            Governance
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           ↓
+                    Memory Manager
+                           ↓
+                    Memory Placement
+                           ↓
+              INTELLIGENT STORAGE
+                     LIFECYCLE
+                           ↓
+        ┌──────────────────┼──────────────────┐
+        ↓                  ↓                  ↓
+       HOT                WARM               COLD
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           ↓
+                    Storage Infrastructure
+                           ↓
+                     iRiel Devices
+                           ↓
+                     Local Intelligence
+
+
+---
+
+## 57. CANONICAL DATA FLOW
+
+Data
+    ↓
+Context / Memory / Application
+    ↓
+Classification
+    ↓
+Governance
+    ↓
+Placement
+    ↓
+Intelligent Storage Lifecycle
+    ↓
+Store / Cache / Compress / Migrate
+    ↓
+Monitor
+    ↓
+Re-evaluate
+    ↓
+Expire / Archive / Remove
+
+
+---
+
+## 58. CANONICAL RELATIONSHIP WITH iRIEL MEMORY
+
+iRiel Memory asks:
+
+"What should remain part of the user's continuity?"
+
+Intelligent Storage Lifecycle asks:
+
+"How should that information be physically managed?"
+
+This separation prevents storage optimization from becoming an uncontrolled memory-management mechanism.
+
+---
+
+## 59. CANONICAL RELATIONSHIP WITH iRIEL DEVICES
+
+iRiel Devices provide:
+
+- Computation.
+- Local storage.
+- Local AI capability.
+- Connectivity.
+- Offline operation.
+- Physical resources.
+
+Intelligent Storage Lifecycle manages how those resources are utilized.
+
+---
+
+## 60. ARCHITECTURAL IMPORTANCE
+
+The Intelligent Storage Lifecycle is a foundational component because the PRSL-AI Ecosystem depends increasingly on local:
+
+- Memory.
+- Context.
+- Intelligence.
+- Models.
+- Knowledge.
+- User data.
+- Workflow artifacts.
+
+Without intelligent storage management, Local-First architecture can eventually create uncontrolled storage pressure.
+
+With the Lifecycle, storage becomes an adaptive infrastructure layer capable of supporting continuous personal intelligence.
+
+---
+
+## 61. WHY IT EXISTS
+
+The Intelligent Storage Lifecycle exists because:
+
+A Personal Intelligence Environment cannot remain local, private, resilient and continuously available if its storage infrastructure is treated as passive capacity.
+
+The system must understand not only:
+
+"What data exists?"
+
+but also:
+
+"Why is it here?"
+
+"How often is it used?"
+
+"Does it need to remain local?"
+
+"Can it be reconstructed?"
+
+"Should it expire?"
+
+"Is it protected?"
+
+"Can it move?"
+
+"Is the user authorized to remove it?"
+
+---
+
+## 62. FOUNDATIONAL PRINCIPLES
+
+The Intelligent Storage Lifecycle follows:
+
+1. Local-First.
+2. Privacy by Default.
+3. User Control.
+4. Data Minimization.
+5. Intelligent Placement.
+6. Lifecycle Awareness.
+7. Storage Efficiency.
+8. Device Awareness.
+9. Cross-Device Continuity.
+10. Safe Optimization.
+11. Explainability.
+12. Accessibility.
+13. Provider Independence.
+14. Cloud Independence.
+15. AI Agnosticism.
+16. Human Authority.
+
+---
+
+## 63. CANONICAL DEFINITION
+
+PRSL-AI Intelligent Storage Lifecycle is the infrastructure intelligence layer responsible for managing the physical lifecycle, placement, prioritization, retention, optimization, migration, expiration and removal of data across iRiel Devices and authorized storage resources.
+
+It enables the Personal Intelligence Environment to remain local, efficient, private and continuously available without treating storage as passive capacity or allowing storage optimization to independently determine the semantic value of personal memory.
+
+---
+
+## 64. CANONICAL SHORT FORM
+
+Intelligent Storage Lifecycle:
+
+Manages storage.
+Not meaning.
+
+Optimizes resources.
+Not identity.
+
+Manages physical lifecycle.
+Not personal memory.
+
+Supports Local-First.
+Protects privacy.
+Reduces unnecessary retention.
+Adapts to device conditions.
+Supports continuous intelligence.
+
+The system manages complexity.
+
+The human retains control.
+
+
+© Robert Software Labs
+
+PRSL-AI Ecosystem
+
+Intelligent Storage Lifecycle — Canonical Definition v1.0

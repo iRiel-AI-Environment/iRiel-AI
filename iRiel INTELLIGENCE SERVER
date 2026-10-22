@@ -1,0 +1,1015 @@
+PRSL-AI ECOSYSTEM — iRiel INTELLIGENCE SERVER
+
+Organization: Robert Software Labs
+Ecosystem: PRSL-AI Ecosystem
+Component: iRiel Intelligence Server
+Document: iRiel Intelligence Server — Canonical Definition
+Version: 1.0
+Status: Canonical
+Classification: Core Ecosystem Architecture
+Architecture: AI-Agnostic / Privacy by Default / Local-First / Human-Centered
+
+
+1. DEFINITION
+
+The iRiel Intelligence Server is the operational intelligence layer of the PRSL-AI Ecosystem responsible for coordinating human intent, context, memory, governance, intelligence routing, capabilities, integrations and durable workflows.
+
+It provides the coordination layer between the @iriel Personal Intelligence Environment and the computational resources required to understand, decide, execute and verify actions.
+
+The iRiel Intelligence Server is independent from any specific AI model, provider, device, application or cloud infrastructure.
+
+
+2. CORE PRINCIPLE
+
+The canonical principle is:
+
+The iRiel Intelligence Server coordinates intelligence; it does not become the intelligence provider.
+
+It may use multiple intelligence providers and computational resources while maintaining a stable architectural abstraction.
+
+
+3. WHAT THE iRIEL INTELLIGENCE SERVER IS
+
+The iRiel Intelligence Server is:
+
+- An operational intelligence layer.
+- A coordination layer.
+- A capability resolution layer.
+- A routing layer.
+- A governance-aware execution coordinator.
+- A bridge between personal intelligence and external capabilities.
+- A coordinator for durable workflows.
+- An abstraction boundary between @iriel and infrastructure.
+
+
+4. WHAT THE iRIEL INTELLIGENCE SERVER IS NOT
+
+The iRiel Intelligence Server is not:
+
+- An AI model.
+- An AI provider.
+- A chatbot.
+- The iRiel AppWeb.
+- An iRiel Device.
+- The Integration Layer.
+- Temporal.
+- A mandatory cloud service.
+- The user's identity.
+- The user's entire memory.
+- A replacement for human decision-making.
+
+
+5. ARCHITECTURAL PURPOSE
+
+The primary purpose of the iRiel Intelligence Server is to prevent the Personal Intelligence Environment from becoming directly coupled to:
+
+- AI models.
+- AI providers.
+- External APIs.
+- MCP servers.
+- Individual applications.
+- Operating systems.
+- Devices.
+- Cloud infrastructure.
+- Workflow engines.
+
+The Server provides the abstraction necessary to allow these components to evolve independently.
+
+
+6. CANONICAL FLOW
+
+Human
+    ↓
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+iRiel Interface
+    ↓
+iRiel Intelligence Server
+    ↓
+Intent
+    ↓
+Context
+    ↓
+Governance
+    ↓
+Capability
+    ↓
+Intelligence / Integration / Workflow
+    ↓
+Execution
+    ↓
+Validation
+    ↓
+Context / Memory
+    ↓
+@iriel
+
+
+7. INTENT PROCESSING
+
+The Intelligence Server receives or coordinates the interpretation of human intent.
+
+Example:
+
+User:
+
+"Create a task for the API documentation."
+
+The Server must determine:
+
+- What the user intends.
+- Which context is relevant.
+- Which capability is required.
+- Which permissions apply.
+- Whether execution is local or external.
+- Which integration or service can provide the capability.
+- Whether confirmation is necessary.
+
+
+8. CONTEXT
+
+The Intelligence Server consumes relevant contextual information from the iRiel Context architecture.
+
+Context may include:
+
+- Current activity.
+- Active project.
+- Recent interactions.
+- Relevant task state.
+- Current environment.
+- Previous decisions.
+- Relevant memory.
+- User-defined preferences.
+- Workflow state.
+
+The Intelligence Server should not require unrestricted access to all user context.
+
+Only context relevant to the operation should be used.
+
+
+9. MEMORY
+
+The Intelligence Server may interact with memory systems when memory is relevant to the requested operation.
+
+Memory is not automatically created from every interaction.
+
+Canonical flow:
+
+Interaction
+    ↓
+Context Evaluation
+    ↓
+Memory Decision
+    ↓
+Persist / Do Not Persist
+
+
+10. GOVERNANCE
+
+Governance is evaluated before controlled execution.
+
+Canonical flow:
+
+Intent
+    ↓
+Capability
+    ↓
+Governance
+    ↓
+Authorization
+    ↓
+Execution
+
+Governance may:
+
+- Allow execution.
+- Deny execution.
+- Require confirmation.
+- Restrict data.
+- Restrict capabilities.
+- Restrict integrations.
+- Require additional authorization.
+
+
+11. INTELLIGENCE ROUTER
+
+The Intelligence Router operates within the broader Intelligence architecture.
+
+It determines the appropriate intelligence resource, capability or execution path.
+
+It may evaluate:
+
+- Capability match.
+- Context match.
+- Privacy.
+- Latency.
+- Cost.
+- Availability.
+- Reliability.
+- Provider capability.
+- User authorization.
+
+
+12. AI-AGNOSTIC ARCHITECTURE
+
+The Intelligence Server must remain independent from any single AI provider.
+
+Possible intelligence resources include:
+
+- Local models.
+- OpenAI models.
+- Gemini models.
+- Claude models.
+- Other compatible models.
+- Specialized local intelligence.
+- Future intelligence systems.
+
+The ecosystem may change providers without changing the identity or fundamental architecture of @iriel.
+
+
+13. MODEL ABSTRACTION
+
+AI models are treated as resources.
+
+They are not the architectural center of the ecosystem.
+
+Canonical relationship:
+
+iRiel Intelligence Server
+    ↓
+Intelligence Router
+    ↓
+Model / Intelligence Resource
+    ↓
+Capability
+
+
+14. CAPABILITY ABSTRACTION
+
+The Intelligence Server operates primarily with capabilities rather than provider-specific implementations.
+
+Examples:
+
+task.create
+task.update
+calendar.read
+calendar.create
+file.read
+file.write
+repository.read
+repository.issue.create
+message.send
+
+
+15. CAPABILITY VS IMPLEMENTATION
+
+The iRiel Intelligence Server may request:
+
+task.create
+
+without requiring the Personal Intelligence Environment to know whether the capability is provided by:
+
+- ClickUp.
+- Monday.
+- A local task engine.
+- Another compatible service.
+
+The capability remains stable while the implementation may change.
+
+
+16. INTEGRATION RELATIONSHIP
+
+The Intelligence Server coordinates with the PRSL-AI Integration Layer.
+
+Canonical flow:
+
+Capability
+    ↓
+Governance
+    ↓
+Integration Layer
+    ↓
+Integration Registry
+    ↓
+Provider / Adapter
+    ↓
+External or Local System
+
+
+17. MCP RELATIONSHIP
+
+MCP is one supported integration mechanism.
+
+Canonical flow:
+
+iRiel Intelligence Server
+    ↓
+Capability
+    ↓
+MCP Integration
+    ↓
+MCP Server
+    ↓
+Tool / Resource
+    ↓
+External System
+
+MCP does not define the entire Integration Layer.
+
+
+18. SYSTEM CAPABILITIES
+
+The Intelligence Server may coordinate operating-system capabilities such as:
+
+- App Intents.
+- Shortcuts.
+- Files.
+- Notifications.
+- Accessibility capabilities.
+- Device services.
+- Local system APIs.
+
+
+19. LOCAL-FIRST PROCESSING
+
+The Intelligence Server should prefer local execution when the requested capability can be fulfilled locally and doing so satisfies the applicable requirements.
+
+Canonical preference:
+
+Local
+    ↓
+Authorized Personal Infrastructure
+    ↓
+External Service
+
+
+20. EXTERNAL PROCESSING
+
+External execution may occur when:
+
+- The capability is unavailable locally.
+- The user authorizes external processing.
+- The requested service requires external infrastructure.
+- Governance permits external processing.
+- External execution provides a necessary capability.
+
+
+21. PRIVACY BY DEFAULT
+
+The Intelligence Server must treat personal data as private by default.
+
+External transmission must be:
+
+- Necessary.
+- Authorized.
+- Policy-compliant.
+- Minimized.
+- Protected.
+
+
+22. DATA MINIMIZATION
+
+The Intelligence Server should provide integrations and external services with only the information necessary to execute the requested capability.
+
+Example:
+
+task.create
+
+Required:
+
+- Task title.
+- Task description.
+- Destination.
+
+Not automatically required:
+
+- Entire user memory.
+- Entire context history.
+- Unrelated files.
+- Private communications.
+- Unrelated personal data.
+
+
+23. CREDENTIAL ISOLATION
+
+AI models should not directly receive sensitive integration credentials.
+
+Canonical architecture:
+
+Intelligence
+    ↓
+Capability
+    ↓
+Integration Layer
+    ↓
+Credential Store
+    ↓
+External Service
+
+
+24. TEMPORAL RELATIONSHIP
+
+Temporal is not the Intelligence Server.
+
+Temporal is a durable execution engine that may execute workflows coordinated by the Intelligence Server.
+
+Canonical relationship:
+
+iRiel Intelligence Server
+    ↓
+Workflow
+    ↓
+Temporal
+    ↓
+Durable Execution
+    ↓
+Activities / Integrations / Services
+
+
+25. DURABLE WORKFLOWS
+
+The Intelligence Server may create or coordinate workflows that must survive:
+
+- Device disconnection.
+- Process termination.
+- Network interruptions.
+- Service delays.
+- Long-running operations.
+- External events.
+- Temporary failures.
+
+
+26. DEVICE INDEPENDENCE
+
+Workflow state should not be inherently bound to a single iRiel Device.
+
+Example:
+
+iPhone
+    ↓
+@iriel
+    ↓
+Intelligence Server
+    ↓
+Workflow
+    ↓
+Temporal
+
+The iPhone becomes unavailable.
+
+The durable workflow may continue.
+
+A desktop later reconnects:
+
+Desktop
+    ↓
+@iriel
+    ↓
+Intelligence Server
+    ↓
+Existing Workflow State
+
+
+27. PERSONAL INTELLIGENCE ENVIRONMENT
+
+The Intelligence Server operates as part of the Personal Intelligence Environment.
+
+The environment may span:
+
+- iRiel Devices.
+- iRiel AppWeb.
+- Local infrastructure.
+- Authorized external services.
+- Intelligence resources.
+- Durable workflows.
+
+
+28. iRIEL RELATIONSHIP
+
+@iriel represents the user's identity and Personal Intelligence Environment.
+
+The Intelligence Server operates on behalf of that environment within authorized boundaries.
+
+Canonical relationship:
+
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+iRiel Intelligence Server
+
+
+29. iRIEL APPWEB RELATIONSHIP
+
+The iRiel AppWeb is an interface to the Personal Intelligence Environment.
+
+It does not own the Intelligence Server or the Integration Layer.
+
+Canonical flow:
+
+iRiel AppWeb
+    ↓
+iRiel Intelligence Server
+    ↓
+Capability
+    ↓
+Execution
+
+
+30. iRIEL DEVICES RELATIONSHIP
+
+iRiel Devices provide local computational resources.
+
+They are not the Intelligence Server itself.
+
+Canonical relationship:
+
+@iriel
+    ↓
+Intelligence Server
+    ↓
+iRiel Device
+    ↓
+Local Capability
+
+or:
+
+@iriel
+    ↓
+Intelligence Server
+    ↓
+External Capability
+
+
+31. CLOUD INDEPENDENCE
+
+The Intelligence Server must not establish a mandatory PRSL-AI cloud dependency.
+
+Cloud infrastructure may be used as an infrastructure choice.
+
+Cloud is not:
+
+- The identity.
+- The Intelligence Server definition.
+- The Personal Intelligence Environment.
+- A mandatory PRSL-AI product.
+
+
+32. SELF-HOSTED AND HYBRID OPERATION
+
+The Intelligence Server architecture should support appropriate deployment models including:
+
+- Local.
+- Self-hosted.
+- Private infrastructure.
+- Hybrid.
+- External infrastructure chosen by the operator.
+
+The architectural model remains independent of the deployment location.
+
+
+33. EXECUTION PIPELINE
+
+Canonical execution pipeline:
+
+Human Intent
+    ↓
+@iriel
+    ↓
+Intent Understanding
+    ↓
+Context Resolution
+    ↓
+Capability Resolution
+    ↓
+Governance
+    ↓
+Authorization
+    ↓
+Data Minimization
+    ↓
+Intelligence / Integration Selection
+    ↓
+Execution
+    ↓
+Result Validation
+    ↓
+Context Update
+    ↓
+Memory Evaluation
+    ↓
+@iriel
+
+
+34. RESULT VALIDATION
+
+The Intelligence Server must distinguish:
+
+Requested
+    ≠
+Attempted
+    ≠
+Executing
+    ≠
+Succeeded
+    ≠
+Confirmed
+
+
+35. RELIABILITY
+
+The Intelligence Server must not claim successful execution without appropriate confirmation.
+
+Possible execution states:
+
+Requested
+Pending
+Executing
+Succeeded
+Failed
+Cancelled
+Timed Out
+Unknown
+
+
+36. UNKNOWN STATE
+
+If execution cannot be confirmed, the system must report the state as unknown rather than fabricate success.
+
+Example:
+
+External Service
+    ↓
+Connection Lost
+    ↓
+Execution State Unknown
+    ↓
+@iriel
+    ↓
+Transparent Status
+
+
+37. FAILURE HANDLING
+
+The Intelligence Server may coordinate:
+
+- Retry.
+- Recovery.
+- Fallback.
+- Compensation.
+- User confirmation.
+- Failure reporting.
+
+
+38. FALLBACK
+
+Where multiple compatible execution paths exist, the Intelligence Server may select an alternative.
+
+Example:
+
+task.create
+    ↓
+Primary Integration
+    ↓
+Unavailable
+    ↓
+Compatible Integration
+    ↓
+Execution
+
+Fallback must respect the same governance and privacy requirements as the original execution.
+
+
+39. OBSERVABILITY
+
+The Intelligence Server should maintain appropriate operational observability.
+
+Possible signals:
+
+- Execution status.
+- Latency.
+- Provider status.
+- Integration status.
+- Errors.
+- Authorization failures.
+- Policy decisions.
+- Workflow state.
+- Retry state.
+
+
+40. AUDITABILITY
+
+Where appropriate, operations may be auditable.
+
+Audit information may include:
+
+- Intent.
+- Capability.
+- Authorization.
+- Policy decision.
+- Integration selected.
+- Data scope.
+- Execution state.
+- Workflow reference.
+- Result.
+
+
+41. HUMAN CONTROL
+
+The Intelligence Server operates under human authority.
+
+The user controls, where applicable:
+
+- Connected services.
+- Permissions.
+- Integrations.
+- External processing.
+- Data sharing.
+- Workflow authorization.
+- Device participation.
+
+
+42. TRANSPARENCY
+
+Architectural abstraction must not become secrecy.
+
+The Intelligence Server may hide unnecessary implementation complexity while still providing relevant information when requested.
+
+Example:
+
+Normal operation:
+
+"Task created."
+
+Detailed request:
+
+"Task created through the authorized ClickUp integration using MCP."
+
+
+43. INTEGRATION REPLACEMENT
+
+The Intelligence Server must allow compatible integrations to be replaced without destroying the Personal Intelligence Environment.
+
+Example:
+
+task.create
+    ↓
+Provider A
+
+can become:
+
+task.create
+    ↓
+Provider B
+
+
+44. PROVIDER INDEPENDENCE
+
+Changing an AI provider, integration provider or execution service should not require rebuilding the user's identity.
+
+Provider replacement must not imply:
+
+- Identity replacement.
+- Memory destruction.
+- Context destruction.
+- Loss of Personal Intelligence Environment.
+
+
+45. SECURITY BOUNDARY
+
+The Intelligence Server participates in the security boundary between:
+
+Human / Personal Environment
+        ↓
+Governance
+        ↓
+Execution Infrastructure
+        ↓
+External Systems
+
+
+46. SECURITY RESPONSIBILITY
+
+The Intelligence Server must cooperate with the security architecture to prevent:
+
+- Unauthorized execution.
+- Credential exposure.
+- Excessive data transmission.
+- Unapproved capabilities.
+- Uncontrolled external communication.
+
+
+47. CONTEXT CONTINUITY
+
+The Intelligence Server allows ongoing operations to maintain relevant state across interactions and, where architecturally supported, across devices.
+
+Context continuity does not mean unrestricted permanent storage.
+
+
+48. MEMORY CONTINUITY
+
+Memory continuity is governed independently according to the PRSL-AI memory architecture.
+
+The Intelligence Server coordinates memory use but does not automatically retain everything.
+
+
+49. WORKFLOW CONTINUITY
+
+Workflow continuity is distinct from conversational continuity.
+
+A conversation may end while a durable workflow remains active.
+
+Canonical distinction:
+
+Conversation
+    ≠
+Workflow
+
+Workflow
+    ↓
+Durable State
+    ↓
+Continued Execution
+
+
+50. ARCHITECTURAL BOUNDARIES
+
+The following boundaries are canonical:
+
+@iriel
+    =
+Identity / Personal Intelligence Environment
+
+iRiel AppWeb
+    =
+Web Interface
+
+iRiel Devices
+    =
+Local Computing Infrastructure
+
+iRiel Context
+    =
+Context Intelligence
+
+Memory
+    =
+Information Continuity
+
+Governance
+    =
+Authorization / Policy
+
+Intelligence Server
+    =
+Operational Intelligence Coordination
+
+Intelligence Router
+    =
+Intelligence / Capability Selection
+
+Integration Layer
+    =
+System Communication
+
+Temporal
+    =
+Durable Workflow Execution
+
+
+51. WHY THE INTELLIGENCE SERVER EXISTS
+
+Without the Intelligence Server, the Personal Intelligence Environment would need to directly coordinate:
+
+- Models.
+- Integrations.
+- APIs.
+- MCP.
+- Devices.
+- Workflows.
+- Governance.
+- Context.
+- External services.
+
+This creates architectural coupling.
+
+The Intelligence Server provides the coordination boundary that keeps these components replaceable and independently evolvable.
+
+
+52. ARCHITECTURAL VALUE
+
+The Intelligence Server provides:
+
+- Decoupling.
+- Provider independence.
+- Model independence.
+- Integration independence.
+- Device independence.
+- Workflow continuity.
+- Governance enforcement.
+- Context-aware execution.
+- Capability abstraction.
+- Operational observability.
+- Reliability.
+- Human control.
+
+
+53. CORE ARCHITECTURAL GUARANTEE
+
+The Personal Intelligence Environment must not become dependent on any single:
+
+- Model.
+- Provider.
+- Integration.
+- Device.
+- Application.
+- Workflow engine.
+- Cloud infrastructure.
+
+
+54. CANONICAL ARCHITECTURE
+
+                         HUMAN
+                           ↓
+                        @iriel
+                           ↓
+              PERSONAL INTELLIGENCE
+                   ENVIRONMENT
+                           ↓
+                iRiel Interface Layer
+                 AppWeb / Devices
+                           ↓
+              iRiel Intelligence Server
+                           │
+        ┌──────────────────┼──────────────────┐
+        ↓                  ↓                  ↓
+     Context            Memory           Governance
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           ↓
+                  Intelligence Router
+                           ↓
+                    Capabilities
+                           ↓
+                  Integration Layer
+                           ↓
+        ┌──────────────────┼──────────────────┐
+        ↓                  ↓                  ↓
+      Local              MCP                APIs
+     Systems           Services           Providers
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           ↓
+                       Temporal
+                           ↓
+                  Durable Workflows
+                           ↓
+                    Result Validation
+                           ↓
+                  Context / Memory
+                           ↓
+                        @iriel
+
+
+55. CANONICAL DEFINITION
+
+The iRiel Intelligence Server is the operational intelligence layer of the PRSL-AI Ecosystem responsible for coordinating human intent, context, memory, governance, intelligence routing, capabilities, integrations and durable workflows while remaining independent from any specific AI model, provider, device, application or cloud infrastructure.
+
+
+56. CANONICAL SHORT FORM
+
+iRiel Intelligence Server:
+
+Coordinates intelligence.
+Understands intent.
+Uses context.
+Respects governance.
+Resolves capabilities.
+Routes integrations.
+Coordinates workflows.
+Preserves continuity.
+Validates execution.
+Remains provider-independent.
+Remains device-independent.
+Remains cloud-independent.
+Keeps the human in control.
+
+
+57. FOUNDATIONAL PRINCIPLE
+
+PRSL-AI does not require the human to adapt to the machine.
+
+The iRiel Intelligence Server exists so the computing environment can coordinate itself around the human's intent, context, privacy and capabilities.
+
+Human Intelligence remains the source of intent.
+
+PRSL-AI provides the architecture that allows technology to adapt to it.
+
+
+© Robert Software Labs
+
+PRSL-AI Ecosystem
+
+iRiel Intelligence Server — Canonical Definition v1.0

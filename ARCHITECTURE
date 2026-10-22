@@ -1,0 +1,1163 @@
+# PRSL-AI ECOSYSTEM — CANONICAL ARCHITECTURE
+
+**Organization:** Robert Software Labs  
+**Ecosystem:** PRSL-AI Ecosystem  
+**Document:** Canonical Architecture  
+**Version:** 1.0  
+**Status:** Canonical  
+**Classification:** Core Architectural Document  
+**Architecture Model:** Human-Centered / Privacy-First / Local-First / AI-Agnostic / Modular
+
+
+---
+
+# 1. ARCHITECTURAL DEFINITION
+
+The PRSL-AI Ecosystem is a modular Personal Intelligence architecture designed around the human rather than around a device, application, cloud provider, or artificial intelligence model.
+
+The architecture establishes the human as the primary authority over identity, context, memory, knowledge, workflows, preferences and personal intelligence.
+
+PRSL-AI is designed according to the principle:
+
+> The machine adapts to the human.
+
+The ecosystem therefore separates:
+
+- Human Identity
+- Personal Intelligence Environment
+- Context
+- Memory
+- Knowledge
+- Intelligence
+- Workflows
+- Devices
+- Infrastructure
+- External AI Providers
+- External Services
+
+Each component has a defined responsibility and must not become the owner of the user's identity or personal environment without explicit authorization.
+
+
+---
+
+# 2. HUMAN-CENTERED ARCHITECTURE
+
+The PRSL-AI architecture begins with the human.
+
+Traditional technology may be represented as:
+
+Device
+    ↓
+Application
+    ↓
+Account
+    ↓
+Cloud
+    ↓
+Person
+
+PRSL-AI reverses this relationship:
+
+Human
+    ↓
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+Personal Intelligence
+    ↓
+Devices and Infrastructure
+
+The architecture therefore treats technology as an adaptive environment serving the person.
+
+
+---
+
+# 3. CANONICAL ARCHITECTURE
+
+The canonical PRSL-AI architecture is:
+
+Human
+    ↓
+@iriel — Identity Signature
+    ↓
+Personal Intelligence Environment
+    │
+    ├── Context
+    ├── Memory
+    ├── Knowledge
+    ├── Workflows
+    ├── Preferences
+    └── Policies
+            ↓
+    Personal Intelligence
+            ↓
+    Intelligence Layer
+            ↓
+    Intelligence Router
+            ↓
+    iRiel Intelligence Server
+            │
+            ├── Context Services
+            ├── Memory Services
+            ├── Intelligence Services
+            ├── Workflow Services
+            ├── Integration Services
+            └── Policy Services
+                    ↓
+                 Temporal
+                    ↓
+             Durable Workflows
+                    ↓
+              Authorized Devices
+                    ↓
+               iRiel System
+                    ↓
+          iRiel Intelligent Presence
+
+
+The architecture is surrounded by transversal principles:
+
+Accessibility & Inclusion
+Privacy by Default
+Security
+Human Control
+Local-First Intelligence
+AI-Agnostic Architecture
+Contextual Adaptation
+
+
+---
+
+# 4. HUMAN
+
+The Human is the primary subject and authority of the PRSL-AI Ecosystem.
+
+The architecture is designed around:
+
+- Individual needs
+- Individual preferences
+- Personal context
+- Personal identity
+- Personal memory
+- Personal knowledge
+- Personal accessibility requirements
+- Personal workflows
+- Personal privacy
+- Personal autonomy
+
+The Human is not treated as a data source for the system.
+
+The system exists to serve the Human.
+
+
+---
+
+# 5. @IRIEL — IDENTITY SIGNATURE
+
+@iriel is the Identity Signature of the PRSL-AI Ecosystem.
+
+@iriel provides identity continuity within the Personal Intelligence Environment.
+
+@iriel is independent from:
+
+- Email addresses
+- Phone numbers
+- Individual applications
+- Specific devices
+- Operating systems
+- AI providers
+- Cloud providers
+
+Identity and authentication are separate concepts.
+
+Authentication verifies access to a service.
+
+@iriel represents identity continuity within the Personal Intelligence Environment.
+
+
+---
+
+# 6. @IRIEL — APPWEB
+
+@iriel is the AppWeb of the PRSL-AI Ecosystem.
+
+@iriel is not a native application.
+
+It does not need to be installed as a platform-specific application.
+
+@iriel provides web-based access to the Personal Intelligence Environment across compatible devices and environments.
+
+The ecosystem may contain native applications for specific capabilities.
+
+Those applications are independent components and must not be confused with @iriel.
+
+
+---
+
+# 7. PERSONAL INTELLIGENCE ENVIRONMENT
+
+The Personal Intelligence Environment is the personal ownership and continuity boundary of the PRSL-AI Ecosystem.
+
+It contains or coordinates:
+
+- Identity
+- Context
+- Memory
+- Knowledge
+- Workflows
+- Preferences
+- Policies
+- Authorized Devices
+
+The Personal Intelligence Environment is not synonymous with cloud infrastructure.
+
+It may operate across:
+
+- Local environments
+- Authorized devices
+- User-controlled infrastructure
+- iRiel Intelligence Server infrastructure
+- Optional external services
+
+The user's identity and personal environment remain conceptually independent from any single infrastructure provider.
+
+
+---
+
+# 8. CONTEXT
+
+Context provides semantic continuity.
+
+Context determines:
+
+- What is happening
+- Why something is happening
+- What happened previously
+- What the user is currently doing
+- What information is relevant
+- What decisions have already been made
+- What task is currently active
+
+Context capabilities include:
+
+- Session Context
+- Working Context
+- Long-Term Context
+- Context Recovery
+- Snapshots
+- Decision History
+- Task Continuity
+- Semantic Search
+- Context Versioning
+
+Core distinction:
+
+Memory preserves information.
+
+Context preserves meaning.
+
+
+---
+
+# 9. MEMORY
+
+Memory preserves relevant information within the Personal Intelligence Environment.
+
+Memory may contain:
+
+- Relevant personal information
+- Historical context
+- User preferences
+- Knowledge
+- Decisions
+- Important interactions
+- Long-term information
+
+Memory must remain governed by:
+
+- Privacy
+- Retention policies
+- User control
+- Security
+- Contextual relevance
+
+Memory is not equivalent to unlimited storage.
+
+Memory is an intelligent representation of information considered relevant to Personal Intelligence.
+
+
+---
+
+# 10. KNOWLEDGE
+
+Knowledge represents information available to Personal Intelligence.
+
+Knowledge may originate from:
+
+- User-owned information
+- Local files
+- Memory
+- Context
+- Authorized integrations
+- External services
+- User-provided sources
+- AI-generated information when appropriate
+
+Knowledge remains subject to:
+
+- Provenance
+- Privacy
+- Authorization
+- Context
+- Retention
+- User control
+
+
+---
+
+# 11. PERSONAL INTELLIGENCE
+
+Personal Intelligence is the intelligence layer created from the interaction between:
+
+Identity
++
+Context
++
+Memory
++
+Knowledge
++
+Preferences
++
+Policies
+
+Personal Intelligence should provide adaptive assistance rather than merely generate responses.
+
+Its responsibilities may include:
+
+- Understanding
+- Reasoning
+- Planning
+- Decision support
+- Automation
+- Communication
+- Accessibility assistance
+- Contextual assistance
+- Workflow execution
+
+
+---
+
+# 12. INTELLIGENCE LAYER
+
+The PRSL-AI Intelligence Layer is AI-agnostic.
+
+PRSL-AI does not depend on one artificial intelligence provider.
+
+The architecture may use:
+
+- Local models
+- Apple Foundation Models
+- OpenAI models
+- Gemini Models
+- Claude models
+- Specialized models
+- Future AI providers
+- User-controlled models
+
+AI providers are implementation components.
+
+They are not the architectural identity of PRSL-AI.
+
+The system should be capable of selecting an appropriate intelligence provider according to policy and context.
+
+
+---
+
+# 13. INTELLIGENCE ROUTER
+
+The Intelligence Router determines which model, service or execution path should handle a request.
+
+Canonical components:
+
+Intent Classifier
+    ↓
+Context Analyzer
+    ↓
+Policy & Compliance Checker
+    ↓
+Model / Service Selector
+    ↓
+Fallback & Load Balancer
+    ↓
+Response Formatter
+
+
+Routing decisions may consider:
+
+- Privacy
+- Capability Match
+- Context Match
+- Latency
+- Cost
+- Availability
+- Policy
+- User preferences
+- Device capabilities
+
+
+---
+
+# 14. iRIEL INTELLIGENCE SERVER
+
+The iRiel Intelligence Server provides infrastructure for Personal Intelligence and durable execution.
+
+Responsibilities may include:
+
+- Intelligence Routing
+- Context Services
+- Memory Services
+- Workflow Services
+- Integration Services
+- Policy Services
+- Intelligence Workers
+- Durable Workflow Workers
+- Server-side orchestration
+
+The Intelligence Server is infrastructure.
+
+It is not the owner of the user's identity.
+
+It does not redefine @iriel.
+
+
+---
+
+# 15. TEMPORAL — DURABLE WORKFLOW ENGINE
+
+Temporal is used as a durable workflow execution engine within the iRiel Intelligence Server architecture.
+
+Temporal may manage:
+
+- Workflow IDs
+- Workflow state
+- Activities
+- Timers
+- Signals
+- Retries
+- Failures
+- Execution history
+- Recovery state
+
+Temporal does not replace:
+
+- @iriel
+- Context
+- Memory
+- Identity
+- Privacy
+- Security
+- Personal Intelligence
+
+Temporal provides durable execution.
+
+It does not provide human identity.
+
+
+---
+
+# 16. WORKFLOW CONTINUITY
+
+Workflows belong to the Personal Intelligence Environment rather than to a specific device.
+
+Therefore:
+
+iPhone
+    ↓
+Workflow
+    ↓
+Personal Intelligence Environment
+    ↓
+Temporal
+    ↓
+Desktop
+    ↓
+Workflow Continuation
+
+
+A workflow should be capable of surviving:
+
+- Device changes
+- Network interruptions
+- Device shutdown
+- Worker failures
+- Session interruptions
+- Temporary service failures
+
+The user should not need to recreate a workflow simply because the execution environment changed.
+
+
+---
+
+# 17. OFFLINE OPERATION
+
+PRSL-AI is local-first rather than cloud-first.
+
+When online:
+
+Device
+    ↓
+iRiel Intelligence Server
+    ↓
+Temporal
+    ↓
+Durable Workflow
+
+
+When offline:
+
+Device
+    ↓
+Local Intelligence
+    ↓
+Local Context
+    ↓
+Local Task State
+    ↓
+Local Execution
+
+
+When connectivity returns:
+
+Local State
+    +
+Context Snapshot
+    +
+Pending Events
+    ↓
+iRiel Intelligence Server
+    ↓
+State Reconciliation
+    ↓
+Temporal
+
+
+Offline operation therefore does not inherently represent loss of Personal Intelligence continuity.
+
+
+---
+
+# 18. DEVICE TRUST
+
+Devices are authorized environments within the Personal Intelligence Environment.
+
+A new device does not automatically receive unrestricted access.
+
+Canonical authorization flow:
+
+Device
+    ↓
+Device Trust
+    ↓
+Identity Recognition
+    ↓
+Policy Evaluation
+    ↓
+Authorized Access
+
+
+A revoked device may lose access without destroying the underlying Personal Intelligence Environment or workflow state.
+
+
+---
+
+# 19. IRIEL DEVICES
+
+iRiel Devices are intelligent physical environments for interaction and local execution.
+
+Capabilities may include:
+
+- Local Intelligence
+- Local Context
+- Local Memory
+- Local Storage
+- Accessibility
+- Automation
+- Sensors
+- Secure Identity Recognition
+- Local Execution
+- Intelligent Presence
+
+An iRiel Device does not own the user's identity.
+
+It is an authorized environment belonging to the Personal Intelligence Environment.
+
+
+---
+
+# 20. INTELLIGENT STORAGE LIFECYCLE
+
+Storage is treated as an intelligent lifecycle rather than passive hardware capacity.
+
+Canonical lifecycle:
+
+Monitoring
+    ↓
+Classification
+    ↓
+Retention
+    ↓
+Optimization
+    ↓
+Deduplication
+    ↓
+Compression
+    ↓
+Archiving
+    ↓
+Recovery
+    ↓
+Authorized Deletion
+
+
+Storage management should consider:
+
+- Usage
+- Recency
+- Importance
+- Context relevance
+- User preferences
+- Redundancy
+- Rebuildability
+- Recovery value
+- Retention policies
+
+Permanent deletion should not be the first response to storage pressure.
+
+
+---
+
+# 21. STORAGE AND PERSONAL INTELLIGENCE
+
+Storage participates in the Personal Intelligence architecture.
+
+Storage
+    ↓
+Memory
+    ↓
+Context
+    ↓
+Knowledge
+    ↓
+Personal Intelligence
+
+Sufficient storage allows devices to retain local knowledge, context, memory and intelligence.
+
+However, storage capacity alone does not create intelligence.
+
+Intelligent storage management determines how information is retained, optimized and recovered.
+
+
+---
+
+# 22. iRIEL INTELLIGENT PRESENCE
+
+iRiel Intelligent Presence is the environmental expression of intelligence on an iRiel Device.
+
+It is not:
+
+- A chatbot
+- A full-screen interface
+- An avatar
+- A notification
+- A mandatory animation
+- A replacement for the current user activity
+
+Its purpose is to communicate:
+
+> iRiel is present.
+
+The canonical visual language is:
+
+Emerald / Dark Neon Green
++
+Subtle Edge Glow
++
+Ambient Presence
++
+Non-Intrusive Feedback
+
+
+---
+
+# 23. INTELLIGENT PRESENCE PERSONALIZATION
+
+The canonical emerald appearance is a default visual identity, not a mandatory user configuration.
+
+Users may personalize:
+
+- Primary color
+- Secondary color
+- Glow intensity
+- Animation
+- Motion
+- Transparency
+- Edge thickness
+- Haptics
+- Audio
+
+Possible profiles include:
+
+Minimal
+Subtle
+Expressive
+Accessibility
+
+
+Identity remains stable regardless of visual personalization.
+
+@iriel
+=
+Identity
+
+Presence Profile
+=
+Expression of Identity
+
+
+---
+
+# 24. ACCESSIBILITY & INCLUSION
+
+Accessibility is a foundational architectural principle.
+
+It is not a secondary feature.
+
+PRSL-AI Accessibility means that intelligence, interfaces, communication, interaction and devices adapt to individual needs, abilities, preferences and context while preserving:
+
+- Autonomy
+- Privacy
+- Control
+- Dignity
+
+The foundational principle is:
+
+> The machine adapts to the human.
+
+Accessibility influences:
+
+- Intelligence
+- Interface
+- Devices
+- Context
+- Memory
+- Presence
+- Privacy
+- Interaction
+- Automation
+
+
+---
+
+# 25. PRIVACY BY DEFAULT
+
+Privacy is a transversal architectural principle.
+
+PRSL-AI prefers:
+
+Local
+    ↓
+User-Controlled
+    ↓
+External Only When Necessary or Authorized
+
+
+The architecture minimizes unnecessary exposure of:
+
+- Identity
+- Context
+- Memory
+- Accessibility information
+- Personal information
+- Behavioral patterns
+- Environmental information
+
+External services may be used when authorized and appropriate.
+
+Cloud is optional.
+
+Cloud is not the architectural foundation of PRSL-AI.
+
+
+---
+
+# 26. SECURITY AND HUMAN CONTROL
+
+Security exists to protect the user's control over the Personal Intelligence Environment.
+
+Security mechanisms may include:
+
+- Identity verification
+- Device trust
+- Authorization policies
+- Access control
+- Encryption
+- Secure storage
+- Workflow authorization
+- Privacy policies
+- Device revocation
+
+Security must not become a mechanism for removing legitimate human control.
+
+The user remains the authority over their personal environment.
+
+
+---
+
+# 27. AI-AGNOSTIC ARCHITECTURE
+
+PRSL-AI is independent from any single AI provider.
+
+The architecture must allow intelligence providers to be:
+
+- Added
+- Removed
+- Replaced
+- Combined
+- Selected dynamically
+- Used conditionally
+
+A provider outage should not fundamentally redefine the user's identity or Personal Intelligence Environment.
+
+The architecture is designed around capabilities and policies rather than vendor dependency.
+
+
+---
+
+# 28. CLOUD PRINCIPLE
+
+Cloud infrastructure is optional.
+
+PRSL-AI does not fundamentally sell or depend on cloud storage.
+
+The primary philosophy is:
+
+Device
+    ↓
+Local Intelligence
+    ↓
+User-Controlled Data
+
+
+External cloud services may be integrated when:
+
+- The user chooses them
+- Policy permits them
+- They provide required capabilities
+- Privacy requirements are satisfied
+
+Cloud is a service option.
+
+It is not the definition of Personal Intelligence.
+
+
+---
+
+# 29. TRANSVERSAL ARCHITECTURAL PRINCIPLES
+
+The following principles apply across the entire PRSL-AI Ecosystem:
+
+1. Human First
+2. Privacy by Default
+3. Local-First Intelligence
+4. Accessibility by Design
+5. Human Control
+6. AI-Agnostic Architecture
+7. Modular Architecture
+8. Contextual Adaptation
+9. Device Independence
+10. Workflow Continuity
+11. Vendor Independence
+12. Security by Design
+13. Personalization
+14. Data Ownership
+15. Intelligent Storage
+
+
+---
+
+# 30. ARCHITECTURAL RELATIONSHIP
+
+The complete conceptual relationship is:
+
+Human
+    ↓
+@iriel
+Identity Signature
+    ↓
+Personal Intelligence Environment
+    │
+    ├── Context
+    ├── Memory
+    ├── Knowledge
+    ├── Workflows
+    ├── Preferences
+    └── Policies
+            ↓
+    Personal Intelligence
+            ↓
+    Intelligence Layer
+            ↓
+    Intelligence Router
+            ↓
+    iRiel Intelligence Server
+            ↓
+    Temporal
+            ↓
+    Durable Workflow Execution
+            ↓
+    Authorized Devices
+            ↓
+    iRiel System
+            ↓
+    iRiel Intelligent Presence
+
+
+Transversal:
+
+Accessibility
+Privacy
+Security
+Human Control
+Local-First
+AI-Agnostic
+Contextual Adaptation
+
+
+---
+
+# 31. CORE SEPARATION OF RESPONSIBILITIES
+
+@iriel
+=
+Who the person is within the ecosystem.
+
+Personal Intelligence Environment
+=
+Where personal continuity exists.
+
+Context
+=
+What is happening and what it means.
+
+Memory
+=
+What is remembered.
+
+Knowledge
+=
+What information is available.
+
+Personal Intelligence
+=
+How the system understands, reasons and assists.
+
+Intelligence Router
+=
+Which intelligence or service should execute a task.
+
+iRiel Intelligence Server
+=
+Infrastructure for intelligence and durable execution.
+
+Temporal
+=
+How workflows remain durable.
+
+iRiel System
+=
+How intelligence operates within the device environment.
+
+iRiel Device
+=
+Where physical interaction and local execution occur.
+
+iRiel Intelligent Presence
+=
+How intelligence communicates its presence.
+
+
+---
+
+# 32. CANONICAL ARCHITECTURAL PRINCIPLE
+
+The PRSL-AI Ecosystem is not organized around the device.
+
+It is not organized around the cloud.
+
+It is not organized around an AI provider.
+
+It is not organized around an application.
+
+It is organized around the Human.
+
+The canonical relationship is:
+
+Human
+    ↓
+Identity
+    ↓
+Personal Environment
+    ↓
+Personal Intelligence
+    ↓
+Adaptive Technology
+
+
+---
+
+# 33. HUMAN INTELLIGENCE
+
+The philosophical foundation of the PRSL-AI architecture is Human Intelligence.
+
+Human Intelligence does not mean replacing artificial intelligence with human cognition.
+
+It means designing technology so that artificial intelligence serves human needs rather than forcing humans to adapt to technological limitations.
+
+Canonical principle:
+
+> The machine adapts to the human.
+
+This principle informs:
+
+- Accessibility
+- Privacy
+- Identity
+- Context
+- Memory
+- Devices
+- Intelligent Presence
+- Workflow Continuity
+- Personalization
+- Storage
+- AI Routing
+
+
+---
+
+# 34. FINAL ARCHITECTURAL STATEMENT
+
+PRSL-AI is a Personal Intelligence Ecosystem centered on the human.
+
+The Human owns the relationship.
+
+@iriel provides Identity Signature and AppWeb access.
+
+The Personal Intelligence Environment provides continuity.
+
+Context provides meaning.
+
+Memory preserves relevant information.
+
+Knowledge provides information.
+
+Personal Intelligence provides adaptive intelligence.
+
+The Intelligence Router selects appropriate intelligence and services.
+
+The iRiel Intelligence Server provides execution infrastructure.
+
+Temporal provides durable workflows.
+
+iRiel Devices provide local interaction and execution.
+
+Intelligent Storage Lifecycle manages information intelligently.
+
+iRiel Intelligent Presence expresses intelligence without demanding attention.
+
+Accessibility ensures technology adapts to the individual.
+
+Privacy protects human control.
+
+AI-Agnostic Architecture prevents dependence on a single provider.
+
+Cloud remains optional.
+
+The device is not the owner.
+
+The cloud is not the owner.
+
+The AI provider is not the owner.
+
+The application is not the owner.
+
+The Human remains the center and authority of the Personal Intelligence Environment.
+
+
+---
+
+# 35. CANONICAL SUMMARY
+
+PRSL-AI can be summarized as:
+
+Human
+    ↓
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+Context + Memory + Knowledge
+    ↓
+Personal Intelligence
+    ↓
+AI-Agnostic Intelligence
+    ↓
+Intelligence Router
+    ↓
+iRiel Intelligence Server
+    ↓
+Temporal + Durable Workflows
+    ↓
+Authorized iRiel Devices
+    ↓
+Local Intelligence
+    ↓
+iRiel Intelligent Presence
+
+
+With:
+
+Accessibility
++
+Privacy
++
+Security
++
+Human Control
++
+Local-First
++
+AI-Agnostic Architecture
+
+crossing the entire ecosystem.
+
+
+---
+
+# 36. FINAL PRINCIPLE
+
+> PRSL-AI does not exist to make humans adapt to technology.
+
+> PRSL-AI exists to make technology adapt to humans.
+
+That is the architectural foundation of the PRSL-AI Ecosystem.
+
+---
+
+© Robert Software Labs
+
+PRSL-AI Ecosystem
+
+Canonical Architecture
+Version 1.0

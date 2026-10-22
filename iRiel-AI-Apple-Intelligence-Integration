@@ -1,0 +1,41 @@
+# iRiel Apple Intelligence Provider
+
+Native Swift 6 package integrating Apple's Foundation Models with iRiel AI.
+
+## Scope
+- Native iOS 26+ and macOS 26+ integration
+- Explicit model availability and errors
+- Request-isolated generation sessions
+- Streaming via cumulative response snapshots
+- Cancellation propagation when stream consumers terminate
+- No cloud fallback, telemetry, or remote transmission
+
+## Integration
+Add this local Swift package to an Xcode iOS/macOS application and import
+`iRielAppleIntelligenceProvider`.
+
+```swift
+import iRielAppleIntelligenceProvider
+
+let provider = iRielAppleIntelligenceProvider()
+let state = await provider.availability()
+let answer = try await provider.generate(
+    .init(prompt: "Summarise this note", instructions: "Answer in British English.")
+)
+```
+
+For streaming, use `try await provider.stream(request)` and replace the
+visible text with each cumulative snapshot.
+
+## Requirements
+Apple Intelligence enabled on a compatible device, supported language/region,
+and Xcode 26+ on macOS. Availability is determined at runtime.
+
+## Verification
+Run `swift test` on a supported macOS/Xcode environment. Linux cannot compile
+the Apple-only `FoundationModels` framework.
+
+## Architectural boundaries
+The provider never invokes cloud APIs or silently falls back to another model.
+A higher-level iRiel intelligence router should make provider selection explicit.
+The supplied Python Apple FM SDK is a reference only and is not vendored here.

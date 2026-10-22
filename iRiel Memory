@@ -1,0 +1,1238 @@
+# PRSL-AI ECOSYSTEM — iRiel Memory
+
+**Organization:** Robert Software Labs  
+**Ecosystem:** PRSL-AI Ecosystem  
+**Component:** iRiel Memory  
+**Document:** iRiel Memory — Canonical Definition  
+**Version:** 1.0  
+**Status:** Canonical  
+**Classification:** Core Ecosystem Architecture  
+**Architecture:** AI-Agnostic / Privacy by Default / Local-First / Human-Centered
+
+---
+
+## 1. DEFINITION
+
+iRiel Memory is the personal continuity layer of the PRSL-AI Ecosystem responsible for preserving, organizing, retrieving, updating, distributing and forgetting information that is relevant to the user's Personal Intelligence Environment.
+
+iRiel Memory exists so that @iriel does not need to restart from zero after every interaction, session or device transition.
+
+Memory is treated as a controlled personal resource rather than as an unrestricted archive of everything the user has ever done.
+
+---
+
+## 2. CORE PRINCIPLE
+
+The canonical principle is:
+
+> **iRiel Memory preserves continuity, not everything.**
+
+The objective is not to maximize the amount of stored information.
+
+The objective is to preserve the information necessary to maintain meaningful continuity while respecting privacy, user control, storage constraints and contextual relevance.
+
+---
+
+## 3. MEMORY VS STORAGE
+
+The following distinction is canonical:
+
+iRiel Memory
+=
+What should be remembered.
+
+Intelligent Storage Lifecycle
+=
+Where, how and for how long that information remains stored.
+
+Memory is logical.
+
+Storage is physical infrastructure.
+
+The two systems cooperate but are not the same component.
+
+---
+
+## 4. PURPOSE
+
+iRiel Memory exists to provide:
+
+- Personal continuity.
+- Context continuity.
+- Task continuity.
+- Project continuity.
+- Decision continuity.
+- Preference continuity.
+- Workflow continuity.
+- Cross-device continuity.
+- Context recovery.
+- Relevant historical knowledge.
+
+---
+
+## 5. WHAT iRIEL MEMORY IS NOT
+
+iRiel Memory is not:
+
+- A complete transcript archive.
+- An unrestricted database of the user's life.
+- Automatic permanent storage.
+- Automatic model training data.
+- A replacement for Context.
+- A replacement for Governance.
+- A replacement for Workflow State.
+- A mandatory cloud service.
+- A mechanism for collecting unnecessary personal data.
+
+---
+
+## 6. PERSONAL OWNERSHIP
+
+Memory belongs to the user's Personal Intelligence Environment.
+
+The architecture must treat personal memory as:
+
+- User-controlled.
+- Private by default.
+- Contextual.
+- Purpose-bound.
+- Governed.
+- Removable.
+
+The PRSL-AI Ecosystem must not treat personal memory as a commercial dataset.
+
+---
+
+## 7. PRIVACY BY DEFAULT
+
+The default state of personal memory is private.
+
+Memory should remain within the user's authorized environment whenever technically and architecturally possible.
+
+External processing requires an applicable justification, authorization and privacy policy.
+
+---
+
+## 8. MEMORY GOVERNANCE
+
+Not every interaction becomes memory.
+
+The Memory architecture evaluates information before persistence.
+
+Canonical flow:
+
+Interaction
+    ↓
+Context Evaluation
+    ↓
+Memory Evaluation
+    ↓
+Governance
+    ↓
+Classification
+    ↓
+Persist / Update / Expire / Discard
+
+---
+
+## 9. MEMORY EVALUATION
+
+The system may evaluate:
+
+- Relevance.
+- Recurrence.
+- Persistence value.
+- Contextual importance.
+- User intent.
+- Sensitivity.
+- Existing memory.
+- Change from previous information.
+- Expiration requirements.
+- User instructions.
+- Storage cost.
+- Privacy requirements.
+
+---
+
+## 10. MEMORY CLASSIFICATION
+
+iRiel Memory is logically divided into different classes according to purpose.
+
+Canonical categories include:
+
+- Working Memory.
+- Session Memory.
+- Long-Term Memory.
+- Context Memory.
+- Decision Memory.
+- Task Memory.
+- Preference Memory.
+- Workflow State.
+
+---
+
+## 11. WORKING MEMORY
+
+Working Memory contains information actively required by the current operation.
+
+Example:
+
+"Estamos editando o documento de iRiel Memory."
+
+Working Memory may be temporary.
+
+It should expire when it is no longer relevant unless another memory class justifies persistence.
+
+---
+
+## 12. SESSION MEMORY
+
+Session Memory maintains continuity across a specific interaction or period of work.
+
+Example:
+
+The user is discussing the iRiel Intelligence Server and has already established several architectural decisions.
+
+Session Memory allows the conversation to continue without repeatedly reconstructing the same information.
+
+---
+
+## 13. LONG-TERM MEMORY
+
+Long-Term Memory contains information with continuing relevance to the Personal Intelligence Environment.
+
+Examples may include:
+
+- Stable architectural decisions.
+- Persistent project information.
+- Long-term preferences.
+- Important recurring workflows.
+- Durable user-defined instructions.
+
+Long-Term Memory must remain governed and editable.
+
+---
+
+## 14. CONTEXT MEMORY
+
+Context Memory contains information that helps reconstruct a relevant situation.
+
+Example:
+
+- Active project.
+- Current objective.
+- Recent activity.
+- Related files.
+- Relevant previous decisions.
+
+Context Memory should not automatically become permanent memory.
+
+---
+
+## 15. DECISION MEMORY
+
+Decision Memory records meaningful decisions that should remain available for future reasoning.
+
+Example:
+
+"PRSL-AI does not require a proprietary cloud."
+
+Decision Memory helps prevent the ecosystem from repeatedly revisiting decisions that have already been established.
+
+---
+
+## 16. TASK MEMORY
+
+Task Memory represents relevant state associated with tasks.
+
+Example:
+
+Task:
+Create canonical iRiel Memory documentation.
+
+State:
+Completed.
+
+Task Memory supports continuity between work sessions.
+
+---
+
+## 17. PREFERENCE MEMORY
+
+Preference Memory may contain authorized and useful user preferences.
+
+Examples:
+
+- Preferred interaction patterns.
+- Preferred output formats.
+- Project conventions.
+- Explicitly established workflow preferences.
+
+Preferences must remain editable and subject to user control.
+
+---
+
+## 18. WORKFLOW STATE
+
+Workflow State represents the operational state of a durable workflow.
+
+Workflow State is not equivalent to personal memory.
+
+Example:
+
+Workflow
+    ↓
+Waiting for external event
+    ↓
+Pending
+
+This state may be managed by infrastructure such as Temporal.
+
+---
+
+## 19. MEMORY MANAGER
+
+The iRiel Memory architecture includes a Memory Manager responsible for managing the lifecycle of memory.
+
+Canonical responsibilities:
+
+- Capture.
+- Classification.
+- Deduplication.
+- Validation.
+- Prioritization.
+- Storage.
+- Retrieval.
+- Updating.
+- Expiration.
+- Invalidation.
+- Forgetting.
+- Distribution.
+
+---
+
+## 20. MEMORY LIFECYCLE
+
+Canonical lifecycle:
+
+Capture
+    ↓
+Evaluate
+    ↓
+Classify
+    ↓
+Validate
+    ↓
+Store
+    ↓
+Retrieve
+    ↓
+Update
+    ↓
+Re-evaluate
+    ↓
+Expire / Forget
+
+Memory is therefore a lifecycle rather than a static database.
+
+---
+
+## 21. DEDUPLICATION
+
+The Memory Manager should avoid unnecessary duplication.
+
+If new information represents an update to existing memory, the system should prefer:
+
+Update
+
+over:
+
+Duplicate
+
+Example:
+
+Old:
+"Project status: planning."
+
+New:
+"Project status: implementation."
+
+The memory should be updated rather than creating unnecessary competing records.
+
+---
+
+## 22. MEMORY CONFLICTS
+
+When new information conflicts with existing memory, the system should not silently assume that one is correct.
+
+Possible actions include:
+
+- Evaluate context.
+- Determine recency.
+- Determine authority.
+- Ask the user.
+- Mark the previous memory as outdated.
+- Preserve decision history when appropriate.
+
+---
+
+## 23. MEMORY RETRIEVAL
+
+Memory retrieval should be relevance-based.
+
+The system should retrieve:
+
+Relevant Memory
+
+rather than:
+
+All Memory.
+
+Canonical principle:
+
+> **Retrieve what is necessary for the current context.**
+
+---
+
+## 24. CONTEXT + MEMORY
+
+iRiel Context and iRiel Memory are complementary.
+
+Context answers:
+
+"What is relevant now?"
+
+Memory answers:
+
+"What should remain available from the past?"
+
+Canonical relationship:
+
+Past
+    ↓
+Memory
+    ↓
+Context
+    ↓
+Present Understanding
+
+---
+
+## 25. INTELLIGENCE SERVER RELATIONSHIP
+
+The iRiel Intelligence Server coordinates memory usage but does not automatically own every memory operation.
+
+Canonical flow:
+
+iRiel Intelligence Server
+    ↓
+Context
+    ↓
+Memory Manager
+    ↓
+Relevant Memory
+    ↓
+Intelligence
+
+The Intelligence Server may request memory when required for reasoning or execution.
+
+---
+
+## 26. GOVERNANCE RELATIONSHIP
+
+Memory operations remain subject to Governance.
+
+Governance may determine:
+
+- Whether information may be stored.
+- How long it may remain stored.
+- Where it may be stored.
+- Whether it may leave the local environment.
+- Whether user confirmation is required.
+- Whether it must be deleted.
+
+---
+
+## 27. USER CONTROL
+
+The user must be able to control memory.
+
+Supported conceptual operations include:
+
+"Remember this."
+
+"Don't remember this."
+
+"Forget this."
+
+"Forget everything related to this."
+
+"Show me what you remember."
+
+"Change that memory."
+
+"Do not use this memory for this task."
+
+These operations must correspond to actual memory-management behavior.
+
+---
+
+## 28. FORGETTING
+
+Forgetting is a first-class architectural capability.
+
+Canonical flow:
+
+User Request
+    ↓
+Locate Memory
+    ↓
+Invalidate
+    ↓
+Remove / Retire
+    ↓
+Update Context
+    ↓
+Update Memory Indexes
+
+The system must not merely hide forgotten information from the interface while continuing to treat it as active memory.
+
+---
+
+## 29. MEMORY EXPIRATION
+
+Some memory should naturally expire.
+
+Examples:
+
+- Temporary session information.
+- Short-lived task state.
+- Temporary contextual information.
+- Cached information.
+- Time-sensitive data.
+
+Expiration reduces unnecessary storage and prevents outdated information from influencing future decisions.
+
+---
+
+## 30. MEMORY PRIORITY
+
+Memory may be assigned different priority levels based on relevance and persistence value.
+
+Conceptually:
+
+HIGH
+    ↓
+Frequently relevant / critical continuity
+
+MEDIUM
+    ↓
+Relevant but less frequently required
+
+LOW
+    ↓
+Rarely used / candidate for removal
+
+EXPIRED
+    ↓
+No longer relevant
+
+FORGOTTEN
+    ↓
+Explicitly invalidated by the user or policy
+
+---
+
+## 31. MEMORY PLACEMENT
+
+Memory does not need to exist in the same physical location at all times.
+
+The Memory Manager may determine appropriate placement.
+
+Possible locations include:
+
+- iRiel Device local storage.
+- Local personal storage.
+- Authorized personal infrastructure.
+- Durable workflow infrastructure.
+- Other explicitly authorized storage.
+
+---
+
+## 32. LOCAL-FIRST MEMORY
+
+When appropriate, memory should remain local.
+
+Canonical preference:
+
+Local Memory
+    ↓
+Authorized Personal Infrastructure
+    ↓
+External Processing
+
+External storage is not the default requirement of iRiel Memory.
+
+---
+
+## 33. DISTRIBUTED MEMORY
+
+The Personal Intelligence Environment may distribute memory across authorized resources.
+
+Canonical model:
+
+@iriel
+    ↓
+Personal Memory Model
+    ↓
+Memory Manager
+    ↓
+┌────────────────┬────────────────┬────────────────┐
+│                │                │
+Device Memory   Personal Store   Durable State
+│                │                │
+└────────────────┴────────────────┴────────────────┘
+
+Distribution must remain governed.
+
+---
+
+## 34. CROSS-DEVICE CONTINUITY
+
+Memory should allow the user to move between devices without necessarily losing relevant continuity.
+
+Example:
+
+iPhone
+    ↓
+@iriel
+    ↓
+Relevant Memory
+    ↓
+Desktop
+    ↓
+@iriel
+    ↓
+Context Reconstruction
+
+The system should recover relevant memory rather than blindly copying the entire memory store to every device.
+
+---
+
+## 35. MEMORY PLACEMENT INTELLIGENCE
+
+The system may evaluate:
+
+- Local availability.
+- Frequency of access.
+- Privacy.
+- Sensitivity.
+- Storage cost.
+- Device capacity.
+- Connectivity.
+- Offline requirements.
+- User preferences.
+- Relevance.
+
+This determines where memory should reside.
+
+---
+
+## 36. RELATIONSHIP WITH INTELLIGENT STORAGE LIFECYCLE
+
+iRiel Memory determines what information has continuity value.
+
+Intelligent Storage Lifecycle determines how the physical storage resource is managed.
+
+Canonical relationship:
+
+iRiel Memory
+    ↓
+Memory Classification
+    ↓
+Memory Placement
+    ↓
+Intelligent Storage Lifecycle
+    ↓
+Physical Storage
+
+---
+
+## 37. STORAGE IMPACT
+
+Continuous memory can consume device storage.
+
+However, iRiel Memory must not be implemented as:
+
+"Store everything permanently on every device."
+
+Instead:
+
+Memory
+    ↓
+Relevance
+    ↓
+Priority
+    ↓
+Placement
+    ↓
+Storage Optimization
+
+The objective is useful local intelligence, not maximum storage consumption.
+
+---
+
+## 38. STORAGE STATES
+
+Memory may be associated with storage states such as:
+
+HOT
+    ↓
+Frequently used
+    ↓
+Local and immediately available
+
+WARM
+    ↓
+Relevant but less frequently used
+    ↓
+Local or authorized personal storage
+
+COLD
+    ↓
+Rarely accessed
+    ↓
+Not necessarily maintained in active local storage
+
+EXPIRED
+    ↓
+No longer relevant
+    ↓
+Eligible for removal
+
+FORGOTTEN
+    ↓
+Explicitly invalidated
+    ↓
+Remove / invalidate according to policy
+
+---
+
+## 39. MEMORY DOES NOT EQUAL TRAINING
+
+A memory stored for @iriel does not automatically become training data for an external AI model.
+
+Canonical principle:
+
+Personal Memory
+    ≠
+Model Training Dataset
+
+The user's memory remains governed by the Personal Intelligence Environment.
+
+---
+
+## 40. EXTERNAL AI PROCESSING
+
+When external AI is used, only the relevant information required for the operation should be transmitted.
+
+Canonical flow:
+
+Memory
+    ↓
+Relevant Selection
+    ↓
+Governance
+    ↓
+Data Minimization
+    ↓
+Authorized External Processing
+
+The entire memory store must never be exposed simply because an external model is being used.
+
+---
+
+## 41. ENCRYPTION
+
+When memory is transmitted across an external boundary, appropriate encryption must protect the communication channel.
+
+Stored memory should also use appropriate protection based on the security architecture and sensitivity of the information.
+
+Encryption does not remove the need for trust and authorization when an external service must process plaintext information.
+
+---
+
+## 42. MEMORY SECURITY
+
+The Memory architecture must protect against:
+
+- Unauthorized access.
+- Uncontrolled extraction.
+- Unnecessary duplication.
+- Credential exposure.
+- Unapproved external transmission.
+- Unauthorized modification.
+- Unauthorized deletion.
+- Memory poisoning.
+- Incorrect context injection.
+
+---
+
+## 43. MEMORY INTEGRITY
+
+Memory should maintain integrity and provenance where necessary.
+
+The system should be able to distinguish:
+
+- User-provided information.
+- System-generated information.
+- External information.
+- Derived information.
+- Historical information.
+- Outdated information.
+
+This reduces the risk of treating an inferred statement as a user-confirmed fact.
+
+---
+
+## 44. MEMORY CONFIDENCE
+
+Where appropriate, memory may have a confidence or verification state.
+
+Examples:
+
+Confirmed
+    ↓
+Explicitly established by user
+
+Observed
+    ↓
+Derived from reliable interaction
+
+Inferred
+    ↓
+System inference
+
+Unverified
+    ↓
+Requires confirmation
+
+This distinction is particularly important for long-term memory.
+
+---
+
+## 45. MEMORY PROVENANCE
+
+Memory may retain provenance information when useful.
+
+Possible metadata:
+
+- Origin.
+- Creation time.
+- Last update.
+- Source.
+- Confidence.
+- Context.
+- User confirmation.
+- Expiration.
+- Sensitivity.
+- Access policy.
+
+---
+
+## 46. MEMORY RECOVERY
+
+If context is lost, iRiel Memory should support Context Recovery.
+
+Canonical flow:
+
+New Session
+    ↓
+Context Recovery
+    ↓
+Relevant Memory Retrieval
+    ↓
+Current State Reconstruction
+    ↓
+Continue
+
+This is one of the primary functions of persistent memory.
+
+---
+
+## 47. MEMORY AND DECISION HISTORY
+
+Important architectural decisions may be preserved separately from ordinary conversational memory.
+
+Example:
+
+Decision:
+"PRSL-AI does not require a proprietary cloud."
+
+Future reasoning can reference the decision without requiring the entire conversation that originally produced it.
+
+---
+
+## 48. MEMORY AND TASK CONTINUITY
+
+Task memory allows work to continue across sessions.
+
+Example:
+
+Task
+    ↓
+Planning
+    ↓
+Implementation
+    ↓
+Paused
+    ↓
+Resume
+
+The user should not need to recreate the entire task context manually when relevant state remains available.
+
+---
+
+## 49. MEMORY AND TEMPORAL
+
+Temporal may maintain durable workflow state.
+
+iRiel Memory may preserve the meaningful personal continuity associated with that workflow.
+
+These are separate responsibilities.
+
+Temporal:
+
+"Workflow is waiting for Activity X."
+
+iRiel Memory:
+
+"User is working on Project Y."
+
+Workflow State
+    ≠
+Personal Memory
+
+---
+
+## 50. MEMORY AND iRIEL DEVICES
+
+iRiel Devices provide physical storage and computational resources for local memory operations.
+
+The device is not the owner of the memory.
+
+The memory belongs to the user's Personal Intelligence Environment.
+
+---
+
+## 51. MEMORY AND iRIEL APPWEB
+
+iRiel AppWeb provides an interface through which the user may access and manage relevant memory capabilities.
+
+The AppWeb does not define the memory architecture.
+
+Canonical flow:
+
+iRiel AppWeb
+    ↓
+iRiel Intelligence Server
+    ↓
+Memory Manager
+    ↓
+Memory
+
+
+---
+
+## 52. MEMORY AND @IRIEL
+
+@iriel is the identity through which the Personal Intelligence Environment is experienced.
+
+Memory contributes to that continuity.
+
+Canonical relationship:
+
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+Context + Memory
+    ↓
+Continuity
+
+
+---
+
+## 53. MEMORY PORTABILITY
+
+Memory should remain as independent as reasonably possible from a specific device.
+
+A user should not lose their personal continuity merely because:
+
+- A device is replaced.
+- A device is lost.
+- A device is upgraded.
+- The user changes interface.
+- An integration is replaced.
+
+---
+
+## 54. MEMORY REPLACEMENT
+
+Replacing an integration must not automatically delete personal memory.
+
+Replacing an AI model must not automatically delete personal memory.
+
+Replacing an iRiel Device must not automatically delete personal memory.
+
+Memory is an independent architectural concern.
+
+---
+
+## 55. MEMORY VERSIONING
+
+Important memory may require versioning.
+
+Example:
+
+Version 1:
+"Project architecture uses provider X."
+
+Version 2:
+"Project architecture is provider-independent."
+
+Versioning allows historical decisions to remain understandable without treating obsolete information as current truth.
+
+---
+
+## 56. MEMORY QUALITY
+
+The Memory Manager should continuously improve memory quality through:
+
+- Deduplication.
+- Conflict detection.
+- Expiration.
+- Relevance scoring.
+- Provenance.
+- User correction.
+- Memory consolidation.
+- Context validation.
+
+---
+
+## 57. MEMORY CONSOLIDATION
+
+Multiple related memories may be consolidated into a more useful representation.
+
+Example:
+
+Many conversations about the same architectural decision may become:
+
+"Canonical decision: PRSL-AI is AI-Agnostic."
+
+This reduces storage and improves retrieval quality.
+
+---
+
+## 58. MEMORY RETRIEVAL PRINCIPLE
+
+The system should prefer:
+
+Relevant
+    +
+Recent when appropriate
+    +
+Verified
+    +
+Contextually useful
+
+over:
+
+Everything
+    +
+Old
+    +
+Unverified
+    +
+Unrelated
+
+---
+
+## 59. MEMORY ACCESS
+
+Memory access should be scoped.
+
+A capability should receive only the memory necessary for the operation.
+
+Example:
+
+A calendar capability should not automatically receive the user's entire project history.
+
+A repository capability should not automatically receive unrelated personal memory.
+
+---
+
+## 60. MEMORY AS A SECURITY BOUNDARY
+
+Memory is a sensitive architectural boundary.
+
+The system must prevent a capability from treating memory as unrestricted global context.
+
+Canonical rule:
+
+Memory availability
+    ≠
+Memory authorization
+
+---
+
+## 61. MEMORY GOVERNANCE PRINCIPLES
+
+iRiel Memory follows:
+
+1. Private by default.
+2. User-controlled.
+3. Purpose-bound.
+4. Context-aware.
+5. Minimal.
+6. Relevant.
+7. Editable.
+8. Removable.
+9. Expirable.
+10. Auditable where appropriate.
+11. Local-first.
+12. Provider-independent.
+13. Device-independent.
+14. Cloud-independent.
+15. Separate from model training.
+16. Separate from workflow state.
+17. Governed before external disclosure.
+
+---
+
+## 62. MEMORY MANAGER RESPONSIBILITIES
+
+The Memory Manager is responsible for:
+
+- Capture.
+- Classification.
+- Storage.
+- Retrieval.
+- Updating.
+- Deduplication.
+- Consolidation.
+- Expiration.
+- Forgetting.
+- Placement.
+- Recovery.
+- Provenance.
+- Integrity.
+- Memory lifecycle management.
+
+---
+
+## 63. CORE ARCHITECTURE
+
+                         @iriel
+                           ↓
+              PERSONAL INTELLIGENCE
+                   ENVIRONMENT
+                           ↓
+                     iRiel Context
+                           ↕
+                 iRiel Memory Manager
+                           ↓
+                    Memory Governance
+                           ↓
+                  Memory Classification
+                           ↓
+                  Memory Placement
+                           ↓
+              Intelligent Storage Lifecycle
+                           ↓
+        ┌──────────────────┼──────────────────┐
+        ↓                  ↓                  ↓
+   Device Memory     Personal Storage    Durable State
+        ↓                  ↓                  ↓
+        └──────────────────┼──────────────────┘
+                           ↓
+              iRiel Intelligence Server
+                           ↓
+                  Context Reconstruction
+                           ↓
+                        @iriel
+
+
+---
+
+## 64. CANONICAL MEMORY FLOW
+
+Interaction
+    ↓
+Context
+    ↓
+Memory Evaluation
+    ↓
+Governance
+    ↓
+Classification
+    ↓
+Storage / Update / Discard
+    ↓
+Relevant Retrieval
+    ↓
+Context Reconstruction
+    ↓
+Intelligence
+    ↓
+User
+
+
+---
+
+## 65. CANONICAL DEFINITION
+
+iRiel Memory is the personal continuity layer of the PRSL-AI Ecosystem responsible for preserving, organizing, retrieving, updating, distributing and forgetting information relevant to the user's Personal Intelligence Environment.
+
+It operates under Privacy by Default, Local-First and Human-Controlled principles and remains independent from any specific device, AI model, provider or cloud infrastructure.
+
+
+---
+
+## 66. CANONICAL SHORT FORM
+
+iRiel Memory:
+
+Preserves continuity.
+Not everything.
+
+Remembers what matters.
+Forgets what no longer matters.
+Respects what is private.
+Uses context to retrieve relevance.
+Uses governance to control access.
+Uses intelligent storage to manage placement.
+Follows the user across authorized devices.
+Remains independent from AI providers.
+Remains independent from cloud infrastructure.
+
+---
+
+## 67. FOUNDATIONAL PRINCIPLE
+
+The purpose of iRiel Memory is not to make the machine remember everything about the human.
+
+Its purpose is to ensure that the human does not have to repeatedly rebuild their relationship with the machine.
+
+Memory exists for continuity.
+
+Continuity exists for the human.
+
+The user remains the owner and authority of that continuity.
+
+
+© Robert Software Labs
+
+PRSL-AI Ecosystem
+
+iRiel Memory — Canonical Definition v1.0

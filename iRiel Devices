@@ -1,0 +1,1031 @@
+PRSL-AI ECOSYSTEM — iRiel DEVICES
+
+Organization: Robert Software Labs
+Ecosystem: PRSL-AI Ecosystem
+Component: iRiel Devices
+Document: iRiel Devices — Canonical Definition
+Version: 1.0
+Status: Canonical
+Classification: Native Hardware Expression of the PRSL-AI Architecture
+Architecture: Local-First / Privacy by Default / AI-Agnostic / Human-Centered
+
+
+1. DEFINITION
+
+iRiel Devices are intelligent computing devices designed to host, process, preserve and manage components of a person's Personal Intelligence Environment.
+
+They are the native hardware expression of the PRSL-AI architecture.
+
+iRiel Devices are not merely hardware products with artificial intelligence features.
+
+They are designed around the principle that computing resources should participate directly in the user's personal intelligence, context, memory, accessibility and privacy environment.
+
+
+2. CORE PRINCIPLE
+
+The fundamental principle of iRiel Devices is:
+
+The device serves the human.
+The intelligence serves the human.
+The data remains under human control.
+
+The device is an environment for personal intelligence, not the owner of the user's identity.
+
+
+3. ARCHITECTURAL POSITION
+
+Canonical relationship:
+
+Human
+    ↓
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+iRiel Devices
+    ↓
+Local Computing Resources
+
+The Personal Intelligence Environment may operate across multiple devices.
+
+Therefore:
+
+iRiel Device
+    ≠
+@iriel
+
+iRiel Device
+    ≠
+PRSL-AI
+
+iRiel Device
+    ≠
+Personal Intelligence itself
+
+
+4. PURPOSE
+
+iRiel Devices exist to provide physical computing infrastructure capable of supporting:
+
+- Local intelligence.
+- Personal context.
+- Personal memory.
+- Local data.
+- Accessibility.
+- Privacy-preserving computation.
+- Intelligent storage.
+- Workflow execution.
+- Personal files.
+- AI acceleration.
+- Cross-device continuity.
+
+
+5. HARDWARE AS ARCHITECTURAL INFRASTRUCTURE
+
+In conventional computing:
+
+Storage
+    =
+Capacity for applications and files.
+
+In PRSL-AI:
+
+Storage
+    =
+Data
+    +
+Context
+    +
+Memory
+    +
+Knowledge
+    +
+Models
+    +
+Indexes
+    +
+Local Intelligence State
+    +
+Personal Files
+
+Therefore, storage capacity becomes an architectural resource rather than merely a hardware specification.
+
+
+6. STORAGE PHILOSOPHY
+
+iRiel Devices are designed around substantial local storage because personal intelligence requires persistent local resources.
+
+The objective is not:
+
+"Store as much as possible."
+
+The objective is:
+
+"Provide enough local capacity for the device to preserve, process and intelligently manage the user's personal computing environment."
+
+
+7. INTELLIGENT STORAGE LIFECYCLE
+
+iRiel Devices use the concept of:
+
+PRSL-AI — Intelligent Storage Lifecycle
+
+Canonical lifecycle:
+
+Data
+    ↓
+Classification
+    ↓
+Relevance
+    ↓
+Access Frequency
+    ↓
+Contextual Value
+    ↓
+Retention
+    ↓
+Placement
+    ↓
+Optimization
+    ↓
+Archive / Removal when authorized
+
+Storage must therefore be actively managed rather than treated as an uncontrolled data repository.
+
+
+8. STORAGE MANAGEMENT PRINCIPLE
+
+More storage
+    ≠
+More uncontrolled data
+
+More storage
+    =
+More capacity for intelligent management
+
+The system should determine which data is:
+
+- Active.
+- Frequently used.
+- Contextually relevant.
+- Archived.
+- Cold.
+- Eligible for removal.
+
+
+9. USER CONTROL
+
+Storage management must preserve Human Control.
+
+The system must not autonomously delete valuable user data merely to optimize storage.
+
+Any destructive or irreversible operation must follow explicit policies and, where appropriate, require user authorization.
+
+
+10. LOCAL-FIRST ARCHITECTURE
+
+iRiel Devices follow the PRSL-AI Local-First principle.
+
+When a task can be processed locally with appropriate performance, privacy and reliability, local processing should be preferred.
+
+Canonical flow:
+
+User Data
+    ↓
+iRiel Device
+    ↓
+Local Processing
+    ↓
+Local Context
+    ↓
+Local Intelligence
+    ↓
+Result
+
+
+11. CLOUD RELATIONSHIP
+
+Cloud is not a foundational requirement of iRiel Devices.
+
+PRSL-AI does not define cloud storage as the default destination for user data.
+
+PRSL-AI does not sell cloud storage as a core product.
+
+Cloud infrastructure may be used when:
+
+- The user chooses to use it.
+- A capability requires external infrastructure.
+- Synchronization is explicitly enabled.
+- Backup is explicitly enabled.
+- An external AI provider is authorized.
+- A service cannot reasonably be performed locally.
+
+Canonical relationship:
+
+iRiel Device
+    ≠
+Cloud
+
+Cloud
+    =
+Optional Infrastructure
+
+
+12. DATA PROCESSING
+
+User data should be processed locally whenever technically and operationally appropriate.
+
+Canonical processing model:
+
+User
+    ↓
+iRiel Device
+    ↓
+Privacy / Policy Evaluation
+    ↓
+Local Processing
+    ↓
+Result
+
+When external processing is required or authorized:
+
+User Data
+    ↓
+Privacy / Policy Check
+    ↓
+Data Minimization
+    ↓
+Encryption
+    ↓
+Authorized External Service
+    ↓
+Processing
+    ↓
+Protected Response
+    ↓
+iRiel Device
+
+
+13. EXTERNAL DATA TRANSMISSION
+
+PRSL-AI must never intentionally transmit user data as unprotected plaintext.
+
+When data must leave the local environment:
+
+- Data must be protected in transit.
+- Data must be minimized.
+- The operation must be authorized.
+- The receiving capability must be known.
+- The processing purpose must be defined.
+- The transmission must follow applicable privacy and security policies.
+
+
+14. ENCRYPTION PRINCIPLE
+
+Encryption is mandatory for appropriate external data transmission.
+
+However:
+
+Encryption
+    ≠
+Complete Privacy
+
+If an external service must process plaintext information, that service may need access to the content during processing.
+
+Therefore, the primary privacy strategy remains:
+
+Avoid unnecessary transmission
+    ↓
+Minimize required transmission
+    ↓
+Protect transmission
+    ↓
+Control external processing
+
+
+15. PRIVACY BY DEFAULT
+
+Privacy by Default is a foundational architectural principle of iRiel Devices.
+
+It is not an optional privacy mode.
+
+The system begins from the assumption that the user's data should remain under the user's control.
+
+Canonical principle:
+
+Can Collect
+    ≠
+Should Collect
+
+Collected
+    ≠
+Should Persist
+
+Stored
+    ≠
+Should Be Shared
+
+Available
+    ≠
+Authorized
+
+
+16. WHY PRIVACY IS FOUNDATIONAL
+
+The more useful personal intelligence becomes, the more sensitive the information it may understand.
+
+Personal Intelligence may interact with:
+
+- Context.
+- Memory.
+- Files.
+- Preferences.
+- Accessibility requirements.
+- Projects.
+- Communications.
+- Workflows.
+- Personal information.
+
+Therefore:
+
+More Personal Intelligence
+    ↓
+More Personal Context
+    ↓
+Greater Privacy Responsibility
+
+Privacy is therefore an architectural requirement, not merely a marketing feature.
+
+
+17. ACCESSIBILITY AND PRIVACY
+
+Accessibility and privacy are directly connected within PRSL-AI.
+
+A highly accessible intelligence system may require contextual information about the person using it.
+
+That information must not become the price of receiving assistance.
+
+Canonical principle:
+
+Accessibility
+    ↓
+Trust
+    ↓
+Privacy
+    ↓
+Local Data
+    ↓
+Personal Intelligence
+
+Accessibility without privacy can create a new form of dependency and exposure.
+
+iRiel Devices therefore treat accessibility and privacy as complementary architectural requirements.
+
+
+18. LOCAL INTELLIGENCE
+
+iRiel Devices should support local intelligence whenever hardware capabilities permit.
+
+Local intelligence may include:
+
+- On-device models.
+- Specialized inference.
+- Personal context processing.
+- Retrieval.
+- Classification.
+- Speech processing.
+- Vision processing.
+- Accessibility processing.
+- Automation.
+- Local reasoning capabilities.
+
+
+19. AI-AGNOSTIC ARCHITECTURE
+
+iRiel Devices remain independent from any individual AI provider.
+
+The architecture may support:
+
+- Local models.
+- Apple Foundation Models.
+- OpenAI models.
+- Gemini Models.
+- Claude models.
+- Specialized models.
+- Future providers.
+
+The device provides computing resources.
+
+The PRSL-AI architecture determines how intelligence capabilities are selected and used.
+
+
+20. PROVIDER INDEPENDENCE
+
+Changing an AI provider must not require replacing the user's identity or Personal Intelligence Environment.
+
+Canonical model:
+
+Provider A
+    ↓
+PRSL-AI Capability
+    ↓
+iRiel Device
+
+Provider B
+    ↓
+Same Capability
+    ↓
+iRiel Device
+
+The device remains independent from the provider.
+
+
+21. PERSONAL INTELLIGENCE ENVIRONMENT
+
+iRiel Devices provide physical infrastructure for the Personal Intelligence Environment.
+
+Canonical components may include:
+
+- Intelligence.
+- Context.
+- Memory.
+- Privacy.
+- Accessibility.
+- Automation.
+- Integrations.
+- Files.
+- Identity-aware capabilities.
+- Local storage.
+
+
+22. iRIEL CONTEXT RELATIONSHIP
+
+iRiel Context determines what information matters within a situation.
+
+iRiel Devices provide the physical resources used to preserve and process that context.
+
+Canonical relationship:
+
+iRiel Context
+    ↓
+What matters?
+    ↓
+Intelligent Storage Lifecycle
+    ↓
+What should remain active?
+    ↓
+iRiel Device
+
+
+23. MEMORY RELATIONSHIP
+
+Memory preserves information.
+
+Context determines relevance.
+
+The device provides physical resources for both.
+
+Canonical distinction:
+
+Memory
+    =
+What has been retained.
+
+Context
+    =
+What matters now.
+
+Device
+    =
+Where computing and storage resources are available.
+
+
+24. DEVICE INDEPENDENCE
+
+Although iRiel Devices are native hardware expressions of PRSL-AI, PRSL-AI remains hardware-agnostic.
+
+PRSL-AI may operate through:
+
+- Existing devices.
+- iRiel Devices.
+- Personal computers.
+- Personal infrastructure.
+- Other authorized hardware.
+
+Therefore:
+
+No iRiel Device
+    ≠
+No PRSL-AI
+
+
+25. NATIVE HARDWARE EXPRESSION
+
+iRiel Devices represent the hardware environment designed specifically around PRSL-AI principles.
+
+They are therefore optimized for:
+
+- Local intelligence.
+- Large local storage.
+- Personal context.
+- Personal memory.
+- Accessibility.
+- Privacy.
+- Intelligent storage.
+- Human-centered interaction.
+
+
+26. CROSS-DEVICE CONTINUITY
+
+The user's Personal Intelligence Environment should remain conceptually continuous across authorized devices.
+
+Example:
+
+iRiel Smartphone
+    ↓
+iRiel Tablet
+    ↓
+iRiel Laptop
+    ↓
+iRiel Desktop
+    ↓
+iRiel Workstation
+
+The device changes.
+
+The human does not.
+
+The identity remains associated with @iriel.
+
+
+27. DEVICE AS ENVIRONMENT
+
+The canonical principle is:
+
+The device is an interface and computing environment for the human, not the owner of the human's identity.
+
+
+28. STORAGE ROADMAP
+
+The current conceptual storage roadmap is:
+
+iRiel Smartphone
+    2 TB / 4 TB / 6 TB
+
+iRiel Tablet
+    8 TB / 12 TB / 14 TB
+
+iRiel Laptop
+    10 TB / 12 TB / 16 TB
+
+iRiel Desktop
+    20 TB / 24 TB / 32 TB
+
+iRiel Workstation
+    40 TB / 64 TB / 128 TB
+
+iRiel Personal Server
+    256 TB / 512 TB / 1 PB+
+
+
+These values represent a product vision and architectural capacity roadmap.
+
+They are not a requirement that every device generation must immediately ship with every listed capacity.
+
+
+29. STORAGE EVOLUTION
+
+Storage capacity should evolve according to:
+
+- Hardware feasibility.
+- Cost.
+- Thermal constraints.
+- Power consumption.
+- Physical constraints.
+- Reliability.
+- User demand.
+- Intelligence workload.
+- Manufacturing capability.
+
+Capacity must not be increased merely for marketing purposes.
+
+
+30. INTELLIGENT DEVICE MANAGEMENT
+
+An iRiel Device should intelligently manage:
+
+- Storage.
+- Processing.
+- Memory.
+- Power.
+- Connectivity.
+- Local intelligence.
+- Workloads.
+- Context availability.
+
+Optimization must prioritize the user's experience and control.
+
+
+31. RESOURCE MANAGEMENT
+
+The system should balance:
+
+Privacy
+    +
+Performance
+    +
+Storage
+    +
+Power
+    +
+Latency
+    +
+Reliability
+
+No single resource should automatically override the user's privacy or control requirements.
+
+
+32. OFFLINE OPERATION
+
+iRiel Devices should support meaningful functionality when disconnected from external services.
+
+Offline capabilities may include:
+
+- Local intelligence.
+- Local files.
+- Local context.
+- Local memory.
+- Accessibility.
+- Local automation.
+- Device management.
+
+Capabilities requiring external infrastructure should be clearly distinguishable from local capabilities.
+
+
+33. NETWORK DEGRADATION
+
+The system should distinguish:
+
+Online
+    ↓
+Full Capability
+
+Degraded
+    ↓
+Reduced External Capability
+
+Offline
+    ↓
+Local Capability Only
+
+The system must not falsely represent an external operation as completed when connectivity is unavailable.
+
+
+34. SECURITY
+
+Security must protect:
+
+- Identity-related information.
+- Context.
+- Memory.
+- Files.
+- Local models.
+- Credentials.
+- Integrations.
+- Workflows.
+- Device state.
+- Communications.
+
+Security must follow least-privilege principles where practical.
+
+
+35. DATA MINIMIZATION
+
+The device should process only the information necessary for the requested capability.
+
+Canonical principle:
+
+Capability Access
+    ≠
+Unrestricted Data Access
+
+
+36. DATA OWNERSHIP
+
+The architecture is designed around user control over personal data.
+
+The device should not treat personal data as a product.
+
+Data should not be collected merely because it may have future commercial value.
+
+
+37. TRANSPARENCY
+
+Users should be able to understand, where appropriate:
+
+- Where data is being processed.
+- Whether processing is local or external.
+- Which external service is involved.
+- Why external processing is necessary.
+- What information is being transmitted.
+- Which permissions apply.
+- What storage management action occurred.
+
+
+38. HUMAN CONTROL
+
+The user should be able to control:
+
+- Data.
+- Storage.
+- Retention.
+- External processing.
+- Integrations.
+- Privacy settings.
+- Accessibility.
+- Synchronization.
+- Backup.
+- Device behavior.
+
+
+39. iRIEL DEVICES AND APPWEB
+
+The iRiel AppWeb is a Web interface.
+
+iRiel Devices are physical computing environments.
+
+Canonical relationship:
+
+iRiel AppWeb
+    ↓
+Personal Intelligence Interface
+    ↓
+PRSL-AI
+    ↓
+iRiel Devices
+    ↓
+Local Computing
+
+
+The AppWeb does not own the device.
+
+The device does not own the identity.
+
+
+40. iRIEL DEVICES AND @IRIEL
+
+@iriel represents the user's Identity Signature.
+
+iRiel Devices provide authorized computing environments for that identity.
+
+Canonical distinction:
+
+@iriel
+    =
+Who
+
+iRiel Context
+    =
+What matters now
+
+iRiel Memory
+    =
+What has been retained
+
+iRiel Device
+    =
+Where computing resources operate
+
+iRiel AppWeb
+    =
+How the user can access the environment
+
+
+41. TEMPORAL RELATIONSHIP
+
+Temporal may be used as a durable workflow engine within the PRSL-AI ecosystem.
+
+iRiel Devices may initiate or interact with workflows.
+
+However:
+
+iRiel Device
+    ≠
+Temporal
+
+Temporal
+    =
+Durable Workflow Execution
+
+The device provides computing and interaction resources while Temporal manages durable workflow execution where applicable.
+
+
+42. CLOUD OPTIONALITY
+
+The architecture explicitly avoids requiring a proprietary PRSL-AI cloud.
+
+Users may choose external infrastructure.
+
+PRSL-AI may integrate with external infrastructure.
+
+However:
+
+Cloud is a choice or implementation detail.
+
+It is not the identity of the ecosystem.
+
+
+43. PRIVACY ARCHITECTURE
+
+The canonical privacy hierarchy is:
+
+1. Avoid unnecessary data collection.
+2. Keep data local when practical.
+3. Minimize data when transmission is required.
+4. Obtain appropriate authorization.
+5. Encrypt protected communications.
+6. Control external processing.
+7. Provide transparency.
+8. Preserve user control.
+
+
+44. PROCESSING HIERARCHY
+
+The canonical processing preference is:
+
+Local
+    ↓
+Authorized Personal Infrastructure
+    ↓
+External Service
+
+The architecture should prefer the lowest appropriate processing boundary that can satisfy the capability.
+
+
+45. WHY THIS ARCHITECTURE EXISTS
+
+iRiel Devices exist because PRSL-AI treats personal intelligence as part of the user's computing environment rather than as a purely remote service.
+
+As context, memory, knowledge, local models and personal data become integral to that environment, local storage and processing become architectural resources rather than merely hardware specifications.
+
+
+46. WHAT iRIEL DEVICES SOLVE
+
+iRiel Devices address:
+
+- Excessive cloud dependency.
+- Limited local intelligence.
+- Fragmented personal context.
+- Insufficient local storage.
+- Weak task continuity.
+- Unnecessary data transmission.
+- Lack of personal computing continuity.
+- Limited accessibility integration.
+- Separation between intelligence and device resources.
+
+
+47. WHAT iRIEL DEVICES DO NOT PROMISE
+
+iRiel Devices do not promise:
+
+- That every operation is always local.
+- That cloud services can never be used.
+- That external AI providers are never required.
+- That all data can always remain on one device.
+- That storage capacity alone creates intelligence.
+- That hardware eliminates the need for distributed infrastructure.
+
+
+48. CORE ARCHITECTURAL INSIGHT
+
+The value of iRiel Devices is not:
+
+"How many terabytes does the device have?"
+
+The value is:
+
+"How much personal intelligence can the device preserve, process and manage while keeping the human in control?"
+
+
+49. CANONICAL PRINCIPLES
+
+iRiel Devices follow:
+
+1. Human First.
+2. Privacy by Default.
+3. Local-First Processing.
+4. User Data Control.
+5. AI-Agnostic Architecture.
+6. Cloud Optionality.
+7. Device Independence.
+8. Intelligent Storage Management.
+9. Data Minimization.
+10. Accessibility by Design.
+11. Contextual Continuity.
+12. Personal Intelligence.
+13. Explicit Authorization.
+14. Secure External Processing.
+15. Transparent System Behavior.
+16. Human Control.
+17. Durable Personal Computing.
+18. No Unnecessary Lock-In.
+
+
+50. CANONICAL TEST
+
+Every proposed iRiel Device capability should answer:
+
+1. Does it serve the human?
+2. Does it preserve Privacy by Default?
+3. Can it operate locally?
+4. If not, why does it require external processing?
+5. Is the transmitted data minimized?
+6. Is the transmission protected?
+7. Does the user understand what happens to their data?
+8. Can the user control the behavior?
+9. Does it remain AI-provider agnostic?
+10. Does it avoid unnecessary cloud dependency?
+11. Does it contribute to the Personal Intelligence Environment?
+12. Does it preserve @iriel independence from the hardware?
+13. Does it improve accessibility?
+14. Does it improve contextual continuity?
+15. Does it justify its resource requirements?
+
+
+51. FINAL ARCHITECTURE
+
+The canonical iRiel Device architecture is:
+
+Human
+    ↓
+@iriel
+    ↓
+Personal Intelligence Environment
+    ↓
+┌──────────────────────────────────┐
+│          iRiel Device             │
+│                                  │
+│  Local Intelligence              │
+│  Local Context                   │
+│  Local Memory                    │
+│  Local Storage                   │
+│  Intelligent Storage Lifecycle   │
+│  Accessibility                   │
+│  Security                        │
+│  Privacy Controls                │
+│  AI Acceleration                 │
+└──────────────────────────────────┘
+    ↓
+Authorized External Services
+    ↓
+Only when necessary or authorized
+
+
+52. FINAL PRINCIPLE
+
+iRiel Devices are not designed to make the human dependent on the cloud.
+
+They are designed to make personal intelligence physically available within the user's own computing environment.
+
+The device should process locally when possible.
+
+The system should minimize what leaves the device.
+
+When external processing is necessary, it must be authorized, minimized, protected and transparent.
+
+The device may change.
+
+The AI provider may change.
+
+The infrastructure may change.
+
+The cloud may change.
+
+The user's identity remains.
+
+The human remains in control.
+
+
+53. CANONICAL DEFINITION
+
+iRiel Devices are intelligent computing devices designed to host, process, preserve and manage components of a person's Personal Intelligence Environment, prioritizing local processing, local data, privacy, accessibility, intelligent storage and human control while remaining independent from any specific AI provider, cloud infrastructure or device ecosystem.
+
+
+54. CANONICAL SHORT FORM
+
+iRiel Devices:
+
+Local by preference.
+Private by default.
+Intelligent by architecture.
+Accessible by design.
+Cloud optional.
+AI-agnostic.
+Human controlled.
+
+
+© Robert Software Labs
+
+PRSL-AI Ecosystem
+
+iRiel Devices — Canonical Definition v1.0

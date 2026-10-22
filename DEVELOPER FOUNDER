@@ -1,0 +1,791 @@
+# PRSL-AI — DEVELOPER FOUNDER
+## Canonical Definition
+
+**Organization:** Robert Software Labs  
+**Ecosystem:** PRSL-AI Ecosystem  
+**Founder:** Developer Founder  
+**Document:** Developer Founder — Canonical Definition  
+**Version:** 1.0  
+**Status:** Canonical  
+**Classification:** Core Ecosystem Role
+
+
+---
+
+# 1. DEFINITION
+
+The Developer Founder is the architectural function responsible for defining, maintaining and evolving the technical foundations that allow the PRSL-AI Ecosystem to be built, extended, integrated and operated without compromising its canonical architectural principles.
+
+The Developer Founder transforms PRSL-AI architecture and specifications into implementable systems, SDKs, APIs, development interfaces, integration contracts, technical standards and engineering practices.
+
+The Developer Founder enables the ecosystem to be built.
+
+The Developer Founder does not own the intelligence of PRSL-AI.
+
+The Developer Founder does not own the user's identity.
+
+The Developer Founder does not redefine the architectural principles of PRSL-AI.
+
+The Developer Founder provides the technical foundation through which those principles can be implemented.
+
+
+---
+
+# 2. PRIMARY PURPOSE
+
+The primary purpose of the Developer Founder is:
+
+> To make the PRSL-AI architecture buildable, extensible, interoperable, maintainable and evolvable.
+
+The Developer Founder ensures that canonical architecture can be transformed into reliable technical implementations without introducing unnecessary vendor dependency, architectural fragmentation or violations of privacy, accessibility or human control.
+
+
+---
+
+# 3. CORE RESPONSIBILITY
+
+The Developer Founder is responsible for the technical enablement of the PRSL-AI Ecosystem.
+
+This includes:
+
+- Developer Architecture
+- SDK Architecture
+- API Architecture
+- Development Interfaces
+- Integration Contracts
+- Extension Points
+- Developer Tooling
+- Technical Standards
+- Reference Implementations
+- Versioning
+- Compatibility
+- Testing Standards
+- Developer Documentation Interfaces
+- Developer Experience
+
+
+---
+
+# 4. ARCHITECTURE TO IMPLEMENTATION
+
+The Developer Founder establishes the relationship between canonical architecture and implementation.
+
+The canonical relationship is:
+
+Architecture
+    ↓
+Specification
+    ↓
+Developer Architecture
+    ↓
+Implementation
+    ↓
+Testing
+    ↓
+Deployment
+    ↓
+Operation
+
+
+Architecture defines what the ecosystem is.
+
+Developer Architecture defines how the ecosystem can be built.
+
+Implementation realizes the architecture.
+
+
+---
+
+# 5. DEVELOPER ARCHITECTURE
+
+Developer Architecture defines the technical structures required to implement PRSL-AI components consistently.
+
+It may include:
+
+- Service boundaries
+- Module boundaries
+- Interfaces
+- Contracts
+- APIs
+- SDKs
+- Events
+- Schemas
+- Protocols
+- Authentication interfaces
+- Authorization interfaces
+- Extension mechanisms
+- Versioning systems
+- Compatibility requirements
+- Testing interfaces
+- Development environments
+
+
+---
+
+# 6. SDK ARCHITECTURE
+
+The Developer Founder defines the architecture necessary for developers to build on PRSL-AI.
+
+SDKs may expose controlled capabilities such as:
+
+- Identity interfaces
+- Context interfaces
+- Memory interfaces
+- Intelligence interfaces
+- Workflow interfaces
+- Automation interfaces
+- Integration interfaces
+- Accessibility interfaces
+- Device interfaces
+- Storage interfaces
+
+SDK design must preserve the boundaries established by the canonical architecture.
+
+
+---
+
+# 7. API ARCHITECTURE
+
+APIs define communication contracts between PRSL-AI components and authorized external systems.
+
+The Developer Founder is responsible for ensuring APIs provide:
+
+- Stable contracts
+- Explicit permissions
+- Clear schemas
+- Versioning
+- Error handling
+- Compatibility
+- Security boundaries
+- Privacy controls
+- Extensibility
+
+
+APIs must not expose internal implementation details unnecessarily.
+
+APIs should expose capabilities rather than create unnecessary coupling between components.
+
+
+---
+
+# 8. INTEGRATION CONTRACTS
+
+PRSL-AI is designed to be modular and AI-agnostic.
+
+Therefore integrations must use explicit contracts.
+
+The canonical model is:
+
+PRSL-AI Capability
+    ↓
+Integration Contract
+    ↓
+Provider / Service
+    ↓
+Implementation
+
+
+This allows a provider or service to be replaced without requiring the entire ecosystem architecture to change.
+
+
+---
+
+# 9. AI-AGNOSTIC DEVELOPMENT
+
+The Developer Founder must preserve AI-provider independence.
+
+PRSL-AI may integrate:
+
+- Local models
+- Apple Foundation Models
+- OpenAI
+- Gemini Models
+- Claude
+- Specialized AI systems
+- Future providers
+
+However, no individual provider should become a structural dependency of the PRSL-AI architecture unless explicitly defined as such by canonical architecture.
+
+The Developer Founder therefore implements abstraction and integration boundaries that allow intelligence providers to be:
+
+- Added
+- Removed
+- Replaced
+- Combined
+- Selected dynamically
+
+
+---
+
+# 10. MODULARITY
+
+The Developer Founder must preserve modularity.
+
+A module should have:
+
+- Defined responsibility
+- Defined interface
+- Defined dependencies
+- Defined inputs
+- Defined outputs
+- Defined lifecycle
+- Defined versioning
+- Defined failure behavior
+
+Modules should be replaceable when practical.
+
+The goal is to prevent one component from becoming an unnecessary point of architectural lock-in.
+
+
+---
+
+# 11. EXTENSION POINTS
+
+The Developer Founder defines controlled extension points that allow the ecosystem to evolve.
+
+Extension points may include:
+
+- Plugins
+- SDK modules
+- APIs
+- Connectors
+- Providers
+- Agents
+- Workflow activities
+- Device capabilities
+- Intelligence services
+
+Extensions must operate within canonical:
+
+- Security
+- Privacy
+- Identity
+- Authorization
+- Accessibility
+- Data governance
+- Architectural boundaries
+
+
+---
+
+# 12. DEVELOPER TOOLING
+
+Developer tooling exists to reduce the complexity of building within the PRSL-AI architecture.
+
+Tooling may include:
+
+- CLI tools
+- SDK tooling
+- Local development environments
+- Testing tools
+- Debugging tools
+- Validation tools
+- Schema tools
+- Integration tools
+- Workflow tooling
+- Documentation tooling
+- Deployment tooling
+
+
+Developer tooling should make correct architectural behavior easier to implement.
+
+
+---
+
+# 13. TECHNICAL STANDARDS
+
+The Developer Founder establishes technical standards for implementation.
+
+Standards may cover:
+
+- Naming
+- Interfaces
+- APIs
+- Schemas
+- Versioning
+- Error handling
+- Logging
+- Testing
+- Security
+- Dependency management
+- Compatibility
+- Documentation
+- Release processes
+
+
+Standards exist to maintain consistency without preventing legitimate architectural evolution.
+
+
+---
+
+# 14. VERSIONING AND COMPATIBILITY
+
+The Developer Founder is responsible for technical mechanisms that allow PRSL-AI to evolve without unnecessary breakage.
+
+This includes:
+
+- API versioning
+- SDK versioning
+- Schema versioning
+- Protocol compatibility
+- Migration strategies
+- Deprecation strategies
+- Backward compatibility where appropriate
+
+
+Canonical architecture determines the direction of evolution.
+
+Developer architecture provides the mechanisms for executing that evolution safely.
+
+
+---
+
+# 15. TESTING
+
+Testing is an architectural requirement.
+
+The Developer Founder establishes testing strategies for:
+
+- Unit behavior
+- Integration behavior
+- API contracts
+- SDK behavior
+- Workflow execution
+- Context handling
+- Memory handling
+- Security boundaries
+- Privacy boundaries
+- Accessibility behavior
+- Device integration
+- Provider substitution
+- Failure recovery
+
+
+Testing must validate not only whether software works, but whether it works without violating canonical PRSL-AI principles.
+
+
+---
+
+# 16. DEVELOPER EXPERIENCE
+
+Developer Experience is part of the Developer Founder's responsibility.
+
+The goal is to make PRSL-AI understandable and usable by developers without requiring them to reverse-engineer the ecosystem.
+
+A developer should be able to understand:
+
+- What a component does
+- Why it exists
+- How it communicates
+- What it is allowed to access
+- What it cannot access
+- How it should be extended
+- How it should be tested
+- How it should be replaced
+
+
+Good Developer Experience should reduce accidental architectural violations.
+
+
+---
+
+# 17. DOCUMENTATION
+
+Developer documentation must provide the technical information necessary to implement PRSL-AI correctly.
+
+Documentation may include:
+
+- Architecture specifications
+- API references
+- SDK references
+- Integration guides
+- Protocol definitions
+- Schemas
+- Examples
+- Reference implementations
+- Security requirements
+- Privacy requirements
+- Accessibility requirements
+- Versioning policies
+- Migration guides
+
+
+Documentation must distinguish clearly between:
+
+Canonical Principles
+    ↓
+Specifications
+    ↓
+Reference Implementations
+    ↓
+Examples
+
+
+An implementation example must never be mistaken for a mandatory architectural principle unless explicitly designated as canonical.
+
+
+---
+
+# 18. DEVELOPER AND PRIVACY
+
+The Developer Founder must ensure that implementation does not undermine Privacy by Default.
+
+Developer architecture should minimize unnecessary access to:
+
+- Identity
+- Context
+- Memory
+- Personal data
+- Accessibility information
+- Device information
+- Behavioral information
+
+
+Access should be:
+
+- Explicit
+- Scoped
+- Authorized
+- Auditable where appropriate
+- Revocable
+
+
+---
+
+# 19. DEVELOPER AND ACCESSIBILITY
+
+Accessibility is a core architectural principle.
+
+Therefore developer implementations must support accessibility by design.
+
+Developer systems should provide appropriate interfaces for:
+
+- Visual accessibility
+- Auditory accessibility
+- Motor accessibility
+- Cognitive accessibility
+- Neurodivergent interaction
+- Communication accessibility
+- Sensory accessibility
+- Contextual accessibility
+
+
+Accessibility must not be treated as an afterthought added after implementation.
+
+
+---
+
+# 20. DEVELOPER AND HUMAN CONTROL
+
+The Developer Founder must preserve human control over the Personal Intelligence Environment.
+
+Technical implementation must not silently transform:
+
+- Recommendations into decisions
+- Permissions into ownership
+- Convenience into mandatory behavior
+- Automation into irreversible action
+- Intelligence into authority
+
+
+The system may assist.
+
+The human remains the authority.
+
+
+---
+
+# 21. DEVELOPER AND @IRIEL
+
+@iriel is the Identity Signature and AppWeb of the PRSL-AI Ecosystem.
+
+The Developer Founder provides the technical interfaces required to implement @iriel without making @iriel dependent on:
+
+- A specific device
+- A specific operating system
+- A specific AI provider
+- A specific cloud provider
+- A specific native application
+
+
+The Developer architecture must preserve identity portability and ecosystem continuity.
+
+
+---
+
+# 22. DEVELOPER AND PERSONAL INTELLIGENCE ENVIRONMENT
+
+The Developer Founder provides the technical interfaces through which developers can interact with the Personal Intelligence Environment.
+
+These interfaces may expose controlled access to:
+
+- Context
+- Memory
+- Knowledge
+- Workflows
+- Preferences
+- Policies
+- Intelligence
+- Devices
+
+
+Access must be permission-based and bounded by the Personal Intelligence Environment's security and privacy policies.
+
+
+---
+
+# 23. DEVELOPER AND TEMPORAL
+
+Temporal is an implementation component used for durable workflow execution.
+
+The Developer Founder is responsible for providing appropriate technical interfaces between:
+
+Personal Intelligence
+    ↓
+Workflow Definitions
+    ↓
+Temporal
+    ↓
+Activities
+    ↓
+Authorized Services
+
+
+Temporal should remain an implementation of durable execution rather than becoming the owner of identity, context or Personal Intelligence.
+
+
+---
+
+# 24. DEVELOPER AND DEVICES
+
+Developer architecture must support multiple device environments.
+
+The ecosystem should be capable of supporting:
+
+- Smartphones
+- Tablets
+- Laptops
+- Desktops
+- Workstations
+- Personal Servers
+- Future iRiel Devices
+- Compatible external devices
+
+
+Device-specific implementation must not redefine the Personal Intelligence Environment.
+
+
+---
+
+# 25. DEVELOPER AND LOCAL-FIRST ARCHITECTURE
+
+Developer implementations should prefer local execution when appropriate.
+
+The preferred decision model is:
+
+Local
+    ↓
+Authorized Personal Infrastructure
+    ↓
+External Service
+
+
+This does not prohibit external services.
+
+It establishes that external infrastructure should not be assumed to be the default location for every operation.
+
+
+---
+
+# 26. DEVELOPER AND CLOUD
+
+Cloud services may be integrated.
+
+However:
+
+Cloud
+=
+Optional Infrastructure
+
+Cloud
+≠
+PRSL-AI Architecture
+
+
+The Developer Founder must avoid creating unnecessary architectural dependence on cloud infrastructure.
+
+A cloud provider should be replaceable when practical.
+
+
+---
+
+# 27. REFERENCE IMPLEMENTATIONS
+
+Reference implementations may be provided to demonstrate canonical behavior.
+
+Reference implementations are useful for:
+
+- Demonstrating architecture
+- Testing interfaces
+- Teaching developers
+- Validating specifications
+- Accelerating development
+
+However:
+
+Reference Implementation
+≠
+Canonical Architecture
+
+
+The implementation may change while the architectural contract remains stable.
+
+
+---
+
+# 28. DEVELOPER GOVERNANCE
+
+The Developer Founder operates within the broader PRSL-AI governance model.
+
+When a technical proposal is introduced, it should be evaluated against:
+
+1. Human First
+2. Privacy by Default
+3. Accessibility by Design
+4. Human Control
+5. Local-First Intelligence
+6. AI-Agnostic Architecture
+7. Modularity
+8. Security
+9. Interoperability
+10. Long-Term Maintainability
+
+
+Technical convenience alone is not sufficient justification for architectural change.
+
+
+---
+
+# 29. ARCHITECTURAL BOUNDARY
+
+The Developer Founder has a critical boundary:
+
+> The Developer layer must enable the architecture, not redefine it.
+
+A technical implementation must not silently become an architectural decision.
+
+The canonical process is:
+
+Architectural Principle
+    ↓
+Architecture
+    ↓
+Specification
+    ↓
+Developer Design
+    ↓
+Implementation
+
+
+Not:
+
+Technical Limitation
+    ↓
+Implementation
+    ↓
+Forced Architecture
+
+
+When implementation conflicts with canonical architecture, the conflict must be surfaced and evaluated explicitly.
+
+
+---
+
+# 30. DEVELOPER FOUNDER — RESPONSIBILITY MODEL
+
+The Developer Founder can be summarized as:
+
+Define
+    ↓
+Enable
+    ↓
+Implement
+    ↓
+Validate
+    ↓
+Maintain
+    ↓
+Evolve
+
+
+The Developer Founder ensures that the ecosystem remains technically buildable while preserving its conceptual integrity.
+
+
+---
+
+# 31. CORE DEVELOPER PRINCIPLES
+
+The Developer Founder follows these principles:
+
+1. Build the architecture, do not replace it.
+2. Preserve human control.
+3. Preserve privacy by default.
+4. Design accessibility into implementation.
+5. Preserve AI-provider independence.
+6. Preserve modularity.
+7. Prefer explicit contracts.
+8. Prefer interoperable interfaces.
+9. Minimize unnecessary coupling.
+10. Make components replaceable where practical.
+11. Make systems testable.
+12. Make implementations observable and maintainable.
+13. Treat security as an architectural requirement.
+14. Treat documentation as part of the implementation interface.
+15. Design for long-term evolution.
+
+
+---
+
+# 32. CANONICAL DEFINITION
+
+> The Developer Founder is the architectural function responsible for transforming PRSL-AI principles and specifications into extensible, interoperable and maintainable technical systems while preserving human control, privacy, accessibility, modularity and AI-provider independence.
+
+
+---
+
+# 33. FINAL PRINCIPLE
+
+The Developer Founder is not the owner of the code.
+
+The Developer Founder is the guardian of the ecosystem's ability to be built correctly.
+
+The Developer Founder ensures that:
+
+Architecture
+    ↓
+Can become
+    ↓
+Implementation
+
+without losing:
+
+Humanity
+Privacy
+Accessibility
+Control
+Modularity
+Interoperability
+AI Independence
+
+
+The Developer Founder exists to make the PRSL-AI Ecosystem buildable without compromising what PRSL-AI is.
+
+
+---
+
+© Robert Software Labs
+
+PRSL-AI Ecosystem
+
+PRSL-AI — Developer Founder
+Canonical Definition v1.0

@@ -1,0 +1,242 @@
+Historical Identity ≠ Conversational Identity
+
+PRSL-AI / iRiel Architectural Principle
+
+Status: Canonical Principle
+Scope: Identity, Context, Memory, Privacy, Interaction, Resonance
+
+1. PRINCIPLE
+
+The iRiel ecosystem must distinguish between persistent identity continuity and the identity presented during interaction.
+
+Historical identity exists to preserve continuity, integrity, authorization, and relationships across time.
+
+Conversational identity represents who the person is now.
+
+Historical identity must never be automatically exposed merely because it exists.
+
+2. CORE RULE
+
+Remember continuity.
+Present identity.
+
+The system may retain the historical relationship between identities when necessary and authorized, but interaction must naturally use the user's current identity.
+
+3. EXAMPLE
+
+A person originally uses:
+
+maria@iriel
+
+Later, the person changes their identity handle to:
+
+joao@iriel
+
+The ecosystem must understand:
+
+maria@iriel → joao@iriel
+
+as a continuity transition belonging to the same persistent identity.
+
+It must NOT interpret this as the creation of an unrelated new person.
+
+4. PERSISTENT IDENTITY
+
+The @iriel handle is not the primary identity key.
+
+The system must maintain an opaque, persistent identity identifier internally.
+
+Example:
+
+identity_id = iriel_identity_01...
+
+Current handle:
+
+joao@iriel
+
+Previous handle:
+
+maria@iriel
+
+The handle may change.
+
+The persistent identity remains.
+
+5. CONVERSATIONAL BEHAVIOR
+
+After the identity transition, the iRiel interaction layer should naturally use the current identity.
+
+Correct:
+
+"Olá, João."
+
+Incorrect:
+
+"Olá, João. Antes você era Maria."
+
+Incorrect:
+
+"Eu lembro que seu nome anterior era Maria."
+
+Incorrect:
+
+"Você costumava usar maria@iriel."
+
+The historical identity must not be surfaced unless there is a legitimate contextual reason and the user is authorized to access that information.
+
+6. IDENTITY CONTINUITY
+
+Identity continuity may preserve, according to permissions and applicable privacy policies:
+
+- Context
+- Authorized memory
+- Preferences
+- Accessibility configuration
+- Device relationships
+- Sessions
+- Permissions
+- Agent relationships
+- Personalization
+- Ecosystem state
+
+A change in representation must not unnecessarily destroy continuity.
+
+7. PRIVACY BOUNDARY
+
+Historical identity is sensitive contextual information.
+
+Its existence does not grant permission to expose it.
+
+The Privacy Layer must prevent unnecessary disclosure of:
+
+- Previous names
+- Previous @iriel handles
+- Previous identity representations
+- Historical identity metadata
+- Identity transition history
+
+Persistence does not equal disclosure.
+
+8. USER CONTROL
+
+The user owns and controls the representation of their identity within the ecosystem.
+
+The user may:
+
+- Change their @iriel handle
+- Update their current identity information
+- Review identity continuity information where appropriate
+- Manage permissions associated with identity data
+- Request removal of historical information where technically and legally applicable
+
+9. ARCHITECTURAL SEPARATION
+
+Identity Layer:
+
+Maintains persistent identity and authorized identity relationships.
+
+Context Engine:
+
+Uses identity continuity when relevant to maintain coherent context.
+
+Memory:
+
+Retains only authorized information.
+
+Interaction Layer:
+
+Uses the current identity by default.
+
+Privacy Layer:
+
+Controls exposure of historical identity information.
+
+Resonance:
+
+Maintains continuity across the ecosystem without forcing historical identity into the interaction.
+
+10. MULTI-DEVICE CONTINUITY
+
+The same persistent identity may move across devices.
+
+Example:
+
+iPhone
+    ↓
+iRiel Identity
+    ↓
+Mac
+    ↓
+iPad
+    ↓
+Web
+    ↓
+Future iRiel Device
+
+The device changes.
+
+The identity does not.
+
+Likewise, a handle may change without breaking continuity.
+
+11. PROVIDER INDEPENDENCE
+
+AI providers must not become the owners of the user's identity.
+
+OpenAI, Anthropic, Google, Apple, Microsoft, local models, MCP services, and other providers are external capabilities.
+
+The canonical identity belongs to iRiel.
+
+12. SECURITY
+
+The persistent identity identifier should be opaque and should not expose unnecessary personal information.
+
+The public @iriel handle should not be used as the sole primary key for internal identity storage.
+
+Example:
+
+Public:
+
+joao@iriel
+
+Internal:
+
+opaque persistent identity identifier
+
+13. RESONANCE
+
+Identity continuity is one expression of iRiel Resonance.
+
+Resonance ensures that changes in:
+
+- Name
+- @iriel handle
+- Device
+- Platform
+- Provider
+- Context
+- Interaction surface
+
+do not unnecessarily fracture the user's relationship with the ecosystem.
+
+14. HUMAN PRINCIPLE
+
+The ecosystem must adapt to the person.
+
+The person must not be forced to repeatedly explain who they are to their own intelligence environment.
+
+Continuity should feel natural.
+
+The system should remember what is necessary to remain coherent while respecting what the person is now.
+
+15. CANONICAL RULE
+
+Historical identity may exist internally for continuity.
+
+Current identity governs interaction.
+
+Historical identity is never surfaced by default.
+
+Remember continuity.
+Present identity.
+Respect the person.

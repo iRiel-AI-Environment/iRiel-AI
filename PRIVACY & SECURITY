@@ -1,0 +1,1057 @@
+PRSL-AI ECOSYSTEM
+PRIVACY & SECURITY
+Canonical Definition v1.0
+
+Organization: Robert Software Labs
+Status: Canonical
+Classification: Foundational / Cross-Cutting Security Layer
+Architecture: Human-Centered / Privacy by Default / Local-First / AI-Agnostic
+
+==================================================
+
+1. PURPOSE
+
+PRSL-AI Privacy & Security defines how the PRSL-AI Ecosystem protects the user's identity, data, context, memory, knowledge, communications, capabilities, devices and actions.
+
+Privacy & Security is a cross-cutting architectural capability.
+
+It does not belong exclusively to one subsystem.
+
+It applies across:
+
+- Identity.
+- Context.
+- Memory.
+- Knowledge.
+- Intelligence.
+- Governance.
+- Integrations.
+- iRiel System.
+- Devices.
+- Storage.
+- AppWeb.
+- Intelligence Server.
+- Intelligent Presence.
+- Resonance.
+
+==================================================
+
+2. CORE DEFINITION
+
+Privacy defines how information should be collected, processed, retained, shared and controlled.
+
+Security protects that information and the systems responsible for processing it against unauthorized access, modification, disclosure, misuse or destruction.
+
+Canonical distinction:
+
+Privacy
+→ Should this data be used, exposed or retained?
+
+Security
+→ How do we protect it from unauthorized access or manipulation?
+
+Both operate together.
+
+==================================================
+
+3. ARCHITECTURAL POSITION
+
+Privacy & Security operates transversally across the ecosystem.
+
+Canonical model:
+
+                     PRSL-AI
+                        │
+              Privacy & Security
+             /    /    |    \    \
+            ↓    ↓     ↓     ↓    ↓
+        Context Memory Knowledge Intelligence
+            ↓    ↓     ↓     ↓
+              Governance
+                   ↓
+              iRiel System
+                   ↓
+                Devices
+
+Privacy & Security is not an optional endpoint.
+
+It establishes boundaries throughout the lifecycle of information and actions.
+
+==================================================
+
+4. FOUNDATIONAL PRINCIPLE
+
+Privacy is a default state.
+
+Security is a continuous requirement.
+
+The system must not assume that data should be:
+
+- Collected.
+- Transmitted.
+- Stored.
+- Remembered.
+- Shared.
+- Exposed.
+
+The system must establish necessity and authorization first.
+
+==================================================
+
+5. PRIVACY BY DEFAULT
+
+PRSL-AI follows Privacy by Default.
+
+Canonical behavior:
+
+Minimize
+↓
+Classify
+↓
+Process locally when possible
+↓
+Restrict access
+↓
+Transmit only when necessary
+↓
+Protect transmission
+↓
+Retain only when justified
+↓
+Delete when no longer required
+
+Privacy must not depend on:
+
+- Subscription.
+- Device price.
+- AI provider.
+- User technical expertise.
+- Application tier.
+
+==================================================
+
+6. LOCAL-FIRST
+
+When a capability can safely and effectively operate locally, local processing is preferred.
+
+Canonical preference:
+
+Local
+↓
+Authorized Personal Infrastructure
+↓
+External Infrastructure
+
+Cloud processing is not prohibited.
+
+Unnecessary cloud processing is discouraged.
+
+==================================================
+
+7. DATA MINIMIZATION
+
+PRSL-AI should process the minimum information required to accomplish the intended task.
+
+Canonical principle:
+
+Necessary data
+↓
+Necessary component
+↓
+Necessary purpose
+↓
+Necessary duration
+
+More data does not automatically produce better intelligence.
+
+==================================================
+
+8. DATA CLASSIFICATION
+
+Information may be classified according to sensitivity.
+
+Example classification:
+
+PUBLIC
+↓
+PERSONAL
+↓
+PRIVATE
+↓
+SENSITIVE
+↓
+HIGHLY SENSITIVE
+
+Classification influences:
+
+- Storage.
+- Processing.
+- Access.
+- Transmission.
+- Retention.
+- Logging.
+- Authorization.
+
+==================================================
+
+9. SENSITIVE DATA
+
+Sensitive information may include:
+
+- Health information.
+- Intimate images.
+- Financial information.
+- Authentication credentials.
+- Private communications.
+- Precise location.
+- Biometric information.
+- Personal identifiers.
+- Private documents.
+- Personal behavioral information.
+
+Highly sensitive information receives stronger controls.
+
+==================================================
+
+10. USER AUTHORITY
+
+The user remains the primary authority over their personal information.
+
+The ecosystem should support:
+
+- Visibility.
+- Consent where appropriate.
+- Access control.
+- Modification.
+- Portability.
+- Deletion.
+- Controlled sharing.
+
+The system must not treat personal information as unrestricted infrastructure.
+
+==================================================
+
+11. IDENTITY PROTECTION
+
+Identity must be separated from device ownership.
+
+Canonical relationship:
+
+User
+↓
+Identity
+↓
+Personal Intelligence Environment
+↓
+Devices
+
+A device is an endpoint.
+
+It is not the definition of the user's identity.
+
+==================================================
+
+12. ACCESS CONTROL
+
+Access must be based on:
+
+- Identity.
+- Authorization.
+- Scope.
+- Capability.
+- Context.
+- Governance.
+- Purpose.
+
+Possessing technical access must not automatically imply permission to use data.
+
+==================================================
+
+13. LEAST PRIVILEGE
+
+Every component should receive the minimum privileges required for its responsibility.
+
+Example:
+
+An Integration that needs calendar access should not automatically receive:
+
+- Health data.
+- Private messages.
+- Financial information.
+- Long-term Memory.
+- Unrelated Knowledge.
+
+Capability access should remain purpose-specific.
+
+==================================================
+
+14. ISOLATION
+
+Sensitive information should be isolated according to:
+
+- User.
+- Identity.
+- Application.
+- Capability.
+- Scope.
+- Security boundary.
+
+A compromised component should not automatically compromise the entire Personal Intelligence Environment.
+
+==================================================
+
+15. ENCRYPTION
+
+Sensitive information should use appropriate cryptographic protection.
+
+Protection should apply where appropriate to:
+
+- Data at rest.
+- Data in transit.
+- Credentials.
+- Authentication material.
+- Sensitive local storage.
+- External communication.
+
+Encryption is necessary but not sufficient.
+
+==================================================
+
+16. ENCRYPTION ≠ PRIVACY
+
+Encrypted transmission does not automatically make data handling appropriate.
+
+The system must first determine:
+
+Should this data leave the device?
+
+Then:
+
+If necessary, how should it be protected?
+
+Canonical order:
+
+Necessity
+↓
+Authorization
+↓
+Minimization
+↓
+Encryption
+↓
+Transmission
+
+==================================================
+
+17. EXTERNAL DATA TRANSMISSION
+
+When data must leave the local environment:
+
+1. Determine necessity.
+2. Classify sensitivity.
+3. Minimize the payload.
+4. Apply policy.
+5. Verify authorization.
+6. Encrypt transmission.
+7. Restrict destination.
+8. Control retention.
+
+Highly sensitive information should not be transmitted silently.
+
+==================================================
+
+18. EXTERNAL AI PROVIDERS
+
+External AI providers are treated as processing capabilities, not as owners of the ecosystem.
+
+Before sending sensitive information externally, the system should evaluate:
+
+- Necessity.
+- Provider.
+- Data sensitivity.
+- User authorization.
+- Governance policy.
+- Security.
+- Retention.
+- Applicable contractual or regulatory requirements.
+
+==================================================
+
+19. AI-AGNOSTIC SECURITY
+
+Privacy & Security must not depend on a specific AI provider.
+
+The security boundary exists before provider selection.
+
+Canonical flow:
+
+User Data
+↓
+Privacy / Security
+↓
+Governance
+↓
+Provider Selection
+↓
+AI Processing
+
+Not:
+
+User Data
+↓
+Provider
+↓
+Privacy
+
+==================================================
+
+20. CONTEXT PRIVACY
+
+Context may contain highly relevant personal information.
+
+Context must therefore be:
+
+- Scoped.
+- Temporary when appropriate.
+- Access-controlled.
+- Minimized.
+- Protected from unnecessary propagation.
+
+Current relevance does not imply permanent retention.
+
+==================================================
+
+21. MEMORY PRIVACY
+
+Memory is persistent by nature and therefore requires stronger controls.
+
+Sensitive information should not automatically become Memory.
+
+Memory should respect:
+
+- Purpose.
+- Authorization.
+- Retention.
+- User control.
+- Deletion.
+
+==================================================
+
+22. KNOWLEDGE PRIVACY
+
+Knowledge may contain information originating from private sources.
+
+Knowledge must preserve:
+
+- Source.
+- Scope.
+- Permissions.
+- Provenance.
+- Sensitivity.
+
+Private Knowledge must not become globally accessible merely because it has been indexed.
+
+==================================================
+
+23. INTELLIGENCE PRIVACY
+
+Intelligence should receive only the information required for reasoning.
+
+Canonical principle:
+
+The model does not automatically receive everything the ecosystem knows.
+
+Information should be selected according to:
+
+- Intent.
+- Context.
+- Authorization.
+- Purpose.
+- Sensitivity.
+
+==================================================
+
+24. iRIEL SYSTEM SECURITY
+
+Execution requires authorization.
+
+Canonical flow:
+
+Intent
+↓
+Capability
+↓
+Authorization
+↓
+Governance
+↓
+Execution
+↓
+Verification
+↓
+Result
+
+Security must prevent unauthorized execution even when an instruction appears valid.
+
+==================================================
+
+25. INTEGRATION SECURITY
+
+Integrations are trust boundaries.
+
+An integration must not receive unrestricted access to the ecosystem.
+
+Canonical model:
+
+Integration
+↓
+Capability
+↓
+Permission
+↓
+Required Data
+↓
+Operation
+↓
+Result
+
+A compromised integration should remain confined to its authorized scope.
+
+==================================================
+
+26. DEVICE SECURITY
+
+iRiel Devices are security boundaries for local computation and storage.
+
+Devices should protect:
+
+- Identity.
+- Local Context.
+- Memory.
+- Knowledge.
+- Credentials.
+- Private files.
+- Communications.
+- Intelligence state.
+
+Device storage is part of the privacy architecture.
+
+==================================================
+
+27. STORAGE SECURITY
+
+Storage should follow the data's sensitivity and lifecycle.
+
+Not all information requires identical:
+
+- Retention.
+- Encryption.
+- Replication.
+- Accessibility.
+- Backup.
+- Deletion policies.
+
+Intelligent Storage Lifecycle must therefore respect Privacy & Security policies.
+
+==================================================
+
+28. TEMPORARY DATA
+
+Temporary information should remain temporary whenever possible.
+
+Examples:
+
+- One-time image analysis.
+- Temporary document processing.
+- Short-lived Context.
+- One-time API responses.
+
+Temporary processing must not automatically become:
+
+Memory
+or
+Knowledge.
+
+==================================================
+
+29. RETENTION
+
+Data retention should have an explicit purpose.
+
+Possible states:
+
+TEMPORARY
+AUTHORIZED RETENTION
+MEMORY
+KNOWLEDGE
+ARCHIVED
+DELETED
+
+Retention should be minimized for sensitive information.
+
+==================================================
+
+30. DELETION
+
+The ecosystem should support controlled deletion of personal information.
+
+Deletion must consider:
+
+- Active Context.
+- Memory.
+- Knowledge.
+- Local storage.
+- Cached representations.
+- External processing where applicable.
+- Derived indexes.
+
+Deletion should not merely remove the visible interface representation while leaving uncontrolled copies.
+
+==================================================
+
+31. AUDITABILITY
+
+Security-relevant actions should provide appropriate auditability.
+
+Possible events:
+
+- Authentication.
+- Authorization.
+- Permission changes.
+- Sensitive access.
+- External transmission.
+- Execution.
+- Security failures.
+- Policy decisions.
+
+Auditability must itself respect privacy.
+
+The system should not create unnecessary surveillance through logging.
+
+==================================================
+
+32. OBSERVABILITY
+
+The ecosystem must remain observable enough to diagnose failures and security events.
+
+However:
+
+Observability
+≠
+Unlimited collection.
+
+Logs should minimize personal and sensitive information.
+
+==================================================
+
+33. SECURITY INCIDENTS
+
+If a security boundary is violated or suspected:
+
+- Isolate the affected component.
+- Restrict access.
+- Preserve necessary evidence.
+- Prevent propagation.
+- Notify appropriate control layers.
+- Recover securely.
+- Re-evaluate affected credentials or permissions.
+
+A compromised integration should not automatically compromise unrelated components.
+
+==================================================
+
+34. FAILURE BEHAVIOR
+
+Security failures must fail closed where appropriate.
+
+Possible states:
+
+ALLOWED
+DENIED
+RESTRICTED
+UNKNOWN
+UNAVAILABLE
+FAILED
+
+Unknown authorization should not be interpreted as permission.
+
+==================================================
+
+35. PRIVACY FAILURE
+
+A privacy failure may include:
+
+- Unnecessary transmission.
+- Unauthorized access.
+- Excessive retention.
+- Unintended exposure.
+- Cross-user leakage.
+- Unnecessary data collection.
+- Improper memory creation.
+
+Privacy incidents must be treated as architectural failures, not merely UI problems.
+
+==================================================
+
+36. SECURITY FAILURE
+
+A security failure may include:
+
+- Unauthorized access.
+- Credential compromise.
+- Integrity violation.
+- Privilege escalation.
+- Data exfiltration.
+- Unauthorized execution.
+- Boundary bypass.
+
+Security controls should limit both probability and impact.
+
+==================================================
+
+37. HUMAN-CENTERED SECURITY
+
+Security must remain understandable and accessible to the user.
+
+Security mechanisms must not become so complex that users cannot understand what the system is doing.
+
+The user should be able to understand:
+
+- What is happening.
+- Why it is happening.
+- What data is involved.
+- Whether external processing occurs.
+- What permission is required.
+- What happened after execution.
+
+==================================================
+
+38. ACCESSIBILITY AND PRIVACY
+
+Accessibility is part of privacy protection.
+
+A blind user, for example, must receive equivalent information about:
+
+- Data transmission.
+- Permission requests.
+- Security states.
+- Execution results.
+- Failures.
+
+Privacy information must be available through accessible channels.
+
+==================================================
+
+39. TRUST
+
+PRSL-AI does not ask the user to trust the system blindly.
+
+Trust must emerge from:
+
+- Consistent behavior.
+- Transparency.
+- Privacy.
+- Security.
+- Verification.
+- User control.
+- Predictable boundaries.
+
+Canonical principle:
+
+Trust is demonstrated, not requested.
+
+==================================================
+
+40. ZERO-TRUST ORIENTATION
+
+The architecture should not assume that every component is trustworthy simply because it belongs to the ecosystem.
+
+Trust should be evaluated according to:
+
+- Identity.
+- Capability.
+- Authorization.
+- Scope.
+- Context.
+- Policy.
+
+Internal components should also respect security boundaries.
+
+==================================================
+
+41. PRIVACY + GOVERNANCE
+
+Governance establishes enforceable policy.
+
+Privacy defines the protection objective.
+
+Security provides technical enforcement.
+
+Canonical relationship:
+
+Philosophy
+↓
+Privacy Principles
+↓
+Governance
+↓
+Security Controls
+↓
+Implementation
+
+==================================================
+
+42. PRIVACY + ACCESSIBILITY
+
+The user's vulnerability must never reduce their privacy.
+
+Accessibility must never require unnecessary exposure of personal information.
+
+The system should provide equivalent protection regardless of interaction modality.
+
+==================================================
+
+43. PRIVACY + INTELLIGENCE
+
+Intelligence should receive the minimum information necessary to perform the requested task.
+
+The most powerful model should not automatically receive the most data.
+
+Capability does not justify unrestricted access.
+
+==================================================
+
+44. PRIVACY + MEMORY
+
+Memory must be treated as a privileged persistence mechanism.
+
+The ecosystem must distinguish:
+
+"Observed"
+
+from:
+
+"Stored permanently."
+
+Sensitive information requires heightened retention controls.
+
+==================================================
+
+45. PRIVACY + KNOWLEDGE
+
+Knowledge must preserve access boundaries.
+
+Information being indexed does not make it public.
+
+Knowledge retrieval must respect:
+
+- Identity.
+- Scope.
+- Permission.
+- Provenance.
+- Sensitivity.
+
+==================================================
+
+46. PRIVACY + INTEGRATIONS
+
+An integration should receive only the information required for the operation it performs.
+
+Example:
+
+Calendar capability
+→ Calendar information.
+
+Not:
+
+Calendar capability
+→ Entire Personal Intelligence Environment.
+
+==================================================
+
+47. PRIVACY + DEVICES
+
+iRiel Devices provide the preferred local environment for sensitive processing when capabilities permit.
+
+Local-first processing reduces unnecessary exposure but does not eliminate the need for device security.
+
+==================================================
+
+48. DAILY-LIFE EXAMPLE — BANKING
+
+User:
+
+"iRiel, how much money do I have available?"
+
+Preferred flow:
+
+Bank Integration
+↓
+Secure authentication
+↓
+Required financial value
+↓
+Local processing
+↓
+Response
+
+The entire financial history should not be exposed to an AI model if it is unnecessary.
+
+==================================================
+
+49. DAILY-LIFE EXAMPLE — PRIVATE MESSAGES
+
+User:
+
+"What did I agree with João yesterday?"
+
+The system should retrieve only the relevant information.
+
+It should not expose the user's complete messaging history to an external intelligence provider unnecessarily.
+
+==================================================
+
+50. DAILY-LIFE EXAMPLE — LOCATION
+
+User:
+
+"What's the fastest route home?"
+
+Location may be processed for the requested operation.
+
+The request does not automatically authorize permanent storage of the user's precise location history.
+
+==================================================
+
+51. DAILY-LIFE EXAMPLE — INTIMATE IMAGE
+
+User:
+
+"iRiel, I noticed something unusual and took a photo."
+
+The image should be classified as highly sensitive.
+
+Preferred behavior:
+
+Local processing
+↓
+No automatic Memory
+↓
+No automatic Knowledge
+↓
+No unnecessary transmission
+↓
+Accessible explanation
+↓
+User-controlled next step
+
+==================================================
+
+52. DAILY-LIFE EXAMPLE — MEDICAL DOCUMENT
+
+User:
+
+"Explain this examination result."
+
+The document should be treated as sensitive health information.
+
+The system should:
+
+- Protect the document.
+- Process locally when possible.
+- Minimize external transmission.
+- Communicate uncertainty.
+- Avoid unsupported diagnosis.
+- Avoid automatic retention.
+
+==================================================
+
+53. DAILY-LIFE EXAMPLE — EXTERNAL AI
+
+If external processing is required:
+
+Sensitive data
+↓
+Classification
+↓
+Minimization
+↓
+Authorization
+↓
+Encrypted transmission
+↓
+Controlled processing
+↓
+Controlled result
+
+Not:
+
+Sensitive data
+↓
+Automatic upload.
+
+==================================================
+
+54. CORE SECURITY PRINCIPLES
+
+PRSL-AI Privacy & Security follows:
+
+1. Privacy by Default.
+2. Local-First.
+3. Data Minimization.
+4. Least Privilege.
+5. Explicit Authorization.
+6. Isolation.
+7. Encryption.
+8. Secure Transport.
+9. Controlled Retention.
+10. User Control.
+11. AI Agnosticism.
+12. Vendor Independence.
+13. Accessible Security.
+14. Verification.
+15. Fail-Closed Behavior where appropriate.
+16. No Silent Data Escalation.
+17. No Unnecessary Collection.
+18. No Unnecessary Transmission.
+19. No Unnecessary Retention.
+20. Continuous Security.
+
+==================================================
+
+55. CANONICAL PRINCIPLE
+
+The PRSL-AI Ecosystem must protect not only the user's data, but also the user's ability to control what happens to that data.
+
+==================================================
+
+56. CANONICAL DEFINITION
+
+PRSL-AI Privacy & Security is the cross-cutting architectural capability responsible for protecting user identity, information, context, memory, knowledge, communications, capabilities, devices and actions through privacy-by-default, local-first processing, data minimization, authorization, isolation, encryption, controlled retention and continuous security enforcement.
+
+==================================================
+
+57. FINAL PRINCIPLE
+
+Privacy is not a feature.
+
+Security is not a setting.
+
+Accessibility is not an exception.
+
+Trust is not a request.
+
+The PRSL-AI Ecosystem must earn trust through architecture and behavior.
+
+The user remains the center.
+
+The user's data remains under meaningful control.
+
+And every component of the ecosystem must operate within boundaries designed to protect that relationship.
+
+==================================================
+
+© Robert Software Labs
+PRSL-AI Ecosystem
+Privacy & Security
+Canonical Definition v1.0

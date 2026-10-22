@@ -1,0 +1,1889 @@
+PRSL-AI ECOSYSTEM
+CANONICAL PERMISSIONS MODEL
+
+Organization: Robert Software Labs
+Status: Canonical
+Version: 1.0
+Classification: Core Architecture
+Document Type: Architectural Permission & Access Control Standard
+
+==================================================
+1. PURPOSE
+==================================================
+
+This document defines the canonical Permissions Model of the
+PRSL-AI Ecosystem.
+
+It establishes:
+
+- How PRSL-AI decides what may be accessed.
+- Who grants authorization.
+- How permissions are represented.
+- How permissions are scoped.
+- How permissions are revoked.
+- How temporary permissions work.
+- How different access levels are represented.
+- How Identity, Authorization, Privacy, Security and Governance
+  interact.
+- How permission decisions remain auditable.
+
+==================================================
+2. CORE PRINCIPLE
+==================================================
+
+Identity answers:
+
+"WHO IS THE ACTOR?"
+
+Authentication answers:
+
+"CAN THE ACTOR PROVE THAT IDENTITY?"
+
+Authorization answers:
+
+"IS THIS ACTOR ALLOWED TO PERFORM THIS OPERATION?"
+
+Permission answers:
+
+"WHAT EXACTLY MAY THIS ACTOR ACCESS OR DO?"
+
+Privacy answers:
+
+"UNDER WHAT CONDITIONS MAY THE DATA BE PROCESSED?"
+
+Governance answers:
+
+"WHICH SYSTEM RULES APPLY?"
+
+Therefore:
+
+IDENTITY
+≠
+AUTHENTICATION
+≠
+AUTHORIZATION
+≠
+PERMISSION
+≠
+PRIVACY
+≠
+GOVERNANCE
+
+==================================================
+3. PERMISSION DEFINITION
+==================================================
+
+A Permission is an explicit authorization to perform a defined
+operation over a defined resource under defined conditions.
+
+Canonical structure:
+
+SUBJECT
++
+ACTION
++
+RESOURCE
++
+SCOPE
++
+CONDITIONS
+=
+PERMISSION
+
+Example:
+
+USER_001
++
+READ
++
+MEMORY
++
+PERSONAL_MEMORY
++
+AUTHENTICATED_SESSION
+=
+AUTHORIZED
+
+==================================================
+4. WHO GRANTS PERMISSION?
+==================================================
+
+The ultimate authority for user-controlled permissions is the
+user.
+
+However, permission decisions may also be constrained by:
+
+- System Security.
+- Governance.
+- Privacy Policy.
+- Device Security.
+- Organizational Policy.
+- Integration Policy.
+- Capability Policy.
+
+Therefore:
+
+USER GRANTS AUTHORITY
+
+but:
+
+SYSTEM POLICY DEFINES THE BOUNDARIES
+
+A user cannot grant a permission that the architecture
+fundamentally prohibits.
+
+==================================================
+5. PERMISSION DECISION MODEL
+==================================================
+
+A permission decision should evaluate:
+
+IDENTITY
+↓
+AUTHENTICATION
+↓
+RESOURCE
+↓
+ACTION
+↓
+SCOPE
+↓
+USER AUTHORIZATION
+↓
+PRIVACY POLICY
+↓
+SECURITY POLICY
+↓
+GOVERNANCE
+↓
+DEVICE / SESSION STATE
+↓
+FINAL DECISION
+
+Result:
+
+ALLOW
+DENY
+REQUIRE_CONFIRMATION
+REQUIRE_REAUTHENTICATION
+REQUIRE_ELEVATION
+UNKNOWN
+
+==================================================
+6. DEFAULT DENY
+==================================================
+
+PRSL-AI follows:
+
+DEFAULT DENY
+
+unless access has been explicitly authorized or is explicitly
+defined as safe public/system functionality.
+
+The absence of a permission must never be interpreted as:
+
+ALLOW.
+
+==================================================
+7. LEAST PRIVILEGE
+==================================================
+
+Permissions must provide the minimum access required for an
+operation.
+
+Example:
+
+An AI component needs to read one document.
+
+It should receive:
+
+READ
++
+DOCUMENT_123
+
+rather than:
+
+READ
++
+ENTIRE_FILE_SYSTEM
+
+Canonical principle:
+
+ACCESS ONLY WHAT IS REQUIRED.
+
+==================================================
+8. PERMISSION GRANULARITY
+==================================================
+
+Permissions may be scoped at multiple levels:
+
+1. Ecosystem
+2. Account
+3. Device
+4. Application
+5. Capability
+6. Resource
+7. Resource type
+8. Action
+9. Session
+10. Task
+11. Time
+12. Data classification
+
+Example:
+
+READ
+→ Photos
+→ Selected Album
+→ Current Session
+
+This is more restrictive than:
+
+READ
+→ All Photos
+→ Permanent Access
+
+==================================================
+9. ACCESS LEVELS
+==================================================
+
+PRSL-AI may represent access using canonical levels.
+
+LEVEL 0
+NO ACCESS
+
+LEVEL 1
+DISCOVERY
+
+LEVEL 2
+METADATA ACCESS
+
+LEVEL 3
+READ ACCESS
+
+LEVEL 4
+WRITE ACCESS
+
+LEVEL 5
+EXECUTION ACCESS
+
+LEVEL 6
+ADMINISTRATIVE / CONTROL ACCESS
+
+The exact levels may be capability-specific.
+
+Higher access must not automatically imply every lower-level
+permission unless explicitly defined by the capability contract.
+
+==================================================
+10. NO ACCESS
+==================================================
+
+LEVEL 0:
+
+NO_ACCESS
+
+The actor cannot:
+
+- Read.
+- Modify.
+- Execute.
+- Enumerate protected information.
+
+The resource may be completely invisible.
+
+==================================================
+11. DISCOVERY ACCESS
+==================================================
+
+LEVEL 1:
+
+DISCOVER
+
+The actor may determine that a capability or resource exists,
+without receiving protected content.
+
+Example:
+
+"Is there a printer available?"
+
+The system may respond:
+
+Printer available.
+
+Without exposing:
+
+Printer configuration.
+
+==================================================
+12. METADATA ACCESS
+==================================================
+
+LEVEL 2:
+
+READ_METADATA
+
+Example:
+
+File:
+
+photo.jpg
+
+Metadata:
+
+- Filename.
+- Size.
+- Creation date.
+
+But not necessarily:
+
+Image contents.
+
+==================================================
+13. READ ACCESS
+==================================================
+
+LEVEL 3:
+
+READ
+
+The actor may access resource content.
+
+Example:
+
+READ_DOCUMENT
+
+This does not automatically imply:
+
+WRITE
+DELETE
+SHARE
+EXECUTE
+
+==================================================
+14. WRITE ACCESS
+==================================================
+
+LEVEL 4:
+
+WRITE
+
+The actor may modify the resource.
+
+Write access does not automatically imply:
+
+DELETE
+
+or:
+
+ADMINISTER
+
+unless explicitly defined.
+
+==================================================
+15. EXECUTION ACCESS
+==================================================
+
+LEVEL 5:
+
+EXECUTE
+
+The actor may trigger an operation.
+
+Examples:
+
+- Send message.
+- Start automation.
+- Run integration action.
+- Execute system operation.
+
+Execution may require additional verification.
+
+==================================================
+16. ADMINISTRATIVE ACCESS
+==================================================
+
+LEVEL 6:
+
+ADMINISTER
+
+Allows control over protected configuration or authorization
+relationships.
+
+Examples:
+
+- Grant permission.
+- Revoke permission.
+- Register integration.
+- Change security configuration.
+
+Administrative access is highly restricted.
+
+==================================================
+17. RESOURCE OWNERSHIP
+==================================================
+
+Ownership and permission are separate concepts.
+
+Example:
+
+USER_001 owns:
+
+MEMORY_123
+
+A system component may have:
+
+READ
+
+without becoming:
+
+OWNER
+
+Ownership remains with the appropriate domain or user.
+
+==================================================
+18. USER PERMISSIONS
+==================================================
+
+A user may authorize PRSL-AI to access specific resources.
+
+Examples:
+
+ALLOW CAMERA
+
+ALLOW MICROPHONE
+
+ALLOW LOCATION
+
+ALLOW CONTACTS
+
+ALLOW FILES
+
+ALLOW MEMORY
+
+ALLOW EXTERNAL_PROCESSING
+
+These permissions must be independently representable.
+
+==================================================
+19. DEVICE PERMISSIONS
+==================================================
+
+A device may have its own permission boundary.
+
+Example:
+
+USER_001:
+
+CAN_USE_CAMERA
+
+Device:
+
+PHONE_A
+
+Camera:
+
+AVAILABLE
+
+But:
+
+TABLET_B
+
+Camera:
+
+DENIED
+
+The user identity is the same.
+
+Device permission differs.
+
+==================================================
+20. APPLICATION / CAPABILITY PERMISSIONS
+==================================================
+
+Permissions may be granted to a specific capability rather than
+to the entire ecosystem.
+
+Example:
+
+Vision Capability:
+
+READ_SELECTED_IMAGE
+
+rather than:
+
+Vision Capability:
+
+READ_ALL_FILES
+
+This reduces unnecessary authority.
+
+==================================================
+21. AI AGENT PERMISSIONS
+==================================================
+
+AI agents must not inherit unlimited user authority.
+
+Example:
+
+Calendar Agent
+
+may have:
+
+READ_CALENDAR
+
+WRITE_CALENDAR
+
+But not:
+
+READ_PHOTOS
+
+unless explicitly required and authorized.
+
+Canonical principle:
+
+AI INTELLIGENCE DOES NOT EQUAL UNLIMITED AUTHORITY.
+
+==================================================
+22. PERMISSION DELEGATION
+==================================================
+
+A permission may be delegated.
+
+Example:
+
+User
+↓
+@iriel
+↓
+Calendar Agent
+
+The agent receives:
+
+READ_CALENDAR
+
+The agent does not become the owner of the calendar.
+
+Delegated authority must retain:
+
+- Original authority.
+- Scope.
+- Expiration.
+- Purpose.
+- Revocation path.
+
+==================================================
+23. SCOPED PERMISSIONS
+==================================================
+
+Permissions should be scoped whenever practical.
+
+Examples:
+
+READ:
+
+Calendar
+
+Scope:
+
+TODAY
+
+or:
+
+READ:
+
+Files
+
+Scope:
+
+/Documents/Project-A
+
+or:
+
+WRITE:
+
+Messages
+
+Scope:
+
+Conversation_123
+
+==================================================
+24. TEMPORARY PERMISSIONS
+==================================================
+
+Permissions may be temporary.
+
+Example:
+
+ALLOW_LOCATION
+
+Duration:
+
+30 minutes
+
+After expiration:
+
+DENIED
+
+Temporary permission must automatically expire.
+
+==================================================
+25. ONE-TIME PERMISSIONS
+==================================================
+
+A permission may be valid for a single operation.
+
+Example:
+
+ALLOW_CAMERA
+
+Scope:
+
+ONE_IMAGE
+
+After capture:
+
+REVOKED
+
+This is particularly valuable for sensitive data.
+
+==================================================
+26. SESSION-BOUND PERMISSIONS
+==================================================
+
+A permission may exist only during a session.
+
+Example:
+
+ALLOW_FILE_ACCESS
+
+Scope:
+
+CURRENT_SESSION
+
+Session ends:
+
+Permission expires.
+
+==================================================
+27. TASK-BOUND PERMISSIONS
+==================================================
+
+A permission may exist only while completing a task.
+
+Example:
+
+Task:
+
+"Organize my downloaded files."
+
+Permission:
+
+READ_DOWNLOADS
+WRITE_DOWNLOADS
+
+After:
+
+TASK_COMPLETED
+
+The temporary authorization may expire.
+
+==================================================
+28. PURPOSE-BOUND PERMISSIONS
+==================================================
+
+Permissions may specify their intended purpose.
+
+Example:
+
+READ_CAMERA_IMAGE
+
+Purpose:
+
+"Analyze image requested by user."
+
+The same permission should not automatically authorize:
+
+"Upload image to external service."
+
+==================================================
+29. CONTEXTUAL PERMISSIONS
+==================================================
+
+Permission decisions may depend on Context.
+
+Example:
+
+Location permission:
+
+ALLOW
+
+while:
+
+USER_IS_NAVIGATING
+
+but:
+
+DENY
+
+for unrelated background processing.
+
+Contextual permissions must remain predictable and transparent.
+
+==================================================
+30. SENSITIVE DATA PERMISSIONS
+==================================================
+
+Sensitive data requires stronger controls.
+
+Examples:
+
+- Health-related information.
+- Financial information.
+- Authentication information.
+- Private communications.
+- Highly personal images.
+- Biometric-related data.
+
+Access may require:
+
+- Explicit consent.
+- Reauthentication.
+- User confirmation.
+- Local processing.
+- Additional governance checks.
+
+==================================================
+31. EXTERNAL PROCESSING PERMISSION
+==================================================
+
+External AI processing is a distinct permission boundary.
+
+Example:
+
+USER:
+
+Allow PRSL-AI to analyze image.
+
+This does NOT automatically mean:
+
+Allow PRSL-AI to send image to external provider.
+
+These are separate permissions.
+
+Canonical distinction:
+
+LOCAL_PROCESSING
+
+versus:
+
+EXTERNAL_PROCESSING
+
+==================================================
+32. CLOUD PERMISSION
+==================================================
+
+Cloud access should be represented separately where applicable.
+
+Example:
+
+ALLOW_CLOUD_STORAGE
+
+does not automatically mean:
+
+ALLOW_EXTERNAL_AI_PROCESSING
+
+or:
+
+ALLOW_THIRD_PARTY_SHARING
+
+Each data movement must have its own policy.
+
+==================================================
+33. PERMISSION AND PRIVACY
+==================================================
+
+Permission alone is insufficient.
+
+Example:
+
+User grants:
+
+ALLOW_EXTERNAL_AI
+
+But the data is classified:
+
+HIGHLY_SENSITIVE
+
+Privacy policy may still require:
+
+DENY
+
+or:
+
+REQUIRE_CONFIRMATION
+
+Therefore:
+
+PERMISSION
++
+PRIVACY
++
+SECURITY
++
+GOVERNANCE
+
+determine the final outcome.
+
+==================================================
+34. PERMISSION AND SECURITY
+==================================================
+
+Security can override a permission when required.
+
+Example:
+
+User authorized:
+
+WRITE_SYSTEM_CONFIGURATION
+
+Security detects:
+
+Compromised Session
+
+Result:
+
+DENY
+
+The permission remains conceptually valid, but execution is
+blocked because the current security state is unsafe.
+
+==================================================
+35. PERMISSION AND GOVERNANCE
+==================================================
+
+Governance can impose system-level restrictions.
+
+Example:
+
+User:
+
+ALLOW_EXTERNAL_PROCESSING
+
+Governance:
+
+External processing prohibited for this data classification.
+
+Result:
+
+DENY
+
+The user permission does not override a higher-priority policy.
+
+==================================================
+36. PERMISSION PRIORITY
+==================================================
+
+Canonical decision hierarchy:
+
+SECURITY
+↓
+GOVERNANCE
+↓
+PRIVACY
+↓
+USER AUTHORIZATION
+↓
+CAPABILITY POLICY
+↓
+DEVICE / SESSION CONDITIONS
+
+The exact implementation may use a policy engine, but a lower
+priority permission must not override a mandatory higher-level
+restriction.
+
+==================================================
+37. PERMISSION STATE
+==================================================
+
+A permission may have states:
+
+REQUESTED
+PENDING
+GRANTED
+DENIED
+EXPIRED
+REVOKED
+SUSPENDED
+CONSTRAINED
+
+These states must be distinguishable.
+
+==================================================
+38. GRANTED
+==================================================
+
+GRANTED means:
+
+The permission currently satisfies all required authorization
+conditions.
+
+It does not necessarily mean that every future operation will
+be allowed.
+
+Context, security, privacy and governance may change.
+
+==================================================
+39. DENIED
+==================================================
+
+DENIED means:
+
+The requested authorization is not currently available.
+
+Possible reasons:
+
+- User denied.
+- Policy denied.
+- Security denied.
+- Privacy denied.
+- Capability unavailable.
+- Device restriction.
+
+The reason should be represented internally for diagnostics.
+
+==================================================
+40. EXPIRED
+==================================================
+
+EXPIRED means:
+
+The permission was valid but its defined lifetime ended.
+
+Example:
+
+30-minute location permission.
+
+After 30 minutes:
+
+EXPIRED.
+
+==================================================
+41. REVOKED
+==================================================
+
+REVOKED means:
+
+Previously granted authority has been intentionally withdrawn.
+
+Revocation must take effect according to the security guarantees
+of the system.
+
+==================================================
+42. SUSPENDED
+==================================================
+
+SUSPENDED means:
+
+The permission remains conceptually configured but is temporarily
+inactive.
+
+Example:
+
+Device security state compromised.
+
+Permission:
+
+SUSPENDED
+
+After recovery:
+
+May return to GRANTED.
+
+==================================================
+43. CONSTRAINED
+==================================================
+
+CONSTRAINED means:
+
+Access is allowed but under reduced scope.
+
+Example:
+
+READ_PHOTOS
+
+becomes:
+
+READ_SELECTED_PHOTO
+
+==================================================
+44. PERMISSION REVOCATION
+==================================================
+
+Permissions must be revocable.
+
+Canonical flow:
+
+GRANTED
+↓
+REVOCATION REQUEST
+↓
+AUTHORIZATION UPDATE
+↓
+ACTIVE ACCESS TERMINATED
+↓
+REVOKED
+↓
+AUDIT EVENT
+
+==================================================
+45. IMMEDIATE REVOCATION
+==================================================
+
+Sensitive permissions should support immediate revocation.
+
+Example:
+
+User:
+
+"Stop letting iRiel access my location."
+
+Result:
+
+LOCATION_PERMISSION
+→ REVOKED
+
+New requests:
+
+DENIED
+
+Existing authorization tokens must be invalidated according to
+the system's security guarantees.
+
+==================================================
+46. DEVICE REVOCATION
+==================================================
+
+If a device is revoked:
+
+All device-bound permissions should be re-evaluated.
+
+Example:
+
+DEVICE_REVOKED
+
+Results:
+
+Camera permission:
+REVOKED ON DEVICE
+
+Memory access:
+REVOKED ON DEVICE
+
+Cloud session:
+REVOKED
+
+User Identity:
+
+REMAINS ACTIVE
+
+==================================================
+47. SESSION REVOCATION
+==================================================
+
+When a session is revoked:
+
+Session-bound permissions become invalid.
+
+Example:
+
+SESSION_REVOKED
+
+→ temporary permissions expire immediately.
+
+Long-lived identity permissions may remain unaffected.
+
+==================================================
+48. DELEGATED PERMISSION REVOCATION
+==================================================
+
+If the user revokes a permission delegated to an AI agent:
+
+User
+↓
+@iriel
+↓
+Agent
+
+Permission:
+
+READ_CONTACTS
+
+Revoked.
+
+Agent must no longer be able to use that authority.
+
+==================================================
+49. PERMISSION TOKENS
+==================================================
+
+Implementations may represent permissions through signed or
+cryptographically protected tokens.
+
+A token should contain only required information.
+
+Possible fields:
+
+PERMISSION_ID
+SUBJECT_ID
+RESOURCE
+ACTION
+SCOPE
+ISSUED_AT
+EXPIRES_AT
+POLICY_VERSION
+AUTHORITY
+STATUS
+
+Tokens must not become an alternative source of truth for
+identity.
+
+==================================================
+50. PERMISSION ID
+==================================================
+
+Every permission assignment should have a unique identifier.
+
+Example:
+
+perm_01XYZ
+
+This allows:
+
+- Revocation.
+- Auditing.
+- Versioning.
+- Tracing.
+- Delegation tracking.
+
+==================================================
+51. PERMISSION VERSIONING
+==================================================
+
+Permissions may change over time.
+
+Example:
+
+Permission v1:
+
+READ_ALL_PHOTOS
+
+Permission v2:
+
+READ_SELECTED_PHOTOS
+
+The system must be able to determine which authorization was
+active at a particular time.
+
+==================================================
+52. PERMISSION AUDIT
+==================================================
+
+Important permission events should be auditable.
+
+Examples:
+
+PERMISSION_REQUESTED
+PERMISSION_GRANTED
+PERMISSION_DENIED
+PERMISSION_REVOKED
+PERMISSION_EXPIRED
+PERMISSION_SUSPENDED
+PERMISSION_SCOPE_CHANGED
+
+Audit records should include:
+
+- Permission ID.
+- Subject.
+- Resource.
+- Action.
+- Decision.
+- Authority.
+- Timestamp.
+- Reason / policy reference where appropriate.
+
+==================================================
+53. PERMISSION EVENT MODEL
+==================================================
+
+The Permission Model integrates directly with the Event Model.
+
+Example:
+
+PERMISSION_GRANTED
+↓
+Event Router
+↓
+Relevant subsystem
+
+Later:
+
+PERMISSION_REVOKED
+↓
+Event Router
+↓
+Sessions / Agents / Capabilities
+↓
+Access terminated
+
+Consumers must process revocation events idempotently.
+
+==================================================
+54. PERMISSION CACHE
+==================================================
+
+Permissions may be cached for performance.
+
+However:
+
+A cache must not become more authoritative than the permission
+source of truth.
+
+Sensitive revocations must propagate within defined security
+guarantees.
+
+==================================================
+55. OFFLINE PERMISSIONS
+==================================================
+
+PRSL-AI may operate offline.
+
+Therefore, some permissions may be evaluated locally.
+
+The system must define:
+
+- Locally valid permissions.
+- Expiration.
+- Revocation guarantees.
+- Required online verification.
+- Security fallback.
+
+Offline operation must never silently expand authority.
+
+==================================================
+56. PERMISSION FAILURE
+==================================================
+
+If permission status cannot be reliably determined for a
+sensitive operation:
+
+DEFAULT:
+
+DENY
+
+or:
+
+REQUIRE_REAUTHENTICATION
+
+or:
+
+REQUIRE_CONFIRMATION
+
+depending on the operation.
+
+UNKNOWN must not silently become ALLOW.
+
+==================================================
+57. PERMISSION AND VERIFICATION
+==================================================
+
+Permission answers:
+
+"May this operation occur?"
+
+Verification answers:
+
+"Did the operation actually occur as expected?"
+
+Example:
+
+Permission:
+
+ALLOW_SEND_MESSAGE
+
+Execution:
+
+ATTEMPTED
+
+Verification:
+
+FAILED
+
+The permission remains distinct from the execution result.
+
+==================================================
+58. PERMISSION AND ROUTER
+==================================================
+
+The Intelligence Router must consider permissions before
+selecting an execution path.
+
+Example:
+
+User asks:
+
+"Analyze this private image."
+
+Router sees:
+
+Local Vision:
+
+AUTHORIZED
+
+External Vision:
+
+NOT AUTHORIZED
+
+Result:
+
+Select Local Vision.
+
+The Router must not route to an unauthorized provider merely
+because it has greater capability.
+
+==================================================
+59. PERMISSION AND @IRIEL
+==================================================
+
+@iriel does not possess unlimited authority.
+
+@iriel operates using:
+
+- User permissions.
+- Capability permissions.
+- Context.
+- Privacy rules.
+- Security policies.
+- Governance.
+
+Therefore:
+
+@IRIEL INTELLIGENCE
+≠
+UNLIMITED USER AUTHORITY
+
+==================================================
+60. PERMISSION AND MEMORY
+==================================================
+
+Memory access must be permission-aware.
+
+Example:
+
+Core AI may have:
+
+READ_RELEVANT_MEMORY
+
+This does not automatically mean:
+
+READ_ALL_MEMORY.
+
+Sensitive Memory may require additional authorization.
+
+==================================================
+61. PERMISSION AND KNOWLEDGE
+==================================================
+
+Knowledge may have different access levels.
+
+Example:
+
+Public Knowledge:
+
+READ
+
+Private Knowledge:
+
+READ with user authorization
+
+Restricted Knowledge:
+
+READ only for specific capability
+
+Knowledge permissions must preserve source restrictions.
+
+==================================================
+62. PERMISSION AND INTEGRATIONS
+==================================================
+
+Integrations require explicit permission boundaries.
+
+Example:
+
+Calendar Integration:
+
+READ_CALENDAR
+
+WRITE_CALENDAR
+
+Email Integration:
+
+READ_EMAIL
+
+SEND_EMAIL
+
+The presence of an integration does not automatically authorize
+every operation.
+
+==================================================
+63. EXAMPLE — CAMERA
+==================================================
+
+User asks:
+
+"Tire uma foto."
+
+Flow:
+
+Identity:
+Authenticated
+
+Device:
+Camera available
+
+Permission:
+CAMERA = GRANTED
+
+Privacy:
+No additional restriction
+
+Governance:
+Allowed
+
+Result:
+
+ALLOW
+
+==================================================
+64. EXAMPLE — PRIVATE IMAGE
+==================================================
+
+User asks:
+
+"Analise esta imagem privada."
+
+Permission:
+
+READ_SELECTED_IMAGE = GRANTED
+
+Local Vision:
+
+AUTHORIZED
+
+External Vision:
+
+DENIED
+
+Result:
+
+Local processing.
+
+No external upload.
+
+==================================================
+65. EXAMPLE — MESSAGE
+==================================================
+
+User:
+
+"Envie uma mensagem para João."
+
+Permission:
+
+SEND_MESSAGES = GRANTED
+
+But:
+
+Verification requirement:
+
+YES
+
+Flow:
+
+Authorize
+↓
+Execute
+↓
+Verify
+↓
+Report result
+
+Permission does not imply successful delivery.
+
+==================================================
+66. EXAMPLE — CONTACTS
+==================================================
+
+User:
+
+"Quem é João?"
+
+Capability needs:
+
+READ_CONTACTS
+
+Permission:
+
+DENIED
+
+Result:
+
+PRSL-AI cannot access Contacts.
+
+It may ask the user for permission.
+
+==================================================
+67. EXAMPLE — TEMPORARY ACCESS
+==================================================
+
+User:
+
+"Use minha localização para encontrar restaurantes próximos."
+
+Permission:
+
+LOCATION
+
+Scope:
+
+CURRENT_REQUEST
+
+Result:
+
+Temporary permission.
+
+After request:
+
+EXPIRED
+
+Future unrelated location access:
+
+DENIED
+
+==================================================
+68. EXAMPLE — REVOKED ACCESS
+==================================================
+
+User previously allowed:
+
+READ_PHOTOS
+
+Later:
+
+"Não quero mais que o iRiel veja minhas fotos."
+
+Result:
+
+PERMISSION_REVOKED
+
+Existing access:
+
+TERMINATED according to security guarantees.
+
+Future requests:
+
+DENIED
+
+==================================================
+69. EXAMPLE — COMPROMISED DEVICE
+==================================================
+
+Device security state:
+
+COMPROMISED
+
+Permission:
+
+WRITE_SYSTEM_CONFIGURATION = GRANTED
+
+Security:
+
+BLOCK
+
+Result:
+
+PERMISSION EFFECTIVELY SUSPENDED
+
+The user's configured authorization remains recorded but cannot
+be exercised while the security condition is unsafe.
+
+==================================================
+70. EXAMPLE — AI AGENT
+==================================================
+
+User asks:
+
+"Organize meus arquivos."
+
+File Agent receives:
+
+READ:
+Downloads
+
+WRITE:
+Downloads
+
+It does NOT receive:
+
+READ:
+Photos
+
+READ:
+Messages
+
+READ:
+Health Data
+
+The Agent receives only the authority required for the task.
+
+==================================================
+71. PERMISSION CONSENT
+==================================================
+
+Consent must be meaningful.
+
+The system should communicate:
+
+- What is being accessed.
+- Why it is needed.
+- For how long.
+- Which scope applies.
+- Whether data leaves the device.
+- Whether an external provider is involved.
+
+The user should not need to understand the internal architecture
+to make an informed decision.
+
+==================================================
+72. PERMISSION TRANSPARENCY
+==================================================
+
+The system should make active permissions inspectable.
+
+Example:
+
+iRiel Permissions
+
+Camera:
+Allowed for current task
+
+Location:
+Not allowed
+
+Memory:
+Relevant memories only
+
+External AI:
+Not allowed for sensitive data
+
+This gives the user operational visibility.
+
+==================================================
+73. PERMISSION MANAGEMENT
+==================================================
+
+Users should be able to:
+
+- View permissions.
+- Grant permissions.
+- Deny permissions.
+- Revoke permissions.
+- Change scope.
+- Change duration.
+- Review delegated permissions.
+- Review external integrations.
+
+==================================================
+74. PERMISSION OWNERSHIP
+==================================================
+
+The permission itself is a system authorization object.
+
+The underlying resource may belong to:
+
+- User.
+- Device.
+- Integration.
+- System.
+- Organization.
+
+Permission grants access.
+
+It does not transfer ownership.
+
+==================================================
+75. PERMISSION CONSISTENCY
+==================================================
+
+Permission state must have an authoritative source.
+
+Caches, tokens and local projections are derived.
+
+When permissions change:
+
+AUTHORITATIVE STATE
+↓
+EVENT
+↓
+AUTHORIZED CONSUMERS
+↓
+LOCAL PROJECTIONS
+
+==================================================
+76. PERMISSION INVARIANTS
+==================================================
+
+The following are canonical:
+
+1. Default is DENY unless explicitly allowed.
+
+2. Identity does not imply permission.
+
+3. Authentication does not imply authorization.
+
+4. Authorization does not override Privacy.
+
+5. User permission does not override mandatory Security or
+   Governance constraints.
+
+6. Permissions must be scoped.
+
+7. Permissions must be revocable.
+
+8. Temporary permissions must expire.
+
+9. One-time permissions must not become persistent.
+
+10. AI agents must receive least privilege.
+
+11. External processing requires an explicit policy boundary.
+
+12. Device permissions are independent from User Identity.
+
+13. Permission state must be auditable.
+
+14. Revocation must propagate according to defined guarantees.
+
+15. UNKNOWN must never silently become ALLOW.
+
+16. Permission tokens are not the canonical identity.
+
+17. Permission does not imply successful execution.
+
+18. Permission does not imply ownership.
+
+19. Sensitive operations may require reauthentication or
+    confirmation.
+
+20. Every permission must have a defined authority and scope.
+
+==================================================
+77. FINAL PERMISSION MODEL
+==================================================
+
+The canonical decision model is:
+
+                   IDENTITY
+                      │
+                      ▼
+                AUTHENTICATION
+                      │
+                      ▼
+                   REQUEST
+                      │
+            ┌─────────┴─────────┐
+            ▼                   ▼
+        RESOURCE              ACTION
+            │                   │
+            └─────────┬─────────┘
+                      ▼
+                    SCOPE
+                      │
+                      ▼
+               USER AUTHORITY
+                      │
+                      ▼
+                  PRIVACY
+                      │
+                      ▼
+                  SECURITY
+                      │
+                      ▼
+                 GOVERNANCE
+                      │
+                      ▼
+              DEVICE / SESSION
+                      │
+                      ▼
+                FINAL DECISION
+                      │
+          ┌───────────┼───────────┐
+          ▼           ▼           ▼
+        ALLOW       DENY      CONFIRMATION
+
+==================================================
+78. FINAL CANONICAL PRINCIPLE
+==================================================
+
+"PRSL-AI does not grant authority merely because an identity is
+known. Every meaningful access operation is evaluated through
+explicit authorization, defined scope, applicable privacy and
+security policies, and governance constraints."
+
+==================================================
+79. FINAL STATEMENT
+==================================================
+
+Permissions are the controlled boundary between intelligence
+and authority.
+
+@iriel may understand what the user wants.
+
+The Router may understand which capability can perform it.
+
+The Device may possess the technical capability.
+
+But none of these facts alone authorize the operation.
+
+The operation becomes executable only when:
+
+IDENTITY
++
+AUTHENTICATION
++
+PERMISSION
++
+SCOPE
++
+PRIVACY
++
+SECURITY
++
+GOVERNANCE
+
+produce an authorized decision.
+
+This prevents PRSL-AI from becoming an intelligence system with
+unbounded access to the user's digital life.
+
+The architecture instead creates a controlled model in which
+intelligence can be powerful while authority remains explicitly
+bounded.
+
+==================================================
+
+© Robert Software Labs
+PRSL-AI Ecosystem
+Canonical Permissions Model
+Version 1.0

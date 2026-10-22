@@ -1,0 +1,837 @@
+PRSL-AI ECOSYSTEM
+PRSL-AI Knowledge
+Canonical Definition v1.0
+
+Organization: Robert Software Labs
+Status: Canonical
+Classification: Core Intelligence Infrastructure
+Architecture: AI-Agnostic / Local-First / Privacy by Default / Human-Centered
+
+==================================================
+
+1. DEFINITION
+
+PRSL-AI Knowledge is the ecosystem capability responsible for acquiring, organizing, validating, representing, governing, retrieving and providing trusted knowledge to the intelligence layer.
+
+Knowledge exists independently from any specific AI model or provider.
+
+==================================================
+
+2. CORE PRINCIPLE
+
+Knowledge represents what the ecosystem can know and provide as evidence to intelligence.
+
+Knowledge is not:
+
+- Context.
+- Memory.
+- Intelligence.
+- Governance.
+- A language model.
+- A single database.
+- RAG alone.
+
+Canonical distinction:
+
+Knowledge
+→ What is known.
+
+Memory
+→ What is preserved for continuity.
+
+Context
+→ What is relevant now.
+
+Intelligence
+→ What is reasoned from available information.
+
+==================================================
+
+3. PURPOSE
+
+PRSL-AI Knowledge exists to:
+
+- Provide reliable knowledge to intelligence.
+- Reduce dependence on model-embedded knowledge.
+- Maintain knowledge independently from AI providers.
+- Preserve provenance.
+- Support validation.
+- Track freshness.
+- Detect conflicting information.
+- Enable controlled retrieval.
+- Support multiple AI providers.
+- Support local-first knowledge access.
+- Respect privacy and authorization boundaries.
+
+==================================================
+
+4. WHY KNOWLEDGE IS A SEPARATE LAYER
+
+An AI model may contain knowledge internally, but model knowledge is not equivalent to ecosystem knowledge.
+
+Without a dedicated Knowledge layer:
+
+Model A
+→ knows one thing.
+
+Model B
+→ knows another.
+
+Local Model
+→ knows something else.
+
+This can produce inconsistent intelligence.
+
+With PRSL-AI Knowledge:
+
+PRSL-AI Knowledge
+↓
+Retrieval
+↓
+OpenAI / Gemini / Local Model / Other Provider
+↓
+Reasoning
+
+The intelligence provider may change without destroying the ecosystem's knowledge infrastructure.
+
+==================================================
+
+5. KNOWLEDGE LIFECYCLE
+
+Canonical lifecycle:
+
+Source
+↓
+Ingestion
+↓
+Normalization
+↓
+Classification
+↓
+Validation
+↓
+Representation
+↓
+Indexing
+↓
+Governance
+↓
+Retrieval
+↓
+Intelligence
+
+Knowledge should remain traceable throughout its lifecycle.
+
+==================================================
+
+6. KNOWLEDGE SOURCES
+
+Knowledge may originate from:
+
+- Documents.
+- Files.
+- Databases.
+- APIs.
+- Web sources.
+- External services.
+- Integrations.
+- Ecosystem documentation.
+- Application knowledge.
+- Authorized user-provided information.
+- Structured datasets.
+- Internal systems.
+
+Source availability does not automatically imply trust.
+
+==================================================
+
+7. PROVENANCE
+
+Knowledge should preserve provenance whenever technically possible.
+
+Relevant metadata may include:
+
+- Source.
+- Origin.
+- Timestamp.
+- Version.
+- Authority.
+- Confidence.
+- Freshness.
+- Scope.
+- Permissions.
+- Validation status.
+
+The system should be able to answer:
+
+"What is the source of this knowledge?"
+
+"When was it obtained?"
+
+"Is it current?"
+
+"Is it authorized for this operation?"
+
+==================================================
+
+8. VALIDATION
+
+Knowledge should be evaluated before being treated as trusted information.
+
+Validation may consider:
+
+- Source authority.
+- Consistency.
+- Evidence.
+- Freshness.
+- Integrity.
+- Scope.
+- Governance.
+- Conflicting sources.
+
+Knowledge may exist without being validated.
+
+Unverified information must not automatically become trusted knowledge.
+
+==================================================
+
+9. KNOWLEDGE STATES
+
+Knowledge may be classified as:
+
+VERIFIED
+→ Supported by sufficient evidence.
+
+TRUSTED
+→ Authorized and considered reliable for its scope.
+
+SUPPORTED
+→ Backed by available evidence but with limitations.
+
+UNVERIFIED
+→ Not sufficiently validated.
+
+CONFLICTING
+→ Sources provide incompatible information.
+
+OUTDATED
+→ Information may no longer represent the current state.
+
+UNKNOWN
+→ Insufficient information exists to establish reliability.
+
+==================================================
+
+10. CONFLICT RESOLUTION
+
+When sources disagree:
+
+Source A
+→ Information X
+
+Source B
+→ Information Y
+
+Knowledge should preserve the conflict rather than silently overwrite one source.
+
+Canonical state:
+
+CONFLICTING
+
+The Intelligence Layer may then evaluate:
+
+- Authority.
+- Context.
+- Freshness.
+- Evidence.
+- Scope.
+- Governance.
+
+==================================================
+
+11. KNOWLEDGE ≠ MEMORY
+
+Memory preserves continuity.
+
+Examples:
+
+"Robert decided X."
+
+"This task was pending."
+
+"We were working on Y."
+
+Knowledge represents reusable information.
+
+Examples:
+
+"PRSL-AI follows an AI-Agnostic architecture."
+
+"iRiel System is the system execution layer."
+
+A memory may contribute to knowledge, but memory must not automatically become trusted knowledge.
+
+==================================================
+
+12. KNOWLEDGE ≠ CONTEXT
+
+Context represents what is relevant to the current situation.
+
+Example:
+
+"The user is currently documenting iRiel System."
+
+Knowledge may represent:
+
+"iRiel System is the system-intelligence execution layer."
+
+Context changes continuously.
+
+Knowledge may persist independently of the current interaction.
+
+==================================================
+
+13. KNOWLEDGE ≠ RAG
+
+RAG is a retrieval technique.
+
+Knowledge is an architectural capability.
+
+PRSL-AI Knowledge may use:
+
+- Vector retrieval.
+- Keyword retrieval.
+- Graph retrieval.
+- Structured queries.
+- Metadata filtering.
+- Hybrid retrieval.
+- Semantic search.
+
+The architecture is not dependent on a single retrieval technology.
+
+==================================================
+
+14. KNOWLEDGE REPRESENTATION
+
+Knowledge may be represented through:
+
+- Structured data.
+- Documents.
+- Semantic representations.
+- Relationships.
+- Metadata.
+- Graph structures.
+- Embeddings.
+- Indexed content.
+- Temporal information.
+
+Different knowledge types may use different representations.
+
+==================================================
+
+15. KNOWLEDGE SCOPES
+
+Knowledge may be categorized into scopes such as:
+
+- Public Knowledge.
+- Ecosystem Knowledge.
+- Application Knowledge.
+- User Knowledge.
+- Private Knowledge.
+- Temporary Knowledge.
+
+Scope determines where and by whom knowledge may be accessed.
+
+==================================================
+
+16. ACCESS CONTROL
+
+The existence of knowledge does not imply universal access.
+
+Access may depend on:
+
+- Identity.
+- Permission.
+- Scope.
+- Privacy policy.
+- Governance.
+- Application context.
+- User authorization.
+- Security requirements.
+
+Knowledge retrieval must respect access boundaries.
+
+==================================================
+
+17. PRIVACY
+
+PRSL-AI Knowledge follows Privacy by Default.
+
+Knowledge should be exposed only to the components that require it.
+
+The system should minimize:
+
+- Unnecessary data exposure.
+- Unnecessary external transmission.
+- Cross-context leakage.
+- Cross-user access.
+- Provider exposure.
+
+Private knowledge remains private unless explicitly authorized otherwise.
+
+==================================================
+
+18. LOCAL-FIRST KNOWLEDGE
+
+When knowledge can be processed locally, local processing is preferred.
+
+Preferred order:
+
+Local Knowledge
+↓
+Authorized Personal Infrastructure
+↓
+External Infrastructure
+
+External services should only be used when required and authorized.
+
+==================================================
+
+19. AI-AGNOSTIC DESIGN
+
+Knowledge must not depend on a specific AI provider.
+
+The same knowledge infrastructure may serve:
+
+- Local models.
+- OpenAI models.
+- Gemini models.
+- Other providers.
+- Future models.
+
+The provider is replaceable.
+
+The ecosystem's knowledge remains persistent.
+
+==================================================
+
+20. INTELLIGENCE SERVER RELATIONSHIP
+
+PRSL-AI Knowledge provides information.
+
+The Intelligence Server reasons over that information.
+
+Canonical flow:
+
+Knowledge
+↓
+Retrieval
+↓
+Intelligence Server
+↓
+Reasoning
+↓
+Decision
+
+Knowledge does not independently determine the final decision.
+
+==================================================
+
+21. GOVERNANCE RELATIONSHIP
+
+Governance determines whether knowledge may be:
+
+- Ingested.
+- Stored.
+- Retrieved.
+- Shared.
+- Transmitted.
+- Used for a specific operation.
+
+Knowledge is therefore subject to PRSL-AI Governance.
+
+==================================================
+
+22. MEMORY RELATIONSHIP
+
+Memory preserves continuity.
+
+Knowledge preserves reusable information.
+
+Relationship:
+
+Memory
+↓
+Potentially relevant information
+↓
+Validation
+↓
+Knowledge
+
+Memory must not automatically promote information into trusted Knowledge.
+
+==================================================
+
+23. CONTEXT RELATIONSHIP
+
+Context selects what is relevant now.
+
+Relationship:
+
+Knowledge
++
+Memory
++
+Current Context
+↓
+Intelligence
+
+Context acts as a relevance layer.
+
+==================================================
+
+24. INTEGRATION RELATIONSHIP
+
+Integrations may provide external knowledge sources.
+
+Example:
+
+Integration
+↓
+External Service
+↓
+Data
+↓
+Knowledge Ingestion
+↓
+Validation
+↓
+Knowledge
+
+Provider-specific protocols remain within the Integration layer.
+
+Knowledge remains provider-agnostic.
+
+==================================================
+
+25. KNOWLEDGE RETRIEVAL
+
+Retrieval should consider:
+
+- Relevance.
+- Authority.
+- Freshness.
+- Scope.
+- Permissions.
+- Context.
+- Confidence.
+- Source quality.
+
+The most similar information is not automatically the most trustworthy information.
+
+==================================================
+
+26. FRESHNESS
+
+Knowledge may become outdated.
+
+Therefore, relevant knowledge should support freshness information.
+
+Possible states:
+
+Current
+Stale
+Expired
+Unknown
+
+Freshness requirements depend on the knowledge domain.
+
+==================================================
+
+27. TEMPORAL KNOWLEDGE
+
+Some knowledge changes over time.
+
+The system should distinguish:
+
+"What is true now?"
+
+from:
+
+"What was true previously?"
+
+Temporal metadata may therefore be required for time-sensitive knowledge.
+
+==================================================
+
+28. KNOWLEDGE SECURITY
+
+Knowledge infrastructure must protect:
+
+- Confidentiality.
+- Integrity.
+- Authorization.
+- Isolation.
+- Provenance.
+- Access boundaries.
+
+Knowledge must not become an unrestricted data reservoir for every intelligence component.
+
+==================================================
+
+29. OBSERVABILITY
+
+Knowledge operations should provide appropriate observability.
+
+Possible information:
+
+- Source accessed.
+- Retrieval operation.
+- Knowledge version.
+- Validation status.
+- Confidence.
+- Access decision.
+- Retrieval result.
+
+Observability must remain compliant with privacy requirements.
+
+==================================================
+
+30. TRUST MODEL
+
+Knowledge reliability should be evaluated rather than assumed.
+
+Canonical model:
+
+Source
++
+Provenance
++
+Validation
++
+Freshness
++
+Authority
++
+Context
+↓
+Knowledge Reliability
+
+Reliability is contextual.
+
+A source may be authoritative for one domain and irrelevant for another.
+
+==================================================
+
+31. HUMAN OVERSIGHT
+
+Users may provide, correct, remove or authorize knowledge depending on the scope and permissions.
+
+Human correction may trigger:
+
+- Knowledge update.
+- Validation.
+- Versioning.
+- Conflict resolution.
+- Memory update.
+- Governance review.
+
+Human authority remains fundamental.
+
+==================================================
+
+32. KNOWLEDGE VERSIONING
+
+Knowledge should support versioning when applicable.
+
+Versioning allows the system to determine:
+
+- What changed.
+- When it changed.
+- Which source changed.
+- Which version was used.
+- Whether previous information remains relevant.
+
+==================================================
+
+33. KNOWLEDGE INTEGRITY
+
+The system should preserve the integrity of stored knowledge.
+
+Changes should be traceable when appropriate.
+
+The ecosystem should avoid silent corruption or unexplained replacement of trusted information.
+
+==================================================
+
+34. KNOWLEDGE AVAILABILITY
+
+Knowledge may be:
+
+AVAILABLE
+UNAVAILABLE
+RESTRICTED
+OUTDATED
+CONFLICTING
+UNKNOWN
+
+The Intelligence Layer must receive enough metadata to distinguish these states.
+
+==================================================
+
+35. FAILURE BEHAVIOR
+
+If requested knowledge cannot be retrieved, the system must not fabricate it.
+
+Possible results:
+
+KNOWLEDGE_AVAILABLE
+KNOWLEDGE_UNAVAILABLE
+KNOWLEDGE_RESTRICTED
+KNOWLEDGE_OUTDATED
+KNOWLEDGE_CONFLICTING
+KNOWLEDGE_UNKNOWN
+
+==================================================
+
+36. HALLUCINATION CONTROL
+
+Knowledge does not eliminate model hallucination automatically.
+
+However, it provides an explicit evidence layer that allows intelligence to distinguish:
+
+- Model-generated knowledge.
+- Retrieved knowledge.
+- Verified knowledge.
+- Unverified information.
+
+The Intelligence Layer should prefer authoritative evidence when appropriate.
+
+==================================================
+
+37. PERSONAL INTELLIGENCE ENVIRONMENT
+
+Knowledge is a foundational component of the Personal Intelligence Environment.
+
+Canonical relationship:
+
+Human
+↓
+@iriel
+↓
+Personal Intelligence Environment
+↓
+Knowledge + Memory + Context
+↓
+Intelligence
+↓
+Action
+
+This allows intelligence to operate with knowledge beyond the model's internal parameters.
+
+==================================================
+
+38. ARCHITECTURAL POSITION
+
+Canonical architecture:
+
+Human
+↓
+@iriel
+↓
+Personal Intelligence Environment
+↓
+Context
+Memory
+Knowledge
+↓
+iRiel Intelligence Server
+↓
+Governance
+↓
+iRiel System
+↓
+Device
+
+Knowledge is an intelligence-enabling infrastructure layer.
+
+==================================================
+
+39. CORE PRINCIPLES
+
+PRSL-AI Knowledge follows:
+
+1. AI-Agnosticism.
+2. Provider Independence.
+3. Provenance.
+4. Validation.
+5. Freshness.
+6. Privacy by Default.
+7. Local-First.
+8. Authorization.
+9. Contextual Relevance.
+10. Explicit Trust.
+11. Conflict Awareness.
+12. Versionability.
+13. Human Oversight.
+14. No Fabricated Knowledge.
+15. Controlled Retrieval.
+
+==================================================
+
+40. CANONICAL DEFINITION
+
+PRSL-AI Knowledge is the ecosystem capability responsible for acquiring, organizing, validating, representing, governing, retrieving and providing trusted knowledge to the intelligence layer independently of any specific AI model or provider.
+
+==================================================
+
+41. CANONICAL SHORT FORM
+
+Knowledge
+→ Knows.
+
+Memory
+→ Remembers.
+
+Context
+→ Understands the now.
+
+Governance
+→ Defines boundaries.
+
+Intelligence
+→ Reasons.
+
+System
+→ Executes.
+
+Resonance
+→ Adapts.
+
+Presence
+→ Manifests.
+
+==================================================
+
+42. FINAL PRINCIPLE
+
+PRSL-AI does not define intelligence solely by what an AI model already knows.
+
+It defines intelligence by what the Personal Intelligence Environment can:
+
+Acquire.
+Understand.
+Validate.
+Remember.
+Retrieve.
+Govern.
+Reason over.
+And responsibly use.
+
+Knowledge therefore becomes a persistent, governed and provider-independent foundation for Human Intelligence within the PRSL-AI Ecosystem.
+
+==================================================
+
+© Robert Software Labs
+PRSL-AI Ecosystem
+PRSL-AI Knowledge — Canonical Definition v1.0

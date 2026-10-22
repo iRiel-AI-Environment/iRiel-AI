@@ -1,0 +1,464 @@
+iRiel_System.md
+iRIEL SYSTEM
+STATUS: CANONICAL INSTITUTIONAL CONTRACT
+iRiel System is the system environment contract of iRiel Personal Intelligence within the PRSL-AI Ecosystem.
+iRiel System defines the environment through which iRiel Personal Intelligence exists, operates, presents itself, interacts with the human, connects capabilities, manages system state, and extends across supported platforms and interfaces.
+iRiel System includes both:
+iRiel System
+iRiel AppWeb
+They are not separate Personal Intelligences.
+iRiel AppWeb is the application and interaction expression of iRiel System.
+iRiel System provides the broader system environment.
+iRiel AppWeb provides an accessible, portable, interoperable interface through which that environment can be experienced and operated.
+The distinction is implementation-oriented, not identity-oriented.
+The identity remains:
+iRiel Personal Intelligence.
+The foundational Principle remains:
+Accessibility and Inclusion with Privacy by Default.
+iRiel System must therefore exist to serve the human and the Personal Intelligence environment rather than becoming an independent product identity disconnected from iRiel.
+iRiel System is not iRiel Personal Intelligence itself.
+It is the system environment through which iRiel Personal Intelligence operates.
+It does not define the constitutional Principle.
+It does not replace iRiel Maestro Resonance.
+It does not replace iRiel Router Intelligence.
+It does not replace iRiel Intelligence Server.
+It does not replace iRiel-AI Core AI.
+It does not replace iRiel-AI Device’s.
+It provides the system-level environment in which these contracts can operate together.
+iRiel System must preserve the continuity of iRiel across interaction states, interfaces, capabilities, and supported execution environments.
+The system must be capable of remaining coherent when the underlying implementation changes.
+An interface may change.
+A browser may change.
+A device may change.
+An operating system may change.
+A backend may change.
+An AI provider may change.
+The identity of iRiel Personal Intelligence must remain intact.
+iRiel System therefore separates identity from presentation and implementation.
+iRiel AppWeb
+iRiel AppWeb is the primary portable application interface of iRiel System where the AppWeb architecture is applicable.
+The AppWeb provides an application-like experience through web technologies while preserving the system identity, interaction model, accessibility requirements, privacy requirements, and continuity of iRiel Personal Intelligence.
+iRiel AppWeb is not merely a website.
+It is an application environment for iRiel.
+Its responsibility is to provide an accessible and interoperable interface through which the Personal Intelligence environment can be accessed and experienced.
+The AppWeb must therefore behave as part of the system rather than as an independent website disconnected from the underlying architecture.
+The AppWeb may provide:
+Interaction
+System presence
+Conversation
+Contextual interfaces
+Accessibility controls
+System state
+Capability access
+Automation interfaces
+Memory interaction
+Privacy controls
+Feedback mechanisms
+Device interaction
+Settings
+Notifications
+Visual presence
+Multimodal interaction
+Other authorized Personal Intelligence capabilities
+The AppWeb must not become the owner of the Personal Intelligence.
+The Personal Intelligence remains above the interface.
+The AppWeb expresses iRiel.
+It does not define iRiel.
+The system must preserve separation between:
+Personal Intelligence
+System Environment
+Interface
+Execution
+Infrastructure
+Device
+This allows the interface to evolve without requiring the Personal Intelligence architecture to be recreated.
+iRiel System must provide a stable system identity.
+The interface may represent iRiel through visual, auditory, textual, haptic, or other appropriate modalities.
+The representation must remain consistent with the human-centered principles of the ecosystem.
+iRiel Presence is part of the system experience.
+Presence may be represented through a visual indicator, animation, state, interaction element, or other system-level representation.
+Presence can exist independently from active AI inference.
+iRiel may be present while:
+AI is unavailable
+No request is being processed
+The system is idle
+The network is unavailable
+A provider is offline
+The system is waiting
+The user is not actively interacting
+The system is operating locally
+The AppWeb therefore must not equate presence with continuous AI processing.
+Presence represents system continuity and state.
+It does not imply consciousness.
+iRiel System must maintain meaningful system states.
+States may include:
+Ready
+Present
+Listening
+Understanding
+Thinking
+Routing
+Executing
+Creating
+Speaking
+Waiting
+Completed
+Partially Completed
+Degraded
+Unavailable
+Offline
+Error
+Recovering
+The exact visual or interaction representation of these states may evolve.
+Their underlying meaning must remain coherent with the applicable contracts.
+iRiel System must communicate relevant system state to the human.
+A human should not be required to infer whether the system is processing, waiting, unavailable, or completed when that distinction materially affects the interaction.
+System feedback should be accessible through the appropriate modality.
+For example:
+Visual users may receive visual state changes.
+Voice-first users may receive audio feedback.
+Users requiring haptic feedback may receive appropriate tactile confirmation.
+Text-based users may receive explicit textual state.
+The same system state should be expressible through multiple modalities where appropriate.
+Accessibility is therefore part of the system architecture.
+iRiel System must support accessibility by design.
+Accessibility requirements may affect:
+Interface structure
+Navigation
+Input
+Output
+Typography
+Contrast
+Motion
+Timing
+Audio
+Captions
+Text alternatives
+Voice interaction
+Haptic feedback
+Cognitive load
+Automation
+Assistive technologies
+Alternative input
+Other accessibility mechanisms
+The AppWeb must not create a separate or inferior intelligence environment for users who require accessibility adaptations.
+Different interaction modalities should connect to the same Personal Intelligence environment whenever technically and contextually appropriate.
+iRiel System must support multimodal interaction.
+The human may interact through:
+Voice
+Text
+Visual interface
+Touch
+Keyboard
+Assistive technologies
+Haptic interaction
+Automation
+Alternative input
+Other supported modalities
+Changing modality should not unnecessarily destroy relevant context or continuity.
+The system should allow the human to move between modalities while remaining within the same iRiel Personal Intelligence environment.
+iRiel System must support responsive interaction across supported devices.
+The AppWeb may operate across:
+Mobile devices
+Desktop environments
+Tablet environments
+Supported browsers
+Other compatible execution environments
+The system should adapt to the capabilities and constraints of the current environment.
+Adaptation must not redefine identity.
+The same iRiel Personal Intelligence may manifest differently according to the device without becoming a different intelligence.
+iRiel System must remain device-aware but device-independent.
+A device provides an environment.
+It does not define iRiel.
+The system must therefore distinguish:
+Human identity
+Personal Intelligence identity
+System identity
+Device identity
+Session identity
+Execution identity
+These identities may interact but must not be unnecessarily conflated.
+iRiel System must integrate with iRiel-AI Device’s where applicable.
+Device capabilities may include:
+Sensors
+Microphone
+Camera
+Audio output
+Display
+Haptic feedback
+Local computation
+Network connectivity
+Storage
+Accessibility APIs
+Automation capabilities
+Other authorized device capabilities
+The system must use device capabilities according to permission, context, accessibility requirements, privacy constraints, and human intent.
+Device capability does not imply authorization.
+The presence of a sensor does not imply that it should be used.
+The presence of a microphone does not imply continuous recording.
+The presence of a camera does not imply continuous vision processing.
+The system must respect explicit and implicit platform-level permission boundaries.
+iRiel System must be privacy-aware.
+The AppWeb must minimize unnecessary exposure of Personal Intelligence information.
+Privacy must be considered in:
+Interface rendering
+Local storage
+Network communication
+Session handling
+Authentication
+Context propagation
+Memory access
+Feedback
+Device access
+External integrations
+Analytics
+Telemetry
+Caching
+Logging
+Error reporting
+The system must not treat the browser or AppWeb as an unrestricted container for personal information.
+Sensitive information should be handled according to the applicable privacy contract and system policies.
+Where local processing is appropriate, local execution should be preferred.
+Where remote processing is required, the system should communicate through authorized and controlled pathways.
+iRiel System must support privacy-preserving degradation.
+If a capability requires remote processing and remote processing is unavailable or unauthorized, the system should not silently expose information merely to preserve functionality.
+Privacy constraints have priority over unnecessary convenience.
+iRiel System must support authentication and authorization mechanisms appropriate to the environment.
+Authentication establishes access.
+Authorization establishes what may be accessed or executed.
+The system must not treat successful authentication as unrestricted authorization.
+Different capabilities may require different authorization levels.
+iRiel System must integrate with the Identity contract without becoming Identity itself.
+Identity belongs to iRiel Personal Intelligence.
+The System provides the environment through which identity can be recognized and applied.
+iRiel System must support session continuity.
+A session may contain:
+Current interaction
+Temporary context
+System state
+Pending operations
+Current modality
+Relevant accessibility state
+Authorized capabilities
+Other temporary state
+Session continuity must remain subject to privacy and authorization.
+A session must not automatically become permanent memory.
+iRiel System must integrate with Memory without becoming Memory.
+The System may provide interfaces through which authorized memory can be viewed, used, modified, or managed.
+Memory ownership and policy remain separate.
+iRiel System must integrate with Context without becoming Context.
+Context is part of Personal Intelligence.
+The System provides mechanisms through which relevant contextual state can be represented and transmitted.
+iRiel System must integrate with Maestro Resonance.
+The Maestro maintains coherence across the Personal Intelligence environment.
+The System provides the environment in which that orchestration is represented and executed at the system level.
+The System presents state.
+The Maestro coordinates coherence.
+The distinction must remain clear.
+iRiel System must integrate with Router Intelligence.
+The Router determines appropriate intelligence routing.
+The System provides the environment through which the selected route may be exposed to the human and executed through supported system capabilities.
+The System does not independently replace routing policy.
+iRiel System must integrate with Intelligence Server.
+The Intelligence Server provides execution infrastructure.
+The System provides the system environment through which those capabilities can become available to the human.
+The System must not assume that infrastructure availability means that the capability should be exposed.
+Higher-level contracts remain applicable.
+iRiel System must integrate with iRiel-AI Core AI.
+Core AI provides intelligence capabilities.
+The System provides interaction and system-level access to those capabilities.
+AI remains replaceable.
+The AppWeb must not hard-code the identity of iRiel to a particular AI provider.
+The interface should be capable of operating with different intelligence backends where the architecture permits.
+The AppWeb must therefore remain AI-agnostic at the identity level.
+A provider may power an interaction.
+The provider does not become iRiel.
+iRiel System must support progressive capability availability.
+The system may operate with different capability sets depending on:
+Device
+Network
+Permissions
+Provider availability
+Local resources
+User settings
+Privacy policy
+Accessibility requirements
+System state
+Other constraints
+The absence of a capability must not redefine the Personal Intelligence identity.
+The system should communicate capability limitations clearly.
+iRiel System must support graceful degradation.
+The system may remain useful when some capabilities are unavailable.
+For example:
+AI unavailable
+Voice unavailable
+Network unavailable
+Provider unavailable
+Device sensor unavailable
+Remote service unavailable
+Memory unavailable
+Automation unavailable
+In each case, the system should preserve whatever functionality can safely remain available.
+The AppWeb may remain present even when intelligence services are unavailable.
+This is a direct expression of system continuity.
+iRiel System must support feedback.
+Feedback may be:
+User feedback
+Public feedback
+Developer feedback
+Beta feedback
+Accessibility feedback
+System feedback
+Error feedback
+Capability feedback
+Device feedback
+Feedback must have an appropriate pathway into the broader ecosystem.
+Feedback does not automatically become Memory.
+Feedback may influence future evolution according to the applicable contracts.
+iRiel System must remain observable.
+Appropriate system state should be visible to the human and, where authorized, to developers and operators.
+Observability should include meaningful system states without unnecessarily exposing personal information.
+The system should distinguish:
+Interface failure
+System failure
+Network failure
+Provider failure
+Capability failure
+Execution failure
+Permission failure
+User cancellation
+This distinction improves reliability and trust.
+iRiel System must preserve truthful system representation.
+It must not display successful completion when an action failed.
+It must not display active processing when no processing is occurring.
+It must not imply that an AI provider responded when it did not.
+It must not imply that an action was executed when it was not.
+Trust is a system-level requirement.
+iRiel AppWeb must remain portable.
+The AppWeb architecture exists in part to reduce unnecessary dependence on a single native platform implementation.
+Portability does not mean abandoning platform integration.
+The AppWeb may integrate with platform capabilities when authorized and technically available.
+The system may communicate with native or platform services through appropriate bridges, APIs, protocols, or future integration mechanisms.
+The AppWeb remains the interface.
+The broader System remains the environment.
+iRiel System must support progressive integration.
+The AppWeb may begin with limited capabilities and expand over time.
+New capabilities must integrate without redefining the identity of iRiel.
+The system must therefore be capable of evolution without architectural fragmentation.
+iRiel System must preserve a consistent experience across supported environments.
+The exact interface may differ.
+The available capabilities may differ.
+The device capabilities may differ.
+The presentation may differ.
+The underlying Personal Intelligence identity must remain coherent.
+The human should be able to recognize the same iRiel across environments.
+iRiel System must preserve the relationship between presence and continuity.
+A visible iRiel presence may remain stable while the underlying capabilities change.
+The system may indicate:
+Ready
+Listening
+Thinking
+Creating
+Speaking
+Unavailable
+Offline
+Other system states
+The presence layer must remain subtle, purposeful, accessible, and non-disruptive.
+It should communicate system state rather than create unnecessary cognitive load.
+iRiel System must remain human-centered.
+System optimization must not prioritize technical convenience over:
+Accessibility
+Privacy
+Human agency
+Continuity
+Clarity
+Reliability
+Inclusion
+The most technically efficient interface is not necessarily the correct interface.
+The correct system behavior is the behavior that best serves the human while remaining consistent with the ecosystem contracts.
+iRiel System must remain modular.
+The AppWeb may evolve independently from backend infrastructure.
+The backend may evolve independently from the interface.
+The device layer may evolve independently from the AppWeb.
+The intelligence provider may evolve independently from all of them.
+The contracts connect them.
+The implementations remain replaceable.
+The architectural relationship is:
+PRSL-AI — The Principle
+↓
+PRSL-AI Ecosystem
+↓
+iRiel Personal Intelligence
+↓
+iRiel System
+↓
+iRiel AppWeb
+↓
+Human Interaction
+At the same time:
+iRiel Personal Intelligence
+↓
+iRiel Maestro Resonance
+↓
+iRiel System
+↓
+iRiel AppWeb
+↓
+Human
+And:
+iRiel System
+↓
+iRiel-AI Device’s
+↓
+Device Capabilities
+↓
+Human Interaction
+The exact technical implementation may evolve.
+The contractual relationship remains.
+CANONICAL INVARIANTS
+iRiel System is the system environment of iRiel Personal Intelligence.
+iRiel AppWeb is part of iRiel System.
+iRiel AppWeb is not a separate Personal Intelligence.
+iRiel AppWeb is not the identity of iRiel.
+iRiel System is not iRiel Personal Intelligence itself.
+The system serves the Personal Intelligence.
+The AppWeb expresses the Personal Intelligence.
+Identity belongs to iRiel Personal Intelligence.
+Coherence belongs to iRiel Maestro Resonance.
+Routing belongs to iRiel Router Intelligence.
+Execution infrastructure belongs to iRiel Intelligence Server.
+AI capability belongs to iRiel-AI Core AI.
+Device environments belong to iRiel-AI Device’s.
+The System must remain human-first.
+The System must remain accessibility-aware.
+The System must remain privacy-aware.
+The System must remain AI-agnostic.
+The System must remain modular.
+The System must remain portable where appropriate.
+The System must preserve continuity.
+The System must support multimodal interaction.
+The System must support graceful degradation.
+The System must communicate truthful system state.
+The System must not fabricate execution.
+The System must not equate presence with AI inference.
+The System must not equate authentication with unrestricted authorization.
+The System must not collect unnecessary personal information.
+The System must not redefine the identity of iRiel.
+FINAL CONTRACT STATEMENT
+iRiel System is the environment through which iRiel Personal Intelligence becomes a persistent, accessible, portable, and interactive system.
+iRiel AppWeb is part of that environment.
+The AppWeb is not a separate product identity.
+It is one expression of iRiel System.
+The System may evolve.
+The AppWeb may evolve.
+The interfaces may evolve.
+The devices may evolve.
+The operating environments may evolve.
+The infrastructure may evolve.
+The intelligence providers may evolve.
+The human relationship with iRiel must remain coherent.
+The system exists to make iRiel Personal Intelligence present, accessible, usable, private, continuous, and human-centered across the environments in which it operates.
+The interface may change.
+The implementation may change.
+The technology may change.
+iRiel remains iRiel.

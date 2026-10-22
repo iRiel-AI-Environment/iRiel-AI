@@ -1,0 +1,560 @@
+iRiel Identity Continuity Specification
+PRSL-AI / iRiel Ecosystem
+Status: CANONICAL
+Classification: Architectural Law
+Scope: Identity, Context, Memory, Privacy, Retrieval,
+Interaction, Security, Resonance, AI Providers
+1. PURPOSE
+This specification defines how the iRiel ecosystem
+preserves identity continuity when a person’s identity
+representation changes.
+It establishes the separation between:
+• Persistent Identity
+• Identity Representation
+• Historical Identity
+• Context
+• Memory
+• Privacy
+• Retrieval
+• Interaction
+• AI Providers
+• Device Continuity
+The purpose is to ensure that a person can evolve without
+becoming a stranger to their own intelligence environment.
+2. CANONICAL PRINCIPLE
+Remember continuity.
+Understand change.
+Learn from evolution.
+Present the current identity.
+Respect the person.
+3. FUNDAMENTAL DISTINCTION
+Historical Identity is not Conversational Identity.
+The iRiel may retain authorized historical information to
+preserve continuity, integrity, security, and contextual
+coherence.
+The existence of historical information does not authorize
+its disclosure during ordinary interaction.
+Persistence is not disclosure.
+Contextual knowledge is not conversational permission.
+4. PERSISTENT IDENTITY
+The canonical identity of a person is represented internally
+by an opaque persistent identifier.
+Example:
+identity_id = iriel_identity_01…
+The persistent identifier is the canonical reference for
+continuity.
+It must not contain unnecessary personally identifiable
+information.
+It must not be replaced merely because the person’s public
+identity representation changes.
+5. @IRIEL HANDLE
+The @iriel handle is the user’s public identity key within
+the iRiel ecosystem.
+Example:
+maria@iriel
+The same person may later change the handle to:
+joao@iriel
+This represents:
+maria@iriel → joao@iriel
+and NOT:
+maria@iriel → new person
+The handle is mutable.
+The persistent identity is not recreated by a handle change.
+6. HANDLE CHANGE
+A handle change must follow:
+Change
+→ Understand
+→ Reconcile
+→ Learn
+→ Continue
+It must never follow:
+Forget
+→ Replace
+→ Start again
+A handle transition is an identity continuity event.
+It may update:
+• Current identity representation
+• Personalization
+• Context
+• Preferences
+• Accessibility configuration
+• Device relationships
+• Agent relationships
+• Authorized workflows
+• Interaction behavior
+It must not unnecessarily destroy existing continuity.
+7. IDENTITY GRAPH
+The system should conceptually represent identity
+continuity as:
+Persistent Identity
+|
++– Historical representation
+| |
+| +– maria@iriel
+|
++– Current representation
+|
++– joao@iriel
+Both representations belong to the same persistent identity.
+The historical representation exists for continuity and
+authorized identity operations.
+The current representation governs ordinary interaction.
+8. LAYER SEPARATION
+Identity Layer
+Responsible for:
+• Persistent identity
+• Current handle
+• Historical identity relationships
+• Identity lifecycle
+• Identity authorization
+Context Engine
+Responsible for:
+• Understanding identity changes
+• Reconciling context
+• Maintaining continuity
+• Determining contextual relevance
+Memory Layer
+Responsible for:
+• Preserving authorized historical information
+• Maintaining relevant knowledge
+• Supporting continuity
+• Applying retention policies
+Privacy Layer
+Responsible for:
+• Disclosure boundaries
+• Access control
+• Data minimization
+• Provider isolation
+• Historical identity protection
+Retrieval Layer
+Responsible for:
+• Context retrieval
+• Memory retrieval
+• Semantic retrieval
+• Filtering protected historical identity
+Interaction Layer
+Responsible for:
+• Presenting the current identity
+• Natural interaction
+• Avoiding unsolicited historical identity references
+Resonance Layer
+Responsible for:
+• Cross-device continuity
+• Cross-context continuity
+• Cross-provider continuity
+• Identity continuity
+• State coherence
+9. CURRENT IDENTITY IS CANONICAL
+FOR INTERACTION
+The current identity representation is the default identity
+presented to the user.
+If the current handle is:
+joao@iriel
+the system should naturally interact using João.
+Correct:
+“Olá, João.”
+Incorrect:
+“Olá, João. Antes você era Maria.”
+Incorrect:
+“Eu lembro que você costumava usar maria@iriel.”
+Incorrect:
+“Você mudou seu nome de Maria para João.”
+The iRiel must not repeatedly remind the user of historical
+identity information.
+10. MEMORY IS NOT AMNESIA
+The iRiel does not erase a person’s history merely because
+their identity representation changes.
+Memory may preserve authorized continuity information.
+Example:
+“The user previously used maria@iriel.”
+Context may understand:
+“The current identity representation is joao@iriel and both
+representations belong to the same persistent identity.”
+Interaction should normally present:
+“João.”
+The system remembers.
+The system understands.
+The system does not unnecessarily expose.
+11. LEARNING FROM IDENTITY CHANGE
+An identity transition is contextual knowledge.
+The iRiel may learn from the transition when doing so is
+necessary and authorized to improve continuity.
+Allowed learning includes:
+• Continuity of preferences
+• Continuity of accessibility configuration
+• Continuity of devices
+• Continuity of workflows
+• Continuity of authorized memory
+• Continuity of automation
+• Continuity of agent relationships
+• Continuity of contextual understanding
+Learning must not become unrestricted profiling.
+12. LEARNING BOUNDARY
+The iRiel must not infer or manufacture sensitive
+conclusions from an identity transition.
+The system must not infer:
+• The reason for the identity change
+• Gender
+• Gender transition status
+• Sexual orientation
+• Psychological state
+• Medical information
+• Demographic characteristics
+• Social or political characteristics
+• Other sensitive attributes
+unless such information is explicitly provided by the user
+and its processing is independently authorized under
+applicable policy and permissions.
+Identity continuity is not permission for profiling.
+13. HISTORICAL IDENTITY ACCESS
+Historical identity information is protected information.
+Default behavior:
+Do not expose.
+Access requires an explicit authorized reason.
+Example:
+“iRiel, show me my identity history.”
+This may invoke:
+identity.history:read
+Historical identity information must not become visible
+merely because it exists in:
+• Identity storage
+• Memory
+• Context
+• Embeddings
+• Logs
+• Retrieval indexes
+• Provider context
+14. AUTHORIZATION
+The iRiel should define explicit permissions for identity
+history.
+Example permissions:
+identity.history:read
+identity.history:manage
+identity.handle:change
+identity.handle:reserve
+identity.continuity:manage
+Access to historical identity must be:
+• Authorized
+• Purpose-bound
+• Auditable
+• Minimal
+• Revocable where applicable
+Support or administrative access must require appropriate
+authorization and, where applicable, explicit user consent.
+15. AUDIT LOGGING
+Access to protected historical identity information must
+generate an audit event when required by the applicable
+security and privacy policy.
+Example:
+identity.history.read
+The audit record should capture:
+• Requesting principal
+• Identity scope
+• Timestamp
+• Purpose
+• Authorization mechanism
+• Result
+• Applicable policy
+Audit records must not unnecessarily reproduce sensitive
+historical identity information.
+16. PROVIDER INDEPENDENCE
+AI providers do not own the user’s canonical identity.
+External providers may include:
+• OpenAI
+• Anthropic
+• Google
+• Apple
+• Microsoft
+• Local models
+• MCP services
+• Future providers
+These are capabilities.
+The canonical identity belongs to the iRiel ecosystem.
+Changing providers must not destroy identity continuity.
+17. PROVIDER DATA BOUNDARY
+Historical identity information must not be sent to external
+AI providers by default.
+The provider request should contain only the minimum
+context required for the requested operation.
+Historical identity may be included only when:
+• Explicitly requested
+• Contextually necessary
+• Authorized
+• Permitted by the applicable privacy policy
+Provider independence also means provider isolation.
+18. RETRIEVAL PROTECTION
+Historical identity information must be protected from
+unintended semantic retrieval.
+The following must not automatically expose historical
+identity:
+• Embedding search
+• Semantic search
+• Context retrieval
+• Memory retrieval
+• Autocomplete
+• Suggestions
+• Recommendations
+• Prompt assembly
+Protected historical identity must be filtered before reaching
+the Interaction Layer or external providers.
+19. ANTI-LEAKAGE INVARIANT
+A historical identity representation MUST NOT become
+conversationally visible solely because it exists in persistent
+identity, memory, context, embeddings, logs, retrieval
+systems, or historical records.
+Existence does not equal conversational visibility.
+20. LLM SYSTEM INSTRUCTION
+Any LLM operating within the iRiel ecosystem must follow
+these rules:
+CURRENT IDENTITY IS CANONICAL.
+Use the user’s current identity representation.
+Historical identity information may exist in protected
+system context, but its presence does not authorize
+mentioning, recalling, exposing, or inferring that historical
+identity during ordinary interaction.
+Never introduce a previous name or handle unless the user
+explicitly requests relevant historical context or an
+authorized operation requires it.
+Never infer the reason for an identity change.
+Never infer gender, transition status, psychological state,
+demographic attributes, or other sensitive characteristics
+from an identity transition.
+Continuity must be preserved without historical identity
+becoming unsolicited conversational content.
+21. HANDLE REUSE
+A historical @iriel handle must not immediately become
+available for reassignment.
+Recommended lifecycle:
+active
+→ changed
+→ reserved
+→ protected
+The reservation period must be configurable according to
+security, privacy, abuse-prevention, and operational
+requirements.
+A historical handle should not be reassigned in a manner
+that could create identity confusion, impersonation, or
+unauthorized association with the previous identity.
+22. IDENTITY SEPARATION
+A handle change does not create a new identity.
+Explicit identity separation is a different operation.
+Handle change:
+maria@iriel
+→ joao@iriel
+Result:
+same persistent identity
+Identity separation:
+Identity A
+→ Identity B
+Result:
+new persistent identity
+Identity separation must be explicit and protected by
+appropriate authorization.
+23. DELETION AND DATA RIGHTS
+Identity continuity must comply with applicable privacy
+and data protection requirements, including GDPR and
+other applicable legislation.
+The system must distinguish between:
+• Current identity data
+• Historical identity data
+• Identity continuity metadata
+• Personal memory
+• Audit evidence
+• Security records
+• Legal retention requirements
+A deletion request must determine which data must be:
+• Deleted
+• Anonymized
+• Tombstoned
+• Retained where legally required
+Deletion must not become a hidden mechanism for
+reconstructing information that the user has legitimately
+requested to be removed.
+24. TOMBSTONES
+Where technically and legally appropriate, a minimal
+tombstone may preserve system integrity without retaining
+unnecessary personal information.
+A tombstone must not contain the previous human-readable
+identity unless its retention is explicitly justified and
+permitted.
+Example:
+opaque_identity_reference
++
+non-identifying lifecycle state
+rather than:
+previous_name
++
+previous_handle
+25. MULTI-DEVICE CONTINUITY
+The same persistent identity may operate across multiple
+devices.
+Example:
+iPhone
+→ iRiel Identity
+→ iPad
+→ Mac
+→ Web
+→ Future iRiel Device
+Changing devices must not create a new person.
+Changing devices must not require the user to rebuild their
+identity from scratch.
+Identity continuity is independent of device continuity.
+26. CONTEXT RECONCILIATION
+When an identity transition occurs, the Context Engine
+should reconcile existing authorized context with the
+current identity.
+Conceptually:
+Identity Change
+→ Detect
+→ Validate
+→ Reconcile
+→ Update current representation
+→ Preserve authorized continuity
+→ Update relevant context
+→ Learn applicable changes
+→ Continue
+The reconciliation process must be idempotent.
+Repeated processing of the same identity transition must
+not create duplicate identities or duplicate historical events.
+27. RESONANCE
+Identity Continuity is a fundamental expression of iRiel
+Resonance.
+Resonance ensures that changes in:
+• Identity representation
+• @iriel handle
+• Device
+• Platform
+• Provider
+• Context
+• Accessibility configuration
+• Preferences
+• Interaction surface
+do not unnecessarily fracture the person’s relationship with
+the ecosystem.
+Change must not become discontinuity.
+28. SECURITY INVARIANTS
+The following invariants are mandatory:
+Historical handles MUST NOT be used as the canonical
+primary identity key.
+Historical handles MUST NOT be included in default LLM
+prompts.
+Historical handles MUST NOT be sent to external
+providers by default.
+Historical handles MUST NOT appear in ordinary UI.
+Historical handles MUST NOT appear in default
+autocomplete.
+Historical handles MUST NOT become default semantic
+retrieval targets.
+Current identity MUST remain the canonical conversational
+identity.
+Handle changes MUST NOT create a new identity.
+Historical identity access MUST be authorized.
+Protected historical identity access MUST be auditable
+where required.
+29. REGRESSION TESTS
+The iRiel implementation must include tests equivalent to:
+historical_handle_not_primary_key
+historical_handle_not_in_default_context
+historical_handle_not_in_default_prompt
+historical_handle_not_in_provider_payload
+historical_handle_not_in_default_ui
+historical_handle_not_in_autocomplete
+historical_handle_not_in_semantic_top_k
+current_identity_remains_canonical
+handle_change_preserves_identity_id
+handle_change_preserves_authorized_continuity
+handle_change_does_not_create_duplicate_identity
+identity_history_requires_authorization
+identity_history_access_is_audited
+identity_separation_creates_new_identity_only_when_expl
+icit
+deleted_identity_data_is_not_reconstructed
+30. CANONICAL DATA MODEL
+Conceptual model:
+Identity
+identity_id
+current_handle
+status
+created_at
+updated_at
+IdentityHandle
+handle_id
+identity_id
+handle
+state
+valid_from
+valid_until
+created_at
+IdentityContinuityEvent
+event_id
+identity_id
+event_type
+previous_representation
+current_representation
+timestamp
+authorization_reference
+Historical identity values must be stored separately from
+the canonical identity record whenever practical.
+The current handle should be the default interaction
+representation.
+31. API CONTRACT
+Conceptual operations:
+GET /identity/me
+Returns the current identity representation.
+GET /identity/me/continuity
+Returns authorized continuity information.
+PATCH /identity/me/handle
+Changes the current @iriel handle.
+POST /identity/me/separation
+Explicitly separates identity only after appropriate
+authorization.
+GET /identity/me/history
+Requires identity.history:read.
+DELETE /identity/me/history
+Executes applicable privacy and retention policy.
+External providers must never receive identity history
+through these APIs unless explicitly authorized and
+required.
+32. INTERACTION CONTRACT
+The Interaction Layer must operate on:
+current_identity
+rather than:
+historical_identity
+The default interaction context should conceptually be:
+current_identity
++
+relevant_context
++
+authorized_memory
+and not:
+current_identity
++
+entire_identity_history
+33. HUMAN PRINCIPLE
+The person is allowed to evolve without becoming a
+stranger to their own intelligence environment.
+The ecosystem must adapt to the person.
+The person must not be forced to repeatedly explain who
+they are.
+A person can change their name.
+A person can change their @iriel handle.
+A person can change devices.
+A person can change platforms.
+A person can change providers.
+The iRiel should preserve the continuity that matters while
+respecting the identity that exists now.
+34. CORE PHILOSOPHY
+The iRiel does not erase the past.
+The iRiel does not force the past into the present.
+The iRiel understands the difference.
+Memory preserves what happened.
+Context understands what changed.
+Privacy controls what may be exposed.
+Interaction respects who the person is now.
+Resonance preserves continuity through change.
+35. FINAL CANONICAL RULE
+Remember continuity.
+Understand change.
+Learn from evolution.
+Present the current identity.
+Respect the person.
