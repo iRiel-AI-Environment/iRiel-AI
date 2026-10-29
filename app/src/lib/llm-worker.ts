@@ -1,0 +1,1 @@
+{"text":"import { WebWorkerMLCEngineHandler } from \"@mlc-ai/web-llm\";\n\nconst handler = new WebWorkerMLCEngineHandler();\nself.onmessage = (msg: MessageEvent) => handler.onmessage(msg);"}
